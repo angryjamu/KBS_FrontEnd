@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* 외부 CSS파일 상단엔 반드시 문자셋을 해야함 */
+.wrap {
+    width: 727px;
+    margin: auto;
+    /* 블록박스 가로중앙 */
+}
+
+/* 텍스트 중앙 class */
+.tac {
+    text-align: center;
+}
+
+/* 배경색 class */
+.bgc{
+    background-color: rgb(92, 92, 92);
+    padding: 10px 0
+    /* 안쪽여백: 위아래 양쪽; */
+}
+
+/* 큰제목 */
+h1#mtit{
+    color: rgb(0, 255, 149);
+    text-shadow: 2px 2px 2px rgb(0, 255, 0);
+}
+
+/* 1. 타입선택자(요소명) */
+address {
+    font-style: normal;
+    /* 글자스타일 */
+    color: rgb(155, 77, 219);
+    /* 글자색 */
+    font-size: 14px;
+    /* 폰트사이즈 */
+    line-height: 1.7;
+    /* 줄간격 */
+}
+
+/* 2. 자손선택자(띄어쓰기) */
+header a {
+    color: #2ff048;
+    /* 글자색 */
+    text-decoration: none;
+    /* 밑줄없앰 */
+}
+
+        /* 4. 아이디 선택자(#) */
+        #logo {
+            vertical-align: -4px;
+            /* 인라인요소간 세로정렬 */
+            margin-right: 4px;
+            /* 오른쪽마진 */
+        }
+
+        /* 5. 클래스 선텍자(.) */
+        .tit {
+            font-style: 30px;
+            /* 글씨크기 */
+            font-family: "맑은고딕";
+            /* 글씨체 */
+            letter-spacing: 2px;
+            /* 자간 */
+            word-spacing: -13px;
+            /* 단어사이 */
+            /* white-space: nowrap; */
+            /* 줄바꿈 금지 */
+        }
+
+                /* 3. 집계자식선택자(>) */
+                main>a {
+                    color: hsl(237, 28%, 63%);
+                    text-decoration: none;
+                    font-size: 14px;
+                    text-shadow: 1px 1px 1px rgb(214, 4, 4);
+                    /* 글자그림자: x y blur 색 */
+                }
+        
+                main>p>q {
+                    color: gray;
+                    background-color: pink;
+                }
+            /* 메인 공통 p요소 */
+            main p{
+                line-height: 1.7;
+                font-size: 17px;
+            }
+    

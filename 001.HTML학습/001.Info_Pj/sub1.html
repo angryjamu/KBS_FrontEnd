@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>네이버 요약뉴스 - 정치</title>
+    <!-- style요소 : 스타일 시트 영역 태그 -->
+    <style>
+        /* 
+                css주석
+
+                css형식
+
+                요소명{
+                    속셩명:값;
+                }
+            */
+
+            
+        .wrap {
+            width: 727px;
+            margin: auto;
+            /* 블록박스 가로중앙 */
+        }
+
+        /* 텍스트 중앙 class */
+        .tac {
+            text-align: center;
+        }
+
+        /* 배경색 class */
+        .bgc{
+            background-color: rgb(92, 92, 92);
+            padding: 10px 0
+            /* 안쪽여백: 위아래 양쪽; */
+        }
+
+        /* 큰제목 */
+        h1#mtit{
+            color: rgb(0, 255, 149);
+            text-shadow: 2px 2px 2px rgb(0, 255, 0);
+        }
+
+        /* 메인 공통 p요소 */
+        main p{
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* 1. 타입선택자(요소명) */
+        address {
+            font-style: normal;
+            /* 글자스타일 */
+            color: rgb(155, 77, 219);
+            /* 글자색 */
+            font-size: 14px;
+            /* 폰트사이즈 */
+            line-height: 1.7;
+            /* 줄간격 */
+        }
+
+        /* 2. 자손선택자(띄어쓰기) */
+        header a {
+            color: #2ff048;
+            /* 글자색 */
+            text-decoration: none;
+            /* 밑줄없앰 */
+        }
+
+        /* 3. 집계자식선택자(>) */
+        main>a {
+            color: hsl(237, 28%, 63%);
+            text-decoration: none;
+            font-size: 14px;
+            text-shadow: 1px 1px 1px rgb(228, 195, 195);
+            /* 글자그림자: x y blur 색 */
+        }
+
+        main>p>q {
+            color: gray;
+            background-color: pink;
+        }
+
+        /* 4. 아이디 선택자(#) */
+        #logo {
+            vertical-align: -4px;
+            /* 인라인요소간 세로정렬 */
+            margin-right: 4px;
+            /* 오른쪽마진 */
+        }
+
+        /* 5. 클래스 선텍자(.) */
+        .tit {
+            font-size: 30px;
+            /* 글씨크기 */
+            font-family: "맑은고딕";
+            /* 글씨체 */
+            letter-spacing: 2px;
+            /* 자간 */
+            word-spacing: -10px;
+            /* 단어사이 */
+            white-space: nowrap;
+            /* 줄바꿈 금지 */
+        }
+
+        /* 6. 그룹 선택자(,) */
+        em,i{
+            color: skyblue;
+        }
+        /* 7. 종속선택자(요소명,아이디명/클래스명) */
+        h3#tit3{
+            display: inline;
+            /* 화면표시방식 : 블록->인라인 변경 */
+            border: 2px dotted brown;
+            /* 보더: 두께 종류 색상 */
+            padding: 3px;
+            /* 안쪽여백 */
+        }
+        /* 종속선택자 class인 경우 */
+        .list {
+            border: 2px dashed solid red;
+            background-color: moccasin;
+        }
+        ul.list{
+            border: 2px dotted brown;
+            background-color: moccasin;
+        }
+        ol.list{
+            border: 2px dotted brown;
+            background-color: rgb(145, 241, 166);
+        }
+        /* 8.속성선택자([]) */
+        /* 
+        속성선택시 이퀄을 쓰는 방법
+        1. = 정확히 같은 값을 찾음
+        2.^= 시작하는 문자를 찾음(웃으면서 시작..)
+        3. $= 끝나는문자 (돈받고끝나라..)
+        4. *= 모두찾음 */
+
+        [alt="뭉크의절규그림"]{
+            border: 15px ridge gold;
+        }
+        /* ^= 시작하는문자 */
+        [href^="http"]{
+            background-color: pink;
+        }
+        /* $= 끝나는문자 */
+        [href$="RANKING"]{
+            color: yellow;
+            font-weight: bold;
+        }
+        /* *= 있기만하면 모두 찾음 */
+        /* ::after(맨뒤) 는 가상요소 */
+        [href*="news1"]::after{
+            content: '★';
+        }
+        /* 9. 형제 선택자(+) */
+        /* ::before 가상요소(맨앞) */
+        li+li::before{/* 앞에 li형제가 있는 li요소를 선택 */
+            content: '♬';
+        }        
+        /* 10.다중형제선택자(~틸드) */
+        .tt~p{/* 클래스가 tt인요소 뒤의 p형제요소 모두를 선택 */
+            background-color: rgb(181, 216, 85);
+        }
+
+        /* 테이블 첫번째 tr의 첫번째 td에 width 주기 */
+        .wd{
+            width: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- 1. 상단영역 -->
+        <header class="tac bgc">
+            <!-- 1.1.제목 -->
+            <h1 id="mtit">네이버 요약 - 정치</h1>
+            <!-- 1.2. 메뉴 -->
+            <nav>
+                <a href="index.html">
+                    <img src="./images/naver.png" alt="네이버로고" style="width: 20px;" id="logo">
+                    <!-- 
+                        [인라인방식의 CSS]
+                        style속성: css셋팅값적용 -->
+                </a>
+                <a href="sub1.html">정치</a>|
+                <a href="sub2.html">경제</a>|
+                <a href="sub3.html">사회</a>|
+                <a href="sub4.html">IT/과학</a>|
+                <a href="sub5.html">TV/연예</a>|
+                <a href="sub6.html">영화</a>|
+            </nav>
+        </header>
+        <hr>
+        <!-- 2. 컨텐츠영역 -->
+        <main>
+            <!-- 1. 언론사로고 -->
+            <img src="images/logo.PNG" alt="뉴스원로고" style="width: 120px;">
+
+            <!-- 2.제목 -->
+            <h2 class="tit">김종인 '선대위 원점 재구성' 요구…윤석열 <span style="color:rgb(243, 137, 17)">첫 정치력 시험대</span></h2>
+            <!-- 3.이미지박스 -->
+            <figure>
+                <img src="./images/1.jpg" alt="정치기사 이미지">
+                <figcaption>
+                    <x-small>&nbsp;윤석열 국민의힘 대통령 후보가 5일 오후 서울 용산구 백범김구기념관에서 열린 제2차 전당대회에서 대선 후보에 최종 선출된 후 당 점퍼를 입고 인사하고
+                        있다. &nbsp;&nbsp;&nbsp;2021.11.5/뉴스1 ©</x-small>
+                </figcaption>
+            </figure>
+
+            <!-- figure요소: 이미지나 표 등을 넣는 박스요소
+            -> figcaption 하위요소 : figure요소 자식요소로 이미지설명을 넣음(필수는아님) -->
+
+
+            News1 오대일 기자
+            <!-- 4.기사내용 -->
+            <p><b>윤석열 국민의힘 대선 후보가 선거대책위원회</b> 구성을 두고 첫 정치력 시험대에 올랐다. 당 <i>대선</i> 후보로 선출되기전까지 '이견' 조율이 필요 없던 점을 고려하면 이번
+                문제를 어떻게 풀어나가느냐에 따라 지도자로서의 자질도 엿볼 수 있을 것으로 보인다.</p>
+
+            <p class="tt">9일 정치권에 따르면 윤 후보는 김종인 전 <strong><em>비상대책위원장과</em> 경선에서 경쟁했던 홍준표 의원</strong> 등을 모두 아우르는 선대위가 구성되기를 바라고 있다.
+                특히 선대위 구성에 있어 경선 캠프에서 자신을</p>
+            도왔던 인사들과 함께 해야한다는 생각이 강하다.
+            당장 김 전 위원장이 선대위의 전면 재구성을 요구하면서 윤 후보의 구상은 차질이 <mark><b>불가피하다는 전망</b></mark>이다.
+
+            <p>경선 때부터 사실상 윤 후보를 공개 지지한 김 전 위원장은 전날 신동아 창간 90주년 특별기획 '20대 <i>대선</i>을 말하다'에 참석해 <q>
+                    윤 후보가 본선을 위해 어떤 형태의 선대위를
+                    구성해 나가야 할지 냉정하게 판단해야 한다
+                </q>고 말했다.</p>
+            <br>
+            <!-- 원본기사 -->
+            <a href="https://blog.naver.com/bkcaller/221314917298"><del>원본기사</del></a>
+            <hr>
+            <br>
+            <h3>국민의힘</h3>
+            <blockquote cite="http://www.peoplepowerparty.kr/renewal/about/preamble.do">
+                국민의힘은 모두의 내일을 함께 만들어가는 정당이다. 반만년의 역사와 빛나는 전통을 자랑하는 우리는 3.1 독립운동 정신과 대한민국임시정부의 정통성을 이어받고, 공산주의 침략에 맞서
+                자유민주주의를 지켜낸 국난극복의 자랑스러운 역사를 가지고 있다. 우리는 하나 된 국민의 힘으로 전쟁의 폐허에서 가난을 극복하고 선진경제를 이룩했으며, 시민의 자발적 참여를 통해 민주화를
+                성취했다. 우리는 현재에 안주하지 않고 끊임없는 변화와 개혁을 주도해 더 나은 내일을 향해 앞장서 나갈 것이다.
+            </blockquote>
+
+            <bdo dir="rtl">찹쌀떡찹쌀떡찹쌀떡</bdo>
+
+            <h3>오늘의 작품 &amp; 설명</h3>
+            <img src="./images/img_the_scream.jpg" alt="뭉크의절규그림">
+            <br>
+            뭉크의 &lt;<cite><abbr title="1892~1893년은 뭉크에게 그의 주제적 인상을 대중에게 전달하고자 노력한 중요한 해이다. 이 모티브는 실제 경험으로 시작된다. 뭉크는 기억한다. 나는 두 친구와 길을 걸었다. 태양이 지고 있으며, 나는 멜랑콜리의 기미를 느꼈다. 갑자기 하늘은 피 같은 레드로 변했다. 나는 멈추어, 길 난간에 기대었고 죽은 자처럼 피곤했다. 나는 블루 블랙의 피오르드와 도시를 넘어 피처럼 불타는 구름을 보았다. 친구들은 계속 걷고 있었고 나는 거기서 전율을 느끼며 서 있었다. 나는 자연을 꿰뚫은 큰 목소리의 절규를 느꼈다.
+                [네이버 지식백과] THE SCREAM (스칸디나비아 예술사, 2014. 1. 15., 이희숙)">절규</abbr></cite>&gt;
+
+            <!-- 언론사 주요뉴스 -->
+            <hr>
+            <h3 id="tit3">언론사 주요뉴스</h3>
+                <ul class="list">
+                    <li>
+                        <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=005&aid=0001483277" target="_blank">
+                            ‘코인 탑승’ 게임빌, 영업익 643% 폭증
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=277&aid=0004997257" target="_blank">
+                            [종합]5G·신사업 양날개…통신3사 영업익 1조 시대
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=584&aid=0000016682" target="_blank">
+                            NASA 달 착륙 시간표 2025년으로 멀어졌다
+                        </a>
+                    </li>
+                </ul>
+
+            <hr>
+            <!-- 정치분야 랭킹뉴스 -->
+            <h3>정치분야 랭킹뉴스</h3>
+            <ol class="list">
+                <li>
+                    <a href="http://adv.imadrep.co.kr/adclick.php?b=431697145742271204910&url=http%3A%2F%2Fmy.newscover.co.kr%2Fltcvt%2F%3Fref%3D3169%26cc%3D1457422" target="_blank">
+                        “주인 없는 187억, 국민들에게 나눠준다” 전격발표
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://adv.imadrep.co.kr/adclick.php?b=43220681688471890304&url=http%3A%2F%2Fmy.newscover.co.kr%2Funilo2%2Fq%2F%3Fcc%3D816884%26ref%3D3220" target="_blank">
+                        로또조작 밝혀지자.. 로또여직원 극단적 선택
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://adv.imadrep.co.kr/adclick.php?b=431697260757172115026&url=http%3A%2F%2Fmy.newscover.co.kr%2Fhill%2F%3Fref%3D3169%26cc%3D2607571" target="_blank">
+                        파주 땅값 대폭상승! 투자자들 몰리는 이유보니!
+                    </a>
+                </li>
+            </ol>
+
+            <hr>
+            <!-- 분야별 주요뉴스 -->
+            <h3>
+                분야별 주요뉴스
+            </h3>
+            <dl>
+                <dt>정치</dt>
+                    <dd>
+                        <a href="https://www.news1.kr/articles/?4488211" target="_blank">
+                            김종인 '파리떼' 살생부…김재원 "왕파리· 무슨 파리 등 등급까지, 살려고"
+
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://www.news1.kr/articles/?4488221" target="_blank">
+                            윤석열 "성남 법정서 자주 뵀죠"…이재명 "저는 기억이 안나는데"
+
+                        </a>
+                    </dd>
+
+            <dl>
+                <dt>경제</dt>
+                    <dd>
+                        <a href="https://www.news1.kr/articles/?4487473" target="_blank">
+                            [속보] 정부, 요소수 사재기 1곳·쟁여둔 요소 3000톤 적발
+                        </a>
+                    <dd>
+                        <a href="https://www.news1.kr/articles/?4487477" target="_blank">
+                            정부, 수입업체 보관 요소 3천톤 확보…사재기 업체 1곳도 고발
+                        </a>
+                    </dd>
+
+            <dl>
+                <dt>사회</dt>
+                    <dd>
+                        <a href="https://www.news1.kr/articles/?4488458" target="_blank">
+                            "친언니가 물고문·피떡 되도록 폭행, 엄빠는 미친애 취급"…16세 'SOS'
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://www.news1.kr/articles/?4488206" target="_blank">
+                            "고2 인데, 재밌게 사는 법 있나요?"…14년 만에 채택된 '감동 답변'
+                        </a>
+                    </dd>
+            </dl>
+
+            <hr>
+            <!-- 언론사별 가장 많이 본 뉴스 -->
+            <table>
+                <h3>언론사별 가장 많이 본 뉴스</h3>
+                <tr>
+                    <td class="wd">
+                        <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=469&aid=0000640165&rankingType=RANKING" target="_blank">
+                            靑 "요소수, 비료인 줄"... '요소수 대란'은 정부 부 …
+                            <img src="./images/t1.jpg" alt="이미지">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=016&aid=0001910520&rankingType=RANKING" target="_blank">
+                            “최대 2천만원 용돈벌이” 너도나도 뛰어든 ‘이것’ 사라진 …
+                            <img src="./images/t2.jpg" alt="이미지2">
+
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=023&aid=0003652034&rankingType=RANKING" target="_blank">
+                            “이건 약속”…오징어 게임 시즌2 못 박은 황동혁 감독이 …
+                            <img src="./images/t3.jpg" alt="이미지3">
+
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+
+        </main>
+        <hr>
+        <!-- 3. 하단영역 -->
+        <footer class="tac bgc">
+            <address>
+                서울시 강남구 대호빌딩 8층 <br>
+                대표: 강보성 <br>
+                전화번호: 010-3362-1793
+            </address>
+        </footer>
+
+
+    </div>
+    <!--
+            [서식관련 테그들]
+        <b> - 굵은 텍스트(bold)
+        <strong> - 중요한 텍스트->시멘틱 (강조할때)
+            -> b와 strong은 둘다 두꺼운체인데 의미가 다름
+        <i> - 기울임꼴 텍스트(italic)
+        <em> - 강조된 텍스트(emphasize) -> 시멘틱
+            -> i와 em은 둘 다 기울임글꼴인데 의미가 다름
+
+        <mark> - 표시된 텍스트(노란색 글자배경표시)
+        <small> - 더 작은 텍스트
+        <del> - 삭제된 텍스트(글자중간에 줄이감)
+        <ins> - 삽입된 텍스트(글자 밑줄표시: insert)
+        <sub> - 아래 첨자 텍스트(subscript)
+        <sup> - 위 첨자 텍스트(superscript)
+
+
+            [인용구 및 인용문 관련 태그들]
+        <blockquote>	인용블록표시 요소 (cite속성으로 출처표시)
+        <q>	간단한 인라인 인용구표시 요소 (따옴표는 인용구 (본글에 따옴표는 지워줘야 함))
+        <abbr>	줄임말 원래뜻 보여주는 요소(title속성필수)
+        (Abbreviations)
+            -> title 속성은 어떤 요소에도 사용가능(툴팁설명표시)
+        <address>	주소표시요소
+        <bdo>	글자진행방향설정 요소 (dir="rtl" 오른쪽부터표시)
+            -> rtl은 right to left 오른쪽에서 왼쪽방향으로의 뜻
+            ->아랍어 등 반대방향으로 글쓰는 문자출력시 사용
+        <cite>	인용구표시(작품명)
+
+            [가장 일반적인 아무런 특징이 없는 인라인 범위설정태그]
+            <span>
+                -> sapn은 범위라는 의미
+
+
+     -->
+
+</body>
+
+</html>
