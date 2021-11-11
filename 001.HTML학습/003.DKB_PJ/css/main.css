@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* 도깨비 메인 CSS - main.css */
+
+html,body{
+    margin: 0;
+    padding: 0;
+    /* 초기화 */
+
+}
+body{
+    background:
+     url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
+     url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+    /* 배경 크기에 cover를 줄 경우 이미지의 양쪽, 위아래를 적절히
+     조정하여 대상 박스를 꽉 채움 */
+}
+
+/************************** 1.상단영역 ***************************/
+
+/************************** 2.컨텐츠영역 ***************************/
+/* 2.1. 캐릭터박스 */
+#cbx{
+    width: 90%;
+    /* height: 300px; */
+    margin: 0 auto;
+    /* 블록요소 가로중앙정렬 - 마영오.. */
+    margin-top: 30%;
+
+
+    outline: 10px dotted blue;
+    /* outline: 두께 종류 색상;
+    외곽선 - 다른요소에 영향없이 외곽선을 표시함
+    박스모델의 필수 요소가 아니다
+    요소를 표시할때 사용함(input요소에 많이 사용) */
+
+    overflow: hidden;
+    /* float처리된 자식요소의 높이값 인식을 위함 */
+}
+/* 캐릭터박스 공통 */
+.cat{
+    width: 25%;/* 4등분 */
+    /* height: 100%; */
+
+    /* block박스는 옆에 다른요소가 못오므로
+    float속성으로 옆으로 흘러가게 해준다 */
+    float: left;
+    /* 나는 왼쪽에있고 아래쪽요소는 오른쪽으로 흘러가라 */
+
+    outline: 5px dashed rebeccapurple;
+}
+
+.cat img{
+    width: 100%;
+}
+/************************** 3.하단영역 ***************************/
+
