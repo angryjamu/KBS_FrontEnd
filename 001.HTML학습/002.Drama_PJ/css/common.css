@@ -1,0 +1,95 @@
+@charset "uft-8";
+/* 최신드라마 공통 css - common.css */
+
+/* 상단영역 */
+#top{
+    text-align: center;
+    /* 글자/인라인요소 중앙정렬 */
+}
+
+/* 메뉴설정 */
+.gnb a{
+    /* a요소에 기본셋팅이 있으므로
+    a요소를 선택하여 변경해야함 */
+    color: hotpink;
+    /* 글자색 */
+    text-decoration: none;
+    /* 밑줄없앰 */
+    font-style: bold;
+    font-size: 23px;
+}
+/* 마우스 오버지 */
+.gnb a:hover,
+.gnb a.on {
+    color: yellowgreen;
+    text-decoration: overline;
+}
+
+/* 드라마테이블 */
+.drama{
+    border: 5px solid #ccc;
+    /* 보더: 두께 종류 색상 */
+    border-collapse: collapse;
+    /* 
+    테이블은 기본적으로 td사이가 떨어져 있음
+    이것을 확인하기 위해 table에 border="1"
+    속성을 넣고 확인해 본다
+    없애기 위해 border-collapse: collapse(무너지다); 를 셋팅
+    기본값은 seperate(나누다)로 되어있음 */
+    width: 800px;
+    /* 테이블은 기본적으로 내용만큼 늘어남
+        여기서는 특정 크기를 지정함 */
+    margin: 0 auto;
+    /* 줄임말..마영오..박스가로중앙정렬 */
+    margin-top: 30px;
+    /* 마진탑만 덮어쓰기 */
+}
+
+/* 테이블 데이터(td) */
+.drama td{
+    font-size: 18px;
+    /* 글자크기 : 기본글자크기는 16px */
+    line-height: 2;
+    /* 줄간격: 숫자는 글자크기를 기준한 배수(px등 단위상용가능) */
+    letter-spacing: -1px;
+    /* 자간 */
+    padding: 5px;
+    /* 안쪽여백 */
+}
+
+/* 테이블 데이터별 가로크기 지정하기 */
+/* 
+    가상클래스
+    :nth-child(순번) 같은종류의 요소 중 몇번째 자식
+    -> 순번에 even을 쓰면 짝수, odd를 쓰면 홀수번째 선택 */
+
+.drama td:nth-child(odd){
+    width: 20%;
+    /* background-color:salmon; */
+}
+.drama td:nth-child(even){
+    width: 30%;
+    /* background-color:rgb(75, 56, 54); */
+}
+
+
+/* 드라마제목 */
+/* 선택시 직계자식선택할 경우 정확한 경로를 모두 써야함
+단, 테이블에서 tbody는 코딩하지 않아도 기본적으로 생긴다
+예) .drama > tbody > tr > td > a */
+.drama a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* 제목 마우스 오버시 */
+.drama a:hover {
+    color: salmon;
+    /* 글자색 */
+    text-decoration: underline;
+    /* 밑줄 */
+}
+/* 포스터 이미지 */
+.drama img{
+    border-radius: 10px;
+}
