@@ -1,8 +1,133 @@
 @charset "utf-8";
 /* 한국최신드라마 리스트 css - main.css */
 
-html,body{/* 콤마(,)는 그룹선택자 */
+html,
+body {
+    /* 콤마(,)는 그룹선택자 */
     margin: 0;
     padding: 0;
 }
 
+/* 테이블 공통 */
+.tbl {
+    font-family: "궁서체", "굴림체";
+    /* 글씨체 - 순서대로 있는 글씨체를 적용함(없을경우) */
+    color: #222;
+    /* 글자색 */
+    border-collapse: collapse;
+    /* 기본값이 seperate이고 테이블 td의 사이 간극이 존재함
+    이것을 없애는 설정값이 collapse */
+}
+
+/* 드라마 리스트 테이블 */
+#drama {
+    font-size: 24px;
+    /* 글자크기 - 기본값은 16px (단위: px,em,rem,%) */
+    margin: 0 auto;
+    /* 
+        마영오 - 박스요소 가로중앙정렬
+        ->블록요소도 가로중앙정렬시 마영오
+        테이블요소도 block과 유사한 특성이 있음
+        옆에 아무것도 못옴
+
+        [블록요소와 테이블요소의 차이점은?]
+        블록은 width를 안주면 width:auto 로써
+        부모요소를 끝까지 차지함
+        >>> 테이블은 내용만큼만 늘어남
+        테이블의 특징 중 하나는 부모요소의 가로크기가
+        자기가 만든 자동크기보다 작아지면 같이 작아짐
+     */
+    width: 1000px;
+    /* 여기서는 가로크기설절함 */
+}
+
+/* 테이블 제목 */
+#drama caption {
+    font-size: 35px;
+    /* 글자크기 */
+    font-weight: bold;
+    /* 글자두껍게 */
+    letter-spacing: 5px;
+    /* 글자간격(자간) */
+    word-spacing: 5px;
+    /* 단어사이 */
+    padding-top: 50px;
+    /* 위쪽패딩 */
+    padding-bottom: 20px;
+    /* 아래쪽패딩 */
+}
+
+/* td와 th에 패딩 */
+#drama td,
+#drama th {
+    padding: 8px 10px
+        /* 패딩: 위아래 양쪽 */
+}
+
+/* td에 밑줄넣기 - 테이블 본문만 적용 */
+#drama tbody td {
+    border-bottom: 1px solid #ccc;
+}
+
+/* th에 윗줄, 아랫줄 두껍게 */
+#drama th {
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+}
+
+/* 본문(tbody) 마지막 tr의 td 아래쪽 보더 넣기 */
+/* :last-child 가상클래스 - 마지막 자식요소 선택 */
+#drama tbody tr:last-child td {
+    border-bottom: 2px solid #555;
+}
+
+/* 본문(tbody)의 8번째 tr의 td 글자색 바꾸기 */
+#drama tbody tr:nth-child(8) td {
+    color: #f00;
+}
+
+/* 본문(tbody)의 짝수번째 tr의 td 배경색 넣기 */
+/* 짝수는 even, 홀수는 odd */
+#drama tbody tr:nth-child(even) td {
+    background-color: #f0f0f0;
+}
+
+/* 하단부분(tfoot) */
+#drama tfoot td {
+    text-align: center;
+    /* 텍스트 중앙정렬 */
+    padding: 45px 0;
+    /* 패딩: 위아래, 안쪽여백 */
+}
+
+/* 구분테이블 박스 */
+div.gubun{
+    width: 1000px;
+    /* 가로크기를 드라마테이블과 동일하게 설정 */
+    margin: 0 auto;
+    /* 마영오 - 블록박스 가로중앙정렬 */
+}
+
+/* 구분 테이블 */
+table#gubun {
+    font-size: 20px;
+    border: 1px solid #999;
+}
+
+/* 구분 테이블 td */
+#gubun td {
+    padding: 10px;
+}
+
+/* 구분테이블 첫번째 tr의 첫번째 td의
+    오른쪽 점선 보더주기 */
+#gubun tr:first-child td:first-child {
+    border-right: 1px dotted #999;
+}
+
+/* 구분테이블의 tr중 앞에 tr형제가 있는
+    tr의 자식 td만 위쪽 점선 보더 주기 */
+/* tr+tr 앞에 tr있는 형제 tr요소를 선택 */
+#gubun tr+tr td {
+    border-top: 1px dotted #999;
+}
