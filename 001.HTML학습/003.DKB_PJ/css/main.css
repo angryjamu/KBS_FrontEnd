@@ -33,9 +33,16 @@ body{
     박스모델의 필수 요소가 아니다
     요소를 표시할때 사용함(input요소에 많이 사용) */
 
-    overflow: hidden;
+    /* overflow: hidden; */
     /* float처리된 자식요소의 높이값 인식을 위함 */
 }
+/* 가상요소로 부모박스 clear:both만들기 */
+#cbx::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
 /* 캐릭터박스 공통 */
 .cat{
     width: 25%;/* 4등분 */
@@ -46,11 +53,76 @@ body{
     float: left;
     /* 나는 왼쪽에있고 아래쪽요소는 오른쪽으로 흘러가라 */
 
-    outline: 5px dashed rebeccapurple;
+    /* outline: 5px dashed rebeccapurple; */
 }
 
-.cat img{
+/* 캐릭터 이미지 */
+.ci > img {     /* 직계자식(>)이미지만 선택 */
     width: 100%;
+    /* 이미지의 height는 자동 (비율유지) */
 }
+
+/* 캐릭터 이름 */
+.ci span {
+    display: block;
+    /* 블록으로 변경 */
+    text-align: center;
+    /* 내용 인라인요소 가로중앙정렬 */
+    margin-top: -21%;
+    /* 비율로 이미지가 변경되므로 마진도 상대적으로 변경되게함 */
+}
+/* 캐릭터 이름 이미지 */
+.ci span img {
+    width: 40%;
+}
+/* 캐릭터 이름 첫번째 이미지 숨기기 */
+.ci span img:first-child {
+    display: none;
+}
+/* .cat 박스에 마우스 오버시 */
+/* 캐릭터 이름 첫번째 이미지 보이기 */
+.cat:hover .ci span img:first-child {
+    display: inline;
+}
+
+/* 캐릭터 이름 마지막 이미지 숨기기 */
+.cat:hover .ci span img:last-child {
+    display: none;
+}
+
+/* 캐릭터 설명박스 */
+.cd {
+    height: 0px;
+    /* .cat에 오버시 250px로 변경 */
+    overflow-y: scroll;
+    /* y축 스크롤만 생겨서 넘치는 자식요소 보이기 */
+    background: url(../images/eachBG.jpg) no-repeat center/cover;
+}
+
+/* .cat에 오버시 */
+.cat:hover .cd {
+    height: 250px;
+}
+
+/* 캐릭터 설명 타이틀 */
+.cd h3 {
+    padding: 5px 10px 0px;
+    /* 패딩: 위 양쪽 아래 */
+}
+
+/* 캐릭터 설명 문단 */
+.cd p {
+    padding: 10px;
+    /* 패딩:4방향 */
+    text-align: justify;
+    /* 양쪽정렬 */
+}
+
+
+/* .cd {
+    display: none;
+}
+
+
 /************************** 3.하단영역 ***************************/
 
