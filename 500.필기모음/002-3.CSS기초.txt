@@ -40,7 +40,7 @@ display 하기전에 셋업하도록 명령한다!
     -> 숫자n은 1부터!, 짝수는 even, 홀수는 odd
 
 6. CSS 적용 우선순위
-    인라인 > id > class > type
+    인라인 > id > class > type(그냥태그. <h1>이런거)
     - 만약 !important를 값 뒤에 쓰면
     가장 우선순위로 적용됨!(신중히 쓸것)
 
