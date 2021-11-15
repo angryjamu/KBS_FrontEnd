@@ -50,10 +50,31 @@
 
              */
         /* h2요소 맨앞에 이미지 넣기 */
-        
+        h2::before {
+            content: url(./imgs/blogo.png);
+            /* 이미지는 원본 이미지만 들어가며
+            가로, 세로 크기조정불가 */
+            margin-right: 20px;
+            /* 오른쪽마진 */
+            vertical-align: middle;
+            /* 다음 인라인요소 세로위치정렬
+            - top, middle, bottom, 숫자px 등 */
+        }
 
         /* 맨뒤 추가요소 ::after */
-        
+        h2::after {
+            content: '';
+            /* 컨텐트만 넣으면 span태그와 같고 */
+            display: inline-block;
+            /* block으로 변경하면 div태그와 같다 */
+            /* inline block으로 변경하면 같은줄에 오고 디자인도 적용된다 */
+            width: 42px;
+            height: 20px;
+            margin-left: 10px;
+            vertical-align: -2px;
+            background: url(./imgs/blogo.png) no-repeat center/cover;
+            /* outline: 5px dotted red; */
+        }
 
         /* dl요소 디자인 */
         dl {
@@ -65,23 +86,50 @@
         }
 
         /* 반복되는 요소의 앞에 아이콘 가상요소로 넣기 */
-        
+        dl dt::before {
+            content: '♣';
+            color: blue;
+            vertical-align: 2px;
+            margin-right: 5px;
+        }
 
         /* dd전체와 dd.story>h3에 가상요소 before적용하기 */
-        
+        dl dd::before,
+        dl dd.story>h3::before {
+            content: '♥';
+            color: red;
+            vertical-align: top;
+            margin-right: 3px;
+        }
 
         /* 스토리의 dd는 가상요소 없애기 */
-        
+        dd.story::before {
+            display: none;
+        }
 
         /* .story의 첫번째 p태그의 첫번째 글자 디자인 변경하기 */
-        
+        dd.story p:first-of-type::first-letter {
+            font-size: 50px;
+            font-weight: bold;
+            color: hotpink;
+
+        }
 
         /* .story의 첫번째 p태그의 첫번째줄 디자인 변경하기 */
-        
+        dd.story p:first-of-type::first-line {
+            color: blue;
+        }
 
         /* 두번째 p태그는 태그로 
         첫번째 글자(b태그), 첫번째 줄(span)변경 */
-        
+        dd.story p:last-of-type b {
+            font-size: 50px;
+            font-weight: bold;
+            color: hotpink;
+        }
+        dd.story p:last-of-type span {
+            color: blue;
+        }
 
     </style>
 </head>
