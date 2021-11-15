@@ -15,8 +15,31 @@ body{
      조정하여 대상 박스를 꽉 채움 */
 }
 
-/************************** 1.상단영역 ***************************/
+/* 스크롤바 트랙 디자인 변경 class */
+/* -webkit- 벤더사명(크롬,사파리) 접두어 */
+.scbar::-webkit-scrollbar {
+    /* 전체 스크롤바 크기변경 */
+    width: 7px;
+}
+.scbar::-webkit-scrollbar-thumb {
+    /* 스크롤바 */
+    background-color: #666;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-thumb-track {
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
+}
 
+/************************** 1.상단영역 ***************************/
+.top {
+    min-height: 123px;
+    /* 최소높이 123px보다 내용이 많아지면 늘어남 */
+    background-color: #fff;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+}
 /************************** 2.컨텐츠영역 ***************************/
 /* 2.1. 캐릭터박스 */
 #cbx{
@@ -48,12 +71,23 @@ body{
     width: 25%;/* 4등분 */
     /* height: 100%; */
 
+    padding: 10px;
+    box-sizing: border-box;
+    /* 패딩때문에 박스가 커지지 않게 패딩을 내부로 포함 */
+
     /* block박스는 옆에 다른요소가 못오므로
     float속성으로 옆으로 흘러가게 해준다 */
     float: left;
     /* 나는 왼쪽에있고 아래쪽요소는 오른쪽으로 흘러가라 */
 
     /* outline: 5px dashed rebeccapurple; */
+
+    /* 트랜지션 : 속시이지 */
+    transition: margin .6s ease-out;
+}
+/* 캐릭터박스에 오버시 마진탑 변경하기 */
+.cat:hover {
+    margin-top: -13%;
 }
 
 /* 캐릭터 이미지 */
@@ -97,9 +131,15 @@ body{
     overflow-y: scroll;
     /* y축 스크롤만 생겨서 넘치는 자식요소 보이기 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
+    border-radius: 20px 0 0 20px;
+    /* 둥근모서리 왼위 오위 오아래 왼아래 순서 */
+    margin-top: 15px;
+    /* 트랜지션:속시이지 */
+    transition: height .6s ease-out;
+
 }
 
-/* .cat에 오버시 */
+/* .cat에 오버시 설명박스 */
 .cat:hover .cd {
     height: 250px;
 }
@@ -121,3 +161,9 @@ body{
 
 /************************** 3.하단영역 ***************************/
 
+.info {
+    min-height: 240px;
+    background-color: #ffffffb6;
+    /* 반투명 배경색(알파값이 투명도) */
+    padding: 15px;
+}
