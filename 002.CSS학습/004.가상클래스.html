@@ -66,7 +66,7 @@
         포커스는 요소가 클릭되어 활성화된 상태를 유지함
         - 포커스를 없애고 싶으면 다른요소를 클릭하면 됨
         - 포커스가 없어지는 상태를 blur(블러)라고함
-
+        참고) 탭키를 눌러서 a요소의 포커스를 이동시킬 수 있음
     */
 
 
@@ -96,7 +96,11 @@
         }
 
         /* :hover 마우스 오버상태 */
-       
+       h2 a:hover {
+        color: red;
+        text-decoration: overline;
+        /* 윗줄표시 */
+       }
 
         /* :active 마우스로 눌려진상태(클!) */
         /* h2 a:active {
@@ -109,6 +113,9 @@
         } */
 
         /* :focus 요소를 클릭하여 초점이 올때 */
+        h2 a:focus {
+            outline: 10px dotted orangered;
+        }
         
 
         /* 시인이름 */
@@ -130,7 +137,8 @@
         ul.part1 {
             /* ul기본 3가지 없애기 */
             margin: 0;
-            padding: 0;
+            padding: 20px 0;
+            /* 위아래 패딩만줌 */
             list-style: none;
             /* 블릿없앰 */
 
@@ -141,14 +149,21 @@
             border: 2px solid #ccc;
             /* 보더 */
             border-radius: 20px;
-            padding: 20px 0;
             text-align: center;
         }
 
         /* 1번 li */
-        
+        ul.part1 li:first-child {
+            font-size: 40px;
+            font-family: "궁서";
+            color: red;
+        }
 
-        /* 오버시 */
+        /* 오버시(:hover) */
+        ul.part1 li:first-child:hover {
+            font-size: 50px;
+        }
+
         
 
         /* 2번째 li */
