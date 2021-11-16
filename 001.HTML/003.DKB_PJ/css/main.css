@@ -1,6 +1,13 @@
 @charset "utf-8";
 /* 도깨비 메인 CSS - main.css */
 
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Dokdo&display=swap');
+/* 
+font-family: 'Dokdo', cursive;
+font-family: 'Black And White Picture', sans-serif;
+*/
+
 html,body{
     margin: 0;
     padding: 0;
@@ -98,6 +105,7 @@ body{
 
 /* 캐릭터 이름 */
 .ci span {
+
     display: block;
     /* 블록으로 변경 */
     text-align: center;
@@ -146,12 +154,18 @@ body{
 
 /* 캐릭터 설명 타이틀 */
 .cd h3 {
+    font-size: 27px;
+    font-family: 'Dokdo', cursive;
+    /* 독도체 */
     padding: 5px 10px 0px;
     /* 패딩: 위 양쪽 아래 */
 }
 
 /* 캐릭터 설명 문단 */
 .cd p {
+    font-size: 19px;
+    font-family: 'Black And White Picture', sans-serif;
+    /* b&w체 */
     padding: 10px;
     /* 패딩:4방향 */
     text-align: justify;
