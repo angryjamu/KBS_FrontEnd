@@ -4,7 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>웹폰트 CDN방식으로 적용하기</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Wallpoet&display=swap" rel="stylesheet">
+    <!-- 
+        링크방식으로 head태그 영역에서 호출함
+        font-family: 'Rye', cursive;
+        font-family: 'Wallpoet', cursive;
+     -->
     <style>
        
 
@@ -42,23 +47,31 @@
             
              */
         /* import방식 CDN 웹폰트 */
-
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Monsieur+La+Doulaise&display=swap');
+        /* 
+        font-family: 'Libre Barcode 39 Extended Text', cursive;
+        font-family: 'Monsieur La Doulaise', cursive;
+         */
 
 
         /* CDN 웹폰트 적용하기 */
         .cdn1 {
+            font-family: 'Wallpoet', cursive;
             color: darkviolet;
         }
-
+        
         .cdn2 {
+            font-family: 'Rye', cursive;
             color: darkgreen;
         }
 
         .cdn3 {
+            font-family: 'Monsieur La Doulaise', cursive;
             color: darkred;
         }
-
+        
         .cdn4 {
+            font-family: 'Libre Barcode 39 Extended Text', cursive;
             color: darkcyan;
         }
     </style>
