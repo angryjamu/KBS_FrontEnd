@@ -2,25 +2,30 @@
 /* 도깨비 메인 CSS - main.css */
 
 /* 웹폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Dokdo&family=Nanum+Gothic&display=swap');
 /* 
 font-family: 'Dokdo', cursive;
 font-family: 'Black And White Picture', sans-serif;
-*/
+font-family: 'Nanum Gothic', sans-serif;
+ */
 
-html,body{
+html,
+body {
     margin: 0;
     padding: 0;
     /* 초기화 */
 
 }
-body{
+
+body {
     background:
-     url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
-     url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+        url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
+        url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
     /* 배경 크기에 cover를 줄 경우 이미지의 양쪽, 위아래를 적절히
      조정하여 대상 박스를 꽉 채움 */
 }
+
+/***************************** 공통 class *****************************/
 
 /* 스크롤바 트랙 디자인 변경 class */
 /* -webkit- 벤더사명(크롬,사파리) 접두어 */
@@ -28,36 +33,220 @@ body{
     /* 전체 스크롤바 크기변경 */
     width: 7px;
 }
+
 .scbar::-webkit-scrollbar-thumb {
     /* 스크롤바 */
     background-color: #666;
     border-radius: 5px;
 }
+
 .scbar::-webkit-scrollbar-thumb-track {
     /* 스크롤바 트랙 */
     background-color: #ddd;
     border-radius: 5px;
 }
 
+/* 리스트 초기화 */
+ul,
+ol {
+    /* 3無 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 가상요소 clear */
+ul::after,
+ol::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 리스트 옆으로 흐르게 */
+li {
+    float: left;
+}
+
 /************************** 1.상단영역 ***************************/
 .top {
-    min-height: 123px;
+    min-height: 122px;
     /* 최소높이 123px보다 내용이 많아지면 늘어남 */
     background-color: #fff;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     border-bottom: 1px solid #ccc;
 }
+
+/* 1-1.로고박스 */
+.logo {
+    margin: 0;
+    /* 마진탑이 부모박스 바깥쪽으로 나감 (기본속성)
+    부모박스가 overflow:hidden 처리가 되면 자식 마진탑을
+    내부에 포함한다. 그런데 여기서는 GNB서브메뉴 때문에
+    이 설정을 할 수 없다 (마진없애고 패딩으로 대신함) */
+    padding-top: 20px;
+    text-align: center;
+    /* 가로중앙 */
+}
+
+/* 로고이미지 가로크기조정(세로는 자동) */
+.logo img {
+    width: 100px;
+}
+
+/* 1-2. GNB메뉴 */
+.gnb {
+    width: 635px;
+    margin: 0 auto;
+}
+
+.gnb>ul>li {
+    padding: 0 17px;
+    /* 양쪽을 동일하게 밀고 사이간격은 34px */
+}
+
+/* GNB a요소 공통 */
+.gnb a {
+    /* a요소 기본설정 변경하기 */
+    color: #000;
+    text-decoration: none;
+    font-family: 'Nanum+Gothic', sans-serif;
+    /* 웹폰트 - 나눔고딕체 적용 */
+    font-size: 13px;
+
+}
+
+/* GNB 상위메뉴 a요소 */
+.gnb>ul>li>a {
+    display: block;
+    /* 높이값 적용위해 */
+    height: 54px;
+
+    line-height: 54px;
+
+    box-sizing: border-box;
+    /* 마우스 오버시 하단보더가 생길때 박스크기가 커지므로
+    이를 방지하기 위해 보더,패딩을 포함하는 보더박스 설정을 해준다 */
+}
+
+/* 상위메뉴 li에 오버시 a요소에 보더로 밑줄만들기 */
+/* 어느요소에 :hover 할 것인가? */
+.gnb>ul>li:hover>a {
+    border-bottom: 4px solid red;
+}
+
+/* 서브메뉴 */
+.smenu {
+    position: absolute;
+    /* 젠틀앱솔루트 */
+
+    /* 서브메뉴 숨기기 */
+    height: 0;
+    overflow: hidden;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .4s ease-out;
+
+    /* 배경가상요소 보다 위! 서브메뉴가 보이도록함! */
+    z-index: 1;
+}
+
+
+
+.smenu li {
+    float: none;
+    /* float해제 */
+}
+
+/* 서브메뉴 a요소 */
+.smenu a {
+    line-height: 30px;
+}
+
+/* 상위메뉴 li에 마우스 오버시 서브메뉴 보이기 */
+/* 첫번째 상위메뉴 li - 메뉴개수 3개
+ -> 30px * 3 = 90px*/
+.gnb>ul>li:nth-child(1):hover .smenu,
+.gnb>ul>li:nth-child(1):hover::after {
+    height: 90px;
+}
+
+/* 세번째 상위메뉴 li */
+/* 세번째 상위메뉴 li - 메뉴개수 4개
+ -> 40px * 3 = 120px */
+.gnb>ul>li:nth-child(3):hover .smenu,
+.gnb>ul>li:nth-child(3):hover::after{
+    height: 120px;
+}
+
+/* 네번째 상위메뉴 li */
+/* 네번째 상위메뉴 li - 메뉴개수 2개 -> 30px * 2 = 60px */
+.gnb>ul>li:nth-child(4):hover .smenu,
+.gnb>ul>li:nth-child(4):hover::after{
+    height: 60px;
+}
+
+/* 상위메뉴 li에 마우스 오버시 서브메뉴
+배경가상요소 아래쪽 가상 보더 만들기 */
+.gnb>ul>li:nth-child(1):hover::after,
+.gnb>ul>li:nth-child(3):hover::after,
+.gnb>ul>li:nth-child(4):hover::after {
+    border-bottom: 2px solid red;
+}
+
+/* JS없이 가상요소로 서브메뉴 전체 배경 만들기 */
+.gnb>ul>li::after{
+    content: '';
+    display: block;
+    /* 명시적으로 block 설정! 마치 div같다 */
+    position: absolute;
+    /* 사실 앱솔루트는 자동 block 설정됨 */
+    left: 0;
+    /* left방향에 대한 부모는?
+    -> 보이는 화면!
+    싸고있는 요소중 어떤 요소도 부모자격이 없으므로
+    부모자격이란? static이 아닌 relative, absolute,fixed!
+    top방향은 설정하지 않았응므로 젠틀하다 위에있는
+    a요소 존중해서 바로 아래부터 나옴 */
+    width: 100%;
+    /* 무엇을 기준하여 100%인가?
+    -> 부모자격이 있는 요소를 기준함 여기서는 보이는 화면! */
+    height: 0;
+    /* 각각의 li마다 오버시 높이값 다름 */
+    background-color: #fff;
+    
+    /* 상단영역 하단보더 1px 보이게 하기위해
+    마진탑으로 1px밀기(top으로 밀지말자) */
+    margin-top: 1px;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .4s ease-out;
+
+}
+
 /************************** 2.컨텐츠영역 ***************************/
+.cont{
+    min-height: 800px;}
 /* 2.1. 캐릭터박스 */
-#cbx{
+
+#cbx {
+    position: relative;
+    /* absolute가 아닌 relative를 쓴 이유는? */
+    /* top 위치 속성이 적용되며 margin:0 auto도 적용되어
+    가로 중앙정렬이 유지된다 */
+    top: 400px;
+    /* 원래위치로 부터 400px위치 */
     width: 90%;
     /* height: 300px; */
     margin: 0 auto;
     /* 블록요소 가로중앙정렬 - 마영오.. */
-    margin-top: 30%;
+    /* margin-top: 30%;
+    -> 가로크기에 따라 위치가 들쑥날쑥해서 사용안함 */
+    
+    
 
 
-    outline: 10px dotted blue;
+    /* outline: 10px dotted blue; */
     /* outline: 두께 종류 색상;
     외곽선 - 다른요소에 영향없이 외곽선을 표시함
     박스모델의 필수 요소가 아니다
@@ -66,16 +255,19 @@ body{
     /* overflow: hidden; */
     /* float처리된 자식요소의 높이값 인식을 위함 */
 }
+
 /* 가상요소로 부모박스 clear:both만들기 */
-#cbx::after{
+#cbx::after {
     content: '';
     display: block;
     clear: both;
 }
 
 /* 캐릭터박스 공통 */
-.cat{
-    width: 25%;/* 4등분 */
+
+.cat {
+    width: 25%;
+    /* 4등분 */
     /* height: 100%; */
 
     padding: 10px;
@@ -92,13 +284,15 @@ body{
     /* 트랜지션 : 속시이지 */
     transition: margin .6s ease-out;
 }
+
 /* 캐릭터박스에 오버시 마진탑 변경하기 */
 .cat:hover {
     margin-top: -13%;
 }
 
 /* 캐릭터 이미지 */
-.ci > img {     /* 직계자식(>)이미지만 선택 */
+.ci>img {
+    /* 직계자식(>)이미지만 선택 */
     width: 100%;
     /* 이미지의 height는 자동 (비율유지) */
 }
@@ -113,14 +307,17 @@ body{
     margin-top: -21%;
     /* 비율로 이미지가 변경되므로 마진도 상대적으로 변경되게함 */
 }
+
 /* 캐릭터 이름 이미지 */
 .ci span img {
     width: 40%;
 }
+
 /* 캐릭터 이름 첫번째 이미지 숨기기 */
 .ci span img:first-child {
     display: none;
 }
+
 /* .cat 박스에 마우스 오버시 */
 /* 캐릭터 이름 첫번째 이미지 보이기 */
 .cat:hover .ci span img:first-child {
@@ -180,4 +377,13 @@ body{
     background-color: #ffffffb6;
     /* 반투명 배경색(알파값이 투명도) */
     padding: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
+/* .bmenu {
+    width: 720px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    list-style: none;
+} */
