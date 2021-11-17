@@ -5,7 +5,14 @@
     padding: 0;
 } */
 
-body {
-    background: url(/1/001.HTML/000.T_Pj/img/mainbg.jpg) no-repeat fixed;
-    background-size: cover;
+body.m1 {
+    background: url(/1/001.HTML/000.T_Pj/img/sogno.png);
+
+    /* background-color: #dfd1d5; */
+    /* background: url(/1/001.HTML/000.T_Pj/img/mainbg.jpg) no-repeat fixed center/cover; */
+}
+.top {
+    min-height: 108px;
+    background-color: #fff;
+    margin: -9px;
 }
