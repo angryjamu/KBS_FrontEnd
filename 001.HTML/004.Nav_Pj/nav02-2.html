@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>유형2. 가로네비 서브별 드롭다운 가로형</title>
+    <title>유형2-2. 가로네비 서브별 드롭다운 가로형(응용)</title>
     <style>
         /* ul,ol 초기화셋팅 */
         ul,
@@ -33,14 +33,18 @@
 
         /* GNB 메뉴 */
         .gnb {
+            position: relative;
+            /* 끝까지 가는 배경을 위한 부모자격! 유형2-2변경 */
             background-color: rgba(46, 192, 78, 0.938);
-            margin: 0 auto;
-            width: 800px;
+            /* margin: 0 auto; */
+            /* width: 800px; */
         }
 
         .gnb>ul {
-            position: relative;
+            /* position: relative; */
+            /* 끝까지 가는 배경을 위해 여기에 부모자격주면 안됨 */
             /* 유형2변경 */
+            
             /* 서브메뉴(s.menu)의 부모자격 */
             width: 800px;
             margin: 0 auto;
@@ -87,7 +91,16 @@
             position: absolute;
             /* 위치이동값 없는 앱솔루트는 젠틀하다 -젠틀앱솔루트- */
 
-            left: 0;
+            left: calc(50% - 400px);
+            /* 
+            유형2-2변경
+                calc() : CSS전용 계산용 메서드
+                각종 4칙연산을 할 수 있음
+                많이 사용되는 경우는 위와 같이
+                특정 %수치에서 특정 px를 뺀 크기를 구할때 사용함
+                clac(%수치 - 수치)
+                (중요: 마이너스 기호 앞뒤에 띄어쓰기 필수) */
+                
             /* left만 부모를 찾음! 누구? .gnb>ul */
             /* 유형2변경 */
             width: 800px;
@@ -138,7 +151,7 @@
 </head>
 
 <body>
-    <h1>유형2. 가로네비 서브별 드롭다운 가로형</h1>
+    <h1>유형2-2. 가로네비 서브별 드롭다운 가로형(응용)</h1>
 
     <!-- GNB 네비게이션 박스 -->
     <!-- GNB(Global Navigation Bar) -->
