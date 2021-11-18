@@ -21,6 +21,7 @@ body {
     background:
         url(../images/bg_logo_a_01.png) no-repeat fixed 10% 25%/10%,
         url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+        /* color: rgba(255, 255, 255, 0.582); */
     /* 배경 크기에 cover를 줄 경우 이미지의 양쪽, 위아래를 적절히
      조정하여 대상 박스를 꽉 채움 */
 }
@@ -72,7 +73,7 @@ li {
 .top {
     min-height: 122px;
     /* 최소높이 123px보다 내용이 많아지면 늘어남 */
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.445);
     /* padding-top: 20px; */
     border-bottom: 1px solid #ccc;
 }
@@ -165,6 +166,7 @@ li {
 /* 서브메뉴 a요소 */
 .smenu a {
     line-height: 30px;
+    color: lightslategray; /* 서브메뉴 글씨체만 적용 */
 }
 
 /* 상위메뉴 li에 마우스 오버시 서브메뉴 보이기 */
@@ -217,7 +219,7 @@ li {
     -> 부모자격이 있는 요소를 기준함 여기서는 보이는 화면! */
     height: 0;
     /* 각각의 li마다 오버시 높이값 다름 */
-    background-color: #fff;
+    background-color: #fff6;
     
     /* 상단영역 하단보더 1px 보이게 하기위해
     마진탑으로 1px밀기(top으로 밀지말자) */
