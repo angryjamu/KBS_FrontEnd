@@ -5,12 +5,16 @@
     padding: 0;
 } */
 
-body.m1 {
+html,
+body{
+    margin: 0;
+    padding: 0;
     background: url(/1/001.HTML/000.T_Pj/img/sogno.png);
-    width: 950px;
+    /* width: 950px; */
     /* background: url(/1/001.HTML/000.T_Pj/img/mainbg.jpg) no-repeat fixed center/cover; */
 }
 
 h1 {
+    text-align: center;
     margin: 0 auto;
 }
