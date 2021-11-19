@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+/* 
+font-family: 'Gugi', cursive;
+ */
+
 html,body{
     padding: 0;
     margin: 0;
@@ -19,10 +24,10 @@ body{
 background-color: gray;
 border-right: 5px;
 }
-
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 .top{
     min-height: 120px;
-    background-color: rgba(117, 112, 96, 0.747);
+    background-color: rgba(48, 47, 43, 0.747);
 }
 .logo{
     margin: 0;
@@ -35,8 +40,23 @@ border-right: 5px;
 .li{
     float: left;
 }
-
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 .gnb{
     width: 600px;
     margin: 0 auto;
+}
+
+.gnb>ul>li{
+    padding: 0 17px;
+}
+
+.gnb a{
+    color: darkslateblue;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Gugi', cursive;
+}
+
+.gnb>ul>li>a{
+    display: block;
 }
