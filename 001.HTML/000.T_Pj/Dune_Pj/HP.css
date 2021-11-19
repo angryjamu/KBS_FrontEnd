@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+html,body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(../imgDune/1.jpg)no-repeat fixed center/cover;
+}
+
+.scb::-webkit-scrollbar{
+    width: 7px;
+}
+.scb::-webkit-scrollbar-thumb{
+    background-color: rgba(207, 183, 43, 0.493);
+    border-radius: 5px;
+}
+.scb::-webkit-scrollbar-track{
+background-color: gray;
+border-right: 5px;
+}
+
+.top{
+    min-height: 120px;
+    background-color: rgba(117, 112, 96, 0.747);
+}
+.logo{
+    margin: 0;
+    text-align: center;
+}
+.logo img{
+    width: 190px;
+}
+
+.li{
+    float: left;
+}
+
+.gnb{
+    width: 600px;
+    margin: 0 auto;
+}
