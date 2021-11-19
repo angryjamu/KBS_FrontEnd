@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 도깨비 PJ 미디어쿼리 CSS - media.css */
+
+/* 800px 이하 모바일 미디어쿼리 */
+@media only screen and (max-width:800px){
+ 
+    /* 1. GNB메뉴,하단링크 숨기기 */
+    .gnb, ul.bmenu {
+        display: none;
+    }
+    /* 2. 상단영역박스(.top) 최소높이 없애기 */
+    .top {
+        min-height: auto;
+        padding-bottom: 20px;
+        /* 아래쪽 공간만들기 */
+    }
+    /* 3. 햄버거버튼 보이기 */
+    .ham{
+        display: block;
+    }
+    /* 4. 캐릭터박스 한줄에 오기 */
+    .cat{
+        width: 100%;
+    }
+    /* 5. 캐릭터 개별박스 오버시 마진탑 없애기 */
+    .cat:hover{
+        margin-top: 0;
+    }
+
+    /* 6. 캐릭터박스 상단조정 */
+        #cbx {
+            top: auto;
+            margin-top: 20px;
+        }
+    }

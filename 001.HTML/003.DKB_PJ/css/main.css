@@ -73,13 +73,13 @@ li {
 .top {
     min-height: 122px;
     /* 최소높이 123px보다 내용이 많아지면 늘어남 */
-    background-color: rgba(255, 255, 255, 0.445);
+    background-color: rgb(255, 255, 255);
     /* padding-top: 20px; */
     border-bottom: 1px solid #ccc;
 }
 
 /* 1-1.로고박스 */
-.logo {
+h1.logo {
     margin: 0;
     /* 마진탑이 부모박스 바깥쪽으로 나감 (기본속성)
     부모박스가 overflow:hidden 처리가 되면 자식 마진탑을
@@ -166,7 +166,7 @@ li {
 /* 서브메뉴 a요소 */
 .smenu a {
     line-height: 30px;
-    color: lightslategray; /* 서브메뉴 글씨체만 적용 */
+    color: rgb(7, 7, 7); /* 서브메뉴 글씨체만 적용 */
 }
 
 /* 상위메뉴 li에 마우스 오버시 서브메뉴 보이기 */
@@ -219,7 +219,7 @@ li {
     -> 부모자격이 있는 요소를 기준함 여기서는 보이는 화면! */
     height: 0;
     /* 각각의 li마다 오버시 높이값 다름 */
-    background-color: #fff6;
+    background-color: rgb(255, 255, 255);
     
     /* 상단영역 하단보더 1px 보이게 하기위해
     마진탑으로 1px밀기(top으로 밀지말자) */
@@ -230,9 +230,28 @@ li {
 
 }
 
+/* 모바일용 햄버거 버튼 */
+.ham{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 50px;
+    height: 70px;
+    font-size: 40px;
+
+    /* 버튼 기본 보더, 배경색 없애기 */
+    border: none;
+    background-color: transparent;
+
+    display: none;
+    /* 처음에 안보임 */
+}
+
 /************************** 2.컨텐츠영역 ***************************/
 .cont{
-    min-height: 800px;}
+    min-height: 800px;
+}
 /* 2.1. 캐릭터박스 */
 
 #cbx {
@@ -288,7 +307,7 @@ li {
     /* outline: 5px dashed rebeccapurple; */
 
     /* 트랜지션 : 속시이지 */
-    transition: margin .6s ease-out;
+    transition: margin-top .6s ease-out;
 }
 
 /* 캐릭터박스에 오버시 마진탑 변경하기 */
@@ -359,6 +378,7 @@ li {
 .cd h3 {
     font-size: 27px;
     font-family: 'Dokdo', cursive;
+    font-weight: normal;
     /* 독도체 */
     padding: 5px 10px 0px;
     /* 패딩: 위 양쪽 아래 */
@@ -368,6 +388,7 @@ li {
 .cd p {
     font-size: 19px;
     font-family: 'Black And White Picture', sans-serif;
+    line-height: 1.7;
     /* b&w체 */
     padding: 10px;
     /* 패딩:4방향 */
@@ -410,6 +431,7 @@ ul.bmenu {
     max-width: 720px;
     margin: 20px auto;  /* 마진: 위아래 양쪽 */
     font: 12px "맑은고딕";  /* 주소는 기본 이탤릭체 */
+    font-style: normal;
     line-height: 2;
     text-align: center;
     
