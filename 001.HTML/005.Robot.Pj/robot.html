@@ -14,16 +14,141 @@
         body {
             /* background: 색이반고윙/크; */
             background: url(./images/bg.jpg) no-repeat fixed top/cover;
+            overflow-x: hidden;
+            /* x축 스크롤바 없애기 */
         }
 
         /* body * {
             outline: 5px dashed lime;
         } */
 
+        /* 로봇 페이지 로고 */
+        h1#logo{
+            position: fixed;
+            top: calc(50% - 100px);
+            left: calc(50% - 100px);
+            /* calc(50% - 100px) */
+            /* 화면의 50%를 밀고 크기의 절반을 빼서 정중앙위치 */
+
+            /* fixed의 부모는 보이는 화면이다 */
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 50%; /* 원 */
+            /* 글자중앙 */
+            text-align: center;
+            line-height: 200px;
+
+            margin: 0;
+
+            color: #fff;
+            font-family: "vladimir script";
+            font-size: 60px;
+            text-shadow: 2px 2px 2px #000; /* 글자그림자: x y blur 색 */
+
+            box-shadow: 0 0 20px 5px pink,
+                        inset 0 0 20px 5px #000;
+
+            /* 
+                [박스 그림자 - box-shadow]
+                - 밝은 색을 쓰면 glow효과임
+                box-shadow: inset x축 y축 blur spread 색;
+                1) inset - 내부그림자설정(셍략하면 일반그림자)
+                2) x축 y축 - 그림자 이동
+                3) blur - 그림자 경계선 흐림 (px단위)
+                4) spread - 그림자 크기(생략가능, 박스그림자에만 있음)
+
+                -> 위의 셋팅법으로 콤마를 사용하면 여러 그림자 효과를 줄 수 있다!
+            */
+
+            /* 배경 */
+            background: pink url(./images/robot_03.png) no-repeat;
+            background-position: center 10px;
+            /* 배경위치: 가로 세로 */
+            background-size: 160px;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: logoAni 2s ease-in-out 1s forwards;
+        }
+
+
+        /* 로봇 페이지 로고 키프레임 */
+        @keyframes logoAni {
+            /* 시작값은 초기설정값과 같아서 from생략 */
+            to{
+                top: 50px;
+                left: 50px;
+            }
+        }/* 키프레임 */
+
+
+        /* 
+            ********************************************************************
+            [CSS로 애니메이션 하기]
+
+            - 시간에 따라 CSS설정을 변경하여 애니메이션을 하도록
+            키프레임을 설정하고 이것을 호출함으로 의도된 연출을
+            구현하는 것이 CSS 애니메이션이다
+
+            [애니메이션 키프레임 만들기]
+            - 키프레임이란? 애니메이션 장면을 넣는 코드
+
+            1. 두장면 키프레임
+            @keyframes 키프레임이름 {
+                from{시작CSS설정}
+                to{끝나는CSS설정}
+            }
+            또는
+            @keyframes 키프레임이름 {
+                0%{시작CSS설정}
+                100%{끝나는CSS설정}
+            }
+
+            -> 만약 from설정과 초기설정이 같다면 from 생략가능
+
+            2. 여러장면 키프레임
+            @keyframes 키프레임이름{
+                0%{CSS설정}
+                10%{CSS설정}
+                20%{CSS설정}
+                ...
+                90%{CSS설정}
+                100%{CSS설정}
+            }
+
+            (1) 장면에 대한 시간 계산은 어떻게 하나?
+            -> 전체시간 * 설정된%/100
+            (2) 전체시간설정은 호출시에 셋팅함
+
+            [ 설정된 키프레임 호출하는 방법 ]
+
+            animation: 이시이지반방마;
+            (이름 시간 이징 지연 반복 방향 마지막상태)
+            ------------------------------------------
+            (1) 이름(animation-name) : 키프레임 이름
+            (2) 시간(animation-duration) : 애니메이션 동작시간(초단위:s)
+            (3) 이징(animation-timing-function) : easeing 가속도
+            (4) 지연시간(animation-delay) : 애니메이션 지연시간(초단위:s)
+            (5) 반복여부(animation-iteration-count) : 애니메이션 반복회수
+                - 기본값은 1, 숫자를 쓰면 숫자만큼 반봅
+                -영원히는 infinite(인피니트)
+            (6) 방향(animation-direction) : 시작->끝
+                - 대체경로 설정하기: alternate 시작->끝, 끝->시작
+                (주의: 대체경로는 반복횟수가 2회이상/infinite)
+            (7) 마지막상태(animation-fill-mode) : 애니메이션이 끝났을때
+                - 처음으로 돌아가는 것이 기본
+                - forwards (앞쪽에... 즉, 애니끝장면)
+            ********************************************************************
+        */
+
+
+
         /* 로봇머리 */
         #head {
             position: relative;
             /* 부모자격 */
+            left: 100%;
+            /* 머리가 왼쪽 바깥에 나가있음 */
             width: 250px;
             height: 250px;
             margin: 0 auto;
@@ -95,6 +220,8 @@
         #body {
             position: relative;
             /* 부모자격 */
+            left: -100%;
+            /* 왼쪽바깥에 나가있음 */
             width: 250px;
             height: 300px;
             margin: 0 auto;
@@ -246,8 +373,11 @@
         }
     </style>
 </head>
-
 <body>
+
+    <!-- 로봇 페이지 로고 -->
+    <h1 id="logo">R2G2</h1>
+
     <!-- 로봇머리 -->
     <div id="head">
         <!-- 눈1 -->
