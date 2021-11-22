@@ -170,7 +170,7 @@ h1.logo{
 
 .cont{
     min-height: 1300px;
-    border: 4px solid blue;
+    border: 2px solid blue;
 }
 
 #cbx{
@@ -182,7 +182,7 @@ h1.logo{
     margin-right: auto;
     margin-left: auto;
     /* margin: 10px; */
-    border: 4px solid #f00;
+    border: 2px solid #f00;
 }
 
 #cbx::after{
