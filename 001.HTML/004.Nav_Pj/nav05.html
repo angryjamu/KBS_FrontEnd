@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <title>유형1.가로네비 서브별 드롭다운 세로형</title>
+    <title>유형5.세로네비 서브별 드롭다운 사이드형</title>
     <style>
         /* ul,ol 초기화셋팅 */
-        ul,ol{
+        ul,
+        ol {
             /* 3無 */
             margin: 0;
             padding: 0;
             list-style: none;
         }
-        /* 가상요소 float 해제 */
+
+        /* 가상요소 float해제 */
         ul::after,
-        ol::after{
+        ol::after {
             content: '';
             display: block;
             clear: both;
         }
-        /* 리스트 옆으로 흐리게 */
-        li{
+
+        /* 리스트 옆으로 흐르게 */
+        li {
             float: left;
         }
 
-        h1 {
-            text-align: center;
+        /* GNB 메뉴 */
+        .gnb {
+            width: 200px;/* 유형5변경 */
+            background-color: #006efd;
         }
 
-        /* GNB 메뉴 */
-        .gnb{
-            background-color: rgba(46, 192, 78, 0.938);
+        .gnb>ul {
+            /* width: 800px; *//* 유형5변경 */
             margin: 0 auto;
+            /* 마영오! */
         }
-        .gnb>ul{
-            width: 800px;
-            margin: 0 auto;
-        }
-        .gnb>ul>li{
+
+        .gnb>ul>li {
+            position: relative;
+            /* 부모자격 - .smenu 유형5변경*/
             width: 200px;
             text-align: center;
             outline: 2px dashed red;
         }
+
         /* a요소 - 글자색, 밑줄처리 */
-        .gnb>ul>li a{ /* 띄어쓰기로 a를 선택하면
-            자손선택이 되어서 서브메뉴의 a요소까지 적용된다 */
+        .gnb>ul>li a {
+            /* 띄어쓰기로 a를 선택하면
+             자손선택이 되어서 서브메뉴의 a요소까지 적용된다! */
             display: block;
             /* 디자인적용위해 */
             width: 200px;
@@ -60,50 +67,55 @@
             font-weight: bold;
             font-size: 14px;
 
-            /* 트랜지션:속시이지 */
+            /* 트랜지션: 속시이지 */
             transition: .4s;
         }
-        /* 상위메뉴에 마우스 오버시 a요소의 글자색, 배경색 */
+
+        /* 상위메뉴에 마우스 오버시 a요소의 글자색,배경색 */
         .gnb>ul>li:hover>a {
-            color: rgb(80, 79, 79);
-            background-color: lightgreen;
+            color: navy;
+            background-color: lightskyblue;
         }
 
         /* 서브메뉴 */
-        .smenu{
-            position: absolute;
-            /* 위치이동값 없는 앱솔루트는 젠틀하다 -젠틀앱솔루트- */
+        .smenu {
+            position: absolute;/* 유형5변경 */
+            top: 0;/* top위치는 부모li에 맞춘다 */
+            left: 100%;/* left위치는 부모li만큼 오른쪽위치 */
+            /* .gnb>li가 부모로써 위치를 잡는다! */
+            
             width: 200px;
-            height: 0; /* 높이값 없앰 */
-            overflow: hidden; /* 넘치는 자식요소 숨기기 */
+            height: 0;
+            /* 높이값 없앰 */
+            overflow: hidden;
+            /* 넘치는 자식요소 숨기기 */
 
-            width: 200px;
-            background-color: rgb(184, 255, 137);
+            background-color: lightskyblue;
 
             /* 트랜지션: 속시이지 */
             transition: height .4s ease-out;
         }
 
-        /* 하위메뉴 a요소에 오버시 글자색, 배경색 */
-        .smenu a:hover{
-            color: rgb(35, 82, 13);
-            background-color: rgb(17, 224, 162);
+        /* 하위메뉴 a요소에 오버시 글자색,배경색 */
+        .smenu a:hover {
+            color: navy;
+            background-color: lightgrey;
         }
 
-        /* 상위메뉴 li에 오버시 서브메뉴 보이기 */
+        /* 상위메뉴 li에 오버시 서브메뉴보이기 */
         /* 2번째 상위메뉴 li -> 서브메뉴 높이값 200px */
-        .gnb>ul>li:nth-child(2):hover .smenu{
+        .gnb>ul>li:nth-child(2):hover .smenu {
             height: 200px;
         }
         /* 3번째 상위메뉴 li -> 서브메뉴 높이값 100px */
-        .gnb>ul>li:nth-child(3):hover .smenu{
+        .gnb>ul>li:nth-child(3):hover .smenu {
             height: 100px;
         }
-
     </style>
 </head>
+
 <body>
-    <h1>유형1.가로네비 서브별 드롭다운 세로형</h1>
+    <h1>유형5.세로네비 서브별 드롭다운 사이드형</h1>
 
     <!-- GNB 네비게이션 박스 -->
     <!-- GNB(Global Navigation Bar) -->
@@ -133,5 +145,8 @@
         </ul>
     </nav>
 
+
+
 </body>
+
 </html>

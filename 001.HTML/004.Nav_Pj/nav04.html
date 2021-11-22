@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>유형1.가로네비 서브별 드롭다운 세로형</title>
+    <title>유형4.세로네비 서브별 드롭다운 세로형</title>
     <style>
         /* ul,ol 초기화셋팅 */
         ul,ol{
@@ -29,11 +29,12 @@
 
         /* GNB 메뉴 */
         .gnb{
+            width: 200px;/* 유형4변경 */
             background-color: rgba(46, 192, 78, 0.938);
-            margin: 0 auto;
+            /* margin: 0 auto; */ /* 유형4변경 */
         }
         .gnb>ul{
-            width: 800px;
+            /* width: 800px; */ /* 유형4변경 */
             margin: 0 auto;
         }
         .gnb>ul>li{
@@ -71,8 +72,9 @@
 
         /* 서브메뉴 */
         .smenu{
-            position: absolute;
-            /* 위치이동값 없는 앱솔루트는 젠틀하다 -젠틀앱솔루트- */
+            /* position: absolute; */ /* 유형4변경 */
+            /* 포지션이 없어야 static이므로 자리를 차지하고 하위메뉴가
+            아래쪽으로 밀고 나갈 수 있다 */
             width: 200px;
             height: 0; /* 높이값 없앰 */
             overflow: hidden; /* 넘치는 자식요소 숨기기 */
@@ -103,7 +105,7 @@
     </style>
 </head>
 <body>
-    <h1>유형1.가로네비 서브별 드롭다운 세로형</h1>
+    <h1>유형4.세로네비 서브별 드롭다운 세로형</h1>
 
     <!-- GNB 네비게이션 박스 -->
     <!-- GNB(Global Navigation Bar) -->
