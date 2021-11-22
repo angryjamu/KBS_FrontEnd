@@ -169,16 +169,18 @@ h1.logo{
 /* --------------------------중----------------------------- */
 
 .cont{
-    min-height: 1300px;
+    max-height: 1300px;
+    margin: 0 auto;
     border: 2px solid blue;
+    box-sizing: border-box;
 }
 
 #cbx{
     position: relative;
-    top: 340px;
     width: 75%;
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: 340px;
     margin-right: auto;
     margin-left: auto;
     /* margin: 10px; */
@@ -194,7 +196,7 @@ h1.logo{
 
 .cat{
     width: 23%;
-    margin: 10px;
+    margin: 1%;
     padding: 3px;
     box-sizing: border-box;
     float: left;
@@ -207,20 +209,32 @@ h1.logo{
     box-shadow: none;
 }
 
+.ci{
+    position: relative;
+    /* 부모자격 */
+}
+
 .ci>img{
     width: 100%;
 }
 
-.ci img:nth-child(2){
-    display: none;
+.ci>img:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 76%;
+    opacity: 0;
+    transition: opacity .6s;
 }
 
-.cat:hover .ci img:first-child{
+/* .cat:hover .ci>img:first-of-type{
     display: none;
-}
+} */
 
-.cat:hover .ci img:nth-child(2){
-    display: inline;
+.cat:hover .ci>img:nth-of-type(2){
+    opacity: 1;
 }
 
 
@@ -235,11 +249,11 @@ h1.logo{
     width: 30%;
 }
 
-.ci span img:first-child{
+.ci span img:first-of-type{
     opacity: 30%;
 }
 
-.ci span img:nth-child(2){
+.ci span img:nth-of-type(2){
     display: none;
 }
 
@@ -250,13 +264,6 @@ h1.logo{
 .cat:hover .ci span img:nth-child(2){
     display: inline;
 }
-
-
-/* .cat:hover .ci span img:first-child{
-    display: none;
-} */
-
-
 
 
 /* --------------------------하----------------------------- */
