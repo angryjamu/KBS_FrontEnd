@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <title>Robot PJ</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+            /* a요소로 #위치 이동시 스크롤 애니메이션 설정 */
+        }
+
         html,
         body {
             margin: 0;
@@ -23,7 +28,7 @@
         } */
 
         /* 로봇 페이지 로고 */
-        h1#logo{
+        h1#logo {
             position: fixed;
             top: calc(50% - 100px);
             left: calc(50% - 100px);
@@ -34,7 +39,8 @@
             width: 200px;
             height: 200px;
             border: 2px solid #ccc;
-            border-radius: 50%; /* 원 */
+            border-radius: 50%;
+            /* 원 */
             /* 글자중앙 */
             text-align: center;
             line-height: 200px;
@@ -44,10 +50,14 @@
             color: #fff;
             font-family: "vladimir script";
             font-size: 60px;
-            text-shadow: 2px 2px 2px #000; /* 글자그림자: x y blur 색 */
+            text-shadow: 2px 2px 2px #000;
+            /* 글자그림자: x y blur 색 */
 
             box-shadow: 0 0 20px 5px pink,
-                        inset 0 0 20px 5px #000;
+                inset 0 0 20px 5px #000;
+
+
+
 
             /* 
                 [박스 그림자 - box-shadow]
@@ -57,9 +67,9 @@
                 2) x축 y축 - 그림자 이동
                 3) blur - 그림자 경계선 흐림 (px단위)
                 4) spread - 그림자 크기(생략가능, 박스그림자에만 있음)
-
+                
                 -> 위의 셋팅법으로 콤마를 사용하면 여러 그림자 효과를 줄 수 있다!
-            */
+                */
 
             /* 배경 */
             background: pink url(./images/robot_03.png) no-repeat;
@@ -67,20 +77,42 @@
             /* 배경위치: 가로 세로 */
             background-size: 160px;
 
-            /* 애니메이션: 이시이지반방마 */
-            animation: logoAni 2s ease-in-out 1s forwards;
-        }
+            /* 처음에 로고 2배크기로 보이게함 */
+            transform: scale(2);
 
+            /* 애니메이션: 이시이지반방마 */
+            animation: logoAni 2s ease-in-out 2s forwards,
+                logo1Ani .5s ease-in-out 4s infinite alternate;
+        }
 
         /* 로봇 페이지 로고 키프레임 */
         @keyframes logoAni {
-            /* 시작값은 초기설정값과 같아서 from생략 */
-            to{
+
+            /* 시작값은 초기설정값과 같아서 from(0%)생략 */
+            80% {
                 top: 50px;
                 left: 50px;
+                transform: rotate(0deg);
+                /* 처음에 흔들기 시작각도로 셋팅! */
             }
-        }/* 키프레임 */
 
+            100% {
+                top: 50px;
+                left: 50px;
+                transform: rotate(-20deg);
+            }
+        }
+
+        /* 로고 애니 키프레임 */
+        @keyframes logo1Ani {
+            from {
+                transform: rotate(-20deg);
+            }
+
+            to {
+                transform: rotate(20deg);
+            }
+        }
 
         /* 
             ********************************************************************
@@ -161,10 +193,12 @@
 
         /* 로봇머리,몸통 키프레임 */
         @keyframes robotAni {
-            to{
+            to {
                 left: 0;
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
 
         /* 눈1 */
@@ -265,15 +299,41 @@
 
         #arm1 {
             left: -50px;
-            top: -10px;
+            top: -19px;
             border-radius: 25px 25px 0 0;
         }
 
         #arm2 {
             right: -50px;
-            top: -10px;
+            top: -19px;
             border-radius: 25px 25px 0 0;
+            transform: rotate(0deg);
+            transform-origin: center 20px;
+
+            /* 애니메이션: 이시이지반방바 */
+            animation: arm2Ani .8s ease-in-out 5s forwards,
+                waving .4s ease-in-out 5.8s infinite alternate;
         }
+
+        /* 오른쪽팔 애니 키프레임 */
+        @keyframes arm2Ani {
+            to {
+                transform: rotate(-160deg);
+            }
+        }
+
+        /* 오른쪽팔 흔들기 키프레임 */
+        @keyframes waving {
+            from {
+                transform: rotate(-160deg);
+            }
+
+            to {
+                transform: rotate(-130deg);
+            }
+        }
+
+
 
         #leg1 {
             bottom: -250px;
@@ -312,15 +372,15 @@
         /* 아이프레임 */
         #screen iframe {
             position: absolute;
-            top: 0px;
-            left: -3px;
-            width: 169px;
+            top: -15px;
+            left: -10px;
+            width: 174px;
             border: none;
             /* 나의 부모는? #screen */
         }
 
         /* 로봇설명박스 */
-        #rdesc{
+        #rdesc {
             width: 800px;
             margin: 350px auto 100px;
             /* 마진: 위 양쪽 아래 -> 양쪽이 auto니까 중앙정렬 */
@@ -338,23 +398,28 @@
         }
 
         /* 로봇설명제목 */
-        #rdesc h2{
+        #rdesc h2 {
+            position: sticky;
+            top: 0;
+            /* sticky 포지션은 top값에 따라 스크롤시
+            fixed로 화면에 고정시키는 포지션 */
             color: lime;
             font-size: 35px;
             text-align: center;
+            background-color: #ffffff63;
         }
 
         /* 설명출처 */
 
-        #rdesc small{
+        #rdesc small {
             display: block;
             /* 텍스트 중앙적용위해 */
             text-align: center;
             color: #ff0;
         }
-        
+
         /* 설명문단 */
-        #rdesc p{
+        #rdesc p {
             font-size: 15px;
             /* 기본글씨크기는 16px */
             line-height: 1.8;
@@ -366,9 +431,12 @@
 
             /* 가독성을 위한 다단설정 */
             /* 다단표기(다중열속성) */
-            column-count: 3;  /* 다중열개수 */
-            column-rule: 5px dotted lime; /* 다중열구분선- 값 설정은 보더와 같다(두께 종류 색상) */
-            column-gap: 50px; /* 다중열 사이간격 - 구분선 오른쪽 간격조정 */
+            column-count: 3;
+            /* 다중열개수 */
+            column-rule: 5px dotted lime;
+            /* 다중열구분선- 값 설정은 보더와 같다(두께 종류 색상) */
+            column-gap: 50px;
+            /* 다중열 사이간격 - 구분선 오른쪽 간격조정 */
 
             text-align: justify;
             /* 양쪽정렬 */
@@ -381,17 +449,107 @@
         }
 
         /* 가상요소로 첫글자 크게하기 - ::first-letter */
-        #rdesc p::first-letter{
+        #rdesc p::first-letter {
             font-size: 30px;
             font-weight: bold;
             color: lightsalmon;
         }
+
+        /* 글박스 유도 링크 */
+        .link {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            font-size: 40px;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        .link a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            color: #f00;
+            text-decoration: underline;
+        }
+
+        /* 위로가기버튼 */
+        .btnTop {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            /* fixed는 보이는 화면이 부모다 */
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 50%;
+            background-color: #ccc;
+            color: blue;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* 버튼에 오버시 */
+        .btnTop:hover {
+            background-color: #ff0;
+            color: red;
+        }
+
+        /* 처응ㅁ에 투명처리 class */
+        .fade {
+            opacity: 0;
+            /* 
+                opacity 속성 - 요소의 투명도 조절
+                0은 완전투명, 1은 완전불투명
+                0.몇 소수점은 중간 투명도
+                예) opacity: 0.5 -> 반투명
+                */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: opa .5s ease-in 5s forwards;
+        }
+
+        /* 투명도 변화 키프레임 */
+        @keyframes opa {
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- 로봇 페이지 로고 -->
     <h1 id="logo">R2G2</h1>
+
+    <!-- 내용보기 링크 타이틀 -->
+    <h2 class="link fade">
+        <a href="#rdesc">What is Robot?</a>
+    </h2>
+    <!-- 
+        a요소에 href속성값으로 "#아이디명"을 사용하면
+        같은 페이지 안에 있는 아이디 요소명 박스의
+        상단라인 위치로 스크롤이동됨(아이디만 됨)
+        -a 요소 기본기능임
+     -->
+
+     <!-- -> 만약 href속성값으로 "#아이디명"을 사용한 경우
+     페이지를 이동할때 상단의 url창을 보면
+     "페이지주소#아이디명" 의 형식으로 페이지를 이동한다!
+     예) 
+     http://127.0.0.1:5500/001.HTML학습
+             /005.Robot_PJ/robot.html#rdesc
+
+     -> 역으로 볼때 페이지주소에 #아이디명 을 뒤에 붙여서
+     호출하면 해당 위치로 바로 이동하여 페이지를 보여준다!
+  -->
+
+    <!-- 위로이동버튼 -->
+    <a href="#" class="btnTop fade">TOP</a>
 
     <!-- 로봇머리 -->
     <div id="head">
@@ -424,7 +582,7 @@
         <div id="tv"></div>
         <!-- 스크린 -->
         <div id="screen">
-            <iframe src="https://www.youtube.com/embed/aVNcxjMxnHg"></iframe>
+            <iframe src="https://www.youtube.com/embed/4TWR90KJl84"></iframe>
             <!-- <iframe src=""></iframe> -->
             <!-- 
                 iframe 요소 (inline frame)
