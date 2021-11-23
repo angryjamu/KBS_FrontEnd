@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGV PJ</title>
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- script 요소 스크립트 코딩영역 -->
+    <script>
+        // 자바스크립트 문법구영 //
+
+        // 주석1
+        /* 주석2 */
+
+        // 함수 - function
+        // : 바로실행하지 않고 호출시에 실행할 코드 저장소
+        // function 함수명(){코드}
+        // 변수는 따옴표없이 사용한 문자이며
+        // 변수는 값을 저장하는 저장소
+        // 변수명은 저장주소
+        function goMv(code) { //코드는 전달변수
+            //호출확인
+            //alert("불러써?"+code);
+
+            // 전체문서.가져와아이디(아이디명).속성명=
+            document.getElementById("ifr").src =
+                // 이퀄(=) 오른쪽의 값이 왼쪽으로 들아감
+                // 결과적으로 src속성에 변경된 값이 할당
+                "https://www.youtube.com/embed/" +
+                code +
+                "?autoplay=1&playsinline=1";
+        } // goMv 함수//
+    </script>
 </head>
 
 <body>
@@ -13,13 +40,76 @@
     <header id="top" class="part">
         <!-- 1-1.페이지 타이틀 -->
         <h1 class="tit">CGV 예고편 상영관</h1>
+        <!-- 1-2.전체메뉴(GNB) -->
+        <nav class="gnb">
+            <ul class="glist">
+                <li>
+                    <a href="#">영화</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">무비차트</a>
+                            </li>
+                            <li>
+                                <a href="#">HD 트레일러</a>
+                            </li>
+                            <li>
+                                <a href="#">무비파인더</a>
+                            </li>
+                            <li>
+                                <a href="#">CGV아트하우스</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">예매</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">빠른예매</a>
+                                <a href="#">상영시간표</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">극장</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">CGV 극장</a>
+                                <a href="#">특별관</a>
+                                <a href="#">CLUB 서비스</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">이벤트&amp;컬처</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">이벤트</a>
+                                <a href="#">기프트샵</a>
+                                <a href="#">매거진</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!-- 2. 메인영역 -->
-    <main id="cont" class="part">
+    <main id="cont" class="part rbx">
         <!-- 2-1.스크린박스 -->
         <div id="screen">
-            <iframe
-                src="https://www.youtube.com/embed/rHTTv3m-zb0?autoplay=1&mute=1&loop=1&playlist=rHTTv3m-zb0&playsinline=1"
+            <iframe id="ifr"
+                src="https://www.youtube.com/embed/?autoplay=1&mute=1&loop=1&playlist=rHTTv3m-zb0&playsinline=1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
@@ -27,23 +117,68 @@
         <nav class="mlist">
             <ul>
                 <li>
-                    <a href="#">
-                    <img src="images/m1.jpg" alt="비와 당신의 이야기"></a></li>
+                    <!-- onclick 속성
+                    클릭이벤트속성 : 클릭이벤트 발생시
+                JS코드를 실행함 -> 여기서는 함수호출 -->
+                    <a href="#" onclick="goMv('dWEQjU3GCE0')">
+                        <img src="images/m1-1.jpg" alt="연애 빠진 로맨스">
+                        <!-- 영화정보 -->
+                        <ol class="movtxt">
+                            <li>연애 빠진 로맨스</li>
+                            <li>전종서,손석구</li>
+                            <li>멜로/로맨스, 코미디</li>
+                        </ol>
+                    </a></li>
                 <li>
-                    <a href="#">
-                    <img src="images/m2.jpg" alt="서복"></a></li>
+                    <a href="#" onclick="goMv('RoMUUNBjO_8')">
+                        <img src="images/m2-1.jpg" alt="킹메이커">
+                        <!-- 영화정보 -->
+                        <ol class="movtxt">
+                            <li>킹메이커</li>
+                            <li>설경구,이선균</li>
+                            <li>드라마</li>
+                        </ol>
+                    </a></li>
                 <li>
-                    <a href="#">
-                    <img src="images/m3.jpg" alt="미나리"></a></li>
+                    <a href="#" onclick="goMv('bR27YmkAK24')">
+                        <img src="images/m3-1.jpg" alt="비상선언">
+                        <!-- 영화정보 -->
+                        <ol class="movtxt">
+                            <li>비상선언</li>
+                            <li>송강호,이병헌</li>
+                            <li>드라마</li>
+                        </ol>
+                    </a></li>
                 <li>
-                    <a href="#">
-                    <img src="images/m4.jpg" alt="더 스파이"></a></li>
+                    <a href="#" onclick="goMv('SvKCs-80uk4')">
+                        <img src="images/m4-1.jpg" alt="킹스맨: 퍼스트 에이전트">
+                        <!-- 영화정보 -->
+                        <ol class="movtxt">
+                            <li>킹스맨: 퍼스트 에이전트</li>
+                            <li>랄프 파인즈, 해리스 딕킨슨</li>
+                            <li>액션</li>
+                        </ol>
+                    </a></li>
                 <li>
-                    <a href="#">
-                    <img src="images/m5.jpg" alt="노매드랜드"></a></li>
+                    <a href="#" onclick="goMv('KBT_YZdoF6g')">
+                        <img src="images/m5-1.jpg" alt="엔칸토:마법의 세계">
+                        <!-- 영화정보 -->
+                        <ol class="movtxt">
+                            <li>엔칸토: 마법의 세계</li>
+                            <li>스테파니 비트리즈</li>
+                            <li>애니메이션</li>
+                        </ol>
+                    </a></li>
                 <li>
-                    <a href="#">
-                    <img src="images/m6.jpg" alt="샹치"></a></li>
+                    <a href="#" onclick="goMv('yFZh-Wqi7RI')">
+                        <img src="images/m6-1.jpg" alt="스파이더맨: 노 웨이 홈">
+                        <!-- 영화정보 -->
+                        <ol class="movtxt">
+                            <li>스파이더맨: 노 웨이 홈</li>
+                            <li>톰 홀랜드, 젠데이아 콜먼</li>
+                            <li>액션,판타지</li>
+                        </ol>
+                    </a></li>
             </ul>
         </nav>
     </main>

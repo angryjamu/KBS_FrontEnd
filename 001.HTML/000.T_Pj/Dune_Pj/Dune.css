@@ -162,17 +162,16 @@ h1.logo{
     height: 50px;
     font-size: 35px;
     border: transparent;
-    /* border: 1px dotted lime; */
     background-color: transparent;
     cursor: pointer;
 }
 /* --------------------------중----------------------------- */
 
 .cont{
-    max-height: 1200px;
+    max-height: 700px;
     margin: 0 auto;
-    border: 2px solid blue;
     box-sizing: border-box;
+    /* border: 2px solid blue; */
 }
 
 #cbx{
@@ -183,8 +182,7 @@ h1.logo{
     margin-top: 340px;
     margin-right: auto;
     margin-left: auto;
-    /* margin: 10px; */
-    border: 2px solid #f00;
+    /* border: 2px solid #f00; */
 }
 
 #cbx::after{
@@ -198,6 +196,7 @@ h1.logo{
     width: 23%;
     margin: 1%;
     padding: 3px;
+    border-radius: 4px;
     box-sizing: border-box;
     float: left;
     background-color: #383838;

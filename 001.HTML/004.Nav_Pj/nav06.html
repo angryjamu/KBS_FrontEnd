@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>유형6.가로네비 서브별 드롭다운 전체창</title>
+    <style>
+        /* ul,ol 초기화셋팅 */
+        ul,
+        ol {
+            /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 가상요소 float 해제 */
+        ul::after,
+        ol::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 리스트 옆으로 흐리게 */
+        li {
+            float: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* GNB 메뉴 */
+        .gnb {
+            position: relative;
+            /* 부모자격- .sbx */
+            background-color: rgba(46, 192, 78, 0.938);
+        }
+
+        .gnb>ul {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .gnb>ul>li {
+            width: 200px;
+            text-align: center;
+            /* outline: 2px dashed red; */
+        }
+
+        /* a요소 - 글자색, 밑줄처리 */
+        .gnb>ul>li a {
+            /* 띄어쓰기로 a를 선택하면
+            자손선택이 되어서 서브메뉴의 a요소까지 적용된다 */
+            display: block;
+            /* 디자인적용위해 */
+            width: 200px;
+            height: 50px;
+
+            /* 글자색변경, 밑줄없앰 */
+            color: #fff;
+            text-decoration: none;
+
+            /* 글자세로 중앙은 줄간격을 사용
+            -> 높이값과 동일하게 셋팅하면 세로중앙위치함 */
+            line-height: 50px;
+
+            font-weight: bold;
+            font-size: 14px;
+
+            /* 트랜지션:속시이지 */
+            transition: .4s;
+        }
+
+        /* 상위메뉴에 마우스 오버시 a요소의 글자색, 배경색 */
+        .gnb>ul>li:hover>a {
+            color: rgb(80, 79, 79);
+            background-color: lightgreen;
+        }
+
+        /* 서브메뉴 박스 */
+        .sbx {
+            position: absolute;
+            /* top위치는 안쓰고 젠틀하게. 상위메뉴 a요소 아래위치 */
+            left: 0;
+            /* 나의 부모는? .gnb*/
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            /* 서브메뉴 숨기기
+            - 유의사항: 숨기는 박스에 위아래 패딩이있으면
+            패딩때문에 닫히지 않는다. 패딩 디자인은 하위요소에 줄것 */
+            background-color: rgb(184, 255, 137);
+
+            /* 트랜지션: 속시이지 */
+            transition: height .4s ease-out;
+        }
+
+        /* 서브메뉴 속박스 */
+        .ibx {
+            position: relative;
+            /* 부모자격- .smenu */
+            width: 800px;
+            height: 300px;
+            /* 속박스 높이값 유지 */
+            margin: 0 auto;
+            padding-top: 20px;
+            box-sizing: border-box;
+            /* 박스크기유지 - 보더, 패딩포함 */
+            /* outline: 4px dashed blueviolet; */
+        }
+
+        /* 서브메뉴 타이틀 */
+        h2.stit {
+            margin: 0;
+            padding: 15px;
+            float: left;
+            /* 옆으로 흐르게 */
+        }
+
+        /* 서브메뉴 */
+        .smenu {
+            width: 200px;
+            float: left;
+            /* 옆으로 흐르게 */
+        }
+
+        /* 서브메뉴 이미지 */
+        .simg {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            /* 부모는? .ibx */
+            height: 280px;
+
+        }
+
+        .gnb .smenu a {
+            color: rgba(46, 192, 78, 0.938);
+            height: auto;
+            line-height: 2.5;
+        }
+
+        /* 하위메뉴 a요소에 오버시 글자색, 배경색 */
+        .smenu a:hover {
+            text-decoration: underline;
+        }
+
+        /* 상위메뉴 li에 오버시 서브메뉴박스(.sbx) 보이기 */
+        /* 2번째 상위메뉴 li -> 서브메뉴 높이값 300px */
+        .gnb>ul>li:hover .sbx {
+            height: 300px;
+        }
+
+        /* 3번째 상위메뉴 li -> 서브메뉴 높이값 100px */
+        .gnb>ul>li:nth-child(3):hover .smenu {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>유형6.가로네비 서브별 드롭다운 전체창</h1>
+
+    <!-- GNB 네비게이션 박스 -->
+    <!-- GNB(Global Navigation Bar) -->
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <!-- 서브메뉴 -->
+                <a href="#">웹개발</a>
+                <!-- 서브메뉴박스 -->
+                <div class="sbx">
+                    <!-- 중앙정렬 속박스 -->
+                    <div class="ibx">
+                        <!-- 서브제목 -->
+                        <h2 class="stit">웹개발</h2>
+                        <!-- 서브메뉴 -->
+                        <ol class="smenu">
+                            <li><a href="#">웹디자인</a></li>
+                            <li><a href="#">HTML5+CSS3</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">웹+모바일</a></li>
+                        </ol>
+                        <ol class="smenu">
+                            <li><a href="#">웹디자인</a></li>
+                            <li><a href="#">HTML5+CSS3</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">웹+모바일</a></li>
+                        </ol>
+                        <!-- 서브메뉴 이미지 -->
+                        <img src="images/bgi001.jpg" alt="서브이미지" class="simg">
+                    </div><!-- .ibx -->
+                </div><!-- .sbx -->
+            </li>
+            <li>
+                <!-- 서브메뉴 -->
+                <a href="#">게시판</a>
+                <!-- 서브메뉴박스 -->
+                <div class="sbx">
+                    <!-- 중앙정렬 속박스 -->
+                    <div class="ibx">
+                        <!-- 서브제목 -->
+                        <h2 class="stit">게시판</h2>
+                        <!-- 서브메뉴 -->
+                        <ol class="smenu">
+                            <li><a href="#">웹디자인</a></li>
+                            <li><a href="#">HTML5+CSS3</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">웹+모바일</a></li>
+                        </ol>
+                        <ol class="smenu">
+                            <li><a href="#">웹디자인</a></li>
+                            <li><a href="#">HTML5+CSS3</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">웹+모바일</a></li>
+                            <li><a href="#">Q&amp;A</a></li>
+                            <li><a href="#">방명록</a></li>
+                        </ol>
+                        <!-- 서브메뉴 이미지 -->
+                        <img src="images/bgi002.jpg" alt="서브이미지" class="simg">
+                    </div><!-- .ibx -->
+                </div><!-- .sbx -->
+            </li>
+            <li><a href="#">프로필</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

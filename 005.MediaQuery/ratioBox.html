@@ -8,12 +8,76 @@
     <style>
 
         .rbx{
-            width: 600px;
-            height: 400px;
+            position: relative;
+            /* 부모자격 - .rbxIn */
+            width: 50%;
+            /* 가로크기 body 의 50% - 상대적크기 */
+            /* height: 40%; */
+
+            /* height값 없이 박스 높이 만들기 */
+            /* padding-top: 50%; */
+
             background: url(./images/mobum.jpg) no-repeat center/cover;
             margin: 0 auto;
         }
+
+        /* 
+            블록박스 하위 자식 블록박스에 패딩탑을 %로 줄 경우
+            부모박스 가로 크기에 대한 비율이 성립된다
+            가로크기에 대한 비율이 성립된다
+            부모:자식 = 1:1 = 100% : 100% 
+            
+            -> 결과적으로 부모블록박스의 가로가
+            %로 유동적 변경이 될 경우 자식요소의
+            패딩탑값도 같이 변경된다
+            따라서 일정한 비율을 만들 수 있다
+            */
+        .rbx::before{
+            content: '';
+            display: block; /* 마치 div와 같다 */
+            padding-top: 56.25%;
+            /* 
+                16:9 비율만들기
+                -> 부모박스의 가로크기를 100%로 봄
+                16:9 = 100 : x
+                16x = 100*9
+                x = 100*9/16
+                x = 56.25
+                */
+        }
+        /* 
+            직접 비율유지를 위해 블록태그를 쓸 경우
+            관리 및 코딩상 문제가 생길 수 있으므로
+            가상요소로 블록자식을 만들어서
+            패딩탑 비율을 준다 */
         
+        /*
+            비율유지 속박스는 왜 필요한가?
+          
+            -> 가상요소로 패딩탑을 주기때문에
+            내용이 패딩아래 나오게 됨
+            따라서 내용이 비율유지 박스안에 들어가도록
+            비율박스에 밀착하는 속박스가 필요하게 됨
+            이 박스는 앱솔루트 밀착박스임
+            */
+        .rbxIn{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* 부모는? .rbx */
+        }
+        /* 또는    
+            .rbxIn{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            }
+            */
+
         /* 내용셋팅 */
         .cat{
             position: absolute;
@@ -23,28 +87,44 @@
             margin: 0;
             padding: 0;
             color: #fff;
-            font-size: 14px;
+            font-size: .875rem;
+            /* 14px rem만들기 14/16=0.875 */
             font-weight: bold;
             line-height: 2;
             text-shadow: 2px 2px 2px #000;
         }
 
+        /* 800px이하 미디쿼리 */
+        @media screen and (max-width:800px) {
+            html{
+                font-size: 12px;
+                /* 12*0.875=10.5px */
+                /* Root인 html요소의 글자크김만 바꾸면
+                하위의 모든 rem,em,%로 잡은 글자나 줄간격이 모두 변경된다 */
+            }
+            .rbx{
+                width: 100%;
+            }
+        }/* 미디어쿼리 */
        
     </style>
 </head>
 
 <body>
-    <div class="rbx"></div>
+    <div class="rbx">
+        <div class="rbxIn">
+
+            <!-- 비율유지 속박스에 내용넣기 -->
+            <dl class="cat">
+                <dt>출연진</dt>
+                <dd>이제훈(김도기역)</dd>
+                <dd>이솜(강하나역)</dd>
+                <dd>김의성(장성철역)</dd>
+            </dl> 
+        </div>
+    </div>
 
 
-<!-- 
-    <dl class="cat">
-        <dt>출연진</dt>
-        <dd>이제훈(김도기역)</dd>
-        <dd>이솜(강하나역)</dd>
-        <dd>김의성(장성철역)</dd>
-    </dl> 
--->
 </body>
 
 </html>

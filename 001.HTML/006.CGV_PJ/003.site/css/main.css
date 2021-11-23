@@ -28,7 +28,10 @@ body{
     /* 부모자격 - .gnb */
     height: 80px;
     background: url(../images/curtain.jpg) repeat-x;
+    z-index: 999;
+    /* GNB 서브메뉴 때문에 맨위로 올린다 */
 }
+
 
 /* 1-1.페이지 타이틀 */
 h1.tit{
@@ -43,24 +46,99 @@ h1.tit{
     /* 그림자를 이용한 Glow효과 */
     text-shadow: 0 0 12px aquamarine;
 }
+/* 1-2.전체메뉴(GNB) */
+.gnb{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    /* 나의 부모는? #top */
+}
+/* GNB li 리스트 */
+.gnb li{
+    position: relative;
+    /* 부모자격 - .smenu */
+    padding: 0 10px;
+    padding-bottom: 5px;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+}
+
+/* GNB 서브메뉴 */
+.smenu{
+    position: absolute;
+    left: 50%;
+    /* 나의 부모는? 싸고있는 li */
+
+    transform: translateX(-50%);
+    /* 내 크기의 절반만큼 반대방향 */
+
+    width: 150px;
+    /* 앱솔루트 특성상 부모자격이 있는 요소의 폭에 맞춰서
+    width: auto가 설정된다. 여기서는 특정 크기를 설정함 */
+
+    background: url(../images/bg_smenu.png)no-repeat center/cover;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff;
+}
+/* 서브메뉴 가상요소로 삼각형모양 만들기 */
+.smenu::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    /* 부모는? .smenu */
+    transform: translateX(-50%);
+    /* 가로방향 중앙이동 */
+
+    /* 삼각형 만들기 */
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #353535; /* 삼각형 */
+    /* border-top: 10px solid red;   역삼각형 */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    /* transparent는 투명색 */
+}
+
+/* 서브메뉴 ol */
+.smenu ol{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* 서브메뉴 li리스트 */
+.smenu li{
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
+.gnb ul>li:first-child~li .smenu{
+    display: none;
+}
 
 /******************************************* 2. 메인영역 *******************************************/
 #cont{
     position: relative;
     /* 부모자격 - 하위요소 */
-    height: 788px;
+    /* height: 788px; */
+    /* 비율유지설정을 위해 height를 주지 않는다 */
     background: url(../images/bg.jpg) no-repeat;
+    background-size: 100%;
+    /* 배경이미지 가로를 기준으로 비율변경 */
 
 }
 
 /* <!-- 2-1. 스크린박스 --> */
 #screen{
     position: absolute;
-    top: 135px;
-    left: 257px;
+    top: 17.1%;
+    left: 21.4%;
     /* 나의 부모는? #cont */
-    width: 701px;
-    height: 398px;
+    width: 58.6%;
+    height: 50.6%;
     background-color: #000;
 }
 
@@ -73,18 +151,72 @@ h1.tit{
 /* 2-2.예고편선택메뉴 */
 .mlist{
     position: absolute;
-    bottom: 56px;
-    left: 252px;
+    bottom: 6%;
+    left: 50%;
+    /* 나의 부모는? .cont */
+    transform: translateX(-50%);
+    /* 자기크기의 절반만큼 반대방향(왼쪽)이동 */
+    width: 60%;
+    /* outline: 4px dashed yellow; */
 }
 /* li디자인 */
 .mlist ul>li{
-    margin: 0 10px;
+    position: relative;
+    width: 14.66%;
+    /* 6등분(16.66%)% - 양쪽마진1% */
+    margin: 0 1%;
+    overflow: hidden;
+    /* .movtxt의 부모자격요소에 줘야 적용됨  */
 }
 /* 포스터 이미지 */
 .mlist img{
-    width: 99px;
-    height: 140px;
+    width: 100%;
+    /* 가로만 li박스에 채움.
+    세로는 자동으로 비율유지. */
 }
+
+/* 영화정보텍스트박스 */
+.movtxt{
+    position: absolute;
+    /* left는 설정하지 않고 젠틀하게 처리
+    ->각 lli위치에 그대로 있음 */
+
+    top: 100%; /* 아래쪽에 나가있음 */
+    /* 나의부모는? .mlist ul>li */
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(2, 2, 2, 0.700);
+    /* 반투명배경 */
+
+    /* 글자셋팅 */
+    font-family: 'Cute Font', cursive;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+
+    /* 트랜지션: 속시이지 */
+    transition: top .4s ease-in-out;
+}
+/* 상위li에 오버시 .movtxt 올라오기 */
+.mlist>ul>li:hover .movtxt{
+    top: 0;
+}
+
+/* 영화정보 li */
+.movtxt li{
+    float: none;
+    /* float 해제 */
+}
+/* 첫번째 li는 영화제목 */
+.movtxt li:first-child{
+    color: aqua;
+    font-size: 17px;
+    letter-spacing: -1px;
+    margin-top: 30%;
+    
+}
+
 
 /******************************************* 3. 하단영역 *******************************************/
 #info{
