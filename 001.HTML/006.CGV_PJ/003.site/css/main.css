@@ -5,12 +5,12 @@
 @import url(reset.css);
 @import url(core.css);
 
-body{
+body {
     background-color: #000;
 }
 
 /* 레이아웃 공통 클래스 */
-.part{
+.part {
     max-width: 1200px;
     /* 확장성 있는 셋팅
     width:1200px로 코딩하면 작은 화면에서는 가로 스크롤이 생김
@@ -23,7 +23,7 @@ body{
 }
 
 /******************************************* 1. 상단영역 *******************************************/
-#top{
+#top {
     position: relative;
     /* 부모자격 - .gnb */
     height: 80px;
@@ -34,7 +34,7 @@ body{
 
 
 /* 1-1.페이지 타이틀 */
-h1.tit{
+h1.tit {
     /* height: 100%;
     - 안줘도 줄간격이 높이를 만들어줌 */
     color: aquamarine;
@@ -46,15 +46,17 @@ h1.tit{
     /* 그림자를 이용한 Glow효과 */
     text-shadow: 0 0 12px aquamarine;
 }
+
 /* 1-2.전체메뉴(GNB) */
-.gnb{
+.gnb {
     position: absolute;
     bottom: 10px;
     right: 15px;
     /* 나의 부모는? #top */
 }
+
 /* GNB li 리스트 */
-.gnb li{
+.gnb li {
     position: relative;
     /* 부모자격 - .smenu */
     padding: 0 10px;
@@ -63,8 +65,13 @@ h1.tit{
     font-size: 20px;
 }
 
+/* 상위메뉴(.glist)의 li에 오버시 서브메뉴(.smenu) 보이기 */
+.glist>li:hover .smenu {
+    display: block;
+}
+
 /* GNB 서브메뉴 */
-.smenu{
+.smenu {
     position: absolute;
     left: 50%;
     /* 나의 부모는? 싸고있는 li */
@@ -72,7 +79,7 @@ h1.tit{
     transform: translateX(-50%);
     /* 내 크기의 절반만큼 반대방향 */
 
-    width: 150px;
+    width: 160px;
     /* 앱솔루트 특성상 부모자격이 있는 요소의 폭에 맞춰서
     width: auto가 설정된다. 여기서는 특정 크기를 설정함 */
 
@@ -80,9 +87,14 @@ h1.tit{
     padding: 3px;
     border-radius: 5px;
     box-shadow: 0 0 5px #fff;
+    margin-top: 5px;
+
+    display: none;
+    /* 처음에 숨기기 */
 }
+
 /* 서브메뉴 가상요소로 삼각형모양 만들기 */
-.smenu::before{
+.smenu::before {
     content: '';
     display: block;
     position: absolute;
@@ -95,7 +107,8 @@ h1.tit{
     /* 삼각형 만들기 */
     width: 0;
     height: 0;
-    border-bottom: 10px solid #353535; /* 삼각형 */
+    border-bottom: 10px solid #353535;
+    /* 삼각형 */
     /* border-top: 10px solid red;   역삼각형 */
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -103,24 +116,83 @@ h1.tit{
 }
 
 /* 서브메뉴 ol */
-.smenu ol{
+.smenu ol {
     border: 1px solid #ccc;
     padding: 5px;
 }
 
 /* 서브메뉴 li리스트 */
-.smenu li{
+.smenu li {
     font-size: 16px;
     line-height: 2;
+    float: none;
+    /* 플롯해제를 하지 않으면 하나의 width 크기가
+    내용만큼만 생기므로 이를 해제하여 패딩안쪽까지만
+    잡히는 width:auto 설정이 적용되도록한다 
+    왜했나? 보더탑 선 길이때문에*/
 }
+
+/* 서브메뉴 li중 보더탑 디자인용 class */
+.bdt {
+    border-top: 1px solid #ccc;
+    padding-top: 5px !important;
+    /* 패딩탑은 위에서 패딩설정에 의해 우선순위가
+    밀려서 적용이 안되므로 최종 적용만을 목적으로
+    매우 제한적으로 !important를 주어서 무조건 적용함 */
+}
+
+/* 서브메뉴 a */
+.smenu a {
+    display: block;
+    white-space: nowrap;
+    /* 내용이 무조건 한줄에 나옴 */
+}
+
+/* 서브메뉴 a에 오버시 */
+.smenu a:hover {
+    color: red;
+}
+
+/* 서브메뉴 오버시 가상요소 빨간손가락 보이기 */
+.smenu li:first-child:hover a::after {
+    float: right;
+    /* 손가락 이미지가 인라인으로 오른쪽 끝에 옴 */
+    content: '🎄';
+    
+    /* content: url(../images/ico_smenu_hand.png); */
+}
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.smenu li:nth-child(2):hover a::after {
+    float: right;
+    content: '🎅';
+}
+
+.smenu li:nth-child(3):hover a::after {
+    float: right;
+    content: '⛄';
+}
+
+.smenu li:nth-child(4):hover a::after {
+    float: right;
+    content: '🎁';
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+
 
 /* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
-.gnb ul>li:first-child~li .smenu{
+/* .gnb ul>li:first-child~li .smenu{
     display: none;
-}
+} */
 
 /******************************************* 2. 메인영역 *******************************************/
-#cont{
+#cont {
     position: relative;
     /* 부모자격 - 하위요소 */
     /* height: 788px; */
@@ -132,24 +204,26 @@ h1.tit{
 }
 
 /* <!-- 2-1. 스크린박스 --> */
-#screen{
+#screen {
     position: absolute;
     top: 17.1%;
-    left: 21.4%;
+    left: 21.2%;
     /* 나의 부모는? #cont */
-    width: 58.6%;
-    height: 50.6%;
+    width: 58.7%;
+    height: 50.7%;
     background-color: #000;
 }
 
 /* 스크림 아이프레임 */
-#screen iframe{
+#screen iframe {
     width: 100%;
     height: 100%;
-    border: none;   /* 기본보더없앰 */
+    border: none;
+    /* 기본보더없앰 */
 }
+
 /* 2-2.예고편선택메뉴 */
-.mlist{
+.mlist {
     position: absolute;
     bottom: 6%;
     left: 50%;
@@ -159,8 +233,9 @@ h1.tit{
     width: 60%;
     /* outline: 4px dashed yellow; */
 }
+
 /* li디자인 */
-.mlist ul>li{
+.mlist ul>li {
     position: relative;
     width: 14.66%;
     /* 6등분(16.66%)% - 양쪽마진1% */
@@ -168,20 +243,22 @@ h1.tit{
     overflow: hidden;
     /* .movtxt의 부모자격요소에 줘야 적용됨  */
 }
+
 /* 포스터 이미지 */
-.mlist img{
+.mlist img {
     width: 100%;
     /* 가로만 li박스에 채움.
     세로는 자동으로 비율유지. */
 }
 
 /* 영화정보텍스트박스 */
-.movtxt{
+.movtxt {
     position: absolute;
     /* left는 설정하지 않고 젠틀하게 처리
     ->각 lli위치에 그대로 있음 */
 
-    top: 100%; /* 아래쪽에 나가있음 */
+    top: 100%;
+    /* 아래쪽에 나가있음 */
     /* 나의부모는? .mlist ul>li */
     width: 100%;
     height: 100%;
@@ -198,27 +275,29 @@ h1.tit{
     /* 트랜지션: 속시이지 */
     transition: top .4s ease-in-out;
 }
+
 /* 상위li에 오버시 .movtxt 올라오기 */
-.mlist>ul>li:hover .movtxt{
+.mlist>ul>li:hover .movtxt {
     top: 0;
 }
 
 /* 영화정보 li */
-.movtxt li{
+.movtxt li {
     float: none;
     /* float 해제 */
 }
+
 /* 첫번째 li는 영화제목 */
-.movtxt li:first-child{
+.movtxt li:first-child {
     color: aqua;
     font-size: 17px;
     letter-spacing: -1px;
     margin-top: 30%;
-    
+
 }
 
 
 /******************************************* 3. 하단영역 *******************************************/
-#info{
-height: 100px;
+#info {
+    height: 100px;
 }
