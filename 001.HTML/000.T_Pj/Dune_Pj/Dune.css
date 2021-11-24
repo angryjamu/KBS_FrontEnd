@@ -9,7 +9,6 @@ font-family: 'Gothic A1', sans-serif;
 font-family: 'Hahmlet', serif;
 */
 
-
 html,body{
     padding: 0;
     margin: 0;
@@ -32,6 +31,20 @@ body{
 background-color: silver;
 border-right: 5px;
 }
+
+.txt::-webkit-scrollbar{
+    width: 3px;
+}
+
+.txt::-webkit-scrollbar-thumb{
+    background-color: #7b7672;
+    border-radius: 3px;
+}
+.txt::-webkit-scrollbar-track{
+background-color: silver;
+border-right: 3px;
+}
+
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* ul{
     border-bottom: 5px dotted lime;
@@ -176,7 +189,7 @@ h1.logo{
 
 #cbx{
     position: relative;
-    width: 75%;
+    width: 60%;
     padding-right: 15px;
     padding-left: 15px;
     margin-top: 340px;
@@ -200,7 +213,7 @@ h1.logo{
     box-sizing: border-box;
     float: left;
     background-color: #383838;
-    box-shadow: 0 0 25px 5px rgb(0 0 0 / 60%);
+    box-shadow: 0 0 25px 20px rgb(0 0 0 / 45%);
     transition: box-shadow 0.3s linear;
 }
 
@@ -222,20 +235,36 @@ h1.logo{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
-    height: 76%;
+    width: 100.8%;
+    height: 79.6%;
     opacity: 0;
     transition: opacity .6s;
 }
 
-/* .cat:hover .ci>img:first-of-type{
-    display: none;
-} */
+.cat>.ci{
+    position: relative;
+    overflow: hidden;
+}
+
+.txt{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 100%;
+    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0.250);
+    font-family: 'Gugi', cursive;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #a97922;
+    overflow-y: scroll;
+}
+
 
 .cat:hover .ci>img:nth-of-type(2){
     opacity: 1;
 }
-
 
 .ci span{
     margin: -15px;
