@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CGV PJ 메인페이지 미디어쿼리 - media.css */
+
+/********************************** 1300px 이하 **********************************/
+@media screen and (max-width:1300px) {
+
+    /* gnb메뉴 위치이동 - 영사기가 보이게 */
+    .gnb {
+        right: 63px;
+    }
+}
+
+/********************************** 1050px 이하 **********************************/
+@media screen and (max-width:1050px) {
+
+    /* glist메뉴 숨기기 - 영사기는 살아있음 */
+    /* 전체메뉴 하위 메뉴박스(.glist) */
+    .glist {
+        position: absolute;
+        left: -73px;
+        width: 121px;
+        padding-top: 17px;
+        /* 오버시 끊어지지 않게 패딩탑으로 밀기 */
+        text-align: right;
+        display: none;
+        /* 처음에 안보임 */
+    }
+
+    /* 상위메뉴 li는 float해제 */
+    ul.glist>li {
+        float: none;
+    }
+
+    /* gnb에 마우스 오버시 .glist메뉴 보이기 */
+    .gnb:hover .glist {
+        display: block;
+    }
+
+    /* 상위메뉴 오버시 하위메뉴 숨기기 */
+    .glist>li:hover .smenu {
+        display: none;
+    }
+}
+
+/********************************** 780px 이하 **********************************/
+@media screen and (max-width:780px) {
+
+    /* 하단영역 배치 변경하기 */
+    #info {
+        height: auto;
+        text-align: center;
+    }
+
+    #info img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+        .sns {
+            position: static;
+            margin: 10px auto;
+            width: 114px;
+        }
+
+    }

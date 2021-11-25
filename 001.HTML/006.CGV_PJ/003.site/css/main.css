@@ -44,7 +44,20 @@ h1.tit {
     text-align: center;
     font-family: 'Jua', sans-serif;
     /* 그림자를 이용한 Glow효과 */
-    text-shadow: 0 0 12px aquamarine;
+    text-shadow: 0 0 4px aquamarine;
+    
+    /* 애니메이션: 이시이지반방마 */
+    animation: titAni 1.5s ease-out infinite alternate;
+}
+/* 타이틀 그림자 블러애니 */
+@keyframes titAni {
+    from{
+        text-shadow: 0 0 4px aquamarine;
+    }
+    to{
+        text-shadow: 0 0 12px aquamarine;
+    }
+    
 }
 
 /* 1-2.전체메뉴(GNB) */
@@ -398,7 +411,7 @@ transition-delay: 0s;
     background: url(../images/sprites_logo.png)no-repeat;
     
     margin: 2px;
-
+    /* 흑백이미지 설정하기 */
     filter: grayscale(100%);
 }
 

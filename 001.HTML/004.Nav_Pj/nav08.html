@@ -1,22 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>유형8.숨긴네비 고정전체창형</title>
     <style>
-        
-    
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 3000px;
+            background-image: linear-gradient(to bottom, #ddbf39, #f706ff, #e21111de);
+        }
+
+        /* 타이틀 */
+        .tit{
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            font-size: 5vw;
+            text-align: center;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 햄버거 버튼 */
+        .ham {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            background-color: rgb(250, 250, 253);
+            padding: 0;
+
+            cursor: pointer;
+            /* 마우스 오버시 손가락모양 */
+        }
+
+        /* GNB 메뉴박스 - 화면기준으로 숨겼다 전체화면에 나옴 */
+        .gnb {
+            position: fixed;
+            top: -100%;
+            /* 높이만큼 위로 올라감(숨겨짐) */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 보이는 화면에 꽉참 */
+            background-color: #000;
+
+            /* 트랜지션: 속시이지 */
+            transition: top .8s ease-out;
+        }
+
+        /* GNB메뉴에 클래스"on"을 주면 내려옴 */
+        .gnb.on {
+            top: 0;
+        }
+
+        /* GNB 닫기버튼 */
+        .cbtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            /* 부모는? .gnb */
+
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            color: #fff;
+
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            background-color: rgb(0, 0, 0);
+            padding: 0;
+
+            cursor: pointer;
+
+        }
+
+        /* GNB a링크 */
+        .gnb a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* GNB il박스 */
+        .gnb ul,
+        .gnb ol {
+            /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 상위ul */
+        .gnb ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 가로,세로방향 정중앙이동 */
+
+            width: 800px;
+            margin: 0 auto;
+            /* 포지션이 absolute일때 마영오가 안먹힘 */
+            overflow: hidden;
+            /* float된 자식인식 */
+            /* outline: 2px dotted deeppink; */
+        }
+
+        /* 상위메뉴 li */
+        .gnb ul>li {
+            float: left;
+            /* 메뉴 옆으로 흐르게 */
+            width: 200px;
+            text-align: center;
+            font-size: 40px;
+            line-height: 2;
+        }
+
+        /* 하위메뉴 li */
+        .gnb ol>li {
+            font-size: 20px;
+            line-height: 2;
+        }
     </style>
+
+    <!-- 자바스크립트 코딩구역 -->
+    <script>
+        // 함수: 호출시 실행하는 코드저장소
+        // 호출: 함수명()
+        // 형식: function 함수명(){코드}
+        function showMenu(){
+
+            // 함수호출확인
+            // alert("나야나아아ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ")
+
+            // 1.변경대상 선정 : .gnb
+            // 선택요소를 gnb라는 이름의 변수에 담는다
+            var gnb=
+            document.getElementsByClassName("gnb").item(0);
+            // 전체문서.가져와클래스(클래스명).몇번째(0)
+
+            // 2.변경내용 : 대상에게 클래스 "on"넣거나 빼기
+            gnb.classList.toggle("on");
+            // classList는 클래스를 적용하는 기능을 가진 JS객체
+            // classList에서 사용하는 3가지 메서드(기능함수)
+            // 1. add(클래스명) - 클래스 추가하기
+            // 2. remove(클래스명) - 클래스 제거
+            // 3. toggle(클래스명) - 클래스가 없으면 넣고 있으면 제거
+
+        } /////// showMenu 함수/////////////
+        /////////////////////////////////////
+    </script>
 </head>
+
 <body>
+    <!-- 타이틀 -->
+    <h1 class="tit">Show me the MENU</h1>
 
     <!-- 전체메뉴버튼 -->
-    <button class="ham" onclick="yogi('0')">≡</button>
-        
+    <button class="ham" onclick="showMenu()">≡</button>
+
     <!-- 전체 네비게이션박스 -->
     <nav class="gnb">
         <!-- 닫기버튼 -->
-        <button class="ham">×</button>
+        <button class="cbtn" onclick="showMenu()">×</button>
         <ul>
             <li><a href="#">Home</a></li>
             <li>
@@ -54,4 +214,5 @@
         </ul>
     </nav>
 </body>
+
 </html>

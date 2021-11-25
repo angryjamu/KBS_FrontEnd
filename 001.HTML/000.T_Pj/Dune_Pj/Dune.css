@@ -1,12 +1,14 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 /* 
 font-family: 'Gugi', cursive;
-font-family: 'Gothic A1', sans-serif;
 font-family: 'Hahmlet', serif;
+font-family: 'Jua', sans-serif;
+font-family: 'Orbitron', sans-serif;
 */
 
 html,
@@ -88,7 +90,6 @@ h1.logo {
 /* --------------------------상----------------------------- */
 
 .top {
-    /* min-height: 120px; */
     background-color: rgba(0, 0, 0, 0.863);
 }
 
@@ -178,15 +179,16 @@ h1.logo {
 .ham {
     color: #fff;
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 10px;
 
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 35px;
     border: transparent;
     background-color: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 /* --------------------------중----------------------------- */
@@ -195,7 +197,6 @@ h1.logo {
     max-height: 700px;
     margin: 0 auto;
     box-sizing: border-box;
-    /* border: 2px solid blue; */
 }
 
 #cbx {
@@ -206,7 +207,6 @@ h1.logo {
     margin-top: 340px;
     margin-right: auto;
     margin-left: auto;
-    /* border: 2px solid #f00; */
 }
 
 #cbx::after {
@@ -247,7 +247,7 @@ h1.logo {
     left: 50%;
     transform: translateX(-50%);
     width: 100.8%;
-    height: 80%;
+    height: 77%;
     opacity: 0;
     transition: opacity .6s;
 }
@@ -259,15 +259,16 @@ h1.logo {
 
 .txt {
     position: absolute;
-    top: -91%;
+    top: 0%;
     width: 100%;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0.250);
-    font-family: 'Gugi', cursive;
-    font-size: 14px;
+    height: 76.5%;
+    background-color: rgba(0, 0, 0, 0.438);
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
     line-height: 20px;
     text-align: center;
-    color: #ad8e53;
+    color: #ced6d5;
+
 
     transition: bottom .2s ease-in-out;
 }
@@ -276,15 +277,18 @@ h1.logo {
     position: relative;
 }
 
-.cat ol>li:first-child:hover .txt {
-    bottom: 0;
-    /* float: none; */
+.txt li:nth-child(2) {
+    color: #85c4bb;
+    font-size: 25px;
+    font-family: 'Hahmlet', serif;
 }
 
-.txt li:first-child {
-    color: rgb(122, 193, 206);
-    font-size: 17px;
+.txt li:nth-child(4) {
+    color: #85c4bb;
+    font-size: 19px;
+    font-family: 'Hahmlet', serif;
 }
+
 
 .cat:hover .ci>img:nth-of-type(2) {
     opacity: 1;
@@ -294,7 +298,6 @@ h1.logo {
     margin: -15px;
     display: block;
     text-align: center;
-    /* margin-top: -10%; */
 }
 
 .ci span img {
