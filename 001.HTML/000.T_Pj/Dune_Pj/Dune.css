@@ -268,13 +268,7 @@ h1.logo {
     line-height: 20px;
     text-align: center;
     color: #ced6d5;
-
-
     transition: bottom .2s ease-in-out;
-}
-
-.ci ol>li {
-    position: relative;
 }
 
 .txt li:nth-child(2) {
@@ -288,7 +282,6 @@ h1.logo {
     font-size: 19px;
     font-family: 'Hahmlet', serif;
 }
-
 
 .cat:hover .ci>img:nth-of-type(2) {
     opacity: 1;
