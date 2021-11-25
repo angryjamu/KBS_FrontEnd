@@ -23,7 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .scb::-webkit-scrollbar {
     width: 5px;
 }
@@ -52,11 +51,6 @@ body {
     border-right: 3px;
 }
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-/* ul{
-    border-bottom: 5px dotted lime;
-} */
-
 ol {
     padding: 0;
 }
@@ -74,10 +68,6 @@ ol::after {
     clear: both;
 }
 
-/* li{
-    float: left;
-} */
-
 h1.logo {
     margin: 0;
     text-align: center;
@@ -90,6 +80,7 @@ h1.logo {
 /* --------------------------상----------------------------- */
 
 .top {
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.863);
 }
 
@@ -102,7 +93,6 @@ h1.logo {
     width: 100px;
     text-align: center;
     float: left;
-    /* padding: 0 20px; */
 }
 
 .gnb a {
@@ -133,9 +123,7 @@ h1.logo {
     position: absolute;
     height: 0;
     overflow: hidden;
-    transition: height .4s
-        /* ease-in */
-    ;
+    transition: height .4s;
     padding-top: 10px;
     z-index: 1;
 }
@@ -172,7 +160,6 @@ h1.logo {
     width: 100%;
     height: 0;
     background-color: #263229;
-    /* margin-top: 1px; */
     transition: height .3s ease-out;
 }
 
@@ -181,7 +168,6 @@ h1.logo {
     position: absolute;
     top: 20px;
     right: 10px;
-
     width: 40px;
     height: 40px;
     font-size: 35px;
@@ -215,7 +201,6 @@ h1.logo {
     clear: both;
 }
 
-
 .cat {
     width: 23%;
     margin: 1%;
@@ -224,12 +209,11 @@ h1.logo {
     box-sizing: border-box;
     float: left;
     background-color: #383838;
-    box-shadow: 0 0 25px 20px rgb(0 0 0 / 45%);
-    transition: box-shadow 0.3s linear;
 }
 
 .cat:hover {
-    box-shadow: none;
+    box-shadow: 0 0 25px 20px rgb(0 0 0 / 35%);
+    transition: box-shadow 0.2s linear;
 }
 
 .ci {
@@ -254,7 +238,11 @@ h1.logo {
 
 .cat>.ci {
     position: relative;
-    /* overflow: hidden; */
+}
+
+.cat .ci:hover .txt{
+    display: inline;
+    z-index: 34671508344306543943430165057430753480967543067430967043943067234674307656893476980760345976093462043087563495;
 }
 
 .txt {
@@ -262,25 +250,26 @@ h1.logo {
     top: 0%;
     width: 100%;
     height: 76.5%;
-    background-color: rgba(0, 0, 0, 0.438);
+    background-color: rgba(0, 0, 0, 0.200);
     font-family: 'Hahmlet', serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 20px;
     text-align: center;
-    color: #ced6d5;
+    color: #fff;
     transition: bottom .2s ease-in-out;
+    display: none;
 }
 
 .txt li:nth-child(2) {
     color: #85c4bb;
-    font-size: 25px;
+    font-size: 23px;
     font-family: 'Hahmlet', serif;
     font-style: italic;
 }
 
 .txt li:nth-child(4) {
-    color: #85c4bb;
-    font-size: 19px;
+    color: #87cbbb;
+    font-size: 16px;
     font-family: 'Hahmlet', serif;
     font-style: italic;
 }
@@ -315,7 +304,6 @@ h1.logo {
     display: inline;
 }
 
-
 /* --------------------------하----------------------------- */
 .footer {
     padding: 0 10px;
@@ -323,13 +311,11 @@ h1.logo {
 
 .footer,
 .footer-center {
-    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
     margin: 0;
     margin-top: 400px;
-    /* z-index: 10; */
     font-weight: 400;
     padding: 0 10px;
 }
