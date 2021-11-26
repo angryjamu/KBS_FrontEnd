@@ -143,6 +143,102 @@
                 : 문서에 있는 각 요소로 접근할 수 있는
                 방법론을 가지는 모델링(인터페이스)
 
+                [ JS 기본요소 선택법 ]
+                1. 아이디요소 선택법 : getElementById() 메서드
+
+                document.getElementById(아이디명)
+                -> html요소 중 아이디요소는 유일하므로
+                한번에 선택가능
+
+                - 메서드 이름분석
+                get -> 가져와
+                Element -> 요소 하나를
+                By Id -> 아이디에 의한 것으로
+
+                2. 클래스요소 선택법 :
+                getElementsByClassName() 메서드
+                - html요소 중 클래스는 여러개 올 수
+                있기때문에 컬렉션집합을 만들어서
+                관리하기 때문에 선택시 순번을 써야함
+                -> .item(순번) 또는 [순번]
+                -> 순번은 0부터셈
+
+                - 메서드 이름분석
+                get -> 가져와
+                Elements -> 요소들을
+                By Class Name -> 클래스 이름에 의한 것으로
+
+                예) 해당 클래스명을 가진 요소 중 처번째것
+                document
+                .getElementsByClassName(클래스명)
+                .item(0)
+
+                또는
+
+                document
+                .getElementsByClassName(클래스명)[0]
+
+
+
+                3. 태그요소 선택법 :
+                getElementsByTagName() 메서드
+                - html요소 중 태그는 여러개 올 수
+                있기때문에 컬렉션집합을 만들어서
+                관리하기 때문에 선택시 순번을 써야함
+                -> .item(순번) 또는 [순번]
+                -> 순번은 0부터셈
+
+                - 메서드 이름분석
+                get -> 가져와
+                Elements -> 요소들을
+                By Tag Name -> 태그 이름에 의한 것으로
+
+                예) 해당 태그명을 가진 요소 중 처번째것
+                document
+                .getElementsByTagName(태그명)
+                .item(0)
+
+                또는
+
+                document
+                .getElementsByTagName(태그명)[0]
+
+
+
+
+                [ JS에서 요소 선택 후 html변경하기 ]
+
+                선택요소.innerHTML = html코드
+
+                -> 선택요소 내부의 자식으로 html코드를 넣는다
+
+
+
+                [ JS에서 요소 선택 후 CSS 변경하기]
+
+                선택요소.style.스타일시트속성명 = 속성값
+                - 선택요소의 CSS 특정 속성값을 변경함
+                - 스타일시트 속성명은 모두 변수형으로 JS의
+                브라우저 객체 만들어져 있다
+
+                예) "font-size" -> fontSize
+                    "border-radius -> boderRadius
+
+                -이음절 이상 속성명은 데쉬(-)를 빼고 첫단어를
+                대문자 처리함
+
+                -> JS에서 CSS를 변경하면 요소 태그 내부에
+                style속성으로 인라인 코딩되어 들어간다
+                (최우선순위로 적용됨)
+
+                [ JS에서 코드를 재사용하는 방법 ]
+                - 선택요소를 변수에 넣기
+                - 변수는 어떤 값이나 객체를 저장하는 공간
+                - 변수명은 그 저장된 공간의 주소명이다
+                - 변수 사용법: var 변수명 = 값
+                ->>> 변수는 따옴표로 싸지 않는 문자다
+
+
         */
 
         /******************************************* 
@@ -164,6 +260,21 @@
             .innerHTML = '<img src="images/kim.png" alt="김비서가 왜그럴까">';
             // html요소를 넣는 속성
             // 이퀄 오른쪽의 데이터가 왼쪽으로 들어감(할당!)
+
+            // 3. CSS 변경하기
+            // 대상선정 : .pbox
+            // 대상을 변수에 담아서 재사용한다
+            var tg = document.getElementsByClassName("pbox").item(0);
+            //  var는 variable(변수)에서 나온말. 변수선언시 사용
+
+            //  (1) 글자색 변경하기
+            tg.style.color = "lime";
+
+            // (2) 글자크기 변경하기
+            tg.style.fontSize = "50px";
+
+            // (3) 트랜지션주기
+            tg.style.transition = "2s";
 
         }////////////////////showMe 함수////////////////////////
         ////////////////////////////////////////////////////////
