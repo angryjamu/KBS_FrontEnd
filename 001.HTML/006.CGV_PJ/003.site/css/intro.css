@@ -74,3 +74,11 @@ body {
     transform: rotate(-15deg) scale(1.5);
     /* 반시계방향 15도회전 + 1.5배 확대 */
 }
+
+
+/********************************** 600px 이하 **********************************/
+@media screen and (max-width:600px) {
+    #enter span {
+        font-size: 6vw;
+    }
+}

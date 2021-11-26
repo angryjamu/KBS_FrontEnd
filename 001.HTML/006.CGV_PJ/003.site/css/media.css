@@ -70,7 +70,7 @@
 @media screen and (max-width:600px) {
 
     /* 1.타이틀 글자크기 */
-    h1.tit{
+    h1.tit {
         font-size: 30px;
     }
 
@@ -80,12 +80,45 @@
         /* 보이는 화면높이 100% 에서 상단(80px)+(하단150px)을 뺀 나머지 높이설정 */
     }
 
-    /* 2. 하단영역 - 150px */
+    /* 2. 영화정보박스 */
+    .mlist {
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    /* 3. 영화텍스트박스 */
+    .movtxt {
+        font-size: 2.6vw;
+        line-height: 3vw;
+    }
+
+    /* 4. 첫번째 li는 영화제목 */
+    .movtxt li:first-child {
+        font-size: 3.3vw;
+    }
+
+    /* 5. 메인박스 배경 */
+    #cont {
+        background-size: 500px;
+        background-position: center top;
+    }
+
+    /* 6. 스크린 크기, 위치 맞추기 */
+    #screen {
+        top: 56px;
+        left: 50.4%;
+        transform: translateX(-50%);
+        /* 가로중앙이동 */
+        width: 299px;
+        height: 167px;
+    }
+
+    /* 7. 하단영역 - 150px */
     #info {
         height: 150px;
     }
 
-    /* 3. 하단주소만 없애기 */
+    /* 8. 하단주소만 없애기 */
     #info address span {
         display: none;
     }
