@@ -47,7 +47,7 @@ h1.tit {
     text-shadow: 0 0 4px aquamarine;
     
     /* 애니메이션: 이시이지반방마 */
-    animation: titAni 1.5s ease-out infinite alternate;
+    animation: titAni 1.3s ease-out infinite alternate;
 }
 /* 타이틀 그림자 블러애니 */
 @keyframes titAni {

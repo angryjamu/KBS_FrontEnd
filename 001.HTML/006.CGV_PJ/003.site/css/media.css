@@ -56,10 +56,38 @@
         display: block;
         margin: 10px auto;
     }
-        .sns {
-            position: static;
-            margin: 10px auto;
-            width: 114px;
-        }
 
+    .sns {
+        position: static;
+        margin: 10px auto;
+        width: 114px;
     }
+
+}
+
+/********************************** 모바일파트 **********************************/
+/********************************** 600px 이하 **********************************/
+@media screen and (max-width:600px) {
+
+    /* 1.타이틀 글자크기 */
+    h1.tit{
+        font-size: 30px;
+    }
+
+    /* 1. 메인영역 - 상단과 하단을 뺀 나머지 높이설정 */
+    .rbx::before {
+        padding-top: calc(100vh - 230px);
+        /* 보이는 화면높이 100% 에서 상단(80px)+(하단150px)을 뺀 나머지 높이설정 */
+    }
+
+    /* 2. 하단영역 - 150px */
+    #info {
+        height: 150px;
+    }
+
+    /* 3. 하단주소만 없애기 */
+    #info address span {
+        display: none;
+    }
+
+}
