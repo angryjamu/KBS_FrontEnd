@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 레이아웃 연습</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;/* 보이는 화면 채우기
+            -자식요소 height %값의 기준이 됨 */
+        }
+        ul,ol{/* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 전체부모 */
+        #wrap{
+            height: 100%;
+        }
+
+        /* ul 파티션 부모박스 */
+        #wrap>ul{
+            height: 100%;
+        }
+        /* li공통 */
+        #wrap>ul>li{
+            width: 20%;
+            height: 200px;
+            outline: 2px dotted red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 전체부모박스 -->
+    <div id="wrap">
+        <!-- 파티션박스 -->
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
