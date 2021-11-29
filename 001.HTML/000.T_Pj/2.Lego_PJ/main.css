@@ -282,8 +282,14 @@ h1.tit{
     font-style: normal;
     font-family: 'Wendy One', sans-serif;
     font-size: 18px;
-    line-height: 20;
+    line-height: 20px;
 
     padding-top: 20px;
     padding-left: 20px;
+}
+
+#info img{
+    float: left;
+    /* margin: 0 auto; */
+    /* margin-right: 20px; */
 }

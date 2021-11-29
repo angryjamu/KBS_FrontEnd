@@ -224,12 +224,39 @@
                 document.querySelector("ul>li")
                 ********************************
                 document.getElementsByTagName("ul").item(0).getElementsByTagName("li").item(0)
+                => 매우길고 선택이 불편하다.....
 
                 -> 메서드명 분석
                 - query 쿼리 -> 질의(기술적인질문)
                 - Selector 선택자 -> CSS선택자
                 -> 브라우저에게 CSS선택자로 질의를 한다
                 그러면 요소를 선택한다
+
+                ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                2. 여러개의 요소를 선택하는 방법
+                querySelectorAll(CSS선택자)
+
+                -> 선택시 컬렉션 집합에 결과를 담는다
+                -> 따라서 요소가 하나일지라도 순번으로 선택한다
+
+                (1) 순번선택법
+                    .item(순번) 또는 [순번]
+                    -> 순번은 0부터
+                    예) document.querySelectorAll(".my>li").item(3)
+                    -> 4번째 li를 선택함
+                    
+                    또는
+
+                    document.querySelectorAll(".my>li")[3]
+                    -> 4번째 li를 선택함
+
+                (2) 요소개수 알아오기 : lenghth
+                querySelectorAll(CSS선택자).lenghth
+                -> 개수를 읽어올 수 있다
+                예)
+                document.querySelectorAll(".my").lenghth
+                -> 만약 .my요소가 7라면 결과로 7이 나온다
+
 
 
 
@@ -239,6 +266,11 @@
 
                 -> 선택요소 내부의 자식으로 html코드를 넣는다
 
+                [ JS에서 요소 선택 후 Text넣기 ]
+
+                선택요소.innerText = 넣을문구
+
+                -> 선택요소 내부 데이터로 텍스트가 들어감
 
 
                 [ JS에서 요소 선택 후 CSS 변경하기]
@@ -336,6 +368,59 @@
         ////////////////////showMe 함수////////////////////////
         ////////////////////////////////////////////////////////
 
+        /*************************************************** 
+            함수명: circle
+            기능: 선택요소를 중앙으로 보낸다
+        **************************************************/
+        function circle(num){ // num - 숫자값 전달변수
+
+            // 1. 함수호출확인
+            console.log("써클,나야나아아아아아!!!!!"+num)
+
+            // 2. 대상선정 .circle
+            var cc = document.querySelectorAll(".circle");
+            console.log("선택요소개수:"+cc.length);
+
+            // 3. 변경내용: 트랜지션으로 화면중앙으로 이동하기
+            cc.item(num).style.transition = "1s ease-out";
+            cc.item(num).style.top = "50%";
+            cc.item(num).style.right = "50%";
+            cc.item(num).style.transform = "translate(50%,-50%)";
+
+        }////////////circle 함수///////////////////
+        ///////////////////////////////////////////
+
+        /*********************************************************************** 
+            함수명: 사각형각
+            기능: 오른쪽상단으로 먼저 이동후 사각형으로 전체 채우기 애니메이션
+        ***********************************************************************/
+        function 사각형각(){
+            
+            // 1. 함수호출확인
+            console.log("사각사각!");
+            // 2. 대상선정: .넌뭐냐
+            var 사각 = document.querySelector(".넌뭐냐")
+            // querySelector() 는 무조건 하나만 선택한다
+
+            // 3.변경내용:top, 트랜지션, width, height
+            사각.style.top = "0";
+            사각.style.borderRadius = "0";
+            사각.style.width = "100vw";
+            사각.style.height = "100vh";
+            사각.style.transition = "3s 1s,top 1s 0s"
+            // -> 트랜지션해석: top값은 기다림없이 1초간 실행 나머지는 모두 1초후 3초간 실행
+
+            // 4. 추가변경: 글자넣기
+            사각.innerText = "JS입문을 환영합니다!";
+
+            // 글자관련 CSS변경하기
+            사각.style.fontSize = "5vw";
+            사각.style.color = "cyan";
+            사각.style.lineHeight = "100vh";
+
+
+        }///////사각형각 함수/////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////
 
     </script>
     <style>
@@ -368,28 +453,45 @@
         }
         /* 원박스 개별이미지 */
         .circle:first-of-type{
+            right: 400px;
             background-image: url(./images/01.png);
         }
         .circle:nth-of-type(2){
+            right: 200px;
             background-image: url(./images/02.png);
         }
         .circle:nth-of-type(3){
             background-image: url(./images/03.png);
         }
         
+        .넌뭐냐{
+            position: absolute;
+            top: 40%;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            white-space: nowrap;
+            border-radius: 50%;
+            background: url(./images/04.png) no-repeat top/cover;
+        }
     </style>
 </head>
 <body>
         
-    <p class="pbox" showMe title="여기를 클릭하세요" onclick="showMe ()">
+    <p class="pbox" showMe title="여기를 클릭하세요" onclick="showMe()">
         나는 요즘 매일매일 생각한다<br>
         도대체 <span id="name"></span>
     </p>
 
     <!-- 원모양박스 -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <div class="circle" onclick="circle(0)"></div>
+    <div class="circle" onclick="circle(1)"></div>
+    <div class="circle" onclick="circle(2)"></div>
+
+    <!-- 사각형으로 변할 원박스 -->
+    <div class="넌뭐냐" onclick="사각형각()"></div>
     
 
 </body>
