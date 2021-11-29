@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* LEGO 인트로 페이지 */
+
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+
+/* font-family: 'Wendy One', sans-serif; */
+
+
+html,
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#enter{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    transition: all .2s /* ease-out */ .1s;
+}
+
+#enter span{
+    display: block;
+    text-align: center;
+    font-family: 'Wendy One', sans-serif;
+    transition: all .2s /* ease-out */ .1s;
+}
+
+#enter:hover span{
+    transform: scale(2);
+    color: #dd2626;
+}
+
+#enter img {
+    width: 400px;
+    transition: transform .4s ease-out;
+    margin-bottom: 10px;
+}
+
+#enter:hover img{
+    transform: rotate(15deg) scale(1.5);
+}
+
+#enter span{
+    transform: rotate(-15deg) scale(1.5);
+}
