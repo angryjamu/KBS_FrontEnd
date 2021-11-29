@@ -24,13 +24,15 @@ a {
 }
 
 body {
-    background: #000;
+    background: url(./img/main4.jpg);
+    /* background-size: 100%; */
+    /* background: rgb(20, 99, 37); */
 }
 
 .part{
     max-width: 1200px;
     margin: 0 auto;
-    outline: 3px dotted dodgerblue;
+    /* outline: 3px dotted dodgerblue; */
 }
 
 ul,ol{
@@ -189,7 +191,7 @@ h1.tit{
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ메인ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 #cont{
     position: relative;
-    background: url(./img/main.jpg) no-repeat;
+    background: url(./img/main8.jpg) no-repeat;
     background-size: 100%;
 }
 
