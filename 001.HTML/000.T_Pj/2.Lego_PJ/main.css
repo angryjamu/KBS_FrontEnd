@@ -24,7 +24,7 @@ a {
 }
 
 body {
-    background: url(./img/main4.jpg);
+    background: url(./img/main4-1.jpg);
     /* background-size: 100%; */
     /* background: rgb(20, 99, 37); */
 }
@@ -161,7 +161,7 @@ h1.tit{
 
 .smenu a:hover{
     color: #fff;
-    text-decoration: underline rgb(252, 227, 0);
+    text-decoration: underline rgb(49, 199, 82);
 }
 
 .glist>li:nth-child(2):hover .smenu{
@@ -197,14 +197,29 @@ h1.tit{
 
 #screen{
     position: absolute;
-    top: 20.3%;
-    left: 36%;
-    width: 28.3%;
-    height: 43.3%;
+    top: 2%;
+    left: 79%;
+    width: 17.3%;
+    height: 22.5%;
     background: #000;
 }
 
 #screen iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#screen2{
+    position: absolute;
+    top: 2%;
+    left: 3.8%;
+    width: 17.3%;
+    height: 22.5%;
+    background: #000;
+}
+
+#screen2 iframe{
     width: 100%;
     height: 100%;
     border: none;

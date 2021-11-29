@@ -235,8 +235,54 @@
                 이유는? 자식요소의 flex속성값으로
                 flex-shrink가 1로 기본설정되어 있기 때문이다
             */
+            justify-content: space-around;
+            /* 수평정렬 */
+            align-content: space-around;
+            /* 
+                align-content 속성:
+                - 여러줄일때 수직정렬
+                1) flex-start : 맨위(기본값)
+                2) flex-end : 맨아래
+                3) center : 세로중앙
+                4) space-around : 아이템 요소 상하에 같은간격
+                5) space-between : 아이템 요소 상하간격일정(처음과 끝이 구석에 붙어나옴)
+                6) space-evenly : 아이템 요소 상하와 사이간격이 모두 일정함
+
+                비교) 한줄일때 수직정렬은 align-items
+            */
+        }
+        /* 글자수를 맞추기 위해 li에 마진을 설정 */
+        .t5>li{
+            margin: 0 14px;
+            /* 양쪽마진으로 조정 */
         }
         
+        /* 타이틀6 */
+        .t6{
+            top: 5%;
+            right: 5%;
+            left: auto;
+            transform: none;
+            width: 350px;
+            height: auto;
+
+            /* 플렉스 설정 */
+            display: flex;
+            flex-wrap: wrap;
+            /* 자동줄바꿈 */
+            justify-content: space-between;
+        }
+        /* 줄바꿈을 할 곳에 li를 넣고 width를 100%주면 줄바꿈 역할을 한다
+        단, 안보이게 처리할것 */
+        .tit>li.brk{
+            /* width: 100%; */
+            flex-basis: 100%;
+            /* flex자식요소는 widh대신 flex-basis를 사용할 수 있음 */
+            height: 0;
+            border: none;
+        }
+
+
     </style>
 </head>
 
@@ -308,8 +354,20 @@
             <li>L</li>
             <li>D</li>
         </ol>
-
-
+        <!-- 타이틀박스6 -->
+        <ol class="tit t6">
+            <li>L</li>
+            <li>O</li>
+            <li>T</li>
+            <li>T</li>
+            <li>E</li>
+            <li class="brk"></li>
+            <li>W</li>
+            <li>O</li>
+            <li>R</li>
+            <li>L</li>
+            <li>D</li>
+        </ol>
 
     </div><!-- #wrap박스 -->
 

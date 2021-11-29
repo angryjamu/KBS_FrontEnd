@@ -203,6 +203,33 @@
                 document
                 .getElementsByTagName(태그명)[0]
 
+                ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+                [ CSS 선택자를 그대로 사용하는 선택법 ]
+
+                1. 하나의 요소 선택법
+                querySelector(CSS선택자)
+                -> 선택요소가 여러개여도 처음 만나는 요소
+                단 하나만을 선택한다
+                따라서 몇번째라는 부가선택이 불필요
+                예)
+                document.querySelector('#my')
+                -> 아이디가 my인 요소
+                document.querySelector(".say")
+                -> 클래스가 say인 요소(만나는 첫번째 .say)
+                document.querySelector("ul>li")
+                -> ul 직계자식 li중 첫번째요소
+
+                => 이렇게 선택하는게 간단해서 인기많음
+                왜?     예컨데 아래 선택을 일반선택법으로 하면...
+                document.querySelector("ul>li")
+                ********************************
+                document.getElementsByTagName("ul").item(0).getElementsByTagName("li").item(0)
+
+                -> 메서드명 분석
+                - query 쿼리 -> 질의(기술적인질문)
+                - Selector 선택자 -> CSS선택자
+                -> 브라우저에게 CSS선택자로 질의를 한다
+                그러면 요소를 선택한다
 
 
 
@@ -271,12 +298,42 @@
             tg.style.color = "lime";
 
             // (2) 글자크기 변경하기
-            tg.style.fontSize = "50px";
+            tg.style.fontSize = "45px";
 
             // (3) 트랜지션주기
             tg.style.transition = "2s";
 
-        }////////////////////showMe 함수////////////////////////
+            // (4) 배경이미지 넣기
+            tg.style.background = "url(./images/kimbs.jpg) no-repeat top/cover";
+
+            // (5) 원모양만들기
+            tg.style.borderRadius = "50%";
+
+            // (6) 글자중앙정렬
+            tg.style.textAlign = "center";
+
+            // (7) 줄간격 300px
+            tg.style.lineHeight = "300px";
+
+            // (8) 정중앙 보내기 + 트랜스폼(이동)
+            tg.style.top = "50%";
+            tg.style.left = "50%";
+
+            // (9) 트랜스폼 : 중앙이동+회전+스케일
+            tg.style.transform = "translate(-50%, -50%) rotate(360deg) scale(.7)";
+
+            // (10) 전체배경색 변경하기
+            // 대상:body
+            // JS에서 body는 특별히 취급하여
+            // document.body 라고 선택함
+            var bd = document.body;
+
+            bd.style.backgroundColor = "orange";
+            bd.style.transition = "5s";
+        }
+        
+
+        ////////////////////showMe 함수////////////////////////
         ////////////////////////////////////////////////////////
 
 
@@ -295,13 +352,45 @@
             color: yellow;
             text-shadow: 1px 1px 1px #000;
         }
+
+        /* 원모양박스 */
+        .circle{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;/* 원 */
+
+            /* 배경공통 */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* 원박스 개별이미지 */
+        .circle:first-of-type{
+            background-image: url(./images/01.png);
+        }
+        .circle:nth-of-type(2){
+            background-image: url(./images/02.png);
+        }
+        .circle:nth-of-type(3){
+            background-image: url(./images/03.png);
+        }
+        
     </style>
 </head>
 <body>
         
-    <p class="pbox" title="여기를 클릭하세요" onclick="showMe()">
+    <p class="pbox" showMe title="여기를 클릭하세요" onclick="showMe ()">
         나는 요즘 매일매일 생각한다<br>
         도대체 <span id="name"></span>
     </p>
+
+    <!-- 원모양박스 -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+
 </body>
 </html>
