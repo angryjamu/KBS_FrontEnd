@@ -21,7 +21,9 @@ body {
     background: url(./imgDune/bg.jpg)no-repeat fixed center/cover;
     font-family: 'Hahmlet', serif;
     overflow-x: hidden;
-}
+    -webkit-scrollbar :none;
+        
+    }
 
 .scb::-webkit-scrollbar {
     width: 5px;
