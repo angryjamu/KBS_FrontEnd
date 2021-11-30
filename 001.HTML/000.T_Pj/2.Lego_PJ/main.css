@@ -16,6 +16,8 @@
 html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,p{
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
 }
 
 a {
@@ -25,8 +27,6 @@ a {
 
 body {
     background: url(./img/main4-1.jpg);
-    /* background-size: 100%; */
-    /* background: rgb(20, 99, 37); */
 }
 
 .part{
@@ -282,10 +282,11 @@ h1.tit{
     background-color: #000;
     font-style: normal;
     font-family: 'Wendy One', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 20px;
-    padding-top: 41px;
-    padding-left: 35px;
+    padding-top: 20px;
+    padding-left: 45px;
+    padding-bottom: 21px;
 }
 
 #info img{
@@ -294,31 +295,31 @@ h1.tit{
 }
 
 .sns {
-    position: relative;
-    top: -98px;
-    right: -973px;
+    position: absolute;
+    top: 60px;
+    right: 85px;
 }
 
 .sns li{
-    width: 40px;
+    width: 34px;
     height: 34px;
-    background: url(./img/sns.jpg) no-repeat;
-    /* margin: 2px; */
+    background: url(./img/sprites_logo.png) no-repeat;
+    margin: 2px;
     filter: grayscale(100%);
 }
 
 .sns li:first-child {
-    background-position: -40px -25px;
+    background-position: -509px -429px;
 }
 .sns li:nth-child(2) {
-    background-position: -100px -25px;
+    background-position: -551px -429px;
 }
 .sns li:nth-child(3) {
-    background-position: -160px -25px;
+    background-position: -593px -429px;
 }
-.sns li:nth-child(4) {
+/* .sns li:nth-child(4) {
     background-position: -220px -25px;
-}
+} */
 
 .sns a{
     display: block;
