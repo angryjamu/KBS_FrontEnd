@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등분할 레이아웃 사이트</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 보이는 화면채우기 - 자식요소의 %기준 필수 */
+        }
+        ul,ol{/* 쓰리 무 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 전체부모 */
+        #wrap{
+            height: 100%;
+        }
+        /* ul 파티션 부모박스 */
+        #wrap>ul{
+            display: flex;
+            /* 플렉스박스 설정 */
+            height: 100%;
+        }
+        /* 파티션 li공통 */
+        #wrap>ul>li{
+            position: relative;/* 부모자격 */
+            flex: 1; /* 등분할 설정 */
+
+            /* 배경공통 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* 각 파티션 li 셋팅 */
+        #wrap>ul>li:nth-child(1){
+            background-image: url(./images/m01_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(2){
+            background-image: url(./images/m02_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(3){
+            background-image: url(./images/m03_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(4){
+            background-image: url(./images/m04_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(5){
+            background-image: url(./images/m05_bg.jpg);
+        }
+
+        /* 파트별 타이틀+로고 이미지 공통 */
+        #wrap>ul>li>img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
+        }
+
+        /* 타이틀이미지 */
+        #wrap>ul>li>img:first-child{
+            width: min(80%,240px);
+        }
+        /* 
+            [ css 함수기능 ]
+            -> 참고(w3s): https://www.w3schools.com/css/css_math_functions.asp
+
+            1. calc()
+             -> 특정값을 계산으로 적용하기(사칙연산가능)
+                예) calc(100% - 200px) -> 100%에서 200px을 뺀 나머지
+
+            2. max()
+             -> 나열된 값에서 가장 큰값을 적용함(2개이상가능)
+            예) max(50%,200px) -> 두값중 큰것이 적용됨
+            
+            3. min()
+             -> 나열된 값에서 가장 작은값을 적용함(2개이상가능)
+            예) min(50%,200px) -> 두값중 작은ㄴ것이 적용됨
+        */
+
+    </style>
+</head>
+
+<body>
+    <!-- 전체부모박스 -->
+    <div id="wrap">
+        <!-- 파티션박스 -->
+        <ul>
+            <li>
+                <img src="./images/m01_txtbox.png" alt="썸머페스티벌">
+                <img src="./images/m01_logo1.png" alt="어드벤처로고">
+            </li>
+            <li>
+                <img src="./images/m02_txtbox.png" alt="서울을 한눈에 담다">
+                <img src="./images/m04_logo.png" alt="서울스카이로고">
+            </li>
+            <li>
+                <img src="./images/m03_txtbox.png" alt="쉐어더드림">
+                <img src="./images/m03_logo.png" alt="아쿠아리움로고">
+            </li>
+            <li>
+                <img src="./images/m04_txtbox.png" alt="어린이왕국">
+                <img src="./images/m05_logo.png" alt="키즈파크로고">
+            </li>
+            <li>
+                <img src="./images/m05_txtbox.png" alt="워터파크">
+                <img src="./images/m02_logo.png" alt="워터파크로고">
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
