@@ -22,6 +22,7 @@ html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,p{
 
 a {
     color: #fff;
+    text-decoration: none;
 }
 
 body {
@@ -224,38 +225,34 @@ h1.tit{
     border: none;
 }
 
-.list{
+.list {
     position: absolute;
-    bottom: 76.1%;
-    left: 79%;
-    /* transform: translateX(-50%); */
+    bottom: 86%;
+    left: 0%;
 }
 
-.list img{
+.list img {
     right: 0;
-    border-radius: 6% 6% 0 0;
-    width: 207px;
-    height: 145px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 
 #enter {
     position: absolute;
-    top: 18%;
-    left: 84%;
-    text-align: center;
+    top: 10%;
+    left: 1%;
     display: block;
+    text-align: center;
+    font-family: 'Montserrat Subrayada', sans-serif;
     transition: all .4s ease-out .2s;
+    color: red;
     text-decoration: none;
-}
-
-#enter span {
-    /* font-family: 'Montserrat Subrayada', sans-serif; */
-    font: bold 34px/40px 'Audiowide';
 }
 
 #enter:hover{
     transform: scale(2);
-    color: chartreuse;
+    color: #ffee00;
 }
 
 
