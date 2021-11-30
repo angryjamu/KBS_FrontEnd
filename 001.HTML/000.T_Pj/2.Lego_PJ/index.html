@@ -7,13 +7,17 @@
     <title>LEGO</title>
     <link rel="stylesheet" href="main.css">
     <script>
-        function goMv(code) {
-            document.getElementById("ifr").src =
+        function goMv(name,code) {
+            document.getElementById(name).src =
 
                 "https://www.youtube.com/embed/" +
                 code +
                 "?autoplay=1&playsinline=1";
+            // document.getElementById("ifr2").src =
 
+            //     "https://www.youtube.com/embed/" +
+            //     code +
+            //     "?autoplay=1&playsinline=1";
         }
     </script>
 </head>
@@ -72,24 +76,26 @@
                 allowfullscreen></iframe>
         </div>
         <div id="screen">
-            <iframe id="ifr"
+            <iframe id="ifr2"
                 src="https://www.youtube.com/embed/?autoplay=1&mute=1&loop=1&playlist=duHGU6S9hZk&playsinline=1/"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
 
         <div class="list">
-            <!-- <ul> -->
-            <!-- <li> -->
-            <a href="#" onclick="goMv('_aHIshgLKA0')">
-                <img src="./img/elsa3.jpg" alt="레고박스">
-                <!-- <ol class="txt"> -->
-                <!-- <li>Star Wars Special</li> -->
-                <!-- <li>350$</li> -->
-                <!-- </ol> -->
+            <a href="#" onclick="goMv('ifr2','_aHIshgLKA0')">
+                <img src="./img/elsa3.jpg" alt="엘사">
             </a>
-            <!-- </li> -->
-            <!-- </ul> -->
+        </div>
+        <h2 id="enter">
+            <a href="#" onclick="goMv('_aHIshgLKA0')">NEW!</a>
+        </h2>
+
+
+        <div class="list">
+            <a href="#" onclick="goMv('ifr','_aHIshgLKA0')">
+                <img src="./img/elsa3.jpg" alt="엘사">
+            </a>
         </div>
         <h2 id="enter">
             <a href="#" onclick="goMv('_aHIshgLKA0')">NEW!</a>
