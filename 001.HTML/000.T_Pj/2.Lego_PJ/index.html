@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGO</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function goMv(code) {
+            document.getElementById("ifr").src =
+
+                "https://www.youtube.com/embed/" +
+                code +
+                "?autoplay=1&playsinline=1";
+
+        }
+    </script>
 </head>
 
 <body>
@@ -55,13 +65,13 @@
     </header>
     <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ메인ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
     <main id="cont" class="part rbx">
-        <div id="screen">
+        <div id="screen2">
             <iframe id="ifr"
                 src="https://www.youtube.com/embed/?autoplay=1&mute=1&loop=1&playlist=duHGU6S9hZk&playsinline=1/"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <div id="screen2">
+        <div id="screen">
             <iframe id="ifr"
                 src="https://www.youtube.com/embed/?autoplay=1&mute=1&loop=1&playlist=duHGU6S9hZk&playsinline=1/"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -69,27 +79,33 @@
         </div>
 
         <div class="list">
-            <ul>
-                <li>
-                    <a href="#" onclick="goMv('2yTr5oS99_c')">
-                        <img src="./img/b1.jpg" alt="스타워즈">
-                        <ol class="txt">
-                            <li>Star Wars Special</li>
-                            <li>350$</li>
-                        </ol>
-                    </a></li>
-            </ul>
+            <!-- <ul> -->
+            <!-- <li> -->
+            <a href="#" onclick="goMv('_aHIshgLKA0')">
+                <img src="./img/box2-1.jpg" alt="레고박스">
+                <!-- <ol class="txt"> -->
+                <!-- <li>Star Wars Special</li> -->
+                <!-- <li>350$</li> -->
+                <!-- </ol> -->
+            </a>
+            <!-- </li> -->
+            <!-- </ul> -->
         </div>
+        <h2 id="enter">
+            NEW!
+        </h2>
     </main>
-    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ메인ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
     <footer id="info" class="part">
         <address>
-            <a href="#"><img src="./img/logo.png" alt="하단레고로고"></a>
+            <a href="https://www.lego.com/en-us/themes"><img src="./img/logo.png" alt="하단레고로고"></a>
             <span>
                 LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online.<br>
-                LEGO, the LEGO logo, the Minifigure, DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and MIXELS are trademarks
-                and copyrights <!-- <br> -->
-                of the LEGO Group. ©2021 The LEGO Group. All rights reserved. Use of this site signifies your agreement to the terms of use.
+                LEGO, the LEGO logo, the Minifigure, DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and MIXELS
+                are trademarks
+                and copyrights
+                of the LEGO Group. ©2021 The LEGO Group. All rights reserved. Use of this site signifies your agreement
+                to the terms of use.
             </span>
         </address>
         <ul class="sns">
@@ -108,11 +124,11 @@
                     <span class="ir">인스타그램 바로가기</span>
                 </a>
             </li>
-            <!-- <li>
+            <li>
                 <a href="https://www.youtube.com/user/LEGO?app=desktop" target="_blank" title="유튜브 바로가기">
                     <span class="ir">유튜브 바로가기</span>
                 </a>
-            </li> -->
+            </li>
         </ul>
     </footer>
 

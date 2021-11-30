@@ -6,14 +6,12 @@
 /* Roboto체 + Roboto Condensed체 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap');
 
-
 /* 나눔바른고딕 */
 @font-face {
     font-family: 'NanumBarunGothic';
     font-weight: 300;
     src: url(../fonts/NanumBarunGothicLightSubset.woff) format('woff');
 }
-
 
 /* Pistilli체 */
 @font-face {
@@ -23,9 +21,6 @@
     src: url(../fonts/Pistilli-Roman.woff) format('woff');
 }
 
-
-
-
 /* 
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
@@ -33,6 +28,84 @@
     font-family: 'Pistilli', sans-serif;
 */
 
+/* 레이아웃 공통 class */
+
+/* 속박스 */
+.ibx {
+    max-width: 1300px;
+    /* 최대1300px유지, 작이지면 auto */
+    margin: 0 auto;
+    /* 가로중앙정렬 */
+}
+
+/* 비율유지박스 */
+.rbx {
+    position: relative;
+    /* 부모자격 - rbxIn */
+    /* height값 설정이 없어야함 */
+}
+
+/* 비율유지박스 가상요소 비율밀기셋팅 */
+.rbx::before {
+    content: '';
+    display: block;
+    /* padding-top: 50%; */
+    /* 부모박스의 가로에 대한 %비율
+    -> 파트별 개별적으로 비율을 따로 줘야함 */
+}
+
+.pt1.rbx::before {
+    padding-top: 55.69%;
+}
+
+/* 파트1비율 */
+/* 비율계산
+        1300 : 724 = 100: x
+        x = 724 * 100 / 1300
+        x = 55.69% */
+
+.pt2.rbx::before {
+    padding-top: 55.69%;
+}
+
+/* 파트2비율 */
+/* 비율계산
+        1300 : 650 = 100: x
+        x = 650 * 100 / 1300
+        x = 50% */
+
+/* 비율유지 속박스 - 가상요소 패딩탑으로 밀리므로 */
+.rbxIn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* 컨텐츠 박스 - 실제내용이 들어가는 박스 */
+.pt1 .cbx {
+    height: 100%;
+    /* 내부박스 높이채우기 */
+    /* .pt2의 flex적용인 경우 높이값 불필요 */
+}
+
+/* 3개로 구성되는 컨텐츠박스 */
+/* flex 적용하기 */
+.fbx {
+    display: flex;
+}
+
+.fbx>.cbx {
+    flex: 1;
+    /* 등분할설정 */
+}
+
+/* 공통 배경설정 */
+.bgi {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* 공통 class */
 
@@ -43,4 +116,3 @@
     height: 0;
     overflow: hidden;
 }
-

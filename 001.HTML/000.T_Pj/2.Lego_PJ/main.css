@@ -22,7 +22,6 @@ html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,p{
 
 a {
     color: #fff;
-    text-decoration: none;
 }
 
 body {
@@ -227,13 +226,40 @@ h1.tit{
 
 .list{
     position: absolute;
-    bottom: 6%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
+    bottom: 76.1%;
+    left: 79%;
+    /* transform: translateX(-50%); */
 }
 
-.list ul>li{
+.list img{
+    right: 0;
+    border-radius: 6% 6% 0 0;
+    width: 207px;
+    height: 145px;
+}
+
+#enter {
+    position: absolute;
+    top: 18%;
+    left: 84%;
+    text-align: center;
+    display: block;
+    transition: all .4s ease-out .2s;
+    text-decoration: none;
+}
+
+#enter span {
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    font: bold 34px/40px 'Audiowide';
+}
+
+#enter:hover{
+    transform: scale(2);
+    color: chartreuse;
+}
+
+
+/* .list ul>li{
     position: relative;
     width: 14.66%;
     margin: 0 1%;
@@ -270,7 +296,7 @@ h1.tit{
     font-size: 17px;
     letter-spacing: -1px;
     margin-top: 30%;
-}
+} */
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 #info{
     position: relative;
@@ -303,23 +329,24 @@ h1.tit{
 .sns li{
     width: 34px;
     height: 34px;
-    background: url(./img/sprites_logo.png) no-repeat;
+    background: url(./img/sns.PNG) no-repeat;
     margin: 2px;
-    filter: grayscale(100%);
+    border-radius: 40%;
+    filter: grayscale(100%)
 }
 
 .sns li:first-child {
-    background-position: -509px -429px;
+    background-position: -41px -27px;
 }
 .sns li:nth-child(2) {
-    background-position: -551px -429px;
+    background-position: -101px -27px;
 }
 .sns li:nth-child(3) {
-    background-position: -593px -429px;
+    background-position: -162px -28px;
 }
-/* .sns li:nth-child(4) {
-    background-position: -220px -25px;
-} */
+.sns li:nth-child(4) {
+    background-position: -221px -27px;
+}
 
 .sns a{
     display: block;
@@ -328,5 +355,5 @@ h1.tit{
 }
 
 .sns li:hover{
-    filter: grayscale(0%);
+    filter: opacity(100%);
 }
