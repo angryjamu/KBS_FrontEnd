@@ -157,7 +157,6 @@ h1.tit{
 .smenu a{
     display: block;
     white-space: nowrap;
-    /* transition: color .3s; */
 }
 
 .smenu a:hover{
@@ -241,7 +240,7 @@ h1.tit{
 .cha2 {
     position: absolute;
     bottom: 86%;
-    left: 73%;
+    left: 92%;
 }
 
 .cha2 img {
@@ -272,7 +271,7 @@ h1.tit{
 #enter2 a {
     position: absolute;
     top: 9%;
-    left: 74.4%;
+    left: 93.6%;
     display: block;
     text-align: center;
     font-family: 'Wendy One', sans-serif;
@@ -281,10 +280,27 @@ h1.tit{
     text-decoration: none;
 }
 
-#enter2:hover img:first-of-type{
-    transform: rotateY(0deg);
+#cont>.cha2 img:first-of-type{
+   transform: rotateY(90deg);
+   transition: transform .4s ease-in;
+}
+
+#cont>.cha2:hover img:first-of-type{
+   transform: rotateY(0deg);
+   transition: transform .4s ease-out .4s;
+}
+
+#cont>.cha2 img:last-of-type{
+    position: absolute;
+    transform: rotate(0deg) .4s;
     transition: transform .4s ease-out .4s;
 }
+
+#cont>.cha2:hover img:last-of-type{
+    transform: rotateY(90deg);
+    transition: transform .4s ease-in;
+ }
+
 
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
