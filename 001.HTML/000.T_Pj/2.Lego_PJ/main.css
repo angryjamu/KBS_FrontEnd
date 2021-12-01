@@ -157,10 +157,11 @@ h1.tit{
 .smenu a{
     display: block;
     white-space: nowrap;
+    /* transition: color .3s; */
 }
 
 .smenu a:hover{
-    color: #fff;
+    color: rgb(251, 255, 0);
     text-decoration: underline rgb(49, 199, 82);
 }
 
@@ -225,20 +226,32 @@ h1.tit{
     border: none;
 }
 
-.list {
+.cha1 {
     position: absolute;
     bottom: 86%;
     left: 0%;
 }
 
-.list img {
+.cha1 img {
+    right: 0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.cha2 {
+    position: absolute;
+    bottom: 86%;
+    left: 73%;
+}
+
+.cha2 img {
     right: 0;
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
 
-#enter a {
+#enter1 a {
     position: absolute;
     top: 9%;
     left: 1.5%;
@@ -250,10 +263,29 @@ h1.tit{
     text-decoration: none;
 }
 
-#enter:hover a{
+#enter1:hover a{
     transform: scale(2);
     color: #ffee00;
 }
+
+
+#enter2 a {
+    position: absolute;
+    top: 9%;
+    left: 74.4%;
+    display: block;
+    text-align: center;
+    font-family: 'Wendy One', sans-serif;
+    transition: all .4s ease-out .2s;
+    color: #065fd4;
+    text-decoration: none;
+}
+
+#enter2:hover img:first-of-type{
+    transform: rotateY(0deg);
+    transition: transform .4s ease-out .4s;
+}
+
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 #info{
