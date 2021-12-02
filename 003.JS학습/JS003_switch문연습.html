@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch문 연습</title>
+    <!-- 웹폰트 CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&amp;display=swap" rel="stylesheet">
+    <style>
+        /* 타이틀 */
+        .tit {
+            text-align: center;
+            font: bold 72px/100px 'Audiowide';
+        }
+
+        /* 스틸컷장면박스 */
+        .photo {
+            text-align: center;
+            /* 인라인요소 가로중앙정렬 */
+            background-color: skyblue;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        /* 메인이미지 */
+        #scene {
+            height: 290px;
+            /* width는 비율에 맞게 자동임! */
+        }
+
+        /* 선택버튼박스 */
+        .btnbx {
+            text-align: center;
+            /* 버튼요소는 인라인블록이지만 
+            인라인특성이 있으므로 글자중앙정렬적용됨! */
+        }
+
+        /* 버튼공통 */
+        .btns {
+            font-size: 42px;
+        }
+    </style>
+    <script>
+        // 함수는 코드 저장소다!
+        /*/////////////////////////////////////////
+            함수명: chgImg
+            기능: 버튼 클릭시 해당 이미지변경하기
+        */ /////////////////////////////////////////
+        function chgImg(U) { //U - 전달변수
+
+            // 전달변수 U에 클릭된 요소 자신을 보내었으므로
+            // 내부의 데이터(글자)를 읽을 수 있다
+            var txt = U.innerText;
+
+            // 1. 함수호출확인
+            console.log("나야놔아!", txt)
+
+            // 이미지경로변수
+            var isrc;
+
+            // 2. 전달된 버튼 이름에 따라 switch문으로 이미지 넣기
+            switch (txt) {
+                case "포스터":
+                    isrc = "./images/ala1.jpg";
+                    break;
+                case "장면1":
+                    isrc = "./images/ala2.jpg";
+                    break;
+                case "장면2":
+                    isrc = "./images/ala3.jpg";
+                    break;
+                case "장면3":
+                    isrc = "./images/ala4.jpg";
+                    break;
+            }
+            
+            // 3. 버튼에 따라 이미지 변경
+            // 대상: #scene
+            // document.getElementById("scene").src = isrc;
+            document.getElementById("scene")
+                .setAttribute("src", isrc)
+            // .setAttribute(속성명,속성값)
+            //  - 선택요소의 속성값을 셋팅하는 JS내장함수
+            //  - 직접 선택후 .속성명으로 셋팅하는 것과
+            // 결과적으로는 같지만 JS내장함수를 이용하여
+            // 변경한다는 점에서 차이가 있음
+            // 전용내장함수를 이용할 것을 권장함
+
+            // 추가 참고 -> 속성값을 가져오는 JS내장함수는?
+            // -> getAttribute(속성명)
+
+        } //////// chgImg 함수 /////////////////////
+        ////////////////////////////////////////////
+    </script>
+</head>
+
+<body>
+    <!-- 전체 타이틀 -->
+    <h1 class="tit">All New Aladin</h1>
+
+    <!-- 스틸컷장면박스 -->
+    <div class="photo">
+        <img id="scene" src="./images/ala1.jpg" alt="알라딘스틸컷">
+    </div>
+
+    <!-- 선택버튼박스 -->
+    <div class="btnbx">
+        <button class="btns" onclick="chgImg(this)">포스터</button>
+        <!-- 
+            함수호출시 this란?
+            this 키워드는 클릭이벤트가 발생한 요소 자신을 말한다
+            함수에서 이것을 받은 후 내부 속성값이나 데이터를
+            읽어갈 수 있다.
+         -->
+        <button class="btns" onclick="chgImg(this)">장면1</button>
+        <button class="btns" onclick="chgImg(this)">장면2</button>
+        <button class="btns" onclick="chgImg(this)">장면3</button>
+    </div>
+
+</body>
+
+</html>

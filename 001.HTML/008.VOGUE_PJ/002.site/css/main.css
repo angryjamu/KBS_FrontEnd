@@ -7,9 +7,9 @@
 @import url(common.css);
 
 /* 아웃라인 표시 */
-body *{
+/* body *{
     outline: 1px dotted #aaa;
-}
+} */
 
 
 /* 개별 배경이미지 */

@@ -16,8 +16,6 @@
 html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,p{
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
 }
 
 a {
@@ -26,7 +24,9 @@ a {
 }
 
 body {
-    background: url(./img/main4-1.jpg);
+    /* background-color: rgb(65, 92, 54); */
+    background: url(./img/main4-1.jpg)right;
+    background-size: 60.4%;
 }
 
 .part{
@@ -152,6 +152,7 @@ h1.tit{
     font-size: 16px;
     line-height: 2;
     font: none;
+    
 }
 
 .smenu a{
