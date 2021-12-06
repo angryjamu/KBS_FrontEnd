@@ -87,6 +87,7 @@
 .cbx {
     position: relative;
     /* 부모자격 - 하위 h2, 가상요소의 부모 */
+    cursor: pointer;
 }
 /* 가상요소로 반투명 검정배경 그라데이션 넣기 */
 .cbx::before {
@@ -143,12 +144,14 @@
 
     font-family: 'Pistilli','NanumBarunGothic';
     /* 웹폰트 영문체(Pistilli) 한글체(NanumBarunGothic) */
-    font-size: 33px;
+    font-size: min(33px,3vw);
+    /* min()을 사용하여 33px과 3vw중 작은 크기가 적용됨(결과적으로 최대값 33px이 됨 */
     font-weight: lighter;
     text-align: center;
     color: #fff;
 
-    padding: 50px;
+    padding: min(50px,3vw);
+    /* 패딩크기도 최대 50px을 유지하다가 화면크기에 맞춤 */
 }
 
 /* 3개로 구성되는 컨텐츠박스 */

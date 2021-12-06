@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* 보그PJ 미디어 쿼리 CSS - media.css */
+
+/************************* 모바일기준 500px 이하 *************************/
+@media only screen and (max-width: 500px){
+
+/* [ 보그 모바일 변경사항 ] */
+/*  */
+/* 1. 상단변경 */
+/* 1) .tmenu없앰 */
+/* 2) .gnb없앰 */
+.tmenu,.gnb{
+    display: none;
+}
+/* 3) 로고이미지 크기변경(130px) */
+.logo img{
+    width: 130px;
+}
+.logo{/* 로고하단여백 */
+    padding-bottom: 10px;
+}
+/* 4) 상단영역 min-height:auto */
+.top{
+    min-height: auto;
+}
+/* 5) 햄버거, 검색버튼 보이기(만들어야함) */
+/*  */
+/* 2. 컨텐츠 영역 */
+/*  */
+/* 1) 1개짜리 박스 */
+/* - 배경이미지 b형으로 변경 */
+/* 컨텐츠1 - 1개 */
+.bg1{
+    background-image: url(../images/cont1b.jpg);
+}
+/* 컨텐츠3 - 1개 */
+.bg5{
+    background-image: url(../images/cont3b.jpg);
+}
+/* 컨텐츠5 - 1개 */
+.bg9{
+    background-image: url(../images/cont5b.jpg);
+
+}/* - 비율변경(149.69%) - .pt1.rbx::before */
+.pt1.rbx::before{
+    padding-top: 149.69%;
+}
+/* - h2태그 글자크기 22px */
+.pt1 .cbx h2{
+    font-size: 22px;
+}
+/*  */
+/* 2) 3개짜리 박스 */
+/* - 박스 한개 없앰(display:none) */
+/* - 비율변경(75%) - .pt2.rbx::before */
+/* - h2태그 글자크기 20px */
+
+
+
+}
