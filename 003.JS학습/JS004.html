@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>배열변수와 객체</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            width: 1000px;
+            height: 80px;
+            border: 2px solid #000;
+            text-align: center;
+            white-space: nowrap;
+            /* 줄바꿈방지 */
+            line-height: 84px;
+            margin: 5px auto;
+            /* 가로중앙 */
+            font-size: 24px;
+        }
+    </style>
+    <script>
+
+        // JS는 코드가 만나는 순간 바로실행됨!
+        // 따라서 html body 상단에 코딩된 JS는
+        // body내부의 요소들이 로딩전에 실행됨!
+        // 그래서 에러가 남!
+        /* 
+            예컨데)
+            Uncaught TypeError: 
+            Cannot set properties of null 
+            (setting 'innerText')
+        */ 
+       // 그래서 에러가 안나게 하려면
+       // html요소 보다 아랫쪽에 JS코드 구역을 만들거나
+       // html로딩구역에 코딩함!
+
+       // 로딩구역만들기!
+       // 로딩이벤트 2가지
+       // 1. load -> 이미지나 동영상까지 모두 로딩후 실행
+       // 2. DOMContentLoaded -> html 태그만 그려지면 바로 실행
+       // -> 2번 이벤트가 속도면에서 빠르다!
+
+       // 이벤트 등록 JS내장함수 //
+       // addEventListener(이벤트명,함수)
+       // -> 특정이벤트와 실행함수를 연결해주는 JS내장함수!
+
+       // 로딩구역 ///////////////////////////////
+       window.addEventListener("load",loadFn);
+       // 파라미터가 없는 함수를 호출할 경우 함수명만 써도됨!
+
+       /****************************************** 
+            함수명: loadFn
+            기능: 페이지로딩시 호출되는 함수
+       ******************************************/
+      function loadFn(){
+
+          // 출력대상: txt1
+          var txt1 = document.getElementById("txt1");
+          txt1.innerText = "나야나";
+
+      } ////////////// loadFn 함수 ////////////////
+      /////////////////////////////////////////////
+        
+
+
+    </script>
+</head>
+
+<body>
+    <h1>배열변수와 객체</h1>
+    <div id="txt1"></div>
+    <div id="txt2"></div>
+    <div id="txt3"></div>
+    <div id="txt4"></div>
+    <div id="txt5"></div>
+    <div id="txt6"></div>
+
+</body>
+
+</html>
