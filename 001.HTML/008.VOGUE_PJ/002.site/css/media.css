@@ -17,14 +17,17 @@
     width: 130px;
 }
 .logo{/* 로고하단여백 */
-    padding-bottom: 10px;
+    padding-top: 1px;
+    padding-bottom: 11px;
 }
 /* 4) 상단영역 min-height:auto */
 .top{
     min-height: auto;
 }
 /* 5) 햄버거, 검색버튼 보이기(만들어야함) */
-/*  */
+.ham,.mag{
+    display: block;
+}
 /* 2. 컨텐츠 영역 */
 /*  */
 /* 1) 1개짜리 박스 */
@@ -51,10 +54,39 @@
 }
 /*  */
 /* 2) 3개짜리 박스 */
-/* - 박스 한개 없앰(display:none) */
+/* - 마지막 박스 한개 없앰(display:none) */
+.pt2 .cbx:last-child{
+    display: none;
+}
 /* - 비율변경(75%) - .pt2.rbx::before */
+.pt2.rbx::before{
+    padding-top: 75%;
+}
 /* - h2태그 글자크기 20px */
+.pt2 .cbx h2{
+    font-size: 20px;
+}
+/* 3) 컨텐츠 오버시 보더애니 조정 */
+.cbx:hover::after{
+    border: 10px solid #f00;
+    /* 보더 두께 조정 */
+}
+.cbx::after{
+    transition: none;
+    /* 트랜지션 없앰 */
+}
 
-
+/* 3.하단영역 */
+/* 하단박스 */
+.info{
+    padding: 40px;
+    /* 패딩변경 */
+    min-height: auto;
+    /* 최소높이해제 */
+}
+/* 하단로고 이미지 width 200px */
+.blogo img{
+    width: 200px;
+}
 
 }
