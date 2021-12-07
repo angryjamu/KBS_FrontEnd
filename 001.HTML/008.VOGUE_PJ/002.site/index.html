@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
     <!-- 미디어쿼리를 본css하단에 link방식으로 넣어준다 -->
-
+<script src="js/common.js"></script>
 </head>
 
 <body>
@@ -116,33 +116,35 @@
                 <span class="ir">모바일검색버튼</span>
             </a>
 
+
             <!-- 1-5. 모바일용 메뉴 -->
-            <div id="mobx">
-                <!-- 1-5-1.모바일 GNB메뉴 -->
-                <nav class="mognb">
-                    <ul>
-                        <li>
-                            <a href="#">FASHION</a>
-                        </li>
-                        <li>
-                            <a href="#">BEAUTY</a>
-                        </li>
-                        <li>
-                            <a href="#">LIVING</a>
-                        </li>
-                        <li>
-                            <a href="#">PEOPLE</a>
-                        </li>
-                        <li>
-                            <a href="#">VIDEO</a>
-                        </li>
-                        <li>
-                            <a href="#">RUNWAY</a>
-                        </li>
-                        <li>
-                            <a href="#">SHOPPING</a>
-                        </li>
-                    </ul>
+            <div class="mowrap">
+                <div id="mobx">
+                    <!-- 1-5-1.모바일 GNB메뉴 -->
+                    <nav class="mognb">
+                        <ul>
+                            <li>
+                                <a href="#">FASHION</a>
+                            </li>
+                            <li>
+                                <a href="#">BEAUTY</a>
+                            </li>
+                            <li>
+                                <a href="#">LIVING</a>
+                            </li>
+                            <li>
+                                <a href="#">PEOPLE</a>
+                            </li>
+                            <li>
+                                <a href="#">VIDEO</a>
+                            </li>
+                            <li>
+                                <a href="#">RUNWAY</a>
+                            </li>
+                            <li>
+                                <a href="#">SHOPPING</a>
+                            </li>
+                        </ul>
                 </nav>
                 <!-- 1-5-2.모바일 sns메뉴 -->
                 <div class="mosns">
@@ -205,6 +207,7 @@
                         </a>
                     </li>
                 </ul>
+            </div>
             </div><!-- 모바일용 링크 끝 -->
         </header>
     </div>
@@ -295,6 +298,10 @@
                     </div>
                 </div>
             </section>
+            <a href="#" id="toTop" style="display: block;">
+            <span id="toTopHover" style="opacity: 0;"></span>
+            <span class="screen-reader-text">Go to Top</span>
+        </a>
         </main>
     </div>
     <!-- 3. 하단영역 -->

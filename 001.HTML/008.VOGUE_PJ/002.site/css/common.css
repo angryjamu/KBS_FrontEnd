@@ -216,9 +216,96 @@
     transform: scale(1.24);
     display: none;
 }
-/* 모바일메뉴박스 */
+/* 모바일용 메뉴를 모두 포함하는 부모박스 */
+.mowrap{
+    height: 0;
+    overflow: hidden;
+}
+/* 모바일용 메뉴 */
 #mobx{
-    display: none;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 30px;
+    /* display: none; */
+}
+.mognb{
+    padding-left: 15px;
+}
+.mognb a{
+    font-family: "roboto";
+    font-size: 25px;
+    line-height: 2;
+    color: #333;
+}
+.mosns{
+    margin-top: 44px;
+    margin-left: 13px;
+}
+.mosns a{
+    display: inline-block;
+    vertical-align: top;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #d2d2d2;
+    border-radius: 50%;
+    margin: 0 2px 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.mosns a.fi-twitter{
+    font-size: 16px;
+}
+.mosns a.fi-youtube-play{
+    font-size: 15px;
+}
+.mosns a:last-child{
+    background: url(../images/sns_kakao.png)no-repeat center/auto 50%;
+}
+
+.magbox{
+    margin: 0;
+    padding: 10px 30px 0 15px;
+    font-family: 'NanumBarunGothic', sans-serif;
+}
+
+/* 잡지커버이미지 */
+.magbox img{
+    width: 100%;
+}
+
+/* 잡지설명 */
+.magbox figcaption{
+    font-size: 12px;
+    line-height: 2;
+    color: #222;
+}
+/* 정기구독버튼 */
+.magbtn{
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.moblink{
+    display: flex;
+    margin-left: 15px;
+    line-height: 3.5;
+    font-size: 15px;
+    letter-spacing: -1;
+}
+.moblink li+li{/* 2번째 li부터 */
+    padding-left: 7px;
+}
+.moblink a{
+    color: #222;
+}
+.moblink li:last-child a{
+    font-weight: bold;
 }
 /************************************************* 3. 하단영역 *************************************************/
 .info {
