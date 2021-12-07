@@ -23,13 +23,12 @@ body * {
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: rgba(255, 195, 195, 0.438);
+    background-color: rgba(126, 107, 107, 0.438);
 }
 
 .logo img{
     width: 45px;
     height: 45px;
-    margin: 0 auto;
     border-radius: 50%;
 }
 
