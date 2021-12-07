@@ -1,1 +1,51 @@
 @charset "utf-8";
+
+html,
+body,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    outline: 1px dashed rgb(158, 158, 158);
+}
+
+.ibx {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 195, 195, 0.438);
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.Mvideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.cont>section {
+    width: 100%;
+    height: 100vh;
+}
+
+.info {
+    height: 366px;
+    background-color: rgb(200, 200, 200);
+}
