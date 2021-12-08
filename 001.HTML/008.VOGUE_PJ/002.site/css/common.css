@@ -216,6 +216,57 @@
     transform: scale(1.24);
     display: none;
 }
+/* 1-5. 모바일용 검색박스 */
+.mos{
+position: relative;
+/* 부모자격 */
+height: 0;/* 50px */
+overflow: hidden;
+}
+/* 검색내부 검정박스 */
+.mwrap{
+position: absolute;
+top: 7px;
+left: 30px;
+right: 30px;
+/* 부모박스기준 박스당기기(양쪽방향)
+-> 유동적인 가로크기가 생성됨 */
+height: 36px;
+/* 높이값은 정해줌 */
+background-color: #000;
+}
+
+/* 검색입력창 */
+#search{
+    position: absolute;
+    top: 2px;
+    bottom: 8px;
+    left: 2px;
+    right: 49px;
+    /* 부모는? .mwrap */
+}
+/* 입력요소 input */
+#search input{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    /* 입력글자 왼쪽여백 */
+}
+
+/* 모바일 검색버튼 */
+.scbtn{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 /* 모바일용 메뉴를 모두 포함하는 부모박스 */
 .mowrap{
     height: 0;
