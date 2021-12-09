@@ -8,15 +8,42 @@
 /************************************************* 1. 상단영역 *************************************************/
 /* 겉박스 */
 #top{
+    position: relative;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
     z-index: 9999;
-    position: relative;
 }
 .top {
     min-height: 206px;
     /* GNB메뉴가 좁아지면 줄바꿈해서 높이값이 늘어남
     그래서 최소높이로 잡아야 늘어날 수 있음 */
 }
+
+/* #top에 클래스가 "on" 넣을 경우 슬림 사이즈 상단영역변경 */
+    
+/* 중앙박스에 최소높이값 없앰 */
+#top.on .top{
+    min-width: auto;
+}
+
+/* 로고 포지션 등 변경 */
+#top.on .logo{
+    position: absolute;
+    top: 0;
+    font-size: 100%;
+    text-align: center;
+}
+
+/* 로고이미지 가로크기변경 */
+#top.on .logo img{
+    width: 100px;
+}
+
+/* 상단메뉴 없애기 */
+#top.on .tmenu{
+    display: none;
+}
+/* 위츼 모든 슬림메뉴 변경은 #top에 .on을 준 경우 적용 */
+
 
 /************** 1-1.상단메뉴 ************/
 .tmenu {
