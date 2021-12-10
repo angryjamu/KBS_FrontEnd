@@ -19,6 +19,7 @@ a {
 
 body * {
     outline: 1px dashed rgb(158, 158, 158);
+    /* background-color: #000; */
 }
 /******************************************* 상단 *******************************************/
 .ibx {
@@ -38,7 +39,7 @@ body * {
 
 .log{
     top: 5%;
-    left: 50%;
+    left: calc(50% - 22.5px);
     position: absolute;
     width: 45px;
     height: 45px;
@@ -46,28 +47,47 @@ body * {
     border-radius: 50%;
 }
 
-.logo ul{
+.gnb ul{
     width: 70%;
     margin: 0 auto;
     padding-top: 5px;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
-.logo>.lb{
-    width: 500px;
-    /* left: 0; */
+.gnb>.lb{
+    position: absolute;
+    width: 200px;
+    left: 32%;
 }
 
-.logo>.rb{
-    width: 250px;
-    /* right: 0; */
+.gnb>.rb{
+    position: absolute;
+    width: 200px;
+    left: 53%;
 }
 
-.logo li{
+.gnb li{
     font-size: 15px;
 }
 
+.ham {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 30px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ham a {
+
+}
 
 
 
@@ -78,13 +98,38 @@ body * {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    /* filter: brightness(75%); */
 }
 
+#gosub {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    /* 부모는 화면 */
+    transform: translate(-50%, -50%);
+    /* 정중앙으로 이동 */
+    z-index: 1;
+}
+
+#gosub span {
+    color: #fff;
+    display: block;
+    /* 옆에 아무도 못오고 width는 끝까지 가기 */
+    text-align: center;
+    /* 글자중앙 */
+    font: bold 34px/40px 'Audiowide';
+    /* font: 스두크/줄체; */
+
+    /* 트랜지션 : 속시이지 */
+    transition: all .4s ease-out .2s;
+
+}
 .cont>section {
     width: 100%;
     height: 100vh;
 }
 
+/******************************************* 하단 *******************************************/
 .info {
     height: 366px;
     background-color: rgb(200, 200, 200);

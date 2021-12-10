@@ -6,16 +6,51 @@ window.addEventListener("scroll",()=>{
     // 스크롤 위치값
     let scTop = this.scrollY;
     // scrollY - 세로축 스크롤 위치값 리턴
+    // this는 화살표함수에서 window를 나타냄
 
-    console.log("스크롤중ㅋㅋ",scTop);
-});
+    /********************************** 
+        윈도우 세로 스크롤 위치값을 가져오는 방법
+        1.this.scrollY;
+        2.window.scrollY;
+        3.document.scroll.scrollingElement.scrollTop;
+        4.document.scroll.documentElement.scrollTop;
+        5.document.querySelector("html").scrollTop;
+    **********************************/
+
+    // console.log("스크롤중",scTop);
+
+    // 상단영역
+    let top = document.querySelector("#top");
+    // 상단이동버튼
+    let tbtn = document.querySelector(".tbtn");
+
+    //상단영역 스크롤//
+    ////스크롤위치값이 100이상일때////
+    if(scTop>=100){ // 100px 이상
+        top.classList.add("on");
+    } ////////// if /////////
+    else{ // 100px 미만
+        top.classList.remove("on");
+    }////// else //////
+
+    //상단영역 스크롤반응하기//
+    ////스크롤위치값이 200이상일때////
+    if(scTop>=200){ // 200px 이상
+        tbtn.classList.add("on");
+    } ////////// if /////////
+    else{ // 200px 미만
+        tbtn.classList.remove("on");
+    }////// else //////
+});////////////// scroll 이벤트함수 ////////////
+////////////////////////////////////////////////
+
 
 //////////// 로딩구역 /////////////////////////
 window.addEventListener("DOMContentLoaded",
 function(){
-
-    console.log("로딩완료!");
-
+    
+    // console.log("로딩완료!");
+    
     //////////////////////////////////////////
     // 1. 햄버거 버튼 클릭시 //////////////////
     //////////////////////////////////////////
