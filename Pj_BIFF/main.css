@@ -8,6 +8,11 @@ h2 {
     margin: 0;
     padding: 0;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 ul,ol{
     list-style: none;
 }
@@ -19,12 +24,21 @@ a {
 
 body * {
     outline: 1px dashed rgb(158, 158, 158);
-    /* background-color: #000; */
 }
-/******************************************* 상단 *******************************************/
+
 .ibx {
     max-width: 1300px;
     margin: 0 auto;
+}
+
+.cont>section {
+    width: 100%;
+    height: 100vh;
+}
+
+/******************************************* 상단 *******************************************/
+.ibx>.cont1:first-child{
+    width: 100%;
 }
 
 #top {
@@ -72,6 +86,12 @@ body * {
     font-size: 15px;
 }
 
+
+
+
+
+
+
 .ham {
     position: absolute;
     width: 100%;
@@ -82,7 +102,92 @@ body * {
     justify-content: flex-end;
     align-items: center
 
+    
 }
+
+.xbtn {
+    position: fixed;
+    top: -100%;
+    /* 높이만큼 위로 올라감(숨겨짐) */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 보이는 화면에 꽉참 */
+    background-color: #000;
+
+    transition: top .8s ease-out;
+}
+
+
+
+.ham.on {
+    top: 0;
+}
+
+.xbtn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.xbtn ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 가로,세로방향 정중앙이동 */
+
+    width: 800px;
+    margin: 0 auto;
+    /* 포지션이 absolute일때 마영오가 안먹힘 */
+    overflow: hidden;
+    /* float된 자식인식 */
+    /* outline: 2px dotted deeppink; */
+}
+
+/* 상위메뉴 li */
+.xbtn ul>li {
+    float: left;
+    /* 메뉴 옆으로 흐르게 */
+    width: 200px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 2;
+}
+
+/* 하위메뉴 li */
+.xbtn ol>li {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.cbtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* 부모는? .gnb */
+
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    color: #fff;
+
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
 
 .menu {
     width: 45px;
@@ -109,6 +214,8 @@ body * {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    text-align: center;
+
     /* filter: brightness(75%); */
 }
 
@@ -133,12 +240,88 @@ body * {
 
     /* 트랜지션 : 속시이지 */
     transition: all .4s ease-out .2s;
+}
+
+/******************************************* Cont2 *******************************************/
+.cont2{
+    position: relative;
+}
+
+.mlist {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 50%;
+    outline: 4px dashed rgb(38, 0, 255);
+}
+
+.mlist ul{
+    display: flex;
+}
+
+.mlist ul>li {
+    position: relative;
+    width: 23%;
+    /* 4등분(25%)% - 양쪽마진1% */
+    margin: 0 1%;
+    overflow: hidden;
+}
+
+.mlist img {
+    width: 100%;
+    /* 가로만 li박스에 채움.
+    세로는 자동으로 비율유지. */
+    border-radius: 5%;
+}
+
+.movtxt {
+    position: absolute;
+    /* left는 설정하지 않고 젠틀하게 처리
+    ->각 li위치에 그대로 있음 */
+
+    top: 100%;
+    /* 아래쪽에 나가있음 */
+    /* 나의부모는? .mlist ul>li */
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5%;
+
+    background-color: rgba(2, 2, 2, 0.700);
+    /* 반투명배경 */
+
+    /* 글자셋팅 */
+    font-family: 'Cute Font', cursive;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+
+    /* 트랜지션: 속시이지 */
+    transition: top .4s ease-in-out;
+}
+
+.mlist>ul>li:hover .movtxt {
+    top: 0;
+}
+
+/* 영화정보 li */
+.movtxt li {
+    float: none;
+    /* float 해제 */
+}
+
+/* 첫번째 li는 영화제목 */
+.movtxt li:first-child {
+    color: aqua;
+    font-size: 17px;
+    letter-spacing: -1px;
+    margin-top: 30%;
 
 }
-.cont>section {
-    width: 100%;
-    height: 100vh;
-}
+
+
 
 /******************************************* 하단 *******************************************/
 .info {
