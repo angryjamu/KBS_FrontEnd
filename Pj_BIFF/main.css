@@ -285,8 +285,7 @@ body * {
 
 .mlist img {
     width: 100%;
-    /* 가로만 li박스에 채움.
-    세로는 자동으로 비율유지. */
+    height: 100%;
     border-radius: 5%;
 }
 
@@ -322,16 +321,19 @@ body * {
 
 /* 영화정보 li */
 .movtxt li {
+    font-size: 18px;
     float: none;
-    /* float 해제 */
+    color: #fff;
 }
+    /* float 해제 */
+
 
 /* 첫번째 li는 영화제목 */
 .movtxt li:first-child {
-    color: aqua;
-    font-size: 17px;
+    color: goldenrod;
+    font-size: 21px;
     letter-spacing: -1px;
-    margin-top: 30%;
+    margin-top: 25%;
 }
 
 
