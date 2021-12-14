@@ -478,7 +478,7 @@ body * {
 }
 .row{
     /* --bs-gutter-x: 2rem; */
-    --bs-gutter-y: 2rem;
+    /* --bs-gutter-y: 2rem; */
     display: flex;
     flex: 1 0 100%;
     flex-wrap: wrap;
@@ -488,9 +488,13 @@ body * {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) / 2);
-    padding-left: calc(var(--bs-gutter-x) / 2);
-    margin-top: var(--bs-gutter-y);
+    /* padding-right: calc(var(--bs-gutter-x) / 2); */
+    /* padding-left: calc(var(--bs-gutter-x) / 2); */
+    /* margin-top: var(--bs-gutter-y); */
+}
+
+.fnb{
+    margin: 10px;
 }
 
 address{
