@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>JS의 Get방식 처리</title>
@@ -77,13 +78,30 @@
 
         //////// 로드구역 ////////////////////////
         // DOMContentLoaded는 html만 모두 그려지면 발생하는 이벤트!
-        window.addEventListener("DOMContentLoaded",function(){
+        window.addEventListener("DOMContentLoaded", function () {
 
             // 로딩구역 확인
             console.log("로딩완료!!!");
 
-            
-            
+            // a요소 click이벤트 설정하기 //
+            // 대상: #gnb a
+            let gnb = document.querySelectorAll("#gnb a");
+            // console.log("gnb개수:",gnb.length)
+
+            for (let x of gnb) { // x - 각 #gnb 아래 a요소
+                x.onclick = () => {
+
+                    // 1. 클릭된 a 텍스트
+                    let txt = x.innerText;
+                    // console.log("텍스트:",txt);
+
+                    // 2. 페이지 이동하기
+                    location.href = "Get02.html?shop=" + escape(txt);
+
+                };
+            }
+
+
             /* 
                 [ url로 보낼때 한글깨짐 방지하기! ]
 
@@ -111,12 +129,8 @@
 
 
 
-        });/////////// 로드구역 //////////////////////////////////
+        }); /////////// 로드구역 //////////////////////////////////
         /////////////////////////////////////////////////////////
-
-
-
-       
     </script>
 
 </head>
@@ -141,4 +155,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>

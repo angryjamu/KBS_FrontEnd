@@ -37,23 +37,79 @@
     </style>
     <script>
         // Get방식으로 넘어온 값 받기!
-        
+        let pm = location.href;
+        // location.href를 오른쪽에 쓰면 url값을 읽어온다
+
+        // indexOf(찾을문자열) -> 찾는문자열의 순번을 리턴함!
+        // 그.러.나... 없으면 -1을 리턴함!
+        console.log("물음표찾기:"+pm.indexOf("?"));
+
+        // 에러방지를 위해 물음표 존재여부체크하기!
+        if(pm.indexOf("?")===-1){
+            alert("비정상적인 접근입니다!");
+            location.href = "Get01.html";
+            // 첫 페이지로 돌아가!
+        } ///////// if /////////////////
+
+        // pm값 물음표(?)자르기 split(구분자) + 이퀄(=)로 자르기
+        pm = pm.split("?")[1].split("=")[1]; //뒷배열
+
+        // unescape처리하기
+        pm = unescape(pm);
+
+        console.log("넘어온값:\n", pm);
+
+        /// 데이터 셋업하기 ///
+        let sdata = {
+            "레드샵": {
+                "배경색":"red",
+                "이미지": "shop_red.jpg"
+            },
+            "오렌지샵": {
+                "배경색": "orange",
+                "이미지": "shop_orange.jpg"
+            },
+            "블루샵": {
+                "배경색": "blue",
+                "이미지": "shop_blue.jpg"
+            },
+            "블랙샵": {
+                "배경색": "black",
+                "이미지": "shop_black.jpg"
+            },
+            "그린샵": {
+                "배경색": "green",
+                "이미지": "shop_green.jpg"
+            }
+        };
+
 
         //////// 로드구역 ////////////////////////
         // DOMContentLoaded는 html만 모두 그려지면 발생하는 이벤트!
-        window.addEventListener("DOMContentLoaded",function(){
-       
+        window.addEventListener("DOMContentLoaded", function () {
+
             // 로딩구역 확인
             console.log("로딩완료!!!");
 
-            
+            // 1. 타이틀 배경색 변경하기
+            let tit = document.querySelector("#title");
+            // 1. 타이틀 배경색 변경하기
+              tit.style.backgroundColor = sdata[pm]["배경색"];
+
+            // 2. 타이틀 넣기
+            tit.innerText = pm;
+
+            // 메인박스
+            let main = document.querySelector("#main");
+
+            // 3. 메인박스 배경이미지 변경
+            main.style.backgroundImage = `url(images/${sdata[pm]["이미지"]})`;
 
 
-        });/////////// 로드구역 //////////////////////////////////
+
+
+        }); /////////// 로드구역 //////////////////////////////////
         /////////////////////////////////////////////////////////
-
-
-
     </script>
 
 </head>
@@ -71,4 +127,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>

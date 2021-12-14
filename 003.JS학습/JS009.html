@@ -226,7 +226,7 @@
                     `<img src="./images/ab${inum}.jpg" alt="${ialt[inum-1]}">`
 
                 // 4. 새로운 li를 툴팁에 넣기
-                nn.title = ialt[inum - 1] + "클릭하면 삭제됩니다."
+                nn.title = ialt[inum - 1] + " 클릭하면 삭제됩니다."
 
                 // 5. 새로운 li를 클릭시 지우기 셋팅
                 nn.onclick = () => nn.remove();
@@ -241,27 +241,21 @@
 
 
 
-
-            ////////////////////////////////////////////////////
-            /// 랜덤생성 버튼 클릭시 새로운 li에 랜덤으로 img넣기
-            // 이벤트 종류: click
-            // 이벤트 대상: .rbt
-            ///////////////////////////////////////////////////
-
-
-
-            ///// 리스트의 li를 클릭하면 지우기! //////////
+            ///// 최초 리스트의 li를 클릭하면 지우기! //////////
             // 이벤트: click
             // 이벤트대상: #div02 ul li
             // 변경대상: 이벤트대상
-            // 변경내용: 변경대상 삭제하기
+            // 변경내용: 삭제하기
             /////////////////////////////////////////////
 
             let del = ctg.querySelectorAll("li");
             for (let x of del) {
 
-                // 1. 기존 li에 툴팁넣기
-                x.title = "클릭하면 삭제 됩니다.";
+                // 대상 내부의 img
+                let ximg = x.querySelector("img");
+
+                // 1. 기존 li의 내부 img에 툴팁넣기
+                ximg.title = ximg.alt + " 클릭하면 삭제 됩니다.";
 
                 // 2. 기존 li를 클릭시 지우기 셋팅하기
                 x.onclick = () => x.remove();
@@ -281,9 +275,18 @@
             // 사용 메서드: appendChild(요소)
             // -> 기존요소를 선택하면 이동이 됨!
             /////////////////////////////////////////////////
+            document.querySelector(".mvl").onclick = () => {
 
+                // 1. 호출확인
+                // console.log("맨뒤로이동");
 
+                // 2. 이동대상: 변수 ctg 아래 li
+                let tg = ctg.querySelectorAll("li")[0];
 
+                // 3. 맨뒤로 이동: appendChild(요소)
+                ctg.appendChild(tg);
+
+            };
 
 
 
@@ -297,6 +300,19 @@
             // 넣을놈 - 마지막 li요소
             // 넣을놈전놈 - 맨처음 li요소
             //////////////////////////////////////////////////
+            document.querySelector(".mvf").onclick = () => {
+
+                // 1. 호출확인
+                // console.log("맨앞이동");
+
+                // 2. 대상선정
+                let tg = ctg.querySelectorAll("li");
+
+                // 3. 맨 뒤 li를 맨 앞으로 이동
+                ctg.insertBefore(tg[tg.length-1],tg[0]);
+                // tg[tg.length-1] -> 맨긑 li갯수봐 1작은수가 끝순번
+                //  tg[0] 맨앞 li
+            }
 
 
 
@@ -426,9 +442,8 @@
 
     <div id="div02">
         <h2>요소의 생성,삭제,이동하기</h2>
-        <button class="nbt">새리스트생성</button>
-        <button class="rbt">랜덤생성</button> <br><br>
-        <button class="mvl">맨뒤이동</button>
+        <button class="nbt">새리스트생성</button> <br>
+        <button class="mvl">맨뒤이동</button> <br>
         <button class="mvf">맨앞이동</button>
         <ul>
             <li><img src="./images/ab1.jpg" alt="아이언맨" title="아이언맨"></li>
