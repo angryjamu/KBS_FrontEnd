@@ -119,7 +119,6 @@ body * {
     overflow: hidden;
 }
 
-
 .gnb li{
     font-size: 15px;
 }
@@ -255,17 +254,17 @@ body * {
 
 #gosub {
     position: absolute;
-    top: 82%;
+    top: 75%;
     /* left: 50%; */
     /* 부모는 화면 */
     transform: translate(-50%, -50%);
     /* 정중앙으로 이동 */
     z-index: 1;
-    left: calc(55% - 22.5px);
+    left: calc(50% - 22.5px);
 }
 
 #gosub img{
-    position: absolute;
+    /* position: absolute; */
     border-radius: 50%;
     left: -33%;
 }
@@ -293,6 +292,7 @@ body * {
     width: 700px;
     height: 40px;
     text-align: center;
+    /* left: calc(50% - 22.5px); */
     left: 25%;
     top: 15%;
     font-size: 35px;
@@ -370,7 +370,7 @@ body * {
     color: goldenrod;
     font-size: 21px;
     letter-spacing: -1px;
-    margin-top: 25%;
+    margin-top: 50%;
 }
 
 
