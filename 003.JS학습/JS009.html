@@ -156,6 +156,7 @@
 
                     // a요소 기본이동막기
                     return false;
+                    // 함수를 나갈때 false를 리턴하면 아무것도 하지마 라는 뜻
                 };
 
             }
@@ -205,6 +206,39 @@
             // 변경 대상: #div02 ul -> ctg 변수에 할당!
             /////////////////////////////////////////////
 
+            // 이미지순번변수(다음이미지가 나오게함)
+            let inum = 1;
+
+            // 이미지설명 배열변수
+            let ialt = ["아이언맨", "딱쓰", "토르", "닥스", "스타로드"]
+
+            document.querySelector(".nbt").onclick = () => {
+
+                // 1. 호출확인
+                // console.log("새리스트생성");
+
+                // 2. 새로운 li를 생성하여 변수에 할당한다
+                let nn = document.createElement("li");
+                // createElement()는 메모리상에 생성함
+
+                // 3. 메모리상에 생성된 li에 이미지 넣기
+                nn.innerHTML =
+                    `<img src="./images/ab${inum}.jpg" alt="${ialt[inum-1]}">`
+
+                // 4. 새로운 li를 툴팁에 넣기
+                nn.title = ialt[inum - 1] + "클릭하면 삭제됩니다."
+
+                // 5. 새로운 li를 클릭시 지우기 셋팅
+                nn.onclick = () => nn.remove();
+
+                // 6. 변경대상 ctg에 새로운 li넣기
+                ctg.appendChild(nn);
+
+                // 7. 이미지 번호 변경하기: 다음번 넣을 이미지번호임
+                inum++;
+                if (inum === 6) inum = 1; //한계수 - 처음으로
+            }
+
 
 
 
@@ -223,6 +257,16 @@
             // 변경내용: 변경대상 삭제하기
             /////////////////////////////////////////////
 
+            let del = ctg.querySelectorAll("li");
+            for (let x of del) {
+
+                // 1. 기존 li에 툴팁넣기
+                x.title = "클릭하면 삭제 됩니다.";
+
+                // 2. 기존 li를 클릭시 지우기 셋팅하기
+                x.onclick = () => x.remove();
+
+            }
 
 
 
@@ -387,11 +431,11 @@
         <button class="mvl">맨뒤이동</button>
         <button class="mvf">맨앞이동</button>
         <ul>
-            <li><img src="./images/ab1.jpg" alt="이미지"></li>
-            <li><img src="./images/ab2.jpg" alt="이미지"></li>
-            <li><img src="./images/ab3.jpg" alt="이미지"></li>
-            <li><img src="./images/ab4.jpg" alt="이미지"></li>
-            <li><img src="./images/ab5.jpg" alt="이미지"></li>
+            <li><img src="./images/ab1.jpg" alt="아이언맨" title="아이언맨"></li>
+            <li><img src="./images/ab2.jpg" alt="누구였더라" title="누구였더라"></li>
+            <li><img src="./images/ab3.jpg" alt="토르" title="토르"></li>
+            <li><img src="./images/ab4.jpg" alt="닥스" title="닥스"></li>
+            <li><img src="./images/ab5.jpg" alt="스타로드" title="스타로드"></li>
         </ul>
     </div>
 
