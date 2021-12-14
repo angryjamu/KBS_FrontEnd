@@ -25,11 +25,11 @@ a {
 }
 
 body * {
-    outline: 1px dashed rgb(158, 158, 158);
+    /* outline: 1px dashed rgb(158, 158, 158); */
 }
 
 .ibx {
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin: 0 auto;
 }
 
@@ -254,7 +254,7 @@ body * {
 
 #gosub {
     position: absolute;
-    top: 75%;
+    top: 90%;
     /* left: 50%; */
     /* 부모는 화면 */
     transform: translate(-50%, -50%);
@@ -264,9 +264,10 @@ body * {
 }
 
 #gosub img{
-    /* position: absolute; */
+    position: absolute;
     border-radius: 50%;
     left: -33%;
+    bottom: 30%;
 }
 
 #gosub span {
@@ -277,9 +278,6 @@ body * {
     /* 글자중앙 */
     font: bold 34px/40px 'Audiowide';
     /* font: 스두크/줄체; */
-
-    /* 트랜지션 : 속시이지 */
-    transition: all .4s ease-out .2s;
 }
 
 /******************************************* Cont2 *******************************************/
