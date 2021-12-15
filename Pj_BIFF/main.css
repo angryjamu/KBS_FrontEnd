@@ -25,11 +25,11 @@ a {
 }
 
 body * {
-    /* outline: 1px dashed rgb(158, 158, 158); */
+    outline: 1px dashed rgb(158, 158, 158);
 }
 
 .ibx {
-    /* max-width: 1300px; */
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -126,9 +126,6 @@ body * {
 
 
 
-
-
-
 .ham {
     position: absolute;
     width: 100%;
@@ -138,8 +135,6 @@ body * {
     display: flex;
     justify-content: flex-end;
     align-items: center
-
-    
 }
 
 .xbtn {
@@ -222,10 +217,6 @@ body * {
 
 
 
-
-
-
-
 .menu {
     width: 45px;
     height: 45px;
@@ -237,9 +228,6 @@ body * {
     padding: 0;
     cursor: pointer;
 }
-
-
-
 
 
 /******************************************* Cont1 *******************************************/
@@ -346,7 +334,6 @@ body * {
     line-height: 25px;
     text-align: center;
 
-    /* 트랜지션: 속시이지 */
     transition: top .4s ease-in-out;
 }
 
@@ -371,6 +358,95 @@ body * {
     margin-top: 50%;
 }
 
+/******************************************* Cont2 *******************************************/
+.cont3{
+    position: relative;
+}
+
+.ad{
+    position: absolute;
+    width: 700px;
+    height: 40px;
+    text-align: center;
+    /* left: calc(50% - 22.5px); */
+    left: 25%;
+    top: 15%;
+    font-size: 35px;
+}
+
+.mlist {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 55%;
+    outline: 2px dashed rgb(38, 0, 255);
+}
+
+.mlist ul{
+    display: flex;
+}
+
+.mlist ul>li {
+    position: relative;
+    width: 23%;
+    /* 4등분(25%)% - 양쪽마진1% */
+    margin: 0 1%;
+    overflow: hidden;
+}
+
+.mlist img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.movtxt {
+    position: absolute;
+    /* left는 설정하지 않고 젠틀하게 처리
+    ->각 li위치에 그대로 있음 */
+
+    top: 100%;
+    /* 아래쪽에 나가있음 */
+    /* 나의부모는? .mlist ul>li */
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5%;
+
+    background-color: rgba(2, 2, 2, 0.700);
+    /* 반투명배경 */
+
+    /* 글자셋팅 */
+    font-family: 'Cute Font', cursive;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+
+    transition: top .4s ease-in-out;
+}
+
+.mlist>ul>li:hover .movtxt {
+    top: 0;
+}
+
+/* 영화정보 li */
+.movtxt li {
+    font-size: 18px;
+    float: none;
+    color: #fff;
+}
+    /* float 해제 */
+
+
+/* 첫번째 li는 영화제목 */
+.movtxt li:first-child {
+    color: goldenrod;
+    font-size: 21px;
+    letter-spacing: -1px;
+    margin-top: 50%;
+}
 
 
 /******************************************* 하단 *******************************************/
