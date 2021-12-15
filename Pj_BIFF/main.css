@@ -488,7 +488,7 @@ body * {
 #ft .footer_inner{
     position: relative;
     background: #000;
-    padding: 30px 0 1px;
+    /* padding: 30px 0 1px; */
 }
 
 .container{
