@@ -58,7 +58,7 @@ function(){
     document.querySelector(".ham").onclick =
     function(){
         // 1. 함수호출확인!
-        console.log("햄버거!");
+        // console.log("햄버거!");
 
         // 2. 변경대상: .mowrap (모바일메뉴 전체박스)
         var tg = document.querySelector(".mowrap");
@@ -74,7 +74,7 @@ function(){
 
         // 구해와야할 것은 대상의 높이값!
         var tgh = tg.offsetHeight;
-        console.log("대상높이:",tgh);
+        // console.log("대상높이:",tgh);
 
         // 기능구현: 높이값이 0이면
         if(tgh===0){
@@ -112,7 +112,7 @@ function(){
     document.querySelector(".mag").onclick = 
     ()=>{
         // 1. 함수호출확인!
-        console.log("검색버튼클릭!");
+        // console.log("검색버튼클릭!");
 
         // 2. 대상선정: .mos
         let mos = document.querySelector(".mos");
