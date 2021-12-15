@@ -216,9 +216,10 @@ html{
 .gnb {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
-    line-height: 0px;
-    margin-top: 11px;
+    line-height: 40px;
+    
     padding: 0 30px;
+    margin-top: 11px;
 }
 
 .gnb>ul {

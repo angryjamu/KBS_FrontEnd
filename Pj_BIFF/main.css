@@ -231,6 +231,10 @@ body * {
 
 
 /******************************************* Cont1 *******************************************/
+/* #cont>.ibx{
+    width: 100%;
+} */
+
 .Mvideo {
     width: 100%;
     height: 100%;
@@ -358,12 +362,12 @@ body * {
     margin-top: 50%;
 }
 
-/******************************************* Cont2 *******************************************/
+/******************************************* Cont3 *******************************************/
 .cont3{
     position: relative;
 }
 
-.ad{
+.ad3{
     position: absolute;
     width: 700px;
     height: 40px;
@@ -374,7 +378,7 @@ body * {
     font-size: 35px;
 }
 
-.mlist {
+.mlist3 {
     position: absolute;
     bottom: 20%;
     left: 50%;
@@ -384,11 +388,11 @@ body * {
     outline: 2px dashed rgb(38, 0, 255);
 }
 
-.mlist ul{
+.mlist3 ul{
     display: flex;
 }
 
-.mlist ul>li {
+.mlist3 ul>li {
     position: relative;
     width: 23%;
     /* 4등분(25%)% - 양쪽마진1% */
@@ -396,13 +400,13 @@ body * {
     overflow: hidden;
 }
 
-.mlist img {
+.mlist3 img {
     width: 100%;
     height: 100%;
     border-radius: 5%;
 }
 
-.movtxt {
+.movtxt3 {
     position: absolute;
     /* left는 설정하지 않고 젠틀하게 처리
     ->각 li위치에 그대로 있음 */
@@ -427,12 +431,12 @@ body * {
     transition: top .4s ease-in-out;
 }
 
-.mlist>ul>li:hover .movtxt {
+.mlist3>ul>li:hover .movtxt3 {
     top: 0;
 }
 
 /* 영화정보 li */
-.movtxt li {
+.movtxt3 li {
     font-size: 18px;
     float: none;
     color: #fff;
@@ -441,7 +445,7 @@ body * {
 
 
 /* 첫번째 li는 영화제목 */
-.movtxt li:first-child {
+.movtxt3 li:first-child {
     color: goldenrod;
     font-size: 21px;
     letter-spacing: -1px;
