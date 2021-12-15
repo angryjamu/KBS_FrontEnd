@@ -98,7 +98,7 @@ let sinfo = {
 
 // 1. GET방식 데이터 읽기 ///
 let pm = location.href;
-console.log("파라미터:", pm);
+// console.log("파라미터:", pm);
 
 // 2. 파라미터 물음표(?)확인하기
 if (pm.indexOf("?") === -1) { // indexOf 값이 -1이면 물음표없다
@@ -108,15 +108,82 @@ if (pm.indexOf("?") === -1) { // indexOf 값이 -1이면 물음표없다
 
 // 3. 물음표(?)와 이퀄(=)로 각각 자른후 뒤의 배열값 읽기
 pm = pm.split("?")[1].split("=")[1]
-console.log("파라미터:", pm);
+// console.log("파라미터:", pm);
 
 // 4. 해당 카테고리 객체값 설정하기
 let cinfo = sinfo[pm];
-console.log("카테고리값:",cinfo);
+// console.log("카테고리값:", cinfo);
 
 //////// 로딩구역 //////////////////////
 window.addEventListener('DOMContentLoaded', () => {
     // console.log("서브로딩완료");
+
+    // 대상선정1 : 메인박스 - .cont
+    let cont = document.querySelector(".cont");
+
+    // 대상선정 : 서브타이틀 - .stit
+    let stit = document.querySelector(".stit");
+
+    // 대상선정 : 서브메뉴 - .lnb
+    let lnb = document.querySelector(".lnb");
+
+    // 대상선정 : 컨텐츠타이틀 - .cbx h2
+    let ctit = document.querySelectorAll(".cbx h2");
+    // console.log("타이틀개수:",ctit.length)
+
+    /*********************************************** 
+        서브 페이지 데이터 셋업하기
+    ***********************************************/
+    // 1. 서브 타이틀 넣기
+    // 대상: .stit -> stit 변수
+    stit.innerText = cinfo["제목"];
+
+    // 예외: pm값이 "runway"일 경우 흰글자에 배경처리
+    if (pm === "runway") {
+        stit.style.color = "white";
+        stit.style.background = "url(images/bg_02.jpg) no-repeat center/cover";
+    }
+
+    // 2. 서브메뉴 넣기
+    let menu = cinfo["메뉴"];
+    // console.log("메뉴:",menu);
+
+    // 코드변수
+    let tag;
+
+    // "없음"이 아니면 메뉴 만들기
+    if (menu !== "없음") {
+        // 메뉴 코드만들기
+        tag = "<ul>";
+        for (let x of menu) {
+            tag += `<li><a href="#">${x}</a></li>`;
+        }
+        tag += "</ul>"
+
+        // 메뉴 코드넣기
+        lnb.innerHTML = tag;
+    } else { //"없음"일경우
+        // lnb메뉴 박스 없애기
+        lnb.style.display = "none";
+    }
+
+    // 3. 메인 컨텐츠 박스에 카테고리 클래스 넣기
+    // -> css 셋업에 따라 서브페이지 컨텐츠박스 배경이미지 나옴
+    // 대상: 메인 컨텐츠박스 - .cont -> cont변수
+    cont.classList.add(cinfo["경로"]);
+
+    // 4. 각 컨텐츠 박스에 컨텐츠 타이틀 넣기
+    // 대상: .cbx h2 -> ctit변수 : 6개
+
+    let seq = 0; //타이틀요소 순번
+
+    // "타이틀" 객체값인 배열만큼 돌아준다
+    for (let x of cinfo["타이틀"]) {
+        // 각 h2요소 내부에 타이틀글자 넣기
+        ctit[seq].innerHTML = x;
+        seq++; //1씩증가
+    }
+
 
 
 
