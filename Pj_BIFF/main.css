@@ -297,7 +297,7 @@ body * {
     position: relative;
 }
 
-.ad{
+.ad1{
     position: absolute;
     width: 700px;
     height: 40px;
@@ -387,6 +387,17 @@ body * {
     position: relative;
 }
 
+.ad2{
+    position: absolute;
+    width: 700px;
+    height: 40px;
+    text-align: center;
+    /* left: calc(50% - 22.5px); */
+    left: 25%;
+    top: 0%;
+    font-size: 35px;
+}
+
 .ad3{
     position: absolute;
     width: 700px;
@@ -394,25 +405,44 @@ body * {
     text-align: center;
     /* left: calc(50% - 22.5px); */
     left: 25%;
-    top: 15%;
+    top: 40%;
     font-size: 35px;
 }
 
-.mlist3 {
+.mlist3-1 {
     position: absolute;
-    bottom: 20%;
+    bottom: 45%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 55%;
+    height: 40%;
+    outline: 2px dashed red;
+}
+.mlist3-2 {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 40%;
     outline: 2px dashed rgb(38, 0, 255);
 }
 
-.mlist3 ul{
+.mlist3-1 ul{
+    display: flex;
+}
+.mlist3-2 ul{
     display: flex;
 }
 
-.mlist3 ul>li {
+.mlist3-1 ul>li {
+    position: relative;
+    width: 23%;
+    /* 4등분(25%)% - 양쪽마진1% */
+    margin: 0 1%;
+    overflow: hidden;
+}
+.mlist3-2 ul>li {
     position: relative;
     width: 23%;
     /* 4등분(25%)% - 양쪽마진1% */
@@ -420,7 +450,12 @@ body * {
     overflow: hidden;
 }
 
-.mlist3 img {
+.mlist3-1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+.mlist3-2 img {
     width: 100%;
     height: 100%;
     border-radius: 5%;
@@ -451,7 +486,10 @@ body * {
     transition: top .4s ease-in-out;
 }
 
-.mlist3>ul>li:hover .movtxt3 {
+.mlist3-1>ul>li:hover .movtxt3 {
+    top: 0;
+}
+.mlist3-2>ul>li:hover .movtxt3 {
     top: 0;
 }
 
@@ -469,7 +507,7 @@ body * {
     color: goldenrod;
     font-size: 21px;
     letter-spacing: -1px;
-    margin-top: 50%;
+    margin-top: 20%;
 }
 
 
