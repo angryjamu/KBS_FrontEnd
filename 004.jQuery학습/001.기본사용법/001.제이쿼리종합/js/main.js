@@ -105,7 +105,7 @@ $(function () { ////////// jQB ///////////////////////////
         // eq는 seqence(순서) 라는 단어에서 나온말
         let tgtop = tg.offset().top; // 화면애서 top값
         let tgleft = tg.offset().left + win5; // 화면에서 left값
-        console.log(`top:${tgtop} / left:${tgleft}`)
+        // console.log(`top:${tgtop} / left:${tgleft}`)
         /* 
             offset() 메서드: 요소의 위치나 크기정보를 담고 있음
             offset().top -> 요소의 top값
@@ -177,6 +177,116 @@ $(function () { ////////// jQB ///////////////////////////
             })
 
     })
+
+    // 3-3. '윗층으로 도망가' 버튼 클릭시
+    btns.eq(2).click(function () {
+        console.log($(this).text(), "버튼");
+
+        // 1. 자기자신 지우기
+        $(this).fadeOut(200);
+
+        // 2. 메시지 사라지기
+        msg.fadeOut(300);
+
+
+        // 3. 이동위치
+        // 대상: 7번방
+        let tg = bd.eq(7);
+        let tgtop = tg.offset().top
+        let tgleft = tg.offset().left + win5
+
+        // 4. 위치이동
+        mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 1000, "easeOutElastic",
+            function () {
+
+                // 5. 메시지 보이기
+                msg.text("여긴없지?")
+                    .fadeIn(200);
+
+                // 6. 좀비보이기 : 현재방(tg)에 있는 좀비(.mz)
+                tg.find(".mz").delay(1000).fadeIn(1000, "easeInOutBounce", function () {
+
+                    // 7. 메시지 수정하기
+                    msg.text("악 여기도오오옷!");
+
+                    // 8. 다음버튼 보이기 : '다시옆방으로'
+                    btns.eq(3).fadeIn(300);
+
+                });
+            });
+
+    });
+
+    // 3-4. '다시옆방으로' 버튼 클릭시
+    btns.eq(3).click(function () {
+        // console.log($(this).text(), "버튼");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 사라지기
+        msg.fadeOut(300);
+
+        // 3. 이동위치
+        // 대상: 6번방
+        let tg = bd.eq(6);
+        let tgtop = tg.offset().top
+        let tgleft = tg.offset().left + win5
+
+
+        // 4. 위치이동
+        mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 1000, "easeInOutElastic",
+            function () {
+
+                // 5. 메시지 보이기
+                msg.text("여긴없지?ㅜㅜ")
+                    .delay(500).fadeIn(200);
+
+                // 6. 다음 메시지 : 2초후 변경
+                setTimeout(() => {
+                    msg.html("그래도 무서우니까 <br> 윗층gogo!");
+
+                    // 7. 다음버튼 보이기 : '무서우니 윗층으로!'
+                    btns.eq(4).fadeIn(200);
+
+                }, 2000);
+
+            })
+    })
+    // 3-5. ''무서우니 윗층으로!'' 버튼 클릭시
+    btns.eq(4).click(function () {
+        // console.log($(this).text(), "버튼");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 사라지기
+        msg.fadeOut(300);
+
+        // 3. 이동위치
+        // 대상: 4번방
+        let tg = bd.eq(4);
+        let tgtop = tg.offset().top
+        let tgleft = tg.offset().left + win5
+
+        // 4. 위치이동
+        mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 1000, "easeOutExpo",
+            function () {
+
+
+            })
+    })
+
+
 
 }); //////////////////// jQB ///////////////////////////
 ////////////////////////////////////////////////////////
