@@ -666,7 +666,10 @@ body{
     content: '';
 }
 
-.tbl_schedule .sch_li:nth-child(even){
+.tbl_schedule .sch_li:nth-child(1){
+    background: #fff;
+}
+.tbl_schedule .sch_li:nth-child(2){
     background: #fff;
 }
 
