@@ -319,7 +319,7 @@ body{
     transform: translateX(-50%);
     width: 85%;
     height: 55%;
-    outline: 2px dashed rgb(38, 0, 255);
+    /* outline: 2px dashed rgb(38, 0, 255); */
 }
 
 .mlist ul{
@@ -420,7 +420,7 @@ body{
     transform: translateX(-50%);
     width: 95%;
     height: 40%;
-    outline: 2px dashed red;
+    /* outline: 2px dashed red; */
 }
 .mlist3-2 {
     position: absolute;
@@ -429,7 +429,7 @@ body{
     transform: translateX(-50%);
     width: 95%;
     height: 40%;
-    outline: 2px dashed rgb(38, 0, 255);
+    /* outline: 2px dashed rgb(38, 0, 255); */
 }
 
 .mlist3-1 ul{
@@ -679,6 +679,14 @@ body{
     border: 1px solid #e0e0e0;
     background: #fff;
     padding: 20px 30px;
+}
+
+.tit_schedule{
+    position: relative;
+    top: 18px;
+    text-align: center;
+    background: #fff;
+    color: #000;
 }
 
 /* .mt50{
