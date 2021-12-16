@@ -33,8 +33,8 @@ $(function () { ////////// jQB ///////////////////////////
 
     // 미니언즈 가로위치 보정값
     // 윈도우 가로크기의 5%
-    let win5 = $(window).width()*0.05;
-    console.log("가로크기5%:",win5);
+    let win5 = $(window).width() * 0.05;
+    console.log("가로크기5%:", win5);
 
     /*************************************************************************** 
                              2. 초기화 셋팅
@@ -104,7 +104,7 @@ $(function () { ////////// jQB ///////////////////////////
         // eq(순번) -> 선택요소들 중 몇번째 요소를 선택
         // eq는 seqence(순서) 라는 단어에서 나온말
         let tgtop = tg.offset().top; // 화면애서 top값
-        let tgleft = tg.offset().left+win5; // 화면에서 left값
+        let tgleft = tg.offset().left + win5; // 화면에서 left값
         console.log(`top:${tgtop} / left:${tgleft}`)
         /* 
             offset() 메서드: 요소의 위치나 크기정보를 담고 있음
@@ -116,13 +116,13 @@ $(function () { ////////// jQB ///////////////////////////
         // 대상: .mi -> mi변수
         // animate({css설정},시간,이징,함수)
         mi.animate({
-            top: tgtop+"px",
-            left: tgleft+"px"
-        },1000,()=>{ //콜백함수(애니후)
+            top: tgtop + "px",
+            left: tgleft + "px"
+        }, 1000, "easeOutCubic", () => { //콜백함수(애니후)
 
             // 5. 메시지변경
             msg.text("우왕 집이당~~!옆방으로 가보장^^")
-            .fadeIn(200); //메세지 나타나기
+                .fadeIn(200); //메세지 나타나기
 
             // 6. 다음버튼 보이기
             btns.eq(1).slideDown(400);
@@ -133,10 +133,49 @@ $(function () { ////////// jQB ///////////////////////////
     });
 
     // 3-2. '옆방으로' 버튼///////////
-    btns.eq(1).click(function(){
-        console.log($(this).text(),"버튼");
+    btns.eq(1).click(function () {
+        console.log($(this).text(), "버튼");
         // $(this)는 btns.eq(1)과 같다
         // text()메서드는 읽어오기도 됨
+
+        // 1. 자기자신 버튼 없애기
+        $(this).fadeOut(200);
+        // 서서히 사라짐
+
+        // 2. 메시지 사라지기
+        msg.slideUp(200);
+
+        // 3. 이동위치
+        // 대상: 9번방
+        let tg = bd.eq(9);
+        let tgtop = tg.offset().top
+        let tgleft = tg.offset().left + win5
+
+        // 4. 위치이동
+        mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 500, "easeInElastic", //이징
+            function () { //콜백함수
+                // 5. 좀비 등장 -> 9번방(tg)에 있는 좀비(.mz)
+                tg.find(".mz").delay(2000).fadeIn(400, function () { //콜백함수
+                    // 6. 메시지 띄우기
+                    msg.html("끄아아아아! <br> ㅠㅠ피하자ㅠㅠ").fadeIn(200).css({
+                        left: "-134%"
+                    });
+
+                    // 7. 다음버튼 보이기 : '윗층으로 도망'
+                    btns.eq(2).slideDown(300);
+
+
+                }); // fadeIn //
+
+                // fadeIn(시간,이징,함수)
+                // find(요소) 내부요소 찾아선택
+                // delay(시간) 애니메이션 앞에서 지연시간
+
+            })
+
     })
 
 }); //////////////////// jQB ///////////////////////////
