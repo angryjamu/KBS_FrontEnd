@@ -264,16 +264,16 @@ $(function () { ////////// jQB ///////////////////////////
         // console.log($(this).text(), "버튼");
 
         // 1. 자기자신 버튼 없애기
-        $(this).slideUp(400);
+        $(this).slideUp(200);
 
         // 2. 메시지 사라지기
-        msg.fadeOut(300);
+        msg.fadeOut(200);
 
         // 3. 이동위치
         // 대상: 4번방
         let tg = bd.eq(4);
-        let tgtop = tg.offset().top
-        let tgleft = tg.offset().left + win5
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
 
         // 4. 위치이동
         mi.animate({
@@ -281,7 +281,47 @@ $(function () { ////////// jQB ///////////////////////////
                 left: tgleft + "px"
             }, 1000, "easeOutExpo",
             function () {
-
+                // 5. 메시지 보이기
+                msg.empty() // empty() 선택요소 텍스트 지우기
+                    .delay(1000).fadeIn(200, () => {
+                        msg.text("무.")
+                    })
+                    .delay(1000).fadeIn(200, () => {
+                        msg.text("무.서.")
+                    })
+                    .delay(1000).fadeIn(200, () => {
+                        msg.text("무.서.워...")
+                    })
+                    .delay(1000).fadeIn(200, () => {
+                        msg.text("무.서.워...ㅜㅜㅜ")
+                    })
+                    .delay(1000).fadeIn(200, () => {
+                        // 6. 좀비달려오기 -> 7번방 좀비: bd.eq(7).find(".mz")
+                        bd.eq(7).find(".mz")
+                            // 윗층으로
+                            .animate({
+                                top: -tg.height() + "px"
+                            }, 500, "easeOutElastic")
+                            // 주인공에게 달려오기
+                            .animate({
+                                right: tg.width() * 1.2 + "px"
+                                // 가로크기만큼 right값 주기(보정)
+                            }, 2000, "easeOutBounce", () => { // 좀비가 온 후!
+                                // 7. 주인공 사색되기(흑백처리)
+                                mi.css({
+                                    filter: "grayscale(100%)"
+                                });
+                            });
+                                // 8. 2초뒤에 좀비되기
+                                setTimeout(() => {
+                                    mi.find("img").attr("src", "images/mz1.png")
+                                    // attr(속성명,속성값)
+                                    // -> 속성값 바꾸는 메서드
+                                    // JS의 setAttribute와 유사
+                                    // 참고) attr(속성명) -> 속성값 가져오기
+                                    // -> setAttribute와 유사
+                                }, 2000)
+                    })
 
             })
     })
