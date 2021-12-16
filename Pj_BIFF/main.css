@@ -29,10 +29,10 @@ body{
     color: #fafafa;
 }
 
-body * {
+/* body * {
     outline: 1px dashed rgb(158, 158, 158);
-    /* background-color: #000; */
-}
+    background-color: #000;
+} */
 
 .ibx {
     max-width: 1300px;
@@ -49,9 +49,9 @@ body * {
     height: 100vh;
 }
 
-/* *, *::before, *::after{
+*, *::before, *::after{
     box-sizing: border-box;
-} */
+}
 
 
 /******************************************* 상단 *******************************************/
@@ -547,7 +547,7 @@ body * {
 
 .tbl_schedule .sch_li .sch_it.blank_wrap{
     background: #f8f8f8;
-    border-top: 1px solid #e0e0e0 !important;
+    border-top: 1px solid #e0e0e0  !important;
 }
 
 .tbl_schedule .sch_li .sch_it{
@@ -573,7 +573,8 @@ body * {
     font-size: 13px;
     line-height: 1.5;
     border: 0px solid #eddfbf;
-    color: #eef2ff;
+    color: #3f538d;
+    background-color: #eef2ff;
     font-weight: bold;
     padding: 2px 6px;
     border-radius: 50%;
