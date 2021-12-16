@@ -25,14 +25,13 @@ a {
 }
 
 body{
-    background-color: #000;
+    background-color: #222;
     color: #fafafa;
 }
 
-/* body * {
-    outline: 1px dashed rgb(158, 158, 158);
-    background-color: #000;
-} */
+body * {
+    /* outline: 1px dashed rgb(158, 158, 158); */
+}
 
 .ibx {
     max-width: 1300px;
@@ -684,6 +683,7 @@ body{
 .tit_schedule{
     position: relative;
     top: 18px;
+    padding: 2%;
     text-align: center;
     background: #fff;
     color: #000;
@@ -763,7 +763,7 @@ body{
 
 #ft .footer_inner{
     position: relative;
-    background: #000;
+    background: #222;
     /* padding: 30px 0 1px; */
 }
 
