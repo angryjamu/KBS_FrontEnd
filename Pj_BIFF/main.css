@@ -65,7 +65,7 @@ body{
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: #e9282061;
+    background-color: #5c545361;
     z-index: 999;
 }
 
@@ -581,6 +581,7 @@ body{
 }
 
 .tbl_schedule .sch_li .sch_it .time{
+    color: #000;
     font-size: 18px;
     line-height: 1.5;
     display: inline-block;
@@ -601,6 +602,7 @@ body{
 }
 
 .tbl_schedule .sch_li .sch_it .film_tit .film_tit_kor{
+    color: #000;
     display: block;
     font-size: 18px;
     line-height: 1.45;
@@ -673,6 +675,70 @@ body{
     background: #fff;
 }
 
+.caution_box{
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    padding: 20px 30px;
+}
+
+/* .mt50{
+    margin-top: 50px;
+} */
+
+.row{
+    /* --bs-gutter-x:2rem; */
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    /* margin-top: calc(); */
+}
+
+/* .row > *{
+    max-width: 100%;
+} */
+
+.tit-sec{
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: -1.3px;
+    word-break: keep-all;
+    margin-bottom: 10px;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+.bold{
+    color: #000;
+    font-weight: bold !important;
+}
+
+.list_secondary > li:first-child{
+    margin-top: 0;
+}
+
+.list_secondary > li{
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 6px 0;
+    padding-left: 10px;
+    letter-spacing: -0.5px;
+    word-break: keep-all;
+    color: #888;
+}
+
+.list_secondary > li:before{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: #aaa;
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
 
 
 /******************************************* 하단 *******************************************/
