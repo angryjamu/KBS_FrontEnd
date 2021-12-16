@@ -312,21 +312,151 @@ $(function () { ////////// jQB ///////////////////////////
                                     filter: "grayscale(100%)"
                                 });
                             });
-                                // 8. 2초뒤에 좀비되기
-                                setTimeout(() => {
-                                    mi.find("img").attr("src", "images/mz1.png")
-                                    // attr(속성명,속성값)
-                                    // -> 속성값 바꾸는 메서드
-                                    // JS의 setAttribute와 유사
-                                    // 참고) attr(속성명) -> 속성값 가져오기
-                                    // -> setAttribute와 유사
-                                }, 2000)
+                        // 8. 메시지 지우기
+                        msg.hide();
+
+                        // 9. 2초뒤에 좀비되기
+                        setTimeout(() => {
+                            mi.find("img").attr("src", "images/mz1.png")
+                            // attr(속성명,속성값)
+                            // -> 속성값 바꾸는 메서드
+                            // JS의 setAttribute와 유사
+                            // 참고) attr(속성명) -> 속성값 가져오기
+                            // -> setAttribute와 유사
+
+                            // 좀비메세지
+                            msg.html("나도좀비..!?<br>어서 치료주사를..!!")
+                                .css({
+                                    left: "100%"
+                                }) //메시지위치변경
+                                .fadeIn(400); // 메세지 나타나기
+
+                            // 10. 다음버튼 보이기 : '치료주사방으로'
+                            btns.eq(5).slideDown(300);
+
+                        }, 2000)
                     })
 
             })
+    });
+
+    // 3-6 ''치료주사방으로'' 버튼 클릭시
+    btns.eq(5).click(function () {
+        console.log($(this).text(), "버튼");
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(200);
+
+        // 2. 메시지 사라지기
+        msg.fadeOut(200);
+
+        // 3. 이동위치
+        // 대상: 2번방
+        let tg = bd.eq(2);
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
+
+        // 4. 위치이동
+        mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 1000, "easeOutElastic",
+            () => {
+            // 5.주사기 돌리기
+            // 주의: transform은 animate에서 사용불가
+            // transform은 transition사용
+            $(".inj").css({
+                transform: "rotate(-150deg)",
+                transition: ".5s ease-out 1s",
+                zIndex: "9999" // 좀비보다 위
+            })
+
+            // 6. 주사놓은 후 (1.5초) 다시 미니언즈2(후유증)
+            setTimeout(() => {
+                // 6-1. 미니언즈 흑백모드 풀기
+                mi.css({filter:"grayscale(0%)"})
+                // 6-2. 새로운 미니언즈 이미지 변경
+                .find("img").attr("src","images/m2.png")
+                // 6-3. 주사기 제거하기
+                $(".inj").remove();
+                // remove는 메서드 태그를 지운다
+
+                // 7. 메시지 보이기
+                msg.text("치료완료!").fadeIn(200)
+                .delay(1000).fadeIn(200,()=>{
+                    msg.html("이제 좀만더<br>가면 탈추울..!");
+                });
+
+                // 8. 다음버튼 보이기: '3번방으로'
+                btns.eq(6).slideDown(400);
+
+            },1500);
+
+        })
+    });
+
+    // 3-7 ''3번방으로'' 버튼 클릭시
+    btns.eq(6).click(function (){
+        console.log($(this).text(), "버튼");
+        
+         // 1. 자기자신 버튼 없애기
+         $(this).slideUp(200);
+
+         // 2. 메시지 사라지기
+         msg.fadeOut(200);
+ 
+         // 3. 이동위치
+         // 대상: 3번방
+         let tg = bd.eq(3);
+         let tgtop = tg.offset().top;
+         let tgleft = tg.offset().left + win5;
+ 
+         // 4. 위치이동
+         mi.animate({
+                 top: tgtop + "px",
+                 left: tgleft + "px"
+             }, 1000,
+             () => {
+
+                // 5. 메시지 보이기
+                msg.text("어서 윗층으로!").fadeIn(200);
+
+                // 6. 다음버튼 보이기 : '1번방으로'
+                btns.eq(7).slideDown(300);
+                
+
     })
+    });
+    // 3-8 ''1번방으로'' 버튼 클릭시
+    btns.eq(7).click(function (){
+        console.log($(this).text(), "버튼");
+        
+         // 1. 자기자신 버튼 없애기
+         $(this).slideUp(200);
+
+         // 2. 메시지 사라지기
+         msg.fadeOut(200);
+ 
+         // 3. 이동위치
+         // 대상: 3번방
+         let tg = bd.eq(1);
+         let tgtop = tg.offset().top;
+         let tgleft = tg.offset().left + win5;
+ 
+         // 4. 위치이동
+         mi.animate({
+                 top: tgtop + "px",
+                 left: tgleft + "px"
+             }, 1000, "easeOutElastic",
+             () => {
+
+                // 5. 메시지 보이기
+                msg.text("이제 곧 탈출이당~").fadeIn(200);
+
+                // 6. 다음버튼 보이기 : '헬기호출'
+                btns.last().slideDown(300);
 
 
-
+    })
+    })
 }); //////////////////// jQB ///////////////////////////
 ////////////////////////////////////////////////////////
