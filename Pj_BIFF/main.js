@@ -2,8 +2,8 @@
 
 function sMenu() {
 
-    let gnb =
-        document.getElementsByClassName("gnb").item(0);
-    gnb.classList.toggle("on");
+    let gnb1 =
+        document.getElementsByClassName("gnb1").item(0);
+    gnb1.classList.toggle("on");
 
 }

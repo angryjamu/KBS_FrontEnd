@@ -67,7 +67,7 @@ body * {
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: #5c545361;
+    background-color: #242221c4;
     z-index: 999;
 }
 
@@ -87,7 +87,7 @@ body * {
 
 }
 
-.gnb ul {
+.gnb2 ul {
     width: 70%;
     margin: 0 auto;
     padding-top: 5px;
@@ -96,7 +96,7 @@ body * {
     margin-top: 10px;
 }
 
-.gnb {
+.gnb2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,13 +117,13 @@ body * {
 }
 
 /* 메뉴 양쪽 등분할 박스 */
-.gnb>div {
+.gnb2>div {
     position: relative;
     flex: 1;
     overflow: hidden;
 }
 
-.gnb .lb {
+.gnb2 .lb {
     position: absolute;
     width: 200px;
     left: 0;
@@ -133,7 +133,7 @@ body * {
     overflow: hidden;
 }
 
-.gnb .rb {
+.gnb2 .rb {
     position: absolute;
     width: 200px;
     right: 0;
@@ -143,15 +143,15 @@ body * {
     overflow: hidden;
 }
 
-.gnb li {
+.gnb2 li {
     font-size: 16px;
 }
 
-.gnb a {
+.gnb2 a {
     color: #fff;
 }
 
-.gnb a:hover {
+.gnb2 a:hover {
     /* border-bottom: 2px solid #f00; */
     text-decoration: 2px underline #f00;
     color: #f00;
@@ -159,14 +159,14 @@ body * {
 }
 
 .menu {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    font-size: 40px;
-    border: 2px solid rgb(0, 0, 0);
+    font-size: 30px;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 50%;
-    background-color: rgb(250, 250, 253);
-    padding: 0;
+    background-color: #bdbdbd;
+    padding: 3px;
     cursor: pointer;
 }
 
@@ -174,7 +174,7 @@ body * {
     position: absolute;
     width: 100%;
     height: 100%;
-    right: 30px;
+    right: 20px;
 
     display: flex;
     justify-content: flex-end;
@@ -183,10 +183,10 @@ body * {
 
 }
 
-.gnb {
+.gnb1 {
     position: fixed;
     top: -100%;
-    left: 87%;
+    /* left: -100%; */
     width: 100%;
     height: 100%;
     /* 보이는 화면에 꽉참 */
@@ -195,34 +195,31 @@ body * {
     transition: top .8s ease-out;
 }
 
-.gnb.on {
-    top: 50%;
+.gnb1.on {
+    top: 0;
 }
 
 .cbtn {
     position: absolute;
     top: 10px;
-    right: 10px;
-
-    width: 50px;
-    height: 50px;
-    font-size: 40px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
     color: #fff;
-
-    border: 3px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
     padding: 0;
-
     cursor: pointer;
 }
 
-.gnb a {
+.gnb1 a {
     color: #fff;
     text-decoration: none;
 }
 
-.gnb ul {
+.gnb1 ul {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -235,7 +232,7 @@ body * {
     outline: 2px dotted deeppink;
 }
 
-.gnb ul>li {
+.gnb1 ul>li {
     float: left;
     /* 메뉴 옆으로 흐르게 */
     width: 200px;
@@ -245,7 +242,7 @@ body * {
 }
 
 /* 하위메뉴 li */
-.gnb ol>li {
+.gnb1 ol>li {
     font-size: 20px;
     line-height: 2;
 }
