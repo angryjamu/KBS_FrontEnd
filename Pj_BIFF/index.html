@@ -11,9 +11,9 @@
     <script>
         function sMenu() {
 
-            let xbtn =
-                document.getElementsByClassName("xbtn").item(0);
-            xbtn.classList.toggle("on");
+            let gnb =
+                document.getElementsByClassName("gnb").item(0);
+            gnb.classList.toggle("on");
 
         }
 
@@ -28,9 +28,8 @@
         <div class="ham">
             <button class="menu" onclick="sMenu()">≡</button>
         </div>
-        <nav class="xbtn">
+        <nav class="gnb">
             <button class="cbtn" onclick="sMenu()">×</button>
-
             <ul>
                 <li><a href="#">BIFF</a></li>
                 <li>
@@ -65,6 +64,7 @@
                 <li><a href="#">프로필</a></li>
             </ul>
         </nav>
+        
         <header class="top ibx">
             <div class="logo">
                 <a href="#">
