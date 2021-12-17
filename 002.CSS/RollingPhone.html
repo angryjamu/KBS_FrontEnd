@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링폰</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        /* 폰박스 */
+        .phone{
+            position: absolute;
+            top: calc(50% - 200px);
+            left: calc(50% - 100px);
+            /* 정중앙이동 */
+            width: 200px;
+            height: 400px;
+            transform: rotateX(350deg) rotateY(160deg);
+            /* 트랜스폼 입체설정하기 */
+            transform-style: preserve-3d;
+
+            /* outline: 2px solid #ccc; */
+        }
+
+        /* 각면 공통 */
+        .phone span{
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        /* 각면 만들기 */
+        /* 1.윗면 */
+        .phone span:nth-child(1){
+            height: 20px;
+            background-image: url(./images/ip06.png);
+            top: -10px;
+            transform: rotateX(-90deg);
+        }
+        /* 2.아랫면 */
+        .phone span:nth-child(2){
+            height: 20px;
+            background-image: url(./images/ip05.png);
+            bottom: -10px;
+            transform: rotateX(90deg);
+        }
+        /* 3.우측면 */
+        .phone span:nth-child(3){
+            width: 20px;
+            background-image: url(./images/ip03.png);
+            right: -10px;
+            transform: rotateY(90deg);
+        }
+        /* 4.좌측면 */
+        .phone span:nth-child(4){
+            width: 20px;
+            background-image: url(./images/ip04.png);
+            left: -10px;
+            transform: rotateY(-90deg);
+        }
+        /* 5.뒷면 */
+        .phone span:nth-child(5){
+            background-image: url(./images/ip02.png);
+            transform: rotateY(180deg) translateZ(-10px);
+        }
+        /* 6.앞면 */
+        .phone span:nth-child(6){
+            background-image: url(./images/ip01.png);
+            transform: rotateY(-180deg) translateZ(10px);
+        }
+    </style>
+</head>
+<body>
+    <!-- 폰박스 -->
+    <div class="phone">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+</body>
+</html>
