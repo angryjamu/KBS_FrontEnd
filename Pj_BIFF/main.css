@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /******************************************* 공통 *******************************************/
 html,
 body,
@@ -13,7 +12,6 @@ ol {
 
 html,body {
     scroll-behavior: smooth;
-
 }
 
 ul,
@@ -155,7 +153,6 @@ body * {
     /* border-bottom: 2px solid #f00; */
     text-decoration: 2px underline #f00;
     color: #f00;
-
 }
 
 .menu {
@@ -370,9 +367,6 @@ body * {
     color: #fff;
 }
 
-/* float 해제 */
-
-
 /* 첫번째 li는 영화제목 */
 .movtxt li:first-child {
     color: goldenrod;
@@ -380,6 +374,29 @@ body * {
     letter-spacing: -1px;
     margin-top: 50%;
 }
+
+.abtn{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 3%;
+    max-width: 55px;
+    /* 최대크기지정 */
+}
+
+.abtn img{
+    width: 100%;
+    /* 높이값은 자동조절 */
+}
+/* 오른쪽버튼 */
+.rb{
+    right: 3%;
+}
+/* 왼쪽버튼 */
+.lb{
+    left: 3%;
+}
+
 
 /******************************************* Cont3 *******************************************/
 .cont3 {
