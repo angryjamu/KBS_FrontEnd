@@ -709,21 +709,11 @@ body {
     color: #000;
 }
 
-/* .mt50{
-    margin-top: 50px;
-} */
-
 .row {
-    /* --bs-gutter-x:2rem; */
     display: flex;
     flex: 1 0 100%;
     flex-wrap: wrap;
-    /* margin-top: calc(); */
 }
-
-/* .row > *{
-    max-width: 100%;
-} */
 
 .tit-sec {
     font-size: 28px;
@@ -880,8 +870,6 @@ body {
 }
 
 .row {
-    /* --bs-gutter-x: 2rem; */
-    /* --bs-gutter-y: 2rem; */
     display: flex;
     flex: 1 0 100%;
     flex-wrap: wrap;
@@ -891,9 +879,6 @@ body {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
-    /* padding-right: calc(var(--bs-gutter-x) / 2); */
-    /* padding-left: calc(var(--bs-gutter-x) / 2); */
-    /* margin-top: var(--bs-gutter-y); */
 }
 
 .fnb {
