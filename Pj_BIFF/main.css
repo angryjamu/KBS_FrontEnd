@@ -56,7 +56,6 @@ body {
     box-sizing: border-box;
 }
 
-
 /******************************************* 상단 *******************************************/
 /* .ibx>.cont1:first-child{
     width: 100%;
@@ -251,8 +250,6 @@ body {
 
 
 
-
-
 .menu {
     width: 45px;
     height: 45px;
@@ -281,18 +278,13 @@ body {
     object-fit: cover;
     overflow: hidden;
     text-align: center;
-    /* filter: brightness(75%); */
 }
 
 #gosub {
     position: absolute;
     top: 90%;
     left: 50%;
-    /* 부모는 화면 */
     transform: translate(-50%, -50%);
-    /* 정중앙으로 이동 */
-    z-index: 1;
-    /* left: calc(50% - 22.5px); */
 }
 
 #gosub img {
@@ -324,7 +316,6 @@ body {
     width: 700px;
     height: 40px;
     text-align: center;
-    /* left: calc(50% - 22.5px); */
     left: 25%;
     top: 15%;
     font-size: 35px;
@@ -332,7 +323,7 @@ body {
 
 .mlist {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
