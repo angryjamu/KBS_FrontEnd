@@ -186,8 +186,7 @@ body * {
 .gnb {
     position: fixed;
     top: -100%;
-    /* 높이만큼 위로 올라감(숨겨짐) */
-    left: 0;
+    left: 87%;
     width: 100%;
     height: 100%;
     /* 보이는 화면에 꽉참 */
