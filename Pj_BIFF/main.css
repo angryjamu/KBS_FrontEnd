@@ -30,7 +30,7 @@ body{
 }
 
 body * {
-    /* outline: 1px dashed rgb(158, 158, 158); */
+    outline: 1px dashed rgb(158, 158, 158);
 }
 
 .ibx {
@@ -54,9 +54,9 @@ body * {
 
 
 /******************************************* 상단 *******************************************/
-.ibx>.cont1:first-child{
+/* .ibx>.cont1:first-child{
     width: 100%;
-}
+} */
 
 #top {
     position: fixed;
@@ -110,6 +110,7 @@ body * {
         width: 500px;
     }
 }
+
 /* 메뉴 양쪽 등분할 박스 */
 .gnb>div{
     position: relative;
@@ -140,7 +141,13 @@ body * {
     font-size: 15px;
 }
 
+.gnb a{
+    color: #fff;
+}
 
+.gnb li:hover{
+    border-bottom: 2px solid #f00;
+}
 
 
 .ham {
@@ -295,13 +302,7 @@ body * {
     margin-top: 16px;
 }
 
-.gnb a{
-    color: #fff;
-}
 
-.gnb li:hover{
-    border-bottom: 2px solid #f00;
-}
 
 /******************************************* Cont2 *******************************************/
 .cont2{

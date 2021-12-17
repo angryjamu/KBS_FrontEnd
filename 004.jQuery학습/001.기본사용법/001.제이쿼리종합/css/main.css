@@ -38,7 +38,7 @@ body {
 }
 /* .tit에 .on을 주면 값 변경하기 */
 .tit.on{
-    top: 50%;
+    top: 57%;
     transform: translateX(-50%) rotate(45deg);
 }
 /* 두번째 변경 */
@@ -120,7 +120,8 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 20px;
-
+    white-space: nowrap;
+    /* 줄바꿈방지 */
 }
 
 @keyframes runMi {
