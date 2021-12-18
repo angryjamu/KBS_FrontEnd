@@ -162,7 +162,7 @@ body * {
     font-size: 30px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 50%;
-    background-color: #bdbdbd;
+    background-color: #c6c6c6;
     padding: 3px;
     cursor: pointer;
 }
@@ -287,11 +287,9 @@ body * {
 }
 
 
-
 /******************************************* Cont2 *******************************************/
 .cont2 {
     position: relative;
-    box-sizing: border-box;
 }
 
 .ad1 {
@@ -309,13 +307,15 @@ body * {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    width: 85%;
+    width: 100%;
     height: 55%;
+    margin: 0 auto;
     /* outline: 2px dashed rgb(38, 0, 255); */
 }
 
 .mlist ul {
     display: flex;
+    height: 80%;
 }
 
 .mlist ul>li {
@@ -326,14 +326,66 @@ body * {
     overflow: hidden;
 }
 
+/* .mlist::before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+} */
+
+
 .mlist img {
+    position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 5%;
+    transition: all .4s ease-in-out;
+}
+
+.mlist li:nth-child(1){
+    /* top: -30%; */
+    /* left: -210%; */
+    transform: scale(.8);
+    filter: grayscale(50%) blur(1px);
+    /* opacity: 0; */
+    /* 안보임 */
+}
+/* 왼쪽 바로옆 */
+.mlist li:nth-child(2){
+    /* top: -20%; */
+    /* left: -110%; */
+    transform: scale(.9);
+    filter: grayscale(50%) blur(1px);
+}
+/* 
+    css 필터 속성: 이미지에 변형효과를 준다
+    filter: 여러가지 필터(그레이스케일, 블러, 세피아, 콘트라스트 등)
+    참조) https://www.w3schools.com/cssref/playit.asp?filename=playcss_filter&preval=none
+*/
+/* 중앙이미지 */
+.mlist li:nth-child(3) {
+    top: 0;
+    left: 0;
+    transform: scale(1);
+}
+/* 오른쪽 바로옆 */
+.mlist li:nth-child(4){
+    /* top: -20%; */
+    /* left: 110%; */
+    transform: scale(.9);
+    filter: grayscale(50%) blur(1px);
+}
+/* 오른쪽 끝 */
+.mlist li:nth-child(5){
+    /* top: -30%; */
+    /* left: 210%; */
+    transform: scale(.8);
+    filter: grayscale(50%) blur(1px);
+    /* opacity: 0; */
+    /* 안보임 */
 }
 
 .movtxt {
-    position: absolute;
+    position: relative;
     /* left는 설정하지 않고 젠틀하게 처리
     ->각 li위치에 그대로 있음 */
 
@@ -378,11 +430,11 @@ body * {
 
 .abtn{
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
-    width: 3%;
+    width: 4%;
+    height: 10%;
     max-width: 55px;
-    /* 최대크기지정 */
 }
 
 .abtn img{
@@ -391,11 +443,11 @@ body * {
 }
 /* 오른쪽버튼 */
 .rb{
-    right: 3%;
+    right: 0%;
 }
 /* 왼쪽버튼 */
 .lb{
-    left: 3%;
+    left: 0%;
 }
 
 
