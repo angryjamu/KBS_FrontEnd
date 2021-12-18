@@ -320,8 +320,8 @@ body * {
 
 .mlist ul>li {
     position: relative;
-    width: 23%;
-    /* 4등분(25%)% - 양쪽마진1% */
+    width: 18%;
+    /* 5등분(20%)% - 양쪽마진1% */
     margin: 0 1%;
     overflow: hidden;
 }
@@ -586,6 +586,10 @@ body * {
 }
 
 /******************************************* Cont4 ******************************************/
+.cont4{
+    color: #000;
+}
+
 .tbl_schedule .sch_li:first-child {
     padding-top: 0;
     border-top: 0;

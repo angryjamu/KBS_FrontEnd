@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
         함수명: autoSlide
         기능: 슬라이드함수 인터발호출
     ****************************************/
-    const autoSlide = () => autoI = setInterval(() => goSlide(1), 2000);
+    const autoSlide = () => autoI = setInterval(() => goSlide(1), 5000);
     ////////// autoSlide 함수 //////////////////////
 
     // setInterval 을 사용시 함수만 호출할 경우
@@ -113,7 +113,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // 2. 타임아웃지우기(실행쓰나미방지)
         clearTimeout(autoT);
         // 자동호출 타임아웃셋팅
-        autoT = setTimeout(autoSlide, 5000)
+        autoT = setTimeout(autoSlide, 3000)
     }
 
 
