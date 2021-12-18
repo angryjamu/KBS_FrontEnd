@@ -113,7 +113,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // 2. 타임아웃지우기(실행쓰나미방지)
         clearTimeout(autoT);
         // 자동호출 타임아웃셋팅
-        autoT = setTimeout(autoSlide, 3000)
+        autoT = setTimeout(autoSlide, 5000)
     }
 
 
