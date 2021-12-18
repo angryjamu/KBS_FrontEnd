@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // appendChild(처음요소) -> 처음요소 맨뒤로 이동
 
         // 3-2. 왼쪽버튼일 경우 : 맨뒤 이미지 맨앞으로
-        else gbx.insertBefore(gimg[gimg.length - 1], gimg[0]);
+        else block.insertBefore(gimg[gimg.length - 1], gimg[0]);
         // insertBefore(끝요소,처음요소) -> 끝요소를 처음요소 앞으로 이동
         // gimg[개수-1] -> 끝요소번호
     }
@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", () => {
     abtn[0].onclick = () => {
         goSlide(0); //슬라이드함수호출
         clearAuto(); //인터발지우기
-    }
+    };
 
     //////////////////////////////////////
     // 자동 넘기기 설정 -> 인터발 함수사용
