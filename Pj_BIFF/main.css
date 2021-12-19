@@ -267,16 +267,18 @@ body * {
 
 #gosub {
     position: absolute;
-    /* top: 90%; */
-    /* left: 50%; */
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #gosub img {
+    max-width: 600px;
     position: absolute;
     /* left: -33%; */
     /* bottom: 30%; */
     clip-path: circle(141px at 50% 53%);
-    transform: translate(-50%, -50%);
+    transform: translate(-28%, -50%);
 
 }
 
