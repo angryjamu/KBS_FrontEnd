@@ -104,8 +104,11 @@ body * {
     margin: 0 auto;
     overflow: hidden;
     display: flex;
-
+    
     animation: menuAni 1s ease-out 1s forwards;
+}
+
+.ham:hover{
 }
 
 @keyframes menuAni {
@@ -264,9 +267,8 @@ body * {
 
 #gosub {
     position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* top: 90%; */
+    /* left: 50%; */
 }
 
 #gosub img {
@@ -274,7 +276,7 @@ body * {
     /* left: -33%; */
     /* bottom: 30%; */
     clip-path: circle(141px at 50% 53%);
-    transform: translate(-28%, -50%);
+    transform: translate(-50%, -50%);
 
 }
 
