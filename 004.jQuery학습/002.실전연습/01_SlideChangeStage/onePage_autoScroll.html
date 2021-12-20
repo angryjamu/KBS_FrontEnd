@@ -118,8 +118,9 @@
         .gnb li{
             margin: 0 7px;
         }
-        /* 메뉴에 마우스 오버시 */
-        .gnb a:hover{
+        /* 메뉴에 마우스 오버시 + 부모li에 .on인 경우 */
+        .gnb a:hover,
+        .gnb li.on a{
             display: inline-block;/* 트랜스폼적용위해 */
             color: lime;
             text-decoration: overline;/* 윗줄 */
@@ -184,7 +185,11 @@
                 // 참고) scrollLeft 는 가로스크롤 위치속성
                 $("html,body").animate({
                     scrollTop: pos + "px"
-                }, 700,"easeInOutQuint");
+                }, dur_sc, easeing_sc);
+
+                $(this).parent().addClass("on")
+                .siblings().removeClass("on");
+
 
            });/////////// click ////////////
 
@@ -206,7 +211,7 @@
             <!-- 1-2.GNB메뉴 -->
             <nav class="gnb">
                 <ul>
-                    <li>
+                    <li class="on">
                         <a href="#pg1">아수라</a>
                     </li>
                     <li>
@@ -240,6 +245,34 @@
     <section id="pg5" class="page"></section>
     <section id="pg6" class="page"></section>
     <section id="pg7" class="page"></section>
+
+    <!-- 3.인디케이터(위치표시자) -->
+    <nav class="indic">
+        <ul>
+            <li class="on">
+                <a href="#pg1"><span>아수라</span></a>
+            </li>
+            <li>
+                <a href="#pg2"><span>고산자</span></a>
+            </li>
+            <li>
+                <a href="#pg3"><span>인천상륙작전</span></a>
+            </li>
+            <li>
+                <a href="#pg4"><span>봉이김선달</span></a>
+            </li>
+            <li>
+                <a href="#pg5"><span>비밀은없다</span></a>
+            </li>
+            <li>
+                <a href="#pg6"><span>아가씨</span></a>
+            </li>
+            <li>
+                <a href="#pg7"><span>탐정홍길동</span></a>
+            </li>
+        </ul>
+    </nav>
+    
 
     
 </body>
