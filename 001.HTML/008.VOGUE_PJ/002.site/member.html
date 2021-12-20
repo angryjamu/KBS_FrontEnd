@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 | 보그 코리아 (Vogue Korea)</title>    
+    <title>회원가입 | 보그 코리아 (Vogue Korea)</title>
     <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
     <link rel="stylesheet" href="css/member.css">
     <link rel="stylesheet" href="css/media.css">
     <!-- 미디어쿼리를 본css하단에 link방식으로 넣어준다! -->
     <script src="js/linksys.js"></script>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/member.js"></script>
+    <!-- member.js는 순서중요! 제이쿼리쓰니까! -->
 </head>
+
 <body>
 
     <!-- 1. 상단영역 -->
@@ -218,13 +225,13 @@
         </header>
     </div>
     <!-- 2. 메인영역 -->
-    <div id="cont" class="bgc">
+    <div id="cont">
         <main class="cont ibx">
             <!-- 1. 서브페이지 탑영역 -->
-             <header class="subtop">
+            <header class="subtop">
                 <!-- 서브타이틀 -->
                 <h2 class="stit">Member</h2>
-             </header>      
+            </header>
 
             <!-- 2. 서브컨텐츠박스 -->
             <section class="scont">
@@ -233,17 +240,20 @@
                         <ul>
                             <li>
                                 <label for="mid">아이디</label>
-                                <input type="text" id="mid" name="mid" maxlength="25" placeholder="영문자로 시작하는 6~20글자 영문자/숫자">
+                                <input type="text" id="mid" name="mid" maxlength="25"
+                                    placeholder="영문자로 시작하는 6~20글자 영문자/숫자">
                                 <span class="msg"></span>
                             </li>
                             <li>
                                 <label for="mpw">비밀번호</label>
-                                <input type="password" id="mpw" name="mpw" maxlength="20" placeholder="특수문자,문자,숫자포함 형태의 5~15자리">
+                                <input type="password" id="mpw" name="mpw" maxlength="20"
+                                    placeholder="특수문자,문자,숫자포함 형태의 5~15자리">
                                 <span class="msg"></span>
                             </li>
                             <li>
                                 <label for="mpw2">비밀번호확인</label>
-                                <input type="password" id="mpw2" name="mpw2" maxlength="20" placeholder="비밀번호 확인을 입력해 주세요">
+                                <input type="password" id="mpw2" name="mpw2" maxlength="20"
+                                    placeholder="비밀번호 확인을 입력해 주세요">
                                 <span class="msg"></span>
                             </li>
                             <li>
@@ -256,7 +266,7 @@
                                 남성
                                 <input type="radio" name="gen" id="gen1">
                                 여성
-                                <input type="radio" name="gen" id="gen2" checked="">
+                                <input type="radio" name="gen" id="gen2" checked>
                                 <!-- 라디오버튼은 name속성값을 같은
                                 이름으로 하면 하나만 선택되는
                                  그룹핑이된다 
@@ -293,7 +303,7 @@
         </main>
     </div>
     <!-- 3. 하단영역 -->
-    <div id="info" class="bgc">
+    <div id="info">
         <footer class="info ibx">
             <!-- 3-1.하단로고 -->
             <div class="blogo">
@@ -301,10 +311,11 @@
             </div>
             <!-- 3-2.회사주소 -->
             <address class="addr">
-                WWW.VOGUE.COM Ⓒ CONDÉNAST ASIA PACIFIC. INC. ALL RIGHTS RESERVED. VOGUE.COM KOREA IS OPERATED BY DOOSAN MAGAZINE.
+                WWW.VOGUE.COM Ⓒ CONDÉNAST ASIA PACIFIC. INC. ALL RIGHTS RESERVED. VOGUE.COM KOREA IS OPERATED BY DOOSAN
+                MAGAZINE.
             </address>
             <!-- 3-3.하단링크 -->
-               
+
             <ul class="blink">
                 <li>
                     <a href="#">정기구독</a>
@@ -321,12 +332,13 @@
             </ul>
         </footer>
     </div>
-    
+
     <!-- 위로가기 버튼 -->
     <a href="#" class="tbtn fi fi-angle-up">
         <span class="ir">위로가기버튼</span>
     </a>
 
-    
+
 </body>
+
 </html>
