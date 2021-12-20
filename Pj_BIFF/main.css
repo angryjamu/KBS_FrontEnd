@@ -270,7 +270,7 @@ body * {
     position: absolute;
     top: 90%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
 }
 
 #gosub img {
@@ -279,16 +279,18 @@ body * {
     /* left: -33%; */
     /* bottom: 30%; */
     clip-path: circle(141px at 50% 53%);
-    transform: translate(-28%, -50%);
+    transform: translate(-50%, -75%);
 
 }
 
 #gosub span {
-    position: relative;
-    color: #cfc3c3d7;
+    position: absolute;
+    color: mediumblue;
     display: inline-block;
     text-align: center;
-    margin-top: 20px;
+    top: 40px;
+    font-size: 3vw;
+    transform: translate(-50%, -35%);
 }
 
 
