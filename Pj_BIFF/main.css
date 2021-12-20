@@ -8,15 +8,11 @@ ul,
 ol {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 html,body {
     scroll-behavior: smooth;
-}
-
-ul,
-ol {
-    list-style: none;
 }
 
 a {
@@ -184,7 +180,7 @@ body * {
 .gnb1 {
     position: fixed;
     right: -100%;
-    width: 25%;
+    width: 20%;
     height: 100%;
     /* 보이는 화면에 꽉참 */
     background-color: #000;
@@ -216,6 +212,10 @@ body * {
     text-decoration: none;
 }
 
+.gnb1>ul{
+    margin: 0 auto;
+}
+
 .gnb1 ul {
     position: absolute;
     top: 50%;
@@ -229,6 +229,7 @@ body * {
 .gnb1 ul>li {
     display: flex;
     flex-direction: column;
+    width: 20%;
     text-align: center;
     font-size: 40px;
     line-height: 2;
@@ -236,7 +237,38 @@ body * {
 
 .gnb1 ol>li {
     font-size: 20px;
-    line-height: 2;
+    line-height: 2.2;
+}
+
+.gnb1>ul>li a{
+    width: 20%;
+    display: block;
+    /* height: 50px; */
+    transition: .4s;
+    
+}
+
+.gnb1>ul>li:hover>a{
+    color: red;
+    background-color: #fafafa;
+}
+
+.smenu{
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+
+.smenu a:hover{
+    color: yellow;
+    background-color: gold;
+}
+
+.gnb1>ul>li:nth-child(2):hover .smenu{
+    height: 180px;
+}
+.gnb1>ul>li:nth-child(3):hover .smenu{
+    height: 80px;
 }
 
 /******************************************* Cont1 *******************************************/
