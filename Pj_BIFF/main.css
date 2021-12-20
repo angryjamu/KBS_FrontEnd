@@ -254,7 +254,7 @@ body * {
     width: 100%;
 } */
 
-.con1 {
+.cont1 {
     position: relative;
 }
 
@@ -288,8 +288,8 @@ body * {
     color: mediumblue;
     display: inline-block;
     text-align: center;
-    top: 40px;
-    font-size: 3vw;
+    top: 45px;
+    font-size: 4vh;
     transform: translate(-50%, -35%);
 }
 
