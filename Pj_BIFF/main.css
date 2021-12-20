@@ -183,18 +183,17 @@ body * {
 
 .gnb1 {
     position: fixed;
-    top: -100%;
-    /* left: -100%; */
-    width: 100%;
+    right: -100%;
+    width: 25%;
     height: 100%;
     /* 보이는 화면에 꽉참 */
     background-color: #000;
 
-    transition: top .8s ease-out;
+    transition: right .4s ease-in-out;
 }
 
 .gnb1.on {
-    top: 0;
+    right: 0;
 }
 
 .cbtn {
@@ -222,29 +221,23 @@ body * {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* 가로,세로방향 정중앙이동 */
-
-    width: 800px;
     margin: 0 auto;
     overflow: hidden;
     /* outline: 2px dotted deeppink; */
 }
 
 .gnb1 ul>li {
-    float: left;
-    /* 메뉴 옆으로 흐르게 */
-    width: 200px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     font-size: 40px;
     line-height: 2;
 }
 
-/* 하위메뉴 li */
 .gnb1 ol>li {
     font-size: 20px;
     line-height: 2;
 }
-
 
 /******************************************* Cont1 *******************************************/
 /* #cont>.ibx{
