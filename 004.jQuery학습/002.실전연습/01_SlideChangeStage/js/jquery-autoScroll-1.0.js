@@ -73,7 +73,7 @@ $(function(){ ////// jQB //////////////////////
                 //-> 지정시간동안 스크롤막기
                 //-> 지정시간은 dur_sc 상수로 관리함!
 
-                // console.log("마우스휠~!");
+                console.log("마우스휠~!");
 
                 // e.preventDefault();
                 // return false;
@@ -92,7 +92,7 @@ $(function(){ ////// jQB //////////////////////
                 // e.wheelDelta는 일반 브라우저용 방향정보
                 // e.detail은 파이어폭스용 방향정보
                 let delta = e.wheelDelta || e.detail;
-                // console.log("휠델타값:"+delta);
+                console.log("휠델타값:"+delta);
 
                 //********************************/
                 // 2. 방향에 따른 페이지 번호증감하기 ////
