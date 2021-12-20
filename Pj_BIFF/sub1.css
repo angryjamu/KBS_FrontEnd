@@ -274,9 +274,9 @@ body * {
     top: 50px;
     left: 0;
     z-index: 99;
-    background-image: url(./img/3list.png) no-repeat;
-    background-position-y: 3px;
+    background: url(./img/3list.png) no-repeat;
     padding-left: 25px;
+    background-position-y: 4px;
     color: #fff;
 }
 /******************************************* 메인화면 *******************************************/
