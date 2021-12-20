@@ -30,7 +30,7 @@ body {
 }
 
 body * {
-    /* outline: 1px dashed rgb(158, 158, 158); */
+    outline: 1px dashed rgb(158, 158, 158);
 }
 
 .ibx {

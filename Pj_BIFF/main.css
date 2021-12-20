@@ -430,7 +430,7 @@ body * {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 4%;
+    width: 2%;
     height: 10%;
     max-width: 55px;
 }
@@ -453,9 +453,9 @@ body * {
     color: mediumblue;
     display: inline-block;
     text-align: center;
-    top: 45px;
+    top: 90%;
+    left: 50%;
     font-size: 4vh;
-    transform: translate(-50%, -35%);
 }
 
 
@@ -597,7 +597,7 @@ body * {
     position: absolute;
     top: 28%;
     transform: translateY(-50%);
-    width: 4%;
+    width: 2%;
     height: 10%;
     max-width: 55px;
 }
@@ -608,11 +608,21 @@ body * {
 }
 /* 오른쪽버튼 */
 .abtn2 .rb{
-    right: 0%;
+    right: -1%;
 }
 /* 왼쪽버튼 */
 .abtn2 .lb{
-    left: 0%;
+    left: -1%;
+}
+
+.cont3 span {
+    position: absolute;
+    color: mediumblue;
+    display: inline-block;
+    text-align: center;
+    top: 90%;
+    left: 50%;
+    font-size: 4vh;
 }
 
 
