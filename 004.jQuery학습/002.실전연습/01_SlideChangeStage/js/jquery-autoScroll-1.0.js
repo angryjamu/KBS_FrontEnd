@@ -10,7 +10,8 @@ let prot_sc = 0; //0-허용, 1-불허용
 // 4. 스크롤애니메이션 시간
 const dur_sc = 600;
 // 광스크롤 금지 시간, 스크롤애니시간
-const easeing_sc = "easeInOutQuint";
+// 5. 스크롤이징
+const easing_sc = "easeInOutQuint";
 
 
 ////////////////// 로딩구역 ////////////////////
@@ -154,8 +155,21 @@ $(function () { ////// jQB //////////////////////
             // 이동애니메이션
             $("html,body").animate({
                 scrollTop: pos + "px"
-            }, dur_sc, "easeInOutQuint");
+            }, dur_sc, easing_sc);
             // dur_sc 상수에 공통시간설정
+
+            // ****************************************
+            // 4. 클릭시 .gnb+.indic 의 li에 클래스 on넣기
+            $(".gnb li").eq(pno).addClass("on")
+            // $(gnb전체li).eq(해당순번).클래스넣기("on")
+            .siblings().removeClass("on");
+            // .다른형제들().클래스제거("on")
+
+            $(".indic li").eq(pno).addClass("on")
+            // $(indic전체li).eq(해당순번).클래스넣기("on")
+            .siblings().removeClass("on");
+            // .다른형제들().클래스제거("on")
+
 
 
         }); //////////// mousewheel //////////////////////

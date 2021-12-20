@@ -108,9 +108,6 @@ body * {
     animation: menuAni 1s ease-out 1s forwards;
 }
 
-.ham:hover{
-}
-
 @keyframes menuAni {
     to {
         width: 500px;

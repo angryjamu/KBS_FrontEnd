@@ -218,7 +218,6 @@
         .indic span {
             display: none;
         }
-
     </style>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -227,25 +226,27 @@
         ///////////// 로딩구역 //////////////////////////////////
         $(function () { ////// jQB ///////////////////////////////
 
-            /************************************* 
-                GNB a요소 클릭시 페이지 이동하기
-            *************************************/
-            // 대상: .gnb a
-            $(".gnb a, .indic a").click(function (e) { // e - 이벤트전달값
-
-                // 기본기능막기 : a의 이동기능막기
+            $("a").click(function (e) {
                 e.preventDefault();
+            })
 
-                // 1. 클릭된 a요소의 href값 읽어오기
+            /************************************* 
+                GNB li요소 클릭시 페이지 이동하기
+            *************************************/
+            // 대상: .gnb li
+            $(".gnb li,.indic li").click(function (e) { // e - 이벤트전달값
+
+                // 1. 클릭된 li요소의 순번 읽어오기
                 // $(this) -> 클릭된 a요소 자신!
-                let idnm = $(this).attr("href");
+                let idx = $(this).index();
                 // attr(속성명) -> 속성값 읽어오기
-                console.log("href값:", idnm);
+                console.log ("클릭된 li순번:", idx);
+
+                pno = idx;
 
                 // 2. 아이디요소의 위치값 알아내기
                 // offset().top 으로 알아냄
-                let pos = $(idnm).offset().top;
-                console.log("위치값:", pos);
+                let pos = $(window).height() * pno;
 
                 // 3. 스크롤 위치 이동 애니메이션
                 // 대상: html,body -> 최상위부모 2개 그룹선택함!
@@ -253,10 +254,16 @@
                 // 참고) scrollLeft 는 가로스크롤 위치속성
                 $("html,body").animate({
                     scrollTop: pos + "px"
-                }, dur_sc, easeing_sc);
+                }, dur_sc, easing_sc);
 
-                $(this).parent().addClass("on")
+
+                // 4.
+
+                $(".gnb li").eq(pno).addClass("on")
                     .siblings().removeClass("on");
+
+                $(".indic li").eq(pno) .addClass("on")
+                .siblings().removeClass("on");
 
 
             }); /////////// click ////////////
