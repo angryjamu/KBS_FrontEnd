@@ -363,11 +363,7 @@ body * {
     transform: scale(.9);
     filter: grayscale(50%) blur(1px);
 }
-/* 
-    css 필터 속성: 이미지에 변형효과를 준다
-    filter: 여러가지 필터(그레이스케일, 블러, 세피아, 콘트라스트 등)
-    참조) https://www.w3schools.com/cssref/playit.asp?filename=playcss_filter&preval=none
-*/
+
 /* 중앙이미지 */
 .mlist li:nth-child(3) {
     top: 0;
@@ -393,8 +389,6 @@ body * {
 
 .movtxt {
     position: relative;
-    /* left는 설정하지 않고 젠틀하게 처리
-    ->각 li위치에 그대로 있음 */
 
     top: 100%;
     /* 아래쪽에 나가있음 */
@@ -455,6 +449,16 @@ body * {
 /* 왼쪽버튼 */
 .lb{
     left: 0%;
+}
+
+.cont2 span {
+    position: absolute;
+    color: mediumblue;
+    display: inline-block;
+    text-align: center;
+    top: 45px;
+    font-size: 4vh;
+    transform: translate(-50%, -35%);
 }
 
 
@@ -591,6 +595,29 @@ body * {
     letter-spacing: -1px;
     margin-top: 20%;
 }
+
+.abtn2{
+    position: absolute;
+    top: 28%;
+    transform: translateY(-50%);
+    width: 4%;
+    height: 10%;
+    max-width: 55px;
+}
+
+.abtn2 img{
+    width: 100%;
+    /* 높이값은 자동조절 */
+}
+/* 오른쪽버튼 */
+.abtn2 .rb{
+    right: 0%;
+}
+/* 왼쪽버튼 */
+.abtn2 .lb{
+    left: 0%;
+}
+
 
 /******************************************* Cont4 ******************************************/
 .cont4{
