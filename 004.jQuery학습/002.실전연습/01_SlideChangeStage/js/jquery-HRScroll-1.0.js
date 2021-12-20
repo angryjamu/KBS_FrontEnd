@@ -9,7 +9,7 @@ const unit_sc = 800;
 // 3. 스크롤애니메이션 시간
 const dur_sc = 2000;
 // 4. 광스크롤 금지 시간, 스크롤애니시간
-const tm_prot = 50;
+// const tm_prot = 50;
 // 5. 스크롤이징
 const easing_sc = "easeOutQuint";
 // easeIn... 으로 되는 시작시 천천히 적용 안됨
