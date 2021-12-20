@@ -227,7 +227,21 @@
              </header>      
 
             <!-- 2. 서브컨텐츠박스 -->
-            <section style="min-height: 500px;">
+            <section class="scont">
+                <div id="login">
+                    <form action="process.php" method="post" class="logF">
+                        <!-- 아이디박스 -->
+                        <div class="minput">
+                            <label for="mid">아이디</label>
+                            <input type="text" name="mid" id="mid" maxlength="10" placeholder="아이디를 입력해주세요.">
+                        </div>
+                        <!-- 비번박스 -->
+                        <div class="minput mi2">
+                            <label for="mid">비밀번호</label>
+                            <input type="password" name="mpw" id="mpw" maxlength="10" placeholder="비밀번호를 입력해주세요.">
+                        </div>
+                    </form>
+                </div>
 
             </section> 
         </main>
