@@ -260,32 +260,7 @@ body * {
     text-align: center;
 }
 
-#gosub {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-}
 
-#gosub img {
-    max-width: 600px;
-    position: absolute;
-    /* left: -33%; */
-    /* bottom: 30%; */
-    clip-path: circle(141px at 50% 53%);
-    transform: translate(-50%, -75%);
-
-}
-
-#gosub span {
-    position: absolute;
-    color: mediumblue;
-    display: inline-block;
-    text-align: center;
-    top: 45px;
-    font-size: 4vh;
-    transform: translate(-50%, -35%);
-}
 
 
 /******************************************* 하단 *******************************************/
