@@ -151,6 +151,13 @@ body * {
     color: #f00;
 }
 
+.gnb2 .rb li:nth-child(1){
+    display: none;
+}
+.gnb2 .rb li:nth-child(2){
+    display: none;
+}
+
 .menu {
     width: 40px;
     height: 40px;
