@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="./media.css">
     <script src="./JS/main.js"></script>
 
-    <script src="./JS/jquery-autoScroll-1.0.js"></script>
     <!-- 부드러운 스크롤 플러그인 : 제이쿼리아님! -->
     <script src="./JS/jquery-3.6.0.min.js"></script>
     <script src="./JS/jquery-ui.min.js"></script>
+    <script src="./JS/jquery-autoScroll-1.0.js"></script>
     <script>
         $(function () { ////// jQB ///////////////////////////////
 
@@ -51,8 +51,13 @@
 
                 // 4.
 
-                $(".gnb2 li").eq(pno).addClass("on")
-                    .siblings().removeClass("on");
+                $(".gnb2 .rb li").eq(pno).addClass("on")
+                    .siblings().removeClass("on")
+                    .parent().parent().siblings().find("li").removeClass("on");
+
+                $(".gnb2 .lb li").eq(pno).addClass("on")
+                    .siblings().removeClass("on")
+                    .parent().parent().siblings().find("li").removeClass("on");
 
                 $(".indic li").eq(pno).addClass("on")
                     .siblings().removeClass("on");

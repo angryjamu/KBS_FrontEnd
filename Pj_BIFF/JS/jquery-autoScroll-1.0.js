@@ -8,7 +8,7 @@ const totnum = 5;
 // 3. 광스크롤 상태변수
 let prot_sc = 0; //0-허용, 1-불허용
 // 4. 스크롤애니메이션 시간
-const dur_sc = 600;
+const dur_sc = 500;
 // 광스크롤 금지 시간, 스크롤애니시간
 // 5. 스크롤이징
 const easing_sc = "easeInOutQuint";

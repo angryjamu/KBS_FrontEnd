@@ -10,10 +10,10 @@ ol {
     padding: 0;
     list-style: none;
 }
-/* 
+
 html,body {
-    scroll-behavior: smooth;
-} */
+    overflow: hidden;
+}
 
 a {
     color: #000;
@@ -293,7 +293,6 @@ body {
 .gnb1>ul>li a{
     width: 320px;
     display: block;
-    /* height: 50px; */
     transition: .5s;
     
 }
