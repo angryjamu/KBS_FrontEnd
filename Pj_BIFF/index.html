@@ -22,7 +22,46 @@
                 e.preventDefault();
             })
 
-        })
+            /************************************* 
+                GNB li요소 클릭시 페이지 이동하기
+            *************************************/
+            // 대상: .gnb li
+            $(".gnb2 li,.indic li").click(function (e) { // e - 이벤트전달값
+
+                // 1. 클릭된 li요소의 순번 읽어오기
+                // $(this) -> 클릭된 a요소 자신!
+                let idx = $(this).index();
+                // attr(속성명) -> 속성값 읽어오기
+                console.log("클릭된 li순번:", idx);
+
+                pno = idx;
+
+                // 2. 아이디요소의 위치값 알아내기
+                // offset().top 으로 알아냄
+                let pos = $(window).height() * pno;
+
+                // 3. 스크롤 위치 이동 애니메이션
+                // 대상: html,body -> 최상위부모 2개 그룹선택함!
+                // 이동속성: scrollTop -> 세로스크롤 위치속성
+                // 참고) scrollLeft 는 가로스크롤 위치속성
+                $("html,body").animate({
+                    scrollTop: pos + "px"
+                }, dur_sc, easing_sc);
+
+
+                // 4.
+
+                $(".gnb2 li").eq(pno).addClass("on")
+                    .siblings().removeClass("on");
+
+                $(".indic li").eq(pno).addClass("on")
+                    .siblings().removeClass("on");
+
+
+            }); /////////// click ////////////
+
+
+        }); /////////////////// jQB ////////////////////////////
     </script>
 
 </head>
@@ -91,17 +130,17 @@
             </div>
 
             <div class="gnb2">
-                <div>
+                <div class="indic">
                     <ul class="lb">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">수상후보작</a></li>
+                        <li class="on"><a href="#pg1">HOME</a></li>
+                        <li><a href="#pg2">수상후보작</a></li>
                     </ul>
 
                 </div>
                 <div>
                     <ul class="rb">
-                        <li><a href="#">우수출품작</a></li>
-                        <li><a href="#">상영시간표</a></li>
+                        <li><a href="#pg3">우수출품작</a></li>
+                        <li><a href="#pg4">상영시간표</a></li>
                     </ul>
 
                 </div>
