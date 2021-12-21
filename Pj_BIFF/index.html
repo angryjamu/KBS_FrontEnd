@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./media.css">
     <script src="./main.js"></script>
 </head>
+
 <body>
     <!-- ******************************************* 상단 ******************************************* -->
     <div id="top">
@@ -20,7 +21,20 @@
         <nav class="gnb1">
             <button class="cbtn" onclick="sMenu()">×</button>
             <ul>
-                <li><a href="#">BIFF</a></li>
+                <li>
+                    <a href="#">BIFF</a>
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">인사말</a>
+                        </li>
+                        <li>
+                            <a href="#">심사 및 어워드</a>
+                        </li>
+                        <li>
+                            <a href="#">조직구성</a>
+                        </li>
+                    </ol>
+                </li>
                 <li>
                     <a href="#">영화</a>
                     <!-- 서브메뉴 -->
@@ -50,10 +64,10 @@
                         </li>
                     </ol>
                 </li>
-                <li><a href="#">프로필</a></li>
+                <li><a href="#"><img src="./img/onair.png" alt="온에어"></a></li>
             </ul>
         </nav>
-        
+
         <header class="top ibx">
             <div class="logo">
                 <a href="#">
@@ -141,27 +155,27 @@
                                 </ol>
                             </a></li>
                         <li>
-                                <a href="#">
-                                    <img src="./img/ml5.jpg" alt="">
-                                    <ol class="movtxt">
-                                        <li>엔칸토: 마법의 세계</li>
-                                        <li>스테파니 비트리즈</li>
-                                        <li>애니메이션</li>
-                                    </ol>
-                                </a></li>
-                            </ul>
-                            <a href="#" class="abtn lb">
-                                <img src="./img/left.png" alt="왼쪽버튼">
-                            </a>
-                            <a href="#" class="abtn rb">
-                                <img src="./img/right.png" alt="오른쪽버튼">
-                            </a>
-                        </nav>
-                        <a href="#">
-                            <span>∨</span>
-                        </a>
+                            <a href="#">
+                                <img src="./img/ml5.jpg" alt="">
+                                <ol class="movtxt">
+                                    <li>엔칸토: 마법의 세계</li>
+                                    <li>스테파니 비트리즈</li>
+                                    <li>애니메이션</li>
+                                </ol>
+                            </a></li>
+                    </ul>
+                    <a href="#" class="abtn lb">
+                        <img src="./img/left.png" alt="왼쪽버튼">
+                    </a>
+                    <a href="#" class="abtn rb">
+                        <img src="./img/right.png" alt="오른쪽버튼">
+                    </a>
+                </nav>
+                <a href="#">
+                    <span>∨</span>
+                </a>
             </section>
-        
+
             <!-- /******************************************* cont3 *******************************************/ -->
             <section class="cont3">
                 <h3 class="ad2">아시아영화의 창</h3>
@@ -294,8 +308,7 @@
                                 <span class="code en">001관</span>
                                 <p class="time en">18:00</p>
                                 <div class="film_tit">
-                                    <a
-                                        href="#">
+                                    <a href="#">
                                         <span class="film_tit_kor">행복의 나라로</span>
                                         <span class="film_tit_eng en">To the Land of Happiness</span>
                                     </a>
@@ -329,8 +342,7 @@
                                 <span class="code en">605관</span>
                                 <p class="time en">18:00</p>
                                 <div class="film_tit">
-                                    <a
-                                        href="#">
+                                    <a href="#">
                                         <span class="film_tit_kor">행복의 나라로</span>
                                         <span class="film_tit_eng en">To the Land of Happiness</span>
                                     </a>
@@ -348,82 +360,82 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-                    <div class="caution_box mt50">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-12">
-                                <p class="tit tit-sec bold mt10">유의사항</p>
-                            </div>
-                            <div class="col-md-10 col-xs-12">
-                                <ul class="list_secondary mt10">
-                                    <li>GV(게스트와의 만남)는 사전 고지없이 변동될 수 있습니다.</li>
-                                    <li>5세 미만의 어린이는 입장하실 수 없습니다.</li>
-                                    <li>모든 촬영기기는 저작권 보호법에 의해 상영관 내 반입하실 수 없으며, 촬영을 금지합니다. </li>
-                                    <li>상영 시작 이후 15분까지는 입장을 허용합니다. </li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="caution_box mt50">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-12">
+                            <p class="tit tit-sec bold mt10">유의사항</p>
+                        </div>
+                        <div class="col-md-10 col-xs-12">
+                            <ul class="list_secondary mt10">
+                                <li>GV(게스트와의 만남)는 사전 고지없이 변동될 수 있습니다.</li>
+                                <li>5세 미만의 어린이는 입장하실 수 없습니다.</li>
+                                <li>모든 촬영기기는 저작권 보호법에 의해 상영관 내 반입하실 수 없으며, 촬영을 금지합니다. </li>
+                                <li>상영 시작 이후 15분까지는 입장을 허용합니다. </li>
+                            </ul>
                         </div>
                     </div>
+                </div>
             </section>
         </main>
-    <!-- /******************************************* 하단 *******************************************/ -->
-    <!-- <div id="info">
+        <!-- /******************************************* 하단 *******************************************/ -->
+        <!-- <div id="info">
         <footer class="info ibx">
 
         </footer>
     </div> -->
-    <footer id="ft" class="ft">
-        <div class="footer_inner">
-            <div class="container">
-                <div class="ft_social">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/busanfilmfest" target="_blank" title="페이스북 이동"
-                                class="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/busanfilmfest" target="_blank" title="트위터 이동"
-                                class="twiter"></a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com/busanfilmfest" target="_blank" title="인스타그램 이동"
-                                class="instargram"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCJB3MxLQsak5tT-Yvod2alA" target="_blank"
-                                title="유튜브 이동" class="youtube"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="fnb">
-                    <ul class="fnb list-inline">
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">저작권정책</a></li>
-                        <li><a href="#">1:1문의</a></li>
-                        <li><a href="#">역대영화제</a></li>
-                    </ul>
-                </div>
-                <div class="row foot_line">
-                    <div class="col" style="text-align: center;">
-                        <address>
-                            <p>
-                                <strong>부산사무국</strong>
-                                (48058) 부산광영시 해운대구 수영강변대로 120 영화의전당 비프힐 3층
-                                <br>
-                                <strong>서울사무소</strong>
-                                (03131) 서울특별시 종로구 율곡로 84 가든타워 1601호
-                            </p>
-                            <p>
-                                <strong>대표전화</strong>
-                                1688-3010
-                            </p>
-                        </address>
+        <footer id="ft" class="ft">
+            <div class="footer_inner">
+                <div class="container">
+                    <div class="ft_social">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/busanfilmfest" target="_blank" title="페이스북 이동"
+                                    class="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/busanfilmfest" target="_blank" title="트위터 이동"
+                                    class="twiter"></a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/busanfilmfest" target="_blank" title="인스타그램 이동"
+                                    class="instargram"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCJB3MxLQsak5tT-Yvod2alA" target="_blank"
+                                    title="유튜브 이동" class="youtube"></a>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="fnb">
+                        <ul class="fnb list-inline">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">저작권정책</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">역대영화제</a></li>
+                        </ul>
+                    </div>
+                    <div class="row foot_line">
+                        <div class="col" style="text-align: center;">
+                            <address>
+                                <p>
+                                    <strong>부산사무국</strong>
+                                    (48058) 부산광영시 해운대구 수영강변대로 120 영화의전당 비프힐 3층
+                                    <br>
+                                    <strong>서울사무소</strong>
+                                    (03131) 서울특별시 종로구 율곡로 84 가든타워 1601호
+                                </p>
+                                <p>
+                                    <strong>대표전화</strong>
+                                    1688-3010
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <p class="copyright ">ⓒ Busan International Film Festival</p>
                 </div>
-                <p class="copyright ">ⓒ Busan International Film Festival</p>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 </body>
 

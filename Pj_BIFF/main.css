@@ -244,13 +244,13 @@ body * {
     width: 324px;
     display: block;
     /* height: 50px; */
-    transition: .4s;
+    transition: .5s;
     
 }
 
 .gnb1>ul>li:hover>a{
     color: red;
-    background-color: #fafafa;
+    background-color: #3d3d3d;
 }
 
 .smenu{
@@ -264,6 +264,9 @@ body * {
     background-color: gold;
 }
 
+.gnb1>ul>li:nth-child(1):hover .smenu{
+    height: 140px;
+}
 .gnb1>ul>li:nth-child(2):hover .smenu{
     height: 180px;
 }
