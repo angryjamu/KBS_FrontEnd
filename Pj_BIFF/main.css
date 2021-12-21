@@ -180,7 +180,7 @@ body * {
 .gnb1 {
     position: fixed;
     right: -100%;
-    width: 20%;
+    width: 18%;
     height: 100%;
     /* 보이는 화면에 꽉참 */
     background-color: #000;
@@ -229,19 +229,19 @@ body * {
 .gnb1 ul>li {
     display: flex;
     flex-direction: column;
-    width: 324px;
+    width: 320px;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 2;
 }
 
 .gnb1 ol>li {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2.2;
 }
 
 .gnb1>ul>li a{
-    width: 324px;
+    width: 320px;
     display: block;
     /* height: 50px; */
     transition: .5s;
