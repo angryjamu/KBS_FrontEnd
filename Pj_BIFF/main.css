@@ -10,10 +10,10 @@ ol {
     padding: 0;
     list-style: none;
 }
-
+/* 
 html,body {
     scroll-behavior: smooth;
-}
+} */
 
 a {
     color: #000;

@@ -1,6 +1,6 @@
 ////////////// BIFF main.js ////////////////
 
-/// 사이드 메뉴 JS ///
+/// 햄버거메뉴 JS ///
 function sMenu() {
 
     let gnb1 =
