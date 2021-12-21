@@ -1,5 +1,6 @@
 ////////////// BIFF main.js ////////////////
 
+/// 사이드 메뉴 JS ///
 function sMenu() {
 
     let gnb1 =
@@ -8,15 +9,9 @@ function sMenu() {
 
 };
 
+////////////////// 슬라이드 버튼 JS /////////////////////
 
-
-
-
-
-////////////////// 로딩구역 /////////////////////
 window.addEventListener("DOMContentLoaded", () => {
-
-    // console.log("로딩완료!")
 
     // 갤러리박스
     let block = document.querySelector(".block");
@@ -105,12 +100,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // 인터발호출함수 최초호출
     autoSlide();
-
     /**************************************** 
      함수명: clearAuto
      기능: 인터발함수 지우고 타임아웃셋팅
     *****************************************/
-
     const clearAuto = () => {
         // console.log("지움");
         // 1. 자동호출지우기
@@ -120,8 +113,9 @@ window.addEventListener("DOMContentLoaded", () => {
         // 자동호출 타임아웃셋팅
         autoT = setTimeout(autoSlide, 3000)
     }
-
-
-
-
 });
+
+///////////////// 영화 동영상 JS ///////////////////////
+
+
+
