@@ -25,9 +25,9 @@ body {
     color: #fafafa;
 }
 
-body * {
-    /* outline: 1px dashed rgb(158, 158, 158); */
-}
+/* body * {
+    outline: 1px dashed rgb(158, 158, 158);
+} */
 
 .ibx {
     max-width: 1300px;
@@ -186,9 +186,11 @@ body * {
     color: #fff;
 }
 
-.gnb2 a:hover {
-    /* border-bottom: 2px solid #f00; */
-    text-decoration: 2px underline #f00;
+.gnb2 a:hover
+,
+.gnb2 li.on a
+{
+    text-decoration: 1px underline #f00;
     color: #f00;
 }
 
