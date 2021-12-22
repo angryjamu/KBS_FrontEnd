@@ -357,17 +357,6 @@ body {
 
 }
 
-/* #gosub span {
-    position: absolute;
-    color: mediumblue;
-    display: inline-block;
-    text-align: center;
-    top: 45px;
-    font-size: 4vh;
-    transform: translate(-50%, -35%);
-} */
-
-
 /******************************************* Cont2 *******************************************/
 .cont2 {
     position: relative;
@@ -383,158 +372,20 @@ body {
     font-size: 35px;
 }
 
-.mlist {
+
+.scont {
     position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 55%;
-    margin: 0 auto;
-    /* outline: 2px dashed rgb(38, 0, 255); */
+    top: 25%;
 }
 
-.mlist ul {
-    display: flex;
-    height: 80%;
-}
-
-.mlist ul>li {
-    position: relative;
-    width: 18%;
-    /* 5등분(20%)% - 양쪽마진1% */
-    margin: 0 1%;
-    overflow: hidden;
-}
-
-/* .mlist::before{
-    content: '';
-    display: block;
-    padding-top: 100%;
-} */
-
-
-.mlist img {
+.scont1{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
-    transition: all .4s ease-in-out;
+    top: 10%;
 }
-
-.mlist li:nth-child(1){
-    /* top: -30%; */
-    /* left: -210%; */
-    transform: scale(.8);
-    filter: grayscale(50%) blur(1px);
-    /* opacity: 0; */
-    /* 안보임 */
-}
-/* 왼쪽 바로옆 */
-.mlist li:nth-child(2){
-    /* top: -20%; */
-    /* left: -110%; */
-    transform: scale(.9);
-    filter: grayscale(50%) blur(1px);
-}
-
-/* 중앙이미지 */
-.mlist li:nth-child(3) {
-    top: 0;
-    left: 0;
-    transform: scale(1);
-}
-/* 오른쪽 바로옆 */
-.mlist li:nth-child(4){
-    /* top: -20%; */
-    /* left: 110%; */
-    transform: scale(.9);
-    filter: grayscale(50%) blur(1px);
-}
-/* 오른쪽 끝 */
-.mlist li:nth-child(5){
-    /* top: -30%; */
-    /* left: 210%; */
-    transform: scale(.8);
-    filter: grayscale(50%) blur(1px);
-    /* opacity: 0; */
-    /* 안보임 */
-}
-
-.movtxt {
-    position: relative;
-
-    top: 100%;
-    /* 아래쪽에 나가있음 */
-    /* 나의부모는? .mlist ul>li */
-    width: 100%;
-    height: 100%;
-
-    border-radius: 5%;
-
-    background-color: rgba(2, 2, 2, 0.700);
-    /* 반투명배경 */
-
-    /* 글자셋팅 */
-    font-family: 'Cute Font', cursive;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: center;
-
-    transition: top .4s ease-in-out;
-}
-
-.mlist>ul>li:hover .movtxt {
-    top: 0;
-}
-
-/* 영화정보 li */
-.movtxt li {
-    font-size: 18px;
-    float: none;
-    color: #fff;
-}
-
-/* 첫번째 li는 영화제목 */
-.movtxt li:first-child {
-    color: goldenrod;
-    font-size: 21px;
-    letter-spacing: -1px;
-    margin-top: 50%;
-}
-
-.abtn{
+.scont2{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2%;
-    height: 10%;
-    max-width: 55px;
+    top: 48%;
 }
-
-.abtn img{
-    width: 100%;
-    /* 높이값은 자동조절 */
-}
-/* 오른쪽버튼 */
-.rb{
-    right: -5%;
-}
-/* 왼쪽버튼 */
-.lb{
-    left: -5%;
-}
-
-/* .cont2 span {
-    position: absolute;
-    color: mediumblue;
-    display: inline-block;
-    text-align: center;
-    top: 90%;
-    left: 50%;
-    font-size: 4vh;
-} */
-
 
 /******************************************* Cont3 *******************************************/
 .cont3 {

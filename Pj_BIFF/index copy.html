@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산국제영화제</title>
+    <link rel="shortcut icon" href="./img/Biff_logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script src="./JS/main.js"></script>
+
+    <!-- 부드러운 스크롤 플러그인 : 제이쿼리아님! -->
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/jquery-ui.min.js"></script>
+    <script src="./JS/jquery-autoScroll-1.0.js"></script>
+    <script src="./JS/swiper-bundle.min.js"></script>
+    <script src="./JS/swiper.js"></script>
+
+</head>
+
+<body>
+    <!-- ******************************************* 상단 ******************************************* -->
+    <div id="top">
+        <div class="ham">
+            <button class="menu" onclick="sMenu()">≡</button>
+        </div>
+        <nav class="gnb1">
+            <button class="cbtn" onclick="sMenu()">×</button>
+            <ul>
+                <li>
+                    <a href="#">BIFF</a>
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">인사말</a>
+                        </li>
+                        <li>
+                            <a href="#">심사 및 어워드</a>
+                        </li>
+                        <li>
+                            <a href="#">조직구성</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">영화</a>
+                    <!-- 서브메뉴 -->
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">상영관</a>
+                        </li>
+                        <li>
+                            <a href="#">장소</a>
+                        </li>
+                        <li>
+                            <a href="#">티켓구매</a>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">게시판</a>
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">Q&amp;A</a>
+                        </li>
+                        <li>
+                            <a href="#">방명록</a>
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="#"><img src="./img/onair.png" alt="온에어"></a></li>
+            </ul>
+        </nav>
+
+        <header class="top ibx">
+            <div class="logo">
+                <a href="#">
+                    <img class="log" src="./img/logo1.png" alt="BIFF로고">
+                </a>
+            </div>
+
+            <div class="gnb2">
+                <div>
+                    <ul class="lb">
+                        <li class="on"><a href="#pg1">HOME</a></li>
+                        <li><a href="#pg2">수상후보작</a></li>
+                    </ul>
+
+                </div>
+                <div>
+                    <ul class="rb">
+                        <li></li>
+                        <li></li>
+                        <li><a href="#pg3">우수출품작</a></li>
+                        <li><a href="#pg4">상영시간표</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+    </div>
+
+    <!-- /******************************************* cont1 *******************************************/ -->
+    <div id="cont">
+
+        <section id="pg1" class="cont1">
+            <video class="Mvideo" src="./img/BIFF2021_1080.mp4" autoplay muted loop></video>
+            <h1 id="gosub">
+                <a href="./sub1.html">
+                    <img src="./img/logo.gif" alt="BIFF로고">
+                </a>
+            </h1>
+        </section>
+        <!-- /******************************************* cont2 *******************************************/ -->
+        <main class="cont ibx">
+            <section id="pg2" class="cont2">
+                <h2 class="ad1">BIFF 2022 수상후보작품</h2>
+
+                <section class="scont">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/mi2.jpeg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1627540409.jpeg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1628094921.jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1628580475.jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1630500303.jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1630636640.jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1630951807.jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1631234545.jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/1632386022.jpg" alt="갤러리이미지"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+    
+                </section>
+
+            </section>
+
+            <!-- /******************************************* cont3 *******************************************/ -->
+            <section id="pg3" class="cont3">
+                <h3 class="ad2">아시아영화의 창</h3>
+                <section class="scont1">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (1).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (10).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (11).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (12).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (13).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (14).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (15).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (16).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (17).jpg" alt="갤러리이미지"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+    
+                </section>
+                <h3 class="ad3">와이드 앵글</h3>
+                <section class="scont2">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (18).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (2).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (3).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (4).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (5).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (6).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (7).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (8).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (9).jpg" alt="갤러리이미지"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+    
+                </section>
+            </section>
+            <!-- /******************************************* cont4 *******************************************/ -->
+            <section id="pg4" class="cont4">
+
+                <div class="tbl_schedule_wrap">
+                    <div class="pull-left">
+                        <h3 class="tit_schedule">
+                            <span class="en">2022. 상영시간표</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="tbl_schedule_wrap">
+                    <div class="tbl_schedule tbl_schedule_date">
+                        <div class="sch_li">
+                            <div class="sch_li_tit">영화의전당 야외극장</div>
+                            <div class="sch_it sch_it1 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it2 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it3 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it4">
+                                <span class="code en">001관</span>
+                                <p class="time en">18:00</p>
+                                <div class="film_tit">
+                                    <div id="txt6">
+                                        <span class="film_tit_kor">행복의 나라로</span>
+                                        <span class="film_tit_eng en">To the Land of Happiness</span>
+                                    </div>
+                                    "(개막식+개막작)"
+                                </div>
+                                <div class="grade">
+                                    <span class="ico_grade ico_15" title="15세 이상 관람가"></span>
+                                    <span class="ico_grade ico_gv" title="GV 게스트와의 만남"></span>
+                                </div>
+                            </div>
+                            <div class="sch_it sch_it5 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it6 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                        </div>
+
+                        <div class="sch_li">
+                            <div class="sch_li_tit">소향씨어터</div>
+                            <div class="sch_it sch_it1 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it2 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it3 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it4">
+                                <span class="code en">605관</span>
+                                <p class="time en">18:00</p>
+                                <div class="film_tit">
+                                    <div id="txt6">
+                                        <span class="film_tit_kor">행복의 나라로</span>
+                                        <span class="film_tit_eng en">To the Land of Happiness</span>
+                                    </div>
+                                    "(개막식생중계+개막작)"
+                                </div>
+                                <div class="grade">
+                                    <span class="ico_grade ico_15" title="15세 이상 관람가"></span>
+                                </div>
+                            </div>
+                            <div class="sch_it sch_it5 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it6 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caution_box mt50">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-12">
+                            <p class="tit tit-sec bold mt10">유의사항</p>
+                        </div>
+                        <div class="col-md-10 col-xs-12">
+                            <ul class="list_secondary mt10">
+                                <li>GV(게스트와의 만남)는 사전 고지없이 변동될 수 있습니다.</li>
+                                <li>5세 미만의 어린이는 입장하실 수 없습니다.</li>
+                                <li>모든 촬영기기는 저작권 보호법에 의해 상영관 내 반입하실 수 없으며, 촬영을 금지합니다. </li>
+                                <li>상영 시작 이후 15분까지는 입장을 허용합니다. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- /******************************************* 하단 *******************************************/ -->
+        <footer id="ft" class="ft">
+            <div class="footer_inner">
+                <div class="container">
+                    <div class="ft_social">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/busanfilmfest" target="_blank" title="페이스북 이동"
+                                    class="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/busanfilmfest" target="_blank" title="트위터 이동"
+                                    class="twiter"></a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/busanfilmfest" target="_blank" title="인스타그램 이동"
+                                    class="instargram"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCJB3MxLQsak5tT-Yvod2alA" target="_blank"
+                                    title="유튜브 이동" class="youtube"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fnb">
+                        <ul class="fnb list-inline">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">저작권정책</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">역대영화제</a></li>
+                        </ul>
+                    </div>
+                    <div class="row foot_line">
+                        <div class="col" style="text-align: center;">
+                            <address>
+                                <p>
+                                    <strong>부산사무국</strong>
+                                    (48058) 부산광영시 해운대구 수영강변대로 120 영화의전당 비프힐 3층
+                                    <br>
+                                    <strong>서울사무소</strong>
+                                    (03131) 서울특별시 종로구 율곡로 84 가든타워 1601호
+                                </p>
+                                <p>
+                                    <strong>대표전화</strong>
+                                    1688-3010
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <p class="copyright ">ⓒ Busan International Film Festival</p>
+                </div>
+            </div>
+        </footer>
+
+        <nav class="indic">
+            <ul>
+                <li class="on">
+                    <a href="#pg1"><span>아수라</span></a>
+                </li>
+                <li>
+                    <a href="#pg2"><span>고산자</span></a>
+                </li>
+                <li>
+                    <a href="#pg3"><span>인천상륙작전</span></a>
+                </li>
+                <li>
+                    <a href="#pg4"><span>봉이김선달</span></a>
+                </li>
+    
+            </ul>
+    
+        </nav>
+    
+
+</body>
+
+</html>
