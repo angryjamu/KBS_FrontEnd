@@ -24,7 +24,7 @@
 
 /* 2. 스와이퍼 세팅 */
 .swiper-container {
-    width: 400px;
+    max-width: 1300px;
     height: 500px;
     margin: 0 auto;
   }
