@@ -310,7 +310,7 @@ body {
 
 .smenu a:hover{
     color: yellow;
-    background-color: gold;
+    background-color: #d6b821c7;
 }
 
 .gnb1>ul>li:nth-child(1):hover .smenu{
@@ -980,7 +980,7 @@ body {
     display: inline-block;
     width: 32px;
     height: 28px;
-    background-image: url(./img/foot_sns.png);
+    background-image: url(../img/foot_sns.png);
     background-repeat: no-repeat;
 }
 
