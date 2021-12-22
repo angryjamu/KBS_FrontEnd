@@ -125,14 +125,14 @@ $(function () { ////// jQB //////////////////////
                     -> 대소문자 관계없이 'my'문자를 모두 찾아라!
 
             *****************************************/
-        //    console.log("브라우저정보:",navigator.userAgent);
-        //    console.log("정보여부:",
-        //    /firefox/i.test(navigator.userAgent));
+            //    console.log("브라우저정보:",navigator.userAgent);
+            //    console.log("정보여부:",
+            //    /firefox/i.test(navigator.userAgent));
 
-        // 파이어폭스 브라우저 이면 델타값 부호를 반대로 한다!
-        if(/firefox/i.test(navigator.userAgent)){
-            delta = -delta; // 변수앞에 마이너스는 부호반대!
-        } ////////////////// if /////////////////////
+            // 파이어폭스 브라우저 이면 델타값 부호를 반대로 한다!
+            if (/firefox/i.test(navigator.userAgent)) {
+                delta = -delta; // 변수앞에 마이너스는 부호반대!
+            } ////////////////// if /////////////////////
 
             //********************************/
             // 2. 방향에 따른 페이지 번호증감하기 ////
@@ -160,15 +160,17 @@ $(function () { ////// jQB //////////////////////
 
             // ****************************************
             // 4. 클릭시 .gnb+.indic 의 li에 클래스 on넣기
-            $(".gnb2 li").eq(pno).addClass("on")
-            // $(gnb전체li).eq(해당순번).클래스넣기("on")
-            .siblings().removeClass("on");
-            // .다른형제들().클래스제거("on")
+            $(".gnb2 .rb li").eq(pno).addClass("on")
+                .siblings().removeClass("on")
+                .parent().parent().siblings().find("li").removeClass("on");
+
+            $(".gnb2 .lb li").eq(pno).addClass("on")
+                .siblings().removeClass("on")
+                .parent().parent().siblings().find("li").removeClass("on");
 
             $(".indic li").eq(pno).addClass("on")
-            // $(indic전체li).eq(해당순번).클래스넣기("on")
-            .siblings().removeClass("on");
-            // .다른형제들().클래스제거("on")
+                .siblings().removeClass("on");
+
 
 
 
@@ -179,3 +181,55 @@ $(function () { ////// jQB //////////////////////
 
 }); ////////////// jQB /////////////////////////
 ////////////////////////////////////////////////
+
+$(function () { ////// jQB ///////////////////////////////
+
+    $("a").click(function (e) {
+        e.preventDefault();
+    })
+
+    /************************************* 
+        GNB li요소 클릭시 페이지 이동하기
+    *************************************/
+    // 대상: .gnb li
+    $(".gnb2 li,.indic li").click(function (e) { // e - 이벤트전달값
+
+        // 1. 클릭된 li요소의 순번 읽어오기
+        // $(this) -> 클릭된 a요소 자신!
+        let idx = $(this).index();
+        // attr(속성명) -> 속성값 읽어오기
+        console.log("클릭된 li순번:", idx);
+
+        pno = idx;
+
+        // 2. 아이디요소의 위치값 알아내기
+        // offset().top 으로 알아냄
+        let pos = $(window).height() * pno;
+
+        // 3. 스크롤 위치 이동 애니메이션
+        // 대상: html,body -> 최상위부모 2개 그룹선택함!
+        // 이동속성: scrollTop -> 세로스크롤 위치속성
+        // 참고) scrollLeft 는 가로스크롤 위치속성
+        $("html,body").animate({
+            scrollTop: pos + "px"
+        }, dur_sc, easing_sc);
+
+
+        // 4.
+
+        $(".gnb2 .rb li").eq(pno).addClass("on")
+            .siblings().removeClass("on")
+            .parent().parent().siblings().find("li").removeClass("on");
+
+        $(".gnb2 .lb li").eq(pno).addClass("on")
+            .siblings().removeClass("on")
+            .parent().parent().siblings().find("li").removeClass("on");
+
+        $(".indic li").eq(pno).addClass("on")
+            .siblings().removeClass("on");
+
+
+    }); /////////// click ////////////
+
+
+}); /////////////////// jQB ////////////////////////////
