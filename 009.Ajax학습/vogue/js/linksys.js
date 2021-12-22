@@ -14,12 +14,17 @@ $(()=>{
         // 2. 글자별로 분기하여 url만들기
         let url;
         switch(txt){
-            case "보그 로그인": url="login.html"; break;
-            case "보그 회원가입": url="member.html"; break;
-            case "보그 갤러리": url="gallery.html"; break;
+            case "보그 로그인": url="login.php"; break;
+            case "보그 회원가입": url="member.php"; break;
+            case "보그 갤러리": url="gallery.php"; break;
         }
         location.href = url;
     });
+
+    $(".logo a").click(function(e){
+        e.preventDefault();
+        location.href = "index.php";
+    })
 })
 // 로딩구역///////////////////////////
 window.addEventListener("DOMContentLoaded", () => {
@@ -51,7 +56,7 @@ window.addEventListener("DOMContentLoaded", () => {
             // 넘길데이타: 메뉴텍스트(소문자로!)
             // 조건: 값이 "search"가 아닌경우
             if(txt!=="search")
-            location.href="sub.html?cat="+txt;
+            location.href="sub.php?cat="+txt;
             // 파라미터 키=값을 넘길때
             // cat이름은 내가 지은 이름
 
