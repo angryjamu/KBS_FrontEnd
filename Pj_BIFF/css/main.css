@@ -357,7 +357,7 @@ body {
 
 }
 
-#gosub span {
+/* #gosub span {
     position: absolute;
     color: mediumblue;
     display: inline-block;
@@ -365,7 +365,7 @@ body {
     top: 45px;
     font-size: 4vh;
     transform: translate(-50%, -35%);
-}
+} */
 
 
 /******************************************* Cont2 *******************************************/
@@ -525,7 +525,7 @@ body {
     left: -5%;
 }
 
-.cont2 span {
+/* .cont2 span {
     position: absolute;
     color: mediumblue;
     display: inline-block;
@@ -533,7 +533,7 @@ body {
     top: 90%;
     left: 50%;
     font-size: 4vh;
-}
+} */
 
 
 /******************************************* Cont3 *******************************************/
@@ -692,7 +692,7 @@ body {
     left: -1%;
 }
 
-.cont3 span {
+/* .cont3 span {
     position: absolute;
     color: mediumblue;
     display: inline-block;
@@ -701,7 +701,7 @@ body {
     left: 50%;
     font-size: 4vh;
 }
-
+ */
 
 /******************************************* Cont4 ******************************************/
 .cont4{
