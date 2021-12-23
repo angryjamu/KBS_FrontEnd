@@ -18,6 +18,7 @@
 
 <body>
 
+    <?php include "inc/login_session.inc" ?>
     <!-- 1. 상단영역 -->
     <?php include "inc/top.inc" ?>
 
