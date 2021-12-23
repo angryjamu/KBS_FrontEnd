@@ -114,16 +114,3 @@ window.addEventListener("DOMContentLoaded", () => {
         autoT = setTimeout(autoSlide, 3000)
     }
 });
-
-
-
-///////////////// C3 JS ///////////////////////
-let swiper1 = new Swiper1(".mySwiper1", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination1",
-      clickable: true,
-    },
-  });
