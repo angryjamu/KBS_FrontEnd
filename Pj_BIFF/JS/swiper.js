@@ -19,7 +19,7 @@ $(() => { // jQB ////////////////////////////////
             prevEl: ".swiper-button-prev",
         },
         autoplay: { // 자동넘김
-            delay: 4000, // 사이시간
+            delay: 3000, // 사이시간
             disableOnInteraction: false, // 상호작용이 없을때 재가동
         },
     });

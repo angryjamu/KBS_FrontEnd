@@ -373,19 +373,6 @@ body {
 }
 
 
-.scont {
-    position: absolute;
-    top: 25%;
-}
-
-.scont1{
-    position: absolute;
-    top: 10%;
-}
-.scont2{
-    position: absolute;
-    top: 48%;
-}
 
 /******************************************* Cont3 *******************************************/
 .cont3 {
@@ -414,135 +401,37 @@ body {
     font-size: 35px;
 }
 
-.mlist3-1 {
-    position: absolute;
-    bottom: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 40%;
-    /* outline: 1px dashed red; */
-}
-
-.mlist3-2 {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 40%;
-    /* outline: 1px dashed blue; */
-}
-
-.mlist3-1 ul {
-    display: flex;
-}
-
-.mlist3-2 ul {
-    display: flex;
-}
-
-.mlist3-1 ul>li {
-    position: relative;
-    width: 23%;
-    /* 4등분(25%)% - 양쪽마진1% */
-    margin: 0 1%;
-    overflow: hidden;
-}
-
-.mlist3-2 ul>li {
-    position: relative;
-    width: 23%;
-    /* 4등분(25%)% - 양쪽마진1% */
-    margin: 0 1%;
-    overflow: hidden;
-}
-
-.mlist3-1 img {
+.swiper1 {
     width: 100%;
     height: 100%;
-    border-radius: 5%;
-}
+  }
 
-.mlist3-2 img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
-}
-
-.movtxt3 {
-    position: absolute;
-    /* left는 설정하지 않고 젠틀하게 처리
-    ->각 li위치에 그대로 있음 */
-
-    top: 100%;
-    /* 아래쪽에 나가있음 */
-    /* 나의부모는? .mlist ul>li */
-    width: 100%;
-    height: 100%;
-
-    border-radius: 5%;
-
-    background-color: rgba(2, 2, 2, 0.700);
-    /* 반투명배경 */
-
-    /* 글자셋팅 */
-    font-family: 'Cute Font', cursive;
-    font-size: 15px;
-    line-height: 25px;
+  .swiper-slide1 {
     text-align: center;
-
-    transition: top .4s ease-in-out;
-}
-
-.mlist3-1>ul>li:hover .movtxt3 {
-    top: 0;
-}
-
-.mlist3-2>ul>li:hover .movtxt3 {
-    top: 0;
-}
-
-/* 영화정보 li */
-.movtxt3 li {
     font-size: 18px;
-    float: none;
-    color: #fff;
-}
+    background: #fff;
 
-/* float 해제 */
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 
-
-/* 첫번째 li는 영화제목 */
-.movtxt3 li:first-child {
-    color: goldenrod;
-    font-size: 21px;
-    letter-spacing: -1px;
-    margin-top: 20%;
-}
-
-.abtn2{
-    position: absolute;
-    top: 28%;
-    transform: translateY(-50%);
-    width: 2%;
-    height: 10%;
-    max-width: 55px;
-}
-
-.abtn2 img{
+  .swiper-slide1 img {
+    display: block;
     width: 100%;
-    /* 높이값은 자동조절 */
-}
-/* 오른쪽버튼 */
-.abtn2 .rb{
-    right: -1%;
-}
-/* 왼쪽버튼 */
-.abtn2 .lb{
-    left: -1%;
-}
-
+    height: 100%;
+    object-fit: cover;
+  }
 
 /******************************************* Cont4 ******************************************/
 .cont4{
