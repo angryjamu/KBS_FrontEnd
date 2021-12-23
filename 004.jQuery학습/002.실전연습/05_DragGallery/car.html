@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Drag view</title>
+    <style>
+        .cbx{
+            width: 1200px;
+            height: 720px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+        }
+        .cbx img{
+            position: absolute;
+            /* 앱솔은 모두 block으로 변환됨 */
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(()=>{//////////jQB ////////////////////
+
+            // 대상: .cbx
+            let cbx = $(".cbx");
+            for(let i = 1; i<=50; i++){
+                cbx.append(`<img src="360view/country${i}.jpg" alt="car">`)
+            }
+
+        });//////////jQB ////////////////////
+    </script>
+</head>
+
+<body>
+    <div class="cbx">
+    </div>
+</body>
+
+</html>
