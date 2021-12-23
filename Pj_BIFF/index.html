@@ -8,6 +8,8 @@
     <title>부산국제영화제</title>
     <link rel="shortcut icon" href="./img/Biff_logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="./css/media.css">
     <script src="./JS/main.js"></script>
 
@@ -15,8 +17,8 @@
     <script src="./JS/jquery-3.6.0.min.js"></script>
     <script src="./JS/jquery-ui.min.js"></script>
     <script src="./JS/jquery-autoScroll-1.0.js"></script>
-    <script>
-    </script>
+    <script src="./JS/swiper-bundle.min.js"></script>
+    <script src="./JS/swiper.js"></script>
 
 </head>
 
@@ -119,166 +121,117 @@
         <main class="cont ibx">
             <section id="pg2" class="cont2">
                 <h2 class="ad1">BIFF 2022 수상후보작품</h2>
+    <!-- Swiper -->
 
-                <nav class="mlist">
-                    <ul class="block">
-                        <li>
-                            <a href="#">
-                                <img src="./img/mi1.jpeg" alt="뉴 커런츠상">
-                                <ol class="movtxt">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/mi2.jpeg" alt="매스">
-                                <ol class="movtxt">
-                                    <li>플래시 포워드 관객상</li> <br>
-                                    <li>&lt;매스&gt;</li><br>
-                                    <li>프란 크랜즈 | 미국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/mi3.jpeg" alt="아임쏘쏘리">
-                                <ol class="movtxt">
-                                    <li>부산시네필상</li> <br>
-                                    <li>&lt;아임 쏘 쏘리&gt;</li> <br>
-                                    <li>자오량 | 대한민국
-                                    </li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/mi4.jpeg" alt="초록밤">
-                                <ol class="movtxt">
-                                    <li>CGV아트하우스상</li> <br>
-                                    <li>&lt;초록밤&gt;</li> <br>
-                                    <li>윤서진 | 대한민국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/ml5.jpg" alt="">
-                                <ol class="movtxt">
-                                    <li>엔칸토: 마법의 세계</li>
-                                    <li>스테파니 비트리즈</li>
-                                    <li>애니메이션</li>
-                                </ol>
-                            </a></li>
-                    </ul>
-                    <a href="#" class="abtn lb">
-                        <img src="./img/left.png" alt="왼쪽버튼">
-                    </a>
-                    <a href="#" class="abtn rb">
-                        <img src="./img/right.png" alt="오른쪽버튼">
-                    </a>
-                </nav>
+    <div
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper mySwiper"
+    >
+      <div
+        class="parallax-bg"
+        style="
+          background-image: url(https://swiperjs.com/demos/images/nature-1.jpg);
+        "
+        data-swiper-parallax="-23%"
+      ></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">Slide 1</div>
+          <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">Slide 2</div>
+          <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">Slide 3</div>
+          <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
             </section>
 
             <!-- /******************************************* cont3 *******************************************/ -->
             <section id="pg3" class="cont3">
                 <h3 class="ad2">아시아영화의 창</h3>
-                <nav class="mlist3-1">
-                    <ul>
-                        <li>
-                            <a href="#" onclick="goMv('KBT_YZdoF6g')">
-                                <img src="./img/01.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#" onclick="goMv('yFZh-Wqi7RI')">
-                                <img src="./img/02.png" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="goMv('KBT_YZdoF6g')">
-                                <img src="./img/03.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#" onclick="goMv('yFZh-Wqi7RI')">
-                                <img src="./img/04.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#" class="abtn2 lb">
-                        <img src="./img/left.png" alt="왼쪽버튼">
-                    </a>
-                    <a href="#" class="abtn2 rb">
-                        <img src="./img/right.png" alt="오른쪽버튼">
-                    </a>
-
-                </nav>
+                <section class="scont1">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (1).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (10).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (11).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (12).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (13).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (14).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (15).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (16).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (17).jpg" alt="갤러리이미지"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+    
+                </section>
                 <h3 class="ad3">와이드 앵글</h3>
-                <nav class="mlist3-2">
-                    <ul>
-                        <li>
-                            <a href="#" onclick="goMv('KBT_YZdoF6g')">
-                                <img src="./img/05.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#" onclick="goMv('yFZh-Wqi7RI')">
-                                <img src="./img/06.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="goMv('KBT_YZdoF6g')">
-                                <img src="./img/07.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a></li>
-                        <li>
-                            <a href="#" onclick="goMv('yFZh-Wqi7RI')">
-                                <img src="./img/08.jpg" alt="">
-                                <ol class="movtxt3">
-                                    <li>뉴 커런츠상</li> <br>
-                                    <li>&lt; 안녕, 내 고향&gt; </li> <br>
-                                    <li>왕얼저우 | 중국</li>
-                                </ol>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#" class="abtn2 lb">
-                        <img src="./img/left.png" alt="왼쪽버튼">
-                    </a>
-                    <a href="#" class="abtn2 rb">
-                        <img src="./img/right.png" alt="오른쪽버튼">
-                    </a>
-                </nav>
+                <section class="scont2">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (18).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (2).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (3).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (4).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (5).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (6).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (7).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (8).jpg" alt="갤러리이미지"></div>
+                            <div class="swiper-slide"><img src="./biff/img/sddefault (9).jpg" alt="갤러리이미지"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+    
+                </section>
             </section>
             <!-- /******************************************* cont4 *******************************************/ -->
             <section id="pg4" class="cont4">
