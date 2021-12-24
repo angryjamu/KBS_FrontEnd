@@ -9,9 +9,7 @@
     <link rel="shortcut icon" href="./img/Biff_logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/C3swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/C3gallery.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="./css/media.css">
     
     <script src="./JS/main.js"></script>
@@ -20,7 +18,9 @@
     <script src="./JS/jquery-ui.min.js"></script>
     <script src="./JS/jquery-autoScroll-1.0.js"></script>
     <script src="./JS/swiper-bundle.min.js"></script>
+    <script src="jquery-touch-punch.min.js"></script>
     <script src="./JS/swiper.js"></script>
+    <script src="./JS/swiper2.js"></script>
 
 
 </head>
@@ -113,19 +113,18 @@
     <div id="cont">
 
         <section id="pg1" class="cont1">
+            <a href="./sub1.html">
             <video class="Mvideo" src="./img/BIFF2021_1080.mp4" autoplay muted loop></video>
             <h1 id="gosub">
-                <a href="./sub1.html">
-                    <img src="./img/logo.gif" alt="BIFF로고">
-                </a>
+                <img src="./img/logo.gif" alt="BIFF로고">
             </h1>
+        </a>
         </section>
         <!-- /******************************************* cont2 *******************************************/ -->
         <main class="cont ibx">
             <section id="pg2" class="cont2">
-                <h2 class="ad1">BIFF 2022 수상후보작품</h2>
                 <!-- Swiper -->
-
+                
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
                     <div class="parallax-bg" style="
           background-image: url(./img/mi4.jpeg);
@@ -140,6 +139,7 @@
                                 </p>
                             </div>
                         </div>
+                       
                         <div class="swiper-slide">
                             <div class="title" data-swiper-parallax="-300">Slide 2</div>
                             <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
@@ -210,24 +210,72 @@
 
             <!-- /******************************************* cont3 *******************************************/ -->
             <section id="pg3" class="cont3">
-                <h3 class="ad2">아시아영화의 창</h3>
 
-                <div class="swiper1 mySwiper1">
-                    <div class="swiper-wrapper1">
-                      <div class="swiper-slide1">><img src="./img/ml5.jpg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/ml1.jpeg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/ml2.jpeg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/ml3.jpg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/ml4.jpg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/mi1.jpeg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/mi2.jpeg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/mi3.jpeg" alt="갤러리이미지"></div>
-                      <div class="swiper-slide1">><img src="./img/mi4.jpeg" alt="갤러리이미지"></div>
+                <h2>ICE CREAM GALLERY</h2>
+                <div id="handle">
+                    <div id="move">
+                        <ul class="dselect">
+                            <li><img src="./biff/img/sddefault (1).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (2).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (4).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (5).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (6).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (7).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (8).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (9).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (10).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (11).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (12).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (13).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (14).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (15).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (16).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (17).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (18).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                        </ul>
                     </div>
-                    <div class="swiper-pagination1"></div>
-                  </div>
+                </div>
+                <div class="case">
+                    <h2>ICE CREAM GALLERY</h2>
+                    <div id="handle">
+                        <div id="move">
+                            <ul class="dselect">
+                                <li><img src="./biff/img/sddefault (1).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (2).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (4).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (5).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (6).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (7).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (8).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (9).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (10).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (11).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (12).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (13).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (14).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (15).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (16).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (17).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (18).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                                <li><img src="./biff/img/sddefault (3).jpg" alt="items"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                <h3 class="ad3">와이드 앵글</h3>
             </section>
             <!-- /******************************************* cont4 *******************************************/ -->
             <section id="pg4" class="cont4">
@@ -401,5 +449,4 @@
 
 
 </body>
-
 </html>
