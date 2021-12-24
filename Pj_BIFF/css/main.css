@@ -389,7 +389,7 @@ body {
 
 .cont3 h2{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 90px;
     font-size: 4vh;
 }
 
@@ -398,16 +398,17 @@ body {
 #handle {
     top: 5%;
     position: relative;
-    height: 70%;
+    height: 30%;
     width: 100%;
     overflow: hidden;
 
 }
 
+
 /*갤러리 내용만큼 가로로큰 내부박스-움직일박스*/
 #move {
     position: absolute;
-    /*            width: 7200px;*/
+               /* width: 7200px; */
     height: 100%;
 }
 
@@ -424,7 +425,8 @@ body {
 
 #move>ul li {
     position: relative;
-    width: 300px;
+    width: 325px;
+    height: 300px;
 }
 
 .case{
