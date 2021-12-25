@@ -190,7 +190,7 @@ body {
 ,
 .gnb2 li.on a
 {
-    text-decoration: 1px underline #f00;
+    /* text-decoration: 1px underline #f00; */
     color: #f00;
 }
 
