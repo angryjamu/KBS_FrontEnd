@@ -251,12 +251,7 @@ body * {
 .cont1 {
     position: relative;
 }
-/******************************************* Cont1 *******************************************/
 
-
-
-
-/******************************************* 메인화면 *******************************************/
 .subposter {
     width: 100%;
     height: 100%;
@@ -265,21 +260,16 @@ body * {
     text-align: center;
 }
 
-.backmain{
-    position: relative;
-}
-
 .back{
     position: absolute;
     top: 100px;
     left: 5%;
     z-index: 99;
-    background: url(./img/3list.png) no-repeat;
+    background: url(../img/3list.png) no-repeat;
     padding-left: 25px;
     background-position-y: 2px;
     color: #fff;
 }
-/******************************************* 메인화면 *******************************************/
 
 
 /******************************************* 하단 *******************************************/
@@ -321,7 +311,7 @@ body * {
     display: inline-block;
     width: 32px;
     height: 28px;
-    background-image: url(./img/foot_sns.png);
+    background-image: url(../img/foot_sns.png);
     background-repeat: no-repeat;
 }
 
