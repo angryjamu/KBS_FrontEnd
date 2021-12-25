@@ -160,7 +160,7 @@ body {
 
 .gnb2 .lb {
     position: absolute;
-    width: 200px;
+    width: 100px;
     left: 0;
     top: 0;
     margin: 0;
@@ -170,7 +170,7 @@ body {
 
 .gnb2 .rb {
     position: absolute;
-    width: 200px;
+    width: 100px;
     right: 0;
     top: 0;
     margin: 0;
@@ -346,10 +346,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url(../img/mi4.jpeg);
+    background-image: url(../img/sub1m.jpg);
     background-position: center;
     background-size: cover;
-    overflow: hidden;
   }
   
   .play-button {
