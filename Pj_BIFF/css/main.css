@@ -1,5 +1,9 @@
 @charset "utf-8";
 /******************************************* 공통 *******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+/* font-family: 'Gowun Batang', serif; */
+
 html,
 body,
 h1,
@@ -13,6 +17,7 @@ ol {
 
 html,body {
     overflow: hidden;
+    font-family: 'Gowun Batang', serif;
 }
 
 a {
