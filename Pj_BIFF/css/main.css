@@ -353,13 +353,10 @@ body {
 }
 
 #gosub img {
-    max-width: 600px;
+    max-width: 100vmin;
     position: absolute;
-    /* left: -33%; */
-    /* bottom: 30%; */
     clip-path: circle(141px at 50% 53%);
     transform: translate(-50%, -75%);
-
 }
 
 /******************************************* Cont2 *******************************************/
@@ -523,13 +520,13 @@ body {
 
 #move>ul li {
     position: relative;
-    width: 340px;
-    height: 300px;
+    width: 43vmin;
+    height: 30vmin;
 }
 #move1>ul li {
     position: relative;
-    width: 340px;
-    height: 300px;
+    width: 43vmin;
+    height: 30vmin;
 }
 
 .case{
