@@ -369,6 +369,7 @@ body {
   }
 
   .swiper-slide {
+      top: 5%;
     font-size: 18px;
     color: #fff;
     -webkit-box-sizing: border-box;
@@ -404,8 +405,8 @@ body {
   }
 
 .swiper-slide:nth-of-type(3){
-    background-image: url(../img/03.jpg);
-    top: 0;
+    background-image: url(../img/sub1m.jpg);
+    top: 5%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -414,7 +415,7 @@ body {
 }
 .swiper-slide:nth-of-type(4){
     background-image: url(../img/04.jpg);
-    top: 0;
+    top: 5%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -423,7 +424,7 @@ body {
 }
 .swiper-slide:nth-of-type(5){
     background-image: url(../img/05.jpg);
-    top: 0;
+    top: 5%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -432,7 +433,7 @@ body {
 }
 .swiper-slide:nth-of-type(6){
     background-image: url(../img/06.jpg);
-    top: 0;
+    top: 5%;
     /* left: 0; */
     /* width: 100%; */
     /* height: 100%; */
