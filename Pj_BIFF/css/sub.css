@@ -357,28 +357,27 @@ body {
     background-image: url(../img/sub1m.jpg);
     background-position: center;
     background-size: cover;
-    /* filter: brightness(60%); */
+    filter: brightness(85%);
   }
 
   .Mtxt{
       position: absolute;
-      /* transform: translate(-38vw, 17vw); */
-      top: 75%;
+      top: 70%;
       left: 3%;
   }
 
   .Mtxt li:first-child{
-      font-size: 5vh;
+      font-size: 3vmax;
       font-weight: bold;
   }
   .Mtxt li:nth-child(2){
-    font-size: 3vh;
+    font-size: 1.8vmax;
   }
   .Mtxt li:nth-child(3){
-    font-size: 1.7vh;
+    font-size: 1.3vmax;
   }
   .Mtxt li:last-child{
-    font-size: 1.7vh;
+    font-size: 1vmax;
   }
   
   .play-button {
