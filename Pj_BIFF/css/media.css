@@ -20,7 +20,7 @@
 }
 
 .cont1{
-    background-image: url(./img/mobmain.jpeg);
+    background-image: url(./img/mobmain.jpeg) no-repeat center/cover;
 }
 
 
