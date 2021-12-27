@@ -437,14 +437,14 @@ body {
     background-image: url(../img/sub1m.jpg);
 }
 .swiper-slide:nth-of-type(4) {
-    background-image: url(../img/cm3.jpeg);
+    background-image: url(../img/cm6.jpeg);
 }
 
 .swiper-slide:nth-of-type(5) {
-    background-image: url(../img/cm6.jpeg);
+    background-image: url(../img/cm3.jpeg);
 }
 .swiper-slide:nth-of-type(6) {
-    background-image: url(../img/cm3.jpeg);
+    background-image: url(../img/cm1.jpeg);
 }
 .swiper-slide:nth-of-type(1) {
     background-image: url(../img/cm1.jpeg);
