@@ -62,7 +62,100 @@
         }
     </style>
     <script>
-        
+        /////////////// 로드구역 ////////////////////////
+        window.addEventListener("DOMContentLoaded", () => {
+
+            const fruit = ["배", "사과", "용과", "딸기"];
+            const frObj = {
+                "배": "fruits_21",
+                "사과": "fruits_02",
+                "용과": "fruits_14",
+                "딸기": "fruits_09",
+            }
+
+            
+
+            // 공통 모듈
+            let showit = document.querySelector(".showit");
+            let cont = document.querySelector(".cont");
+            let mbtn = document.querySelectorAll(".mbtn");
+
+            // 처음배열 출력!
+            // showit.innerText = fruit.toString();
+            showit.innerText = fruit.join("*");
+
+
+
+            // 링크걸기
+            for(let x of mbtn){
+                x.onclick = () => {
+                    let me = event.currentTarget;
+                    let txt = me.innerText;
+                    console.log(txt);
+                    switch(txt){
+                        case "과일주세요~!": makeIt(); break;
+                        case "뒷배열추가요~!": addArr1(); break;
+                        case "앞배열추가요~!": addArr2(); break;
+                        case "뒷배열삭제요~!": remArr1(); break;
+                        case "앞배열삭제요~!": remArr2(); break;
+                    }
+                };
+            } /////// for of ///////////
+
+
+            // 과일주세요~! : 실제 화면에 배열보이기
+            const makeIt = () => {
+                const mk = function (val) {
+                    txt +=
+                        `<li style="background:
+                        url(./addimg/${frObj[val]}.png) 
+                        no-repeat center/cover">${val}</li>`;
+                }; ////////mk //////////
+
+                let txt = "<ul>";
+                fruit.forEach(mk);
+                txt += "</ul>";
+
+                cont.innerHTML = txt;
+
+
+            } ///////// maekeIt함수 ///////
+
+            /*  */
+            const addArr1 = () => {
+                let sel = document.getElementById("sel").value;
+                console.log(sel);
+                fruit.push(sel);
+                console.log(fruit);
+                showit.innerText = fruit.join("*");
+            } ///////// addArr함수 ///////////
+
+            const addArr2 = () => {
+                let sel = document.getElementById("sel").value;
+                console.log(sel);
+                fruit.unshift(sel);
+                console.log(fruit);
+                showit.innerText = fruit.join("*");
+            } ///////// addArr함수 ///////////
+
+            // 뒷배열삭제
+            const remArr1 = () => {
+                fruit.pop();
+                console.log(fruit);
+                showit.innerText = fruit.join("*");
+            } ///////// addArr함수 ///////////
+
+            // 앞배열삭제
+            const remArr2 = () => {
+                fruit.shift();
+                console.log(fruit);
+                showit.innerText = fruit.join("*");
+            } ///////// addArr함수 ///////////
+
+
+
+        }); //////////// 로드구역 ///////////////////////
+        /////////////////////////////////////////////////
     </script>
 </head>
 
