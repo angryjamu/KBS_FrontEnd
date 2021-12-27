@@ -27,7 +27,9 @@ TweenMax.set(".play-triangle", {
   scaleX: 2
 })
 
-const rotateTL = new TimelineMax({ paused: true })
+const rotateTL = new TimelineMax({
+    paused: true
+  })
   .to(".play-circle-01", .7, {
     opacity: .1,
     rotation: '+=360',
@@ -41,7 +43,9 @@ const rotateTL = new TimelineMax({ paused: true })
     ease: Power1.easeInOut
   }, 0)
 
-const openTL = new TimelineMax({ paused: true })
+const openTL = new TimelineMax({
+    paused: true
+  })
   .to(".play-backdrop", 1, {
     opacity: .95,
     visibility: "visible",
@@ -93,10 +97,10 @@ close.addEventListener("click", e => {
 function sMenu() {
 
   let gnb1 =
-      document.getElementsByClassName("gnb1").item(0);
+    document.getElementsByClassName("gnb1").item(0);
   gnb1.classList.toggle("on");
 
-};/// 햄버거메뉴 JS //////////////////////////
+}; /// 햄버거메뉴 JS //////////////////////////
 
 ////////////////// 슬라이드 버튼 JS /////////////////////
 
@@ -114,39 +118,39 @@ window.addEventListener("DOMContentLoaded", () => {
   ***********************************************/
   const goSlide = dir => { // dir  - 방향(1-오른쪽,0-왼쪽)
 
-      // 0. 광클금지 /////
-      if (prot) return; // 돌아가!
-      prot = 1; //잠금
-      setTimeout(() => prot = 0, 400);
-      ////////////////////////////////////////////
+    // 0. 광클금지 /////
+    if (prot) return; // 돌아가!
+    prot = 1; //잠금
+    setTimeout(() => prot = 0, 400);
+    ////////////////////////////////////////////
 
-      // 0.4초후 prot 변수를 처음값으로 변경하여 잠금
+    // 0.4초후 prot 변수를 처음값으로 변경하여 잠금
 
-      // 광클금지의 원리는 전역변수를 지정하고
-      // 이값에 따라 return을 주고 바로 변경하여 잠그고
-      // 일정시간뒤에 다시 처음 값으로 풀어준다.
+    // 광클금지의 원리는 전역변수를 지정하고
+    // 이값에 따라 return을 주고 바로 변경하여 잠그고
+    // 일정시간뒤에 다시 처음 값으로 풀어준다.
 
-      // return은 함수를 빠져나감
-      // 참고) break는 제어문을 빠져나감
+    // return은 함수를 빠져나감
+    // 참고) break는 제어문을 빠져나감
 
-      // 1. 함수호출확인
-      // console.log("바뀌나",dir);
+    // 1. 함수호출확인
+    // console.log("바뀌나",dir);
 
-      // 2. 대상선정: .gbx -> gbx변수에 할당
+    // 2. 대상선정: .gbx -> gbx변수에 할당
 
-      //  대상 하위 img요소
-      let gimg = block.querySelectorAll("img");
+    //  대상 하위 img요소
+    let gimg = block.querySelectorAll("img");
 
-      // 3. 변경내용
+    // 3. 변경내용
 
-      // 3-1. 오른쪽버튼일 경우 : 맨앞 이미지 맨뒤로
-      if (dir) block.appendChild(gimg[0]);
-      // appendChild(처음요소) -> 처음요소 맨뒤로 이동
+    // 3-1. 오른쪽버튼일 경우 : 맨앞 이미지 맨뒤로
+    if (dir) block.appendChild(gimg[0]);
+    // appendChild(처음요소) -> 처음요소 맨뒤로 이동
 
-      // 3-2. 왼쪽버튼일 경우 : 맨뒤 이미지 맨앞으로
-      else block.insertBefore(gimg[gimg.length - 1], gimg[0]);
-      // insertBefore(끝요소,처음요소) -> 끝요소를 처음요소 앞으로 이동
-      // gimg[개수-1] -> 끝요소번호
+    // 3-2. 왼쪽버튼일 경우 : 맨뒤 이미지 맨앞으로
+    else block.insertBefore(gimg[gimg.length - 1], gimg[0]);
+    // insertBefore(끝요소,처음요소) -> 끝요소를 처음요소 앞으로 이동
+    // gimg[개수-1] -> 끝요소번호
   }
 
   //// 이동버튼 클릭설정하기 /////////
@@ -156,14 +160,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // 오른쪽버튼 클릭시
   abtn[1].onclick = () => {
-      goSlide(1); //슬라이드함수호출
-      clearAuto(); //인터발지우기
+    goSlide(1); //슬라이드함수호출
+    clearAuto(); //인터발지우기
   };
 
   // 왼쪽버튼 클릭시
   abtn[0].onclick = () => {
-      goSlide(0); //슬라이드함수호출
-      clearAuto(); //인터발지우기
+    goSlide(0); //슬라이드함수호출
+    clearAuto(); //인터발지우기
   };
 
   //////////////////////////////////////
@@ -194,12 +198,12 @@ window.addEventListener("DOMContentLoaded", () => {
    기능: 인터발함수 지우고 타임아웃셋팅
   *****************************************/
   const clearAuto = () => {
-      // console.log("지움");
-      // 1. 자동호출지우기
-      clearInterval(autoI);
-      // 2. 타임아웃지우기(실행쓰나미방지)
-      clearTimeout(autoT);
-      // 자동호출 타임아웃셋팅
-      autoT = setTimeout(autoSlide, 3000)
+    // console.log("지움");
+    // 1. 자동호출지우기
+    clearInterval(autoI);
+    // 2. 타임아웃지우기(실행쓰나미방지)
+    clearTimeout(autoT);
+    // 자동호출 타임아웃셋팅
+    autoT = setTimeout(autoSlide, 3000)
   }
 });
