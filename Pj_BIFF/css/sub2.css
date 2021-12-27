@@ -368,14 +368,14 @@ body {
   }
 
   .Mtxt li:first-child{
-      font-size: 3vmax;
+      font-size: 2vmax;
       font-weight: bold;
   }
   .Mtxt li:nth-child(2){
-    font-size: 1.8vmax;
+    font-size: 1.5vmax;
   }
   .Mtxt li:nth-child(3){
-    font-size: 1.3vmax;
+    font-size: 1vmax;
   }
   .Mtxt li:last-child{
     font-size: 1vmax;
