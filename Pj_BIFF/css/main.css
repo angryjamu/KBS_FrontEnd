@@ -489,7 +489,7 @@ padding-left: 30px;
 .cont3 h2{
     text-align: center;
     padding-top: 90px;
-    font-size: 3vmax;
+    font-size: 2vmax;
 }
 
 
@@ -543,13 +543,13 @@ padding-left: 30px;
 
 #move>ul li {
     position: relative;
-    width: 43vmin;
-    height: 30vmin;
+    width: 35vmin;
+    height: 25vmin;
 }
 #move1>ul li {
     position: relative;
-    width: 43vmin;
-    height: 30vmin;
+    width: 35vmin;
+    height: 25vmin;
 }
 
 .case{
