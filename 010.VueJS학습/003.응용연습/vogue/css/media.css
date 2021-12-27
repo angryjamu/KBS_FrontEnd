@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* 보그PJ 미디어 쿼리 CSS - media.css */
+
+/************************* 모바일기준 500px 이하 *************************/
+@media only screen and (max-width: 500px){
+/* 상단영역고정 */
+body{
+    padding-top: 55px;
+    /* 상단영역만큼 공백을 줌 */
+}
+/* 상단영역 최상위부모 */
+#top{
+    position: fixed;
+    top: 0;
+    /* body 패딩탑 때문에 꼭줘야함 */
+}
+/* 모바일일때 상단메뉴 고정시 메뉴 스크롤되게 하기 */
+#top.mob{/* .mob클래스 추가시 적용 */
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* [ 보그 모바일 변경사항 ] */
+/*  */
+/* 1. 상단변경 */
+/* 1) .tmenu없앰 */
+/* 2) .gnb없앰 */
+.tmenu,.gnb{
+    display: none;
+}
+/* 3) 로고이미지 크기변경(130px) */
+.logo img{
+    width: 130px;
+}
+.logo{/* 로고하단여백 */
+    padding-top: 1px;
+    padding-bottom: 11px;
+}
+/* 4) 상단영역 min-height:auto */
+.top{
+    min-height: auto;
+    background-color: #fff;
+    /* 아래쪽 요소가 비춰 보이므로 줘야함 */
+}
+/* 5) 햄버거, 검색버튼 보이기(만들어야함) */
+.ham,.mag{
+    display: block;
+}
+/* 2. 컨텐츠 영역 */
+/*  */
+/* 1) 1개짜리 박스 */
+
+/* - 배경이미지 b형으로 변경 */
+/* 컨텐츠1 - 1개 */
+.bg1{
+    background-image: url(../images/cont1b.jpg);
+}
+/* 컨텐츠3 - 1개 */
+.bg5{
+    background-image: url(../images/cont3b.jpg);
+}
+/* 컨텐츠5 - 1개 */
+.bg9{
+    background-image: url(../images/cont5b.jpg);
+
+}/* - 비율변경(149.69%) - .pt1.rbx::before */
+.pt1.rbx::before{
+    padding-top: 149.69%;
+}
+/* - h2태그 글자크기 22px */
+.pt1 .cbx h2{
+    font-size: 22px;
+}
+/*  */
+/* 2) 3개짜리 박스 */
+/* - 마지막 박스 한개 없앰(display:none) */
+.pt2 .cbx:last-child{
+    display: none;
+}
+/* - 비율변경(75%) - .pt2.rbx::before */
+.pt2.rbx::before{
+    padding-top: 75%;
+}
+/* - h2태그 글자크기 20px */
+.pt2 .cbx h2{
+    font-size: 20px;
+}
+/* 3) 컨텐츠 오버시 보더애니 조정 */
+.cbx:hover::after{
+    border: 10px solid #f00;
+    /* 보더 두께 조정 */
+}
+.cbx::after{
+    transition: none;
+    /* 트랜지션 없앰 */
+}
+
+/* 3.하단영역 */
+/* 하단박스 */
+.info{
+    padding: 40px;
+    /* 패딩변경 */
+    min-height: auto;
+    /* 최소높이해제 */
+}
+/* 하단로고 이미지 width 200px */
+.blogo img{
+    width: 200px;
+}
+
+}

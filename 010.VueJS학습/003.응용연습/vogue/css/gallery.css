@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* VOGUE PJ 갤러리 페이지 CSS - gallery.css */
+
+/* 외부CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 서브 전체박스 */
+.scont {
+    margin-bottom: 100px;
+    min-height: 500px;
+}
+
+/* 1. 서브타이틀 */
+.stit {
+    font-family: 'Pistilli', sans-serif;
+    font-size: 50px;
+    padding: 40px 0 20px;
+    /* 위40px 양쪽0 아래20px */
+    text-align: center;
+    font-weight: normal;
+}
+
+/* 2. 스와이퍼 셋팅 */
+.swiper {
+    max-width: 1300px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
