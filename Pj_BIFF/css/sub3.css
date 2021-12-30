@@ -334,7 +334,7 @@ body {
     top: 9%;
     left: 3%;
     z-index: 99;
-    background: url(../img/3list.png) no-repeat;
+    /* background: url(../img/3list.png) no-repeat; */
     padding-left: 25px;
     background-position-y: 6px;
     color: #fff;
