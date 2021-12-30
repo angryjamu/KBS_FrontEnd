@@ -1,8 +1,9 @@
 @charset "utf-8";
 /******************************************* 공통 *******************************************/
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
 /* font-family: 'Gowun Batang', serif; */
+/* font-family: 'IM Fell English SC', serif; */
 
 
 html,
@@ -20,6 +21,7 @@ html,
 body {
     overflow: hidden;
     font-family: 'Gowun Batang', serif;
+    font-family: 'IM Fell English SC', serif;
 }
 
 a {
@@ -196,7 +198,7 @@ body {
 
 .gnb2 a:hover,
 .gnb2 li.on a {
-    color: #f00;
+    color: #0061f5;
 }
 
 .menu {
