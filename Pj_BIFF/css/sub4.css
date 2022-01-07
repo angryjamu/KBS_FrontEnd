@@ -440,7 +440,7 @@ audio{
     margin: 0 auto;
     max-width: 1300px;
     padding: 60px 60px 80px;
-    background-color: rgb(244 242 243 / 78%);
+    background-color: rgb(244 242 243 / 85%);
 }
 
 .characters h2{
@@ -482,14 +482,16 @@ audio{
     display: table-cell !important;
     vertical-align: top;
     width: 50%;
+    text-align: center;
 }
 
 .imgtxtbx .iimg{
     margin-bottom: 30px;
-    max-width: 235px;
+    max-width: 200px;
 }
 
 .txtbx h3{
+    text-align: center;
     line-height: 1.3em !important;
 }
 h3{
@@ -507,6 +509,7 @@ h3{
     display: block;
 }
 .txtbx p{
+    text-align: center;
     margin: 15px 0 0;
 }
 p{
@@ -523,7 +526,7 @@ p{
     background-image: url(../img/sub4img/poster1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 500px auto;
+    background-size: 480px auto;
     line-height: 0;
     bottom: 60px;
 }
@@ -541,7 +544,7 @@ p{
 }
 
 .cont2{
-    background-image: url(../img/sub4img/bg2.jpeg);
+    background-image: url(../img/sub4img/bg.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
