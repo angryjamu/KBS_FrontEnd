@@ -33,12 +33,12 @@ body {
     background-color: #222;
     color: #333333;}
 
-.ibx {
+/* .ibx {
     max-width: 1300px;
     margin: 0 auto;
 }
 
-/* .cont>section {
+.cont>section {
     width: 100%;
     height: 100vh;
 } */
@@ -328,7 +328,7 @@ audio{
     height: 80px;
 }
 
-/******************************************* Cont2 *******************************************/
+/******************************************* Cont1 *******************************************/
 .cont1 {
     position: relative;
 }
@@ -544,7 +544,7 @@ p{
 }
 
 .cont2{
-    background-image: url(../img/sub4img/bg.jpeg);
+    background-image: url(../img/sub4img/poster1.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -552,9 +552,15 @@ p{
     
 }
 
+.cbwrap .imgtxtbx > .scdimg{
+    background-image: url(../img/sub4img/taku.gif);
+    background-size: 540px auto;
+    top: 0;
+}
 
 
-/******************************************* Cont4 ******************************************/
+
+/******************************************* Cont3 ******************************************/
 
 
 
