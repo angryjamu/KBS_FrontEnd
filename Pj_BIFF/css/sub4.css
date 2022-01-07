@@ -31,18 +31,17 @@ a {
 
 body {
     background-color: #222;
-    color: #fafafa;
-}
+    color: #333333;}
 
 .ibx {
     max-width: 1300px;
     margin: 0 auto;
 }
 
-.cont>section {
+/* .cont>section {
     width: 100%;
     height: 100vh;
-}
+} */
 
 .cont1 {
     width: 100%;
@@ -363,30 +362,6 @@ audio{
     text-align: center;
 }
 
-/* .Mtxt {
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    color: #6c6c6c;
-}
-
-.Mtxt li:first-child {
-    font-size: 2vmax;
-    font-weight: bold;
-}
-
-.Mtxt li:nth-child(2) {
-    font-size: 1.5vmax;
-}
-
-.Mtxt li:nth-child(3) {
-    font-size: 1vmax;
-}
-
-.Mtxt li:last-child {
-    font-size: 1vmax;
-} */
-
 .play-button {
     width: 100px;
     height: 100px;
@@ -459,7 +434,7 @@ audio{
     cursor: pointer;
 }
 
-/******************************************* Cont3 ******************************************/
+/******************************************* Cont2 ******************************************/
 
 .characters{
     margin: 0 auto;
@@ -548,7 +523,7 @@ p{
     background-image: url(../img/sub4img/poster1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 550px auto;
+    background-size: 500px auto;
     line-height: 0;
     bottom: 60px;
 }
@@ -556,7 +531,7 @@ p{
     display: block;
 }
 
-.cont3 .imgbx div{
+.cont2 .imgbx div{
     padding-top: 101%;
     background-position: center;
     background-size: cover;
@@ -565,12 +540,18 @@ p{
     position: relative;
 }
 
+.cont2{
+    background-image: url(../img/sub4img/bg2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    
+}
+
 
 
 /******************************************* Cont4 ******************************************/
-.cont4 {
-    color: #000;
-}
 
 
 
