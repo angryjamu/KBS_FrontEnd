@@ -9,7 +9,8 @@ TweenMax.set(".play-circle-02", {
 })
 
 TweenMax.set(".play-perspective", {
-  xPercent: 6.5,
+  xPercent: 2.1,
+  yPercent: -6.6,
   scale: .175,
   transformOrigin: "center",
   perspective: 1
