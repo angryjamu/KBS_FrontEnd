@@ -460,6 +460,7 @@ audio{
 }
 
 /******************************************* Cont3 ******************************************/
+
 .characters{
     margin: 0 auto;
     max-width: 1300px;
@@ -488,6 +489,80 @@ audio{
 
 .cbwrap > div > div{
     padding: 15px 0;
+}
+.cbwrap > div > div{
+    border-bottom: 1px solid #ccc;
+}
+.imgtxtbx{
+    border-top: 1px solid #ccc;
+}
+
+.imgtxtbx > div.txtbx{
+    padding: 30px 30px;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+}
+.imgtxtbx > div{
+    display: table-cell !important;
+    vertical-align: top;
+    width: 50%;
+}
+
+.imgtxtbx .iimg{
+    margin-bottom: 30px;
+    max-width: 235px;
+}
+
+.txtbx h3{
+    line-height: 1.3em !important;
+}
+h3{
+    border: none;
+    padding: 0;
+    font-size: 155%;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 0;
+    display: table;
+    width: 100%;
+}
+.txtbx h3 span{
+    font-size: 80%;
+    display: block;
+}
+.txtbx p{
+    margin: 15px 0 0;
+}
+p{
+    font-size: 100%;
+    line-height: 1.5em;
+}
+
+.cbwrap .imgtxtbx > .imgbx{
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    left: 0;
+    /* background-image: url(../img/sub4img/bars.svg); */
+    background-image: url(../img/sub4img/poster1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 550px auto;
+    line-height: 0;
+    bottom: 60px;
+}
+.mainposter{
+    display: block;
+}
+
+.cont3 .imgbx div{
+    padding-top: 101%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 30px 0 0;
+    position: relative;
 }
 
 
