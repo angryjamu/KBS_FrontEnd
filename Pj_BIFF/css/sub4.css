@@ -5,7 +5,6 @@
 /* font-family: 'Gowun Batang', serif; */
 /* font-family: 'IM Fell English SC', serif; */
 
-
 html,
 body,
 h1,
@@ -19,7 +18,7 @@ ol {
 
 html,
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Gowun Batang', serif;
     font-family: 'IM Fell English SC', serif;
 }
@@ -490,6 +489,10 @@ audio{
     max-width: 200px;
 }
 
+.iimg{
+    min-width: 160px;
+}
+
 .txtbx h3{
     text-align: center;
     line-height: 1.3em !important;
@@ -544,12 +547,11 @@ p{
 }
 
 .cont2{
-    background-image: url(../img/sub4img/poster1.jpeg);
+    background-image: url(../img/sub4img/poster3.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 0;
-    
 }
 
 .cbwrap .imgtxtbx > .scdimg{
@@ -557,18 +559,26 @@ p{
     background-size: 540px auto;
     top: 0;
 }
-
-
+.cbwrap .imgtxtbx > .trdimg{
+    background-image: url(../img/sub4img/rikako.gif);
+    background-size: 540px auto;
+    top: 0;
+}
+.cbwrap .imgtxtbx > .fimg{
+    background-image: url(../img/sub4img/utaka.gif);
+    background-size: 540px auto;
+    top: 0;
+}
+.cbwrap .imgtxtbx > .fifimg{
+    background-image: url(../img/sub4img/umi0.jpeg);
+    background-size: 540px auto;
+    top: 0;
+}
 
 /******************************************* Cont3 ******************************************/
 
 
-
 /******************************************* 하단 *******************************************/
-/* .info {
-    height: 366px;
-    background-color: rgb(200, 200, 200);
-} */
 
 #ft {
     position: relative;
@@ -594,7 +604,6 @@ p{
 
 #ft .footer_inner .ft_social {
     text-align: center;
-    /* margin-top: 15px; */
 }
 
 #ft .footer_inner .ft_social ul li {
@@ -669,8 +678,6 @@ p{
 
 #ft .foot_line {
     border-top: 1px solid #333;
-    /* margin: 30px 0; */
-    /* padding: 40px 0 10px 0; */
 }
 
 .row {
