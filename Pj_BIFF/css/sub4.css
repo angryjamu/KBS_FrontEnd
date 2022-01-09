@@ -63,11 +63,11 @@ audio{
 }
 
 /*********************************************** 인디케이터 ***********************************************/
-.indic {
+/* .indic {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    /* 세로중앙이동 */
+    세로중앙이동
     left: 1%;
     width: 20px;
 }
@@ -89,17 +89,17 @@ audio{
     transition: width .4s;
 }
 
-/* 마우스 오버시 + 클래스 "on" */
+마우스 오버시 + 클래스 "on"
 .indic li:hover a,
 .indic li.on a {
     width: 150%;
     background-color: #fff;
 }
 
-/* 설명글자숨기기 */
+설명글자숨기기
 .indic span {
     display: none;
-}
+} */
 
 /*********************************************** 인디케이터 ***********************************************/
 
@@ -196,11 +196,10 @@ audio{
 }
 
 .gnb2 a {
-    color: #fff;
+    color: #ddd;
 }
 
-.gnb2 a:hover,
-.gnb2 li.on a {
+.gnb2 a:hover{
     color: #0061f5;
 }
 
