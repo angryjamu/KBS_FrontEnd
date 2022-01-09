@@ -110,7 +110,7 @@ audio{
 } */
 
 #top {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -546,7 +546,7 @@ p{
 }
 
 .cont2{
-    background-image: url(../img/sub4img/poster3.jpeg);
+    background-image: url(../img/sub4img/back2.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
