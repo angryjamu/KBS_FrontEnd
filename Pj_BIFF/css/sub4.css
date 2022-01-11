@@ -2,8 +2,11 @@
 /******************************************* 공통 *******************************************/
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
 /* font-family: 'Gowun Batang', serif; */
 /* font-family: 'IM Fell English SC', serif; */
+/* font-family: 'Poor Story', cursive; */
 
 html,
 body,
@@ -29,15 +32,16 @@ a {
 }
 
 body {
-    background-color: #222;
+    background-color: #9ec0cb;
     color: #333333;}
+    
 
 /* .ibx {
     max-width: 1300px;
     margin: 0 auto;
-}
+} */
 
-.cont>section {
+/* .cont>section {
     width: 100%;
     height: 100vh;
 } */
@@ -528,9 +532,9 @@ p{
     background-image: url(../img/sub4img/poster1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 480px auto;
+    background-size: 550px auto;
     line-height: 0;
-    bottom: 60px;
+    /* bottom: 40px; */
 }
 .mainposter{
     display: block;
@@ -546,15 +550,17 @@ p{
 }
 
 .cont2{
-    background-image: url(../img/sub4img/back2.jpeg);
+    /* background-image: url(../img/sub4img/back3.jpeg); */
+    background-color: #fad9ce;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 0;
+    /* font-family: 'Poor Story', cursive; */
 }
 
 .cbwrap .imgtxtbx > .scdimg{
-    background-image: url(../img/sub4img/taku.gif);
+    background-image: url(../img/sub4img/taku2.gif);
     background-size: 540px auto;
     top: 0;
 }
@@ -575,6 +581,43 @@ p{
 }
 
 /******************************************* Cont3 ******************************************/
+.cont3 {
+    position: relative;
+    padding: 80px 0;
+    background: url(../img/sub4img/bottomback.jpeg) center top no-repeat;
+    background-size: cover;
+}
+
+section .inner{
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tit{
+    font-size: 36px;
+    display: block;
+    width: auto;
+    margin-bottom: 1.5em;
+    text-align: center;
+    visibility: visible;
+    animation-duration: 1.25s;
+    animation-name: fadeIn;
+}
+
+.cont3 .end {
+    width: 43.3%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.cont3 .txtbx{
+    margin: 2em 0;
+    text-align: center;
+    font-family: 'Poor Story', cursive;
+    font-weight: lighter;
+    font-size: 17px;
+}
 
 
 /******************************************* 하단 *******************************************/
@@ -582,12 +625,12 @@ p{
 #ft {
     position: relative;
     margin: 0 0 0 0;
-    color: #999;
+    color: #fff;
 }
 
 #ft .footer_inner {
     position: relative;
-    background: #222;
+    background: #9ec0cb;
     padding: 30px 0 0;
 }
 
@@ -663,7 +706,7 @@ p{
     right: 0;
     width: 1px;
     height: 14px;
-    background: #444;
+    background: #fff;
 }
 
 #ft .fnb li a {
@@ -671,12 +714,12 @@ p{
     font-size: 13px;
     line-height: 1.6;
     font-weight: 500;
-    color: #aaa;
+    color: #fff;
     letter-spacing: -0.2px
 }
 
 #ft .foot_line {
-    border-top: 1px solid #333;
+    border-top: 1px solid #fff;
 }
 
 .row {
