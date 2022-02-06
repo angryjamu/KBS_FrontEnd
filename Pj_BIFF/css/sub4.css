@@ -40,16 +40,6 @@ strong {
     font-weight: bolder;
 }
 
-/* .ibx {
-    max-width: 1300px;
-    margin: 0 auto;
-} */
-
-/* .cont>section {
-    width: 100%;
-    height: 100vh;
-} */
-
 .cont1 {
     width: 100%;
     height: 100vh;
@@ -70,53 +60,7 @@ audio{
     height: 30px;
 }
 
-/*********************************************** 인디케이터 ***********************************************/
-/* .indic {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    세로중앙이동
-    left: 1%;
-    width: 20px;
-}
-
-.indic li {
-    width: 100%;
-    height: 10px;
-    margin: 3px 0;
-    cursor: pointer;
-}
-
-.indic a {
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-top: 4px;
-    background-color: #ccc;
-    box-shadow: 1px 1px 1px #777;
-    transition: width .4s;
-}
-
-마우스 오버시 + 클래스 "on"
-.indic li:hover a,
-.indic li.on a {
-    width: 150%;
-    background-color: #fff;
-}
-
-설명글자숨기기
-.indic span {
-    display: none;
-} */
-
-/*********************************************** 인디케이터 ***********************************************/
-
-
 /******************************************* 상단 *******************************************/
-/* .ibx>.cont1:first-child{
-    width: 100%;
-} */
-
 #top {
     position: absolute;
     top: 0;
@@ -234,7 +178,6 @@ audio{
     justify-content: flex-end;
     align-items: center;
     background-color: transparent;
-
 }
 
 .gnb1 {
@@ -243,7 +186,6 @@ audio{
     height: 100%;
     /* 보이는 화면에 꽉참 */
     background-color: #000;
-
     transition: right .4s ease-in-out;
 }
 
@@ -282,7 +224,6 @@ audio{
     transform: translate(-50%, -50%);
     margin: 0 auto;
     overflow: hidden;
-    /* outline: 2px dotted deeppink; */
 }
 
 .gnb1 ul>li {
@@ -441,7 +382,6 @@ audio{
 }
 
 /******************************************* Cont2 ******************************************/
-
 .characters{
     margin: 0 auto;
     max-width: 1300px;
@@ -538,7 +478,6 @@ p{
     background-repeat: no-repeat;
     background-size: 550px auto;
     line-height: 0;
-    /* bottom: 40px; */
 }
 .mainposter{
     display: block;
@@ -560,7 +499,6 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 0;
-    /* font-family: 'Poor Story', cursive; */
 }
 
 .cbwrap .imgtxtbx > .scdimg{
@@ -628,9 +566,7 @@ section .inner{
     text-decoration: underline;
 }
 
-
 /******************************************* 하단 *******************************************/
-
 #footer{
     clear: both;
     padding: 15px 0 15px 0;
@@ -650,5 +586,3 @@ section .inner{
 #footer a:hover{
     text-decoration: underline;
 }
-
-
