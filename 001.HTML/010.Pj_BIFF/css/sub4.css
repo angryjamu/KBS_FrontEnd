@@ -1,0 +1,593 @@
+@charset "utf-8";
+/******************************************* 공통 *******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+/* font-family: 'Gowun Batang', serif; */
+/* font-family: 'IM Fell English SC', serif; */
+/* font-family: 'Poor Story', cursive; */
+
+html,
+body,
+h1,
+h2,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    /* overflow: hidden; */
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Poor Story', cursive;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    /* background-color: #fad9ce; */
+    color: #333333;}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+.cont1 {
+    width: 100%;
+    height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+audio{
+    position: absolute;
+    z-index: 999;
+    top: 5%;
+    left: 76%;
+    max-width: 100%;
+    height: 30px;
+}
+
+/******************************************* 상단 *******************************************/
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #242221c4;
+    z-index: 999;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 22.5px);
+    width: 45px;
+    height: 45px;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.gnb2 ul {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.gnb2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+
+    animation: menuAni 1s ease-out 1s forwards;
+}
+
+@keyframes menuAni {
+    to {
+        width: 260px;
+    }
+}
+
+/* 메뉴 양쪽 등분할 박스 */
+.gnb2>div {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.gnb2 .lb {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gnb2 .rb {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gnb2 li {
+    font-size: 16px;
+}
+
+.gnb2 a {
+    color: #ddd;
+}
+
+.gnb2 a:hover{
+    color: #0061f5;
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 3px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.ham {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+}
+
+.gnb1 {
+    position: fixed;
+    right: -100%;
+    height: 100%;
+    /* 보이는 화면에 꽉참 */
+    background-color: #000;
+    transition: right .4s ease-in-out;
+}
+
+.gnb1.on {
+    right: 0;
+}
+
+.cbtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+    cursor: pointer;
+}
+
+.gnb1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.gnb1>ul {
+    margin: 0 auto;
+}
+
+.gnb1 ul {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gnb1 ul>li {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+}
+
+.gnb1 ol>li {
+    font-size: 18px;
+    line-height: 2.2;
+}
+
+.gnb1>ul>li a {
+    width: 320px;
+    display: block;
+    transition: .5s;
+
+}
+
+.gnb1>ul>li:hover>a {
+    color: red;
+    background-color: #3d3d3d;
+}
+
+.smenu {
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+
+.smenu a:hover {
+    color: yellow;
+    background-color: #d6b821c7;
+}
+
+.gnb1>ul>li:nth-child(1):hover .smenu {
+    height: 140px;
+}
+
+.gnb1>ul>li:nth-child(2):hover .smenu {
+    height: 180px;
+}
+
+.gnb1>ul>li:nth-child(3):hover .smenu {
+    height: 80px;
+}
+
+/******************************************* Cont1 *******************************************/
+.cont1 {
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    top: 9%;
+    left: 3%;
+    z-index: 99;
+    padding-left: 25px;
+    background-position-y: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cont1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.Mvideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    text-align: center;
+}
+
+.play-button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.play-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.play-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 15px);
+    border: none;
+    outline: none;
+    background: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.play-close::before,
+.play-close::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+
+.play-close::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.play-circles {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.play-perspective {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: -230px;
+    top: -125px;
+}
+
+.play-triangle {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/******************************************* Cont2 ******************************************/
+.characters{
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 60px 60px 80px;
+    background-color: #17171721;
+}
+
+.characters h2{
+    font-size: 260%;
+    line-height: 1.2em;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.cbwrap>.box1:first-child{
+    padding-top: 30px;
+}
+.cbwrap>.box1{
+    position: relative;
+    padding: 0;
+    margin-bottom: -1px;
+}
+
+.cbwrap > div > div{
+    padding: 15px 0;
+}
+.cbwrap > div > div{
+    border-bottom: 1px solid #ccc;
+}
+.imgtxtbx{
+    border-top: 1px solid #ccc;
+}
+
+.imgtxtbx > div.txtbx{
+    padding: 30px 30px;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+}
+.imgtxtbx > div{
+    display: table-cell !important;
+    vertical-align: top;
+    width: 50%;
+    text-align: center;
+}
+
+.imgtxtbx .iimg{
+    margin-bottom: 30px;
+    max-width: 200px;
+}
+
+.iimg{
+    min-width: 160px;
+}
+
+.txtbx h3{
+    text-align: center;
+    line-height: 1.3em !important;
+}
+h3{
+    border: none;
+    padding: 0;
+    font-size: 155%;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 0;
+    display: table;
+    width: 100%;
+}
+.txtbx h3 span{
+    font-size: 80%;
+    display: block;
+}
+.txtbx p{
+    text-align: center;
+    margin: 15px 0 0;
+}
+p{
+    font-size: 100%;
+    line-height: 1.5em;
+}
+
+.cbwrap .imgtxtbx > .imgbx{
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    left: 0;
+    /* background-image: url(../img/sub4img/bars.svg); */
+    background-image: url(../img/sub4img/poster1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 550px auto;
+    line-height: 0;
+}
+.mainposter{
+    display: block;
+}
+
+.cont2 .imgbx div{
+    padding-top: 101%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 30px 0 0;
+    position: relative;
+}
+
+.cont2{
+    background-image: url(../img/sub4img/bottomback.jpeg);
+    /* background-color: #fad9ce; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}
+
+.cbwrap .imgtxtbx > .scdimg{
+    background-image: url(../img/sub4img/taku2.gif);
+    background-size: 540px auto;
+    top: 0;
+}
+.cbwrap .imgtxtbx > .trdimg{
+    background-image: url(../img/sub4img/rikako.gif);
+    background-size: 540px auto;
+    top: 0;
+}
+.cbwrap .imgtxtbx > .fimg{
+    background-image: url(../img/sub4img/utaka.gif);
+    background-size: 540px auto;
+    top: 0;
+    left: 12%;
+}
+.cbwrap .imgtxtbx > .fifimg{
+    background-image: url(../img/sub4img/umi0.jpeg);
+    background-size: 540px auto;
+    top: 0;
+}
+
+/******************************************* Cont3 ******************************************/
+.cont3 {
+    position: relative;
+    padding: 80px 0;
+    background: url(../img/sub4img/bottomback.jpeg) center top no-repeat;
+    background-size: cover;
+}
+
+section .inner{
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tit{
+    font-size: 36px;
+    display: block;
+    width: auto;
+    margin-bottom: 1.5em;
+    text-align: center;
+    visibility: visible;
+    animation-duration: 1.25s;
+    animation-name: fadeIn;
+}
+
+.cont3 .end {
+    width: 43.3%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.cont3 .txtbx{
+    margin: 2em 0;
+    text-align: center;
+    font-family: 'Poor Story', cursive;
+    font-weight: lighter;
+    font-size: 17px;
+}
+
+.cont3 .txtbx p{
+    text-decoration: underline;
+}
+
+/******************************************* 하단 *******************************************/
+#footer{
+    clear: both;
+    padding: 15px 0 15px 0;
+    background:#a3a3a3;
+    font-size: 14px;
+    color: #404040;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.ghibli{
+    height: 20px;
+    margin-right: 5px;
+}
+
+#footer a{
+    display: inline-block;
+    margin-right: 5px;
+    color: #404040;
+}
+
+#footer a:hover{
+    text-decoration: underline;
+}
