@@ -392,6 +392,7 @@ audio{
 .characters h2{
     font-size: 260%;
     line-height: 1.2em;
+    text-decoration: overline;
     padding: 0;
     background-color: transparent;
     border-radius: 0;
@@ -569,7 +570,7 @@ section .inner{
 /******************************************* 하단 *******************************************/
 #footer{
     clear: both;
-    padding: 15px 0 15px 0;
+    padding: 10px 0 10px 0;
     background:#a3a3a3;
     font-size: 14px;
     color: #404040;
