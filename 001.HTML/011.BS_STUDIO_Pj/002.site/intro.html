@@ -4,6 +4,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>BS STUDIO intro page</title>
+<link rel="stylesheet" href="./css/intro.css">
+
 </head>
+
+<body>
+    <a href="./index.html">
+    <video id="video" src="../003.source/wave.mp4" autoplay loop onloadstart="this.volume=0.7" playsinline="./img/intro.png"></video>
+    </a>
+    <div class="sdc">
+        <div class="bars active fade-leave-active fade-leave-to">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <audio autoplay controls loop onloadstart="this.volume=0.6">
+                <source src="../003.source/bill.mp3"autoplay type="audio/mpeg">
+                Your browser does not support the audio element.
+                이 브라우저에서는 오디오가 지원되지 않습니다.
+            </audio>
+        </div>
+    </div>
+
+</body>

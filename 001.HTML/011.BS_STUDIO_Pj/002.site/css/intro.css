@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* BS STUDIO 인트로 페이지 */
+
+html,
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sdc{
+    position: fixed;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    z-index: 5;
+}
+
+.bars{
+    height: 30px;
+    width: 24px;
+    margin: 1.7em 1em;
+    position: relative;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.bars.active .bar{
+    animation: linear -.8s infinite alternate;
+}
+
+.bars.active .bar:first-child{
+    animation-duration: 674ms;
+}
+
+.bar{
+    left: 1px;
+}
+
+.bar{
+    background: #fff;
+    opacity: 75;
+    bottom: 1px;
+    height: 3px;
+    position: absolute;
+    width: 3px;
+}
