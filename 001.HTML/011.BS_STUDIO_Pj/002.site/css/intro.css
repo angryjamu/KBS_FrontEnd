@@ -23,7 +23,7 @@ body {
     object-fit: cover;
 }
 
-/* .sdc{
+.sdc{
     position: fixed;
     height: auto;
     bottom: 0;
@@ -36,6 +36,11 @@ body {
     z-index: 5;
 }
 
+.null-transform-hack {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
 .bars{
     height: 30px;
     width: 24px;
@@ -45,6 +50,14 @@ body {
     cursor: pointer;
 }
 
+.fade-enter-active, .fade-leave-active{
+    transition: opacity 0.5s;
+}
+
+/* .fade-enter, .fade-leave-to{
+    opacity: 0;
+} */
+
 .bars.active .bar{
     animation: linear -.8s infinite alternate;
 }
@@ -52,9 +65,39 @@ body {
 .bars.active .bar:first-child{
     animation-duration: 674ms;
 }
+.bars.active .bar:nth-child(2){
+    animation-duration: 533ms;
+}
+.bars.active .bar:nth-child(3){
+    animation-duration: 607ms;
+}
+.bars.active .bar:nth-child(4){
+    animation-duration: 558ms;
+}
+.bars.active .bar:nth-child(5){
+    animation-duration: .6s;
+}
+.bars.active .bar:nth-child(6){
+    animation-duration: 527ms;
+}
 
-.bar{
+.bar:first-child{
     left: 1px;
+}
+.bar:nth-child(2){
+    left: 5px;
+}
+.bar:nth-child(3){
+    left: 9px;
+}
+.bar:nth-child(4){
+    left: 13px;
+}
+.bar:nth-child(5){
+    left: 17px;
+}
+.bar:nth-child(6){
+    left: 21px;
 }
 
 .bar{
@@ -64,4 +107,4 @@ body {
     height: 3px;
     position: absolute;
     width: 3px;
-} */
+}
