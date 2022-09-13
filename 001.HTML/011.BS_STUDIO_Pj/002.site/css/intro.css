@@ -23,6 +23,15 @@ body {
     object-fit: cover;
 }
 
+audio {
+    position: fixed;
+    height: 30px;
+    bottom: 23px;
+    left: 97vw;
+    opacity: 10%;
+    z-index: 999;
+}
+
 .sdc{
     position: fixed;
     height: auto;
@@ -33,7 +42,7 @@ body {
     display: flex;
     justify-content:flex-end;
     align-items: flex-end;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .null-transform-hack {
@@ -44,7 +53,7 @@ body {
 .bars{
     height: 30px;
     width: 24px;
-    margin: 1.7em 1em;
+    margin: 1.7em 2em;
     position: relative;
     pointer-events: auto;
     cursor: pointer;
@@ -58,11 +67,18 @@ body {
     opacity: 0;
 } */
 
-.bars.active .bar{
-    animation: linear -.8s infinite alternate;
+.bars .bar{
+    animation: barsAni linear -.8s infinite alternate;
 }
 
-.bars.active .bar:first-child{
+@keyframes barsAni {
+    1%{
+        /* top: 50px; */
+        bottom:20px;
+    }
+}
+
+.bars .bar:first-child{
     animation-duration: 674ms;
 }
 .bars.active .bar:nth-child(2){
@@ -82,7 +98,7 @@ body {
 }
 
 .bar:first-child{
-    left: 1px;
+    left: 10px;
 }
 .bar:nth-child(2){
     left: 5px;
