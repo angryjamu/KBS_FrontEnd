@@ -16,7 +16,7 @@
                 }
             */
 
-            
+
         .wrap {
             width: 727px;
             margin: auto;
@@ -29,20 +29,20 @@
         }
 
         /* 배경색 class */
-        .bgc{
+        .bgc {
             background-color: rgb(92, 92, 92);
             padding: 10px 0
-            /* 안쪽여백: 위아래 양쪽; */
+                /* 안쪽여백: 위아래 양쪽; */
         }
 
         /* 큰제목 */
-        h1#mtit{
+        h1#mtit {
             color: rgb(0, 255, 149);
             text-shadow: 2px 2px 2px rgb(0, 255, 0);
         }
 
         /* 메인 공통 p요소 */
-        main p{
+        main p {
             line-height: 1.7;
             font-size: 17px;
         }
@@ -104,11 +104,13 @@
         }
 
         /* 6. 그룹 선택자(,) */
-        em,i{
+        em,
+        i {
             color: skyblue;
         }
+
         /* 7. 종속선택자(요소명,아이디명/클래스명) */
-        h3#tit3{
+        h3#tit3 {
             display: inline;
             /* 화면표시방식 : 블록->인라인 변경 */
             border: 2px dotted brown;
@@ -116,19 +118,23 @@
             padding: 3px;
             /* 안쪽여백 */
         }
+
         /* 종속선택자 class인 경우 */
         .list {
             border: 2px dashed solid red;
             background-color: moccasin;
         }
-        ul.list{
+
+        ul.list {
             border: 2px dotted brown;
             background-color: moccasin;
         }
-        ol.list{
+
+        ol.list {
             border: 2px dotted brown;
             background-color: rgb(145, 241, 166);
         }
+
         /* 8.속성선택자([]) */
         /* 
         속성선택시 이퀄을 쓰는 방법
@@ -137,38 +143,44 @@
         3. $= 끝나는문자 (돈받고끝나라..)
         4. *= 모두찾음 */
 
-        [alt="뭉크의절규그림"]{
+        [alt="뭉크의절규그림"] {
             border: 15px ridge gold;
         }
+
         /* ^= 시작하는문자 */
-        [href^="http"]{
+        [href^="http"] {
             background-color: pink;
         }
+
         /* $= 끝나는문자 */
-        [href$="RANKING"]{
+        [href$="RANKING"] {
             color: yellow;
             font-weight: bold;
         }
+
         /* *= 있기만하면 모두 찾음 */
         /* ::after(맨뒤) 는 가상요소 */
-        [href*="news1"]::after{
+        [href*="news1"]::after {
             content: '★';
         }
+
         /* 9. 형제 선택자(+) */
         /* ::before 가상요소(맨앞) */
-        li+li::before{/* 앞에 li형제가 있는 li요소를 선택 */
+        li+li::before {
+            /* 앞에 li형제가 있는 li요소를 선택 */
             content: '♬';
-        }        
+        }
+
         /* 10.다중형제선택자(~틸드) */
-        .tt~p{/* 클래스가 tt인요소 뒤의 p형제요소 모두를 선택 */
+        .tt~p {
+            /* 클래스가 tt인요소 뒤의 p형제요소 모두를 선택 */
             background-color: rgb(181, 216, 85);
         }
 
         /* 테이블 첫번째 tr의 첫번째 td에 width 주기 */
-        .wd{
+        .wd {
             width: 150px;
         }
-
     </style>
 </head>
 
@@ -221,7 +233,8 @@
             <p><b>윤석열 국민의힘 대선 후보가 선거대책위원회</b> 구성을 두고 첫 정치력 시험대에 올랐다. 당 <i>대선</i> 후보로 선출되기전까지 '이견' 조율이 필요 없던 점을 고려하면 이번
                 문제를 어떻게 풀어나가느냐에 따라 지도자로서의 자질도 엿볼 수 있을 것으로 보인다.</p>
 
-            <p class="tt">9일 정치권에 따르면 윤 후보는 김종인 전 <strong><em>비상대책위원장과</em> 경선에서 경쟁했던 홍준표 의원</strong> 등을 모두 아우르는 선대위가 구성되기를 바라고 있다.
+            <p class="tt">9일 정치권에 따르면 윤 후보는 김종인 전 <strong><em>비상대책위원장과</em> 경선에서 경쟁했던 홍준표 의원</strong> 등을 모두 아우르는 선대위가
+                구성되기를 바라고 있다.
                 특히 선대위 구성에 있어 경선 캠프에서 자신을</p>
             도왔던 인사들과 함께 해야한다는 생각이 강하다.
             당장 김 전 위원장이 선대위의 전면 재구성을 요구하면서 윤 후보의 구상은 차질이 <mark><b>불가피하다는 전망</b></mark>이다.
@@ -238,8 +251,8 @@
             <h3>국민의힘</h3>
             <blockquote cite="http://www.peoplepowerparty.kr/renewal/about/preamble.do">
                 국민의힘은 모두의 내일을 함께 만들어가는 정당이다. 반만년의 역사와 빛나는 전통을 자랑하는 우리는 3.1 독립운동 정신과 대한민국임시정부의 정통성을 이어받고, 공산주의 침략에 맞서
-                자유민주주의를 지켜낸 국난극복의 자랑스러운 역사를 가지고 있다. 우리는 하나 된 국민의 힘으로 전쟁의 폐허에서 가난을 극복하고 선진경제를 이룩했으며, 시민의 자발적 참여를 통해 민주화를
-                성취했다. 우리는 현재에 안주하지 않고 끊임없는 변화와 개혁을 주도해 더 나은 내일을 향해 앞장서 나갈 것이다.
+                자유민주주의를 지켜낸 국난극복의 자랑스러운 역사를 가지고 있다. 우리는 하나 된 국민의 힘으로 전쟁의 폐허에서 가난을 극복하고 선진경제를 이룩했으며, <suo>시민의</suo> 자발적 참여를 통해 민주화를
+                성취했다. 우리는 현재에 안주하지 않고 끊임없는 변화와 개혁을 주도해 더 나은 내일을 향해 <sup>앞장서 나갈 것이다.</sup>
             </blockquote>
 
             <bdo dir="rtl">찹쌀떡찹쌀떡찹쌀떡</bdo>
@@ -253,43 +266,49 @@
             <!-- 언론사 주요뉴스 -->
             <hr>
             <h3 id="tit3">언론사 주요뉴스</h3>
-                <ul class="list">
-                    <li>
-                        <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=005&aid=0001483277" target="_blank">
-                            ‘코인 탑승’ 게임빌, 영업익 643% 폭증
+            <ul class="list">
+                <li>
+                    <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=005&aid=0001483277"
+                        target="_blank">
+                        ‘코인 탑승’ 게임빌, 영업익 643% 폭증
 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=277&aid=0004997257" target="_blank">
-                            [종합]5G·신사업 양날개…통신3사 영업익 1조 시대
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=584&aid=0000016682" target="_blank">
-                            NASA 달 착륙 시간표 2025년으로 멀어졌다
-                        </a>
-                    </li>
-                </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=277&aid=0004997257"
+                        target="_blank">
+                        [종합]5G·신사업 양날개…통신3사 영업익 1조 시대
+                    </a>
+                </li>
+                <li>
+                    <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=584&aid=0000016682"
+                        target="_blank">
+                        NASA 달 착륙 시간표 2025년으로 멀어졌다
+                    </a>
+                </li>
+            </ul>
 
             <hr>
             <!-- 정치분야 랭킹뉴스 -->
             <h3>정치분야 랭킹뉴스</h3>
             <ol class="list">
                 <li>
-                    <a href="http://adv.imadrep.co.kr/adclick.php?b=431697145742271204910&url=http%3A%2F%2Fmy.newscover.co.kr%2Fltcvt%2F%3Fref%3D3169%26cc%3D1457422" target="_blank">
+                    <a href="http://adv.imadrep.co.kr/adclick.php?b=431697145742271204910&url=http%3A%2F%2Fmy.newscover.co.kr%2Fltcvt%2F%3Fref%3D3169%26cc%3D1457422"
+                        target="_blank">
                         “주인 없는 187억, 국민들에게 나눠준다” 전격발표
                     </a>
                 </li>
 
                 <li>
-                    <a href="http://adv.imadrep.co.kr/adclick.php?b=43220681688471890304&url=http%3A%2F%2Fmy.newscover.co.kr%2Funilo2%2Fq%2F%3Fcc%3D816884%26ref%3D3220" target="_blank">
+                    <a href="http://adv.imadrep.co.kr/adclick.php?b=43220681688471890304&url=http%3A%2F%2Fmy.newscover.co.kr%2Funilo2%2Fq%2F%3Fcc%3D816884%26ref%3D3220"
+                        target="_blank">
                         로또조작 밝혀지자.. 로또여직원 극단적 선택
                     </a>
                 </li>
 
                 <li>
-                    <a href="http://adv.imadrep.co.kr/adclick.php?b=431697260757172115026&url=http%3A%2F%2Fmy.newscover.co.kr%2Fhill%2F%3Fref%3D3169%26cc%3D2607571" target="_blank">
+                    <a href="http://adv.imadrep.co.kr/adclick.php?b=431697260757172115026&url=http%3A%2F%2Fmy.newscover.co.kr%2Fhill%2F%3Fref%3D3169%26cc%3D2607571"
+                        target="_blank">
                         파주 땅값 대폭상승! 투자자들 몰리는 이유보니!
                     </a>
                 </li>
@@ -302,21 +321,21 @@
             </h3>
             <dl>
                 <dt>정치</dt>
-                    <dd>
-                        <a href="https://www.news1.kr/articles/?4488211" target="_blank">
-                            김종인 '파리떼' 살생부…김재원 "왕파리· 무슨 파리 등 등급까지, 살려고"
+                <dd>
+                    <a href="https://www.news1.kr/articles/?4488211" target="_blank">
+                        김종인 '파리떼' 살생부…김재원 "왕파리· 무슨 파리 등 등급까지, 살려고"
 
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.news1.kr/articles/?4488221" target="_blank">
-                            윤석열 "성남 법정서 자주 뵀죠"…이재명 "저는 기억이 안나는데"
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://www.news1.kr/articles/?4488221" target="_blank">
+                        윤석열 "성남 법정서 자주 뵀죠"…이재명 "저는 기억이 안나는데"
 
-                        </a>
-                    </dd>
+                    </a>
+                </dd>
 
-            <dl>
-                <dt>경제</dt>
+                <dl>
+                    <dt>경제</dt>
                     <dd>
                         <a href="https://www.news1.kr/articles/?4487473" target="_blank">
                             [속보] 정부, 요소수 사재기 1곳·쟁여둔 요소 3000톤 적발
@@ -327,51 +346,54 @@
                         </a>
                     </dd>
 
-            <dl>
-                <dt>사회</dt>
-                    <dd>
-                        <a href="https://www.news1.kr/articles/?4488458" target="_blank">
-                            "친언니가 물고문·피떡 되도록 폭행, 엄빠는 미친애 취급"…16세 'SOS'
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="https://www.news1.kr/articles/?4488206" target="_blank">
-                            "고2 인데, 재밌게 사는 법 있나요?"…14년 만에 채택된 '감동 답변'
-                        </a>
-                    </dd>
-            </dl>
+                    <dl>
+                        <dt>사회</dt>
+                        <dd>
+                            <a href="https://www.news1.kr/articles/?4488458" target="_blank">
+                                "친언니가 물고문·피떡 되도록 폭행, 엄빠는 <del>미친애</del> 취급"…16세 'SOS'
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="https://www.news1.kr/articles/?4488206" target="_blank">
+                                "고2 인데, 재밌게 사는 법 있나요?"…14년 만에 채택된 '감동 답변'
+                            </a>
+                        </dd>
+                    </dl>
 
-            <hr>
-            <!-- 언론사별 가장 많이 본 뉴스 -->
-            <table>
-                <h3>언론사별 가장 많이 본 뉴스</h3>
-                <tr>
-                    <td class="wd">
-                        <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=469&aid=0000640165&rankingType=RANKING" target="_blank">
-                            靑 "요소수, 비료인 줄"... '요소수 대란'은 정부 부 …
-                            <img src="./images/t1.jpg" alt="이미지">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=016&aid=0001910520&rankingType=RANKING" target="_blank">
-                            “최대 2천만원 용돈벌이” 너도나도 뛰어든 ‘이것’ 사라진 …
-                            <img src="./images/t2.jpg" alt="이미지2">
+                    <hr>
+                    <!-- 언론사별 가장 많이 본 뉴스 -->
+                    <table>
+                        <h3>언론사별 가장 많이 본 뉴스</h3>
+                        <tr>
+                            <td class="wd">
+                                <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=469&aid=0000640165&rankingType=RANKING"
+                                    target="_blank">
+                                    靑 "요소수, 비료인 줄"... '요소수 대란'은 정부 부 …
+                                    <img src="./images/t1.jpg" alt="이미지">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=016&aid=0001910520&rankingType=RANKING"
+                                    target="_blank">
+                                    “최대 2천만원 용돈벌이” 너도나도 뛰어든 ‘이것’ 사라진 …
+                                    <img src="./images/t2.jpg" alt="이미지2">
 
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=023&aid=0003652034&rankingType=RANKING" target="_blank">
-                            “이건 약속”…오징어 게임 시즌2 못 박은 황동혁 감독이 …
-                            <img src="./images/t3.jpg" alt="이미지3">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=023&aid=0003652034&rankingType=RANKING"
+                                    target="_blank">
+                                    “이건 약속”…오징어 게임 시즌2 못 박은 황동혁 감독이 …
+                                    <img src="./images/t3.jpg" alt="이미지3">
 
-                        </a>
-                    </td>
-                </tr>
-            </table>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
 
 
         </main>
