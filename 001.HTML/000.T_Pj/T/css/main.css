@@ -1,27 +1,85 @@
 @charset "utf-8";
-
-/* html,body {
+/* ------------------------------공통영역------------------------------ */
+html,body,div,h1,h2,h3,h4,h5,ul,ol,li,header,nav,article,aside,details,a,footer{
     margin: 0;
     padding: 0;
-} */
-
-html,
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
 body{
-    margin: 0;
-    padding: 0;
-    background: url(/1/001.HTML/000.T_Pj/img/sogno.png);
-    /* width: 950px; */
-    /* background: url(/1/001.HTML/000.T_Pj/img/mainbg.jpg) no-repeat fixed center/cover; */
+    font-family: '맑은 고딕','돋움', sans-serif;
 }
-
-
-
-h1 {
-    text-align: left;
-    /* padding-bottom: -5px; */
-
+/* ------------------------------헤더영역------------------------------ */
+.header{
+    border-bottom: 1px solid silver;
 }
-h1.img{
-    width: 100%;
-    margin: 10px;
+.header .inner{
+    width: 1168px;
+    margin: 0 auto;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+.header .logo{
+    float: left;
+}
+.header .util{
+    float: right;
+}
+.header .inner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.header .gnb{
+    position: absolute;
+    left: 200px;
+    top: 0;
+    border: 1px solid red
+}
+.gnb .tMenu{
+    float: left;
+}
+.gnb .tMenu>li{
+    float: left;
+    border: 1px solid #000;
+    padding: 0 10px;
+    margin-right: 85px;
+    position: relative;
+}
+.tMenu>li:last-child{
+    margin-right: 0;
+}
+.tMenu>li>a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #292929;
+    display: block;
+    line-height: 100px;
+}
+.depth{
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+.depth li{
+    outline: 1px solid skyblue;
+    margin-top: 15px;
+    line-height: 1.6;
+    /* padding: 35px 10px 35px; */
+    /* display: none; */
+}
+.depth li:first-child{
+    margin-top: 0;
+}
+.depth li a{
+/* background-color: goldenrod; */
+display: block;
+color: #808080;
+font-size: 18px;
+white-space: nowrap;
+}
+.depth a:hover{
+    text-decoration: underline;
+    color: #000;
 }
