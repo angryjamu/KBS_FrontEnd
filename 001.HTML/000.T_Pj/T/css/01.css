@@ -1,0 +1,52 @@
+html,body,header,nav,ul,ol,li,h1,h2,h3,h4,h5,p,a,img{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    font-family: '맑은고딕','돋음',Arial, Helvetica, sans-serif;
+}
+img{
+    vertical-align: middle;
+}
+.header{
+    background-color: #f48e99;
+}
+.logo{
+    float: left;
+}
+.logo img{
+    width: 93px;
+}
+.logo a{
+    display: block;
+}
+.header .inner{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.inner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.gnb{
+    float: right;
+}
+.gnb>li{
+    float: left;
+}
+.gnb>li>a{
+    display: block;
+    padding: 0 45px;
+    line-height: 100px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+}
