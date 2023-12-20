@@ -1,0 +1,158 @@
+/* --------------------------------공통부분-------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Kanit&family=Poor+Story&family=Kdam+Thmor+Pro&display=swap');
+html,body,header,div,nav,ul,ol,li,h1,h2,h3,h4,h5,p,a,footer,main{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #ae834c;
+}
+.inner{
+    width: 1000px;
+    margin: 0 auto;
+}
+img{
+    vertical-align: middle;
+}
+i{
+    font-style: normal;
+}
+/* --------------------------------헤더부분-------------------------------- */
+.header{
+    background-color: #190a07;
+}
+.header .logo{
+    text-align: center;
+    padding-top: 15px;
+}
+.header .logo img{
+    width: 260px;
+}
+.gnb{
+    width: 800px;
+    margin: 0 auto;
+}
+.gnb .depth1::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.gnb .depth1>li{
+    float: left;
+    padding: 0 5px;
+    position: relative;
+    width: 120px;
+    text-align: center;
+}
+.gnb>.depth1>li>a{
+    font-family: 'Kanit', sans-serif;
+    height: 57px;
+    line-height: 57px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 17px;
+}
+.gnb .depth1>li:hover>a{
+    font-weight: bold;
+    border-bottom: 2px solid goldenrod;
+    transition: all .3s ease-out;
+}
+.gnb .depth2{
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+.gnb .depth2>li{
+    width: 120px;
+    height: 0;
+    transition: height .4s ease-out;
+}
+.gnb .depth2>li a{
+    line-height: 40px;
+    background-color: #7c410a;
+    display: block;
+    display: none;
+    white-space: nowrap;
+    color: #eb8400;
+    transition: .4s;
+}
+.gnb .depth1>li:hover .depth2>li{
+    height: 40px;
+}
+.gnb .depth1>li:hover .depth2>li>a{
+    display: block;
+}
+.depth2>li>a:hover{
+    color: #b7b7b7;
+    background-color: rgb(53, 40, 0);
+}
+.header .fa{
+    position: absolute;
+    top: 45px;
+    right: 60px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#Btn{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: brown;
+    transition: .6s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+.closeBtn{
+    font-size: 60px;
+    position: absolute;
+    top: 25px;
+    right: 54px;
+    cursor: pointer;
+}
+.hamSideMenu{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    margin: auto;
+}
+.hamSideMenu li a{
+    display: block;
+    font-size: 36px;
+    padding: 10px;
+    text-align: center;
+    transition: .3s ease-out;
+}
+.hamSideMenu li a:hover{
+    background-color: gainsboro;
+    color: darkolivegreen;
+}
+.hamSideMenu ul{
+    display: none;
+}
+/* --------------------------------헤더부분-------------------------------- */
+.cont{
+    background: url(img/bg.jpg) no-repeat center center/cover;
+    height: 882px;
+    position: relative;
+}
+.cont .down{
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    color: #fdfbae;
+    font-size: 32px;
+    cursor: pointer;
+    animation: down 1.7s linear infinite;
+}
+@keyframes down {
+    0%{transform: translateY(-10px);}
+    25%{transform: translateY(0px);}
+    50%{transform: translateY(10px);}
+    75%{transform: translateY(0px);}
+    100%{transform: translateY(-10px);}
+}

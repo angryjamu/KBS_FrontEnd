@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dune part:2</title>
+    <link rel="stylesheet" href="dune_pj.css">
+    <link rel="stylesheet" href="js/dune_pj.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo"><a href="#"><img src="img/logo.png" alt="dune logo"></img></a></h1>
+            <nav class="gnb">
+                <ul class="depth1">
+                    <li><a href="#">Synopsis</a></li>
+                    <li><a href="#">Family</a>
+                <ul class="depth2">
+                    <li><a href="#">Atreides</a></li>
+                    <li><a href="#">Agamemnon</a></li>
+                    <li><a href="#">Old Duke</a></li>
+                    <li><a href="#">Leto Atreides</a></li>
+                    <li><a href="#">Jessica Atreides</a></li>
+                </ul>
+            </li>
+                    <li><a href="#">Character</a></li>
+                    <li><a href="#">Planet</a>
+                        <ul class="depth2">
+                            <li><a href="#">Kaitain</a></li>
+                            <li><a href="#">Arrakis</a></li>
+                            <li><a href="#">Giedi Prime</a></li>
+                            <li><a href="#">Salusa Secundus</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Video</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav id="Btn">
+            <i class="closeBtn" onclick="cNav()">&times;</i>
+            <ul class="hamSideMenu">
+                <li><a href="#">Synopsis</a></li>
+                <li><a href="#">Family</a>
+                    <ul class="sideSubMenu1">
+                        <li><a href="#">Atreides</a></li>
+                        <li><a href="#">Agamemnon</a></li>
+                        <li><a href="#">Old Duke</a></li>
+                        <li><a href="#">Leto Atreides</a></li>
+                        <li><a href="#">Jessica Atreides</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Character</a></li>
+                <li><a href="#">Planet</a>
+                    <ul class="sideSubMenu2">
+                        <li><a href="#">Kaitain</a></li>
+                        <li><a href="#">Arrakis</a></li>
+                        <li><a href="#">Giedi Prime</a></li>
+                        <li><a href="#">Salusa Secundus</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Video</a></li>
+            </ul>
+        </nav>
+        <i class="fa fa-bars" onclick="oNav()"></i>
+    </header>
+    
+    <main class="cont">
+        <i class="down">⥥</i>
+    </main>
+</body>
+<script>
+    function oNav() {
+    document.getElementById('Btn').style.width='100%';
+}
+function cNav() {
+    document.getElementById('Btn').style.width='0%';
+}
+</script>
+</html>

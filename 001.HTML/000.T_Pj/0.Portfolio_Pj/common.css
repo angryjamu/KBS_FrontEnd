@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+body,header,h1,h2,h3,h4,h5,h6,ul,ol,li,p{
+    margin: 0;
+    padding: 0;
+}
+.menubox{
+    position: absolute;
+    left: 10%;
+    top: 50px
+}
+.menubox img{
+    width: 30px;
+    cursor: pointer;
+}
+.logo{
+    width: 195px;
+    margin: 0 auto;
+}
+.logo a{
+    display: block;
+    margin-top: 35px;
+}
+.logo img{
+    width: 100%;
+}
