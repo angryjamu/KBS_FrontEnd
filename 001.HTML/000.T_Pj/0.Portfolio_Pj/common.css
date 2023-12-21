@@ -4,10 +4,20 @@ body,header,h1,h2,h3,h4,h5,h6,ul,ol,li,p{
     margin: 0;
     padding: 0;
 }
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    color: #292929;
+}
+ul,li,ol{
+    list-style: none;
+}
 .menubox{
     position: absolute;
     left: 10%;
-    top: 50px
+    top: 48px
 }
 .menubox img{
     width: 30px;
@@ -23,4 +33,29 @@ body,header,h1,h2,h3,h4,h5,h6,ul,ol,li,p{
 }
 .logo img{
     width: 100%;
+}
+
+.imgbox{
+    text-align: center;
+    margin-top: 100px;
+}
+.imgbox img{
+    width: 600px;
+    height: 480px;
+}
+.footer{
+    
+}
+.footer .contact{
+    margin: 140px 0 auto;
+    padding-top: 20px;
+    border-top: 2px solid #525252;
+    display: flex;
+    justify-content: center;
+}
+.footer .contact li{
+    padding: 0 20px;
+}
+.footer .contact a{
+    display: block;
 }
