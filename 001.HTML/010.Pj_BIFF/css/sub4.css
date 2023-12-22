@@ -78,13 +78,24 @@ audio{
     width: 45px;
     height: 45px;
     z-index: 10;
-    background-color: transparent;
 }
 
 .logo img {
     width: 100%;
     border-radius: 50%;
+}
 
+.logo:hover img{
+    animation: logoFilter 2s alternate infinite;
+}
+
+@keyframes logoFilter {
+    0% {
+        filter: 0;
+    }
+    100% {
+        filter: invert(64%) sepia(60%) saturate(7438%) hue-rotate(197deg) brightness(107%) contrast(101%);
+    }
 }
 
 .gnb2 ul {
@@ -106,7 +117,6 @@ audio{
     margin: 0 auto;
     overflow: hidden;
     display: flex;
-
     animation: menuAni 1s ease-out 1s forwards;
 }
 
