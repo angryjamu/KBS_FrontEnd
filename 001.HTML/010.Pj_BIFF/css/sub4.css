@@ -7,7 +7,8 @@
 /* font-family: 'Gowun Batang', serif; */
 /* font-family: 'IM Fell English SC', serif; */
 /* font-family: 'Poor Story', cursive; */
-
+html {
+}
 html,
 body,
 h1,
@@ -22,6 +23,7 @@ ol {
 html,
 body {
     /* overflow: hidden; */
+    scroll-behavior: smooth;
     font-family: 'IM Fell English SC', serif;
     font-family: 'Poor Story', cursive;
 }
@@ -264,7 +266,7 @@ audio{
 }
 
 .ghilogo{
-    margin-top: 20px;
+    vertical-align: middle;
     height: 35px;
 }
 
@@ -280,11 +282,11 @@ audio{
 }
 
 .gnb1>ul>li:nth-child(1):hover .smenu {
-    height: 140px;
+    height: 120px;
 }
 
 .gnb1>ul>li:nth-child(2):hover .smenu {
-    height: 180px;
+    height: 160px;
 }
 
 .gnb1>ul>li:nth-child(3):hover .smenu {
