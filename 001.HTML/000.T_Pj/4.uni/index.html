@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천문대 연습페이지</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-----------------------------------------header----------------------------------------->
+    <header class="header">
+        <div class="weatherbox">
+                <div class="wdate">
+                    <span>12-15</span>
+                </div>
+                <div class="wicon">
+                    <img src="img/03d.svg" alt="weather">
+                </div>
+                <div class="wtemp">
+                    11&#176;
+                </div>
+        </div>
+        <h1 class="logo">
+            <a href="#"><img src="img/L3.png" alt="로고"></a>
+        </h1>
+        <nav class="gnb">
+            <ul class="mainManu">
+                <li><a href="#">천문대 소개</a>
+                    <ul class="sMenu sMenu1">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">시설소개</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">프로그램</a>
+                    <ul class="sMenu smenu2">
+                        <li><a href="#">단체 프로그램</a></li>
+                        <li><a href="#">일일 프로그램</a></li>
+                        <li><a href="#">예약하기</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">갤러리</a></li>
+            </ul>
+        </nav>
+        <i class="ham" onclick="oNav()">&#9776;</i>
+        <nav id="navi">
+            <i class="cBtn" onclick="cNav()">&times;</i>
+        <div class="sideMenu">
+            <ul>
+                <li><a href="#">천문대 소개</a>
+                    <ul class="sideSubMenu">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">시설소개</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">프로그램</a>
+                    <ul class="sideSubMenu">
+                        <li><a href="#">단체 프로그램</a></li>
+                        <li><a href="#">일일 프로그램</a></li>
+                        <li><a href="#">예약하기</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">갤러리</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <!-----------------------------------------main----------------------------------------->
+    <main class="cont1">
+        <div class="txtbox">
+            <p class="firstP">별이 보고 싶을 땐</p>
+            <h2>중미산천문대</h2>
+            <p class="scndP">해발 420M에 위치한 중미산천문대는<br>
+                수도권에서 가장 많은 별을 볼 수 있는 곳입니다.</p>
+        </div>
+        <div class="indi">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </main>
+    <!-----------------------------------------cont2----------------------------------------->
+    <div class="cont cont2">
+        <div class="cont2box">
+            <div class="txtbox">
+                <p class="mtxt">바로가기 서비스 안내글입니다.</p>
+                <p class="stxt">바로가기 서비스 소개글입니다.바로가기 서비스 소개글입니다.<br>
+                    바로가기 서비스 두번째줄 입니다.바로가기 서비스 두번째줄 입니다.
+                </p>
+            </div>
+            <ul>
+                <li><a href="#">운영 프로그램</a></li>
+                <li><a href="#">예약하기</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">갤러리</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-----------------------------------------cont3----------------------------------------->
+    <div class="cont cont3">
+        <div class="cont3box">
+            <h2>이달의 관측</h2>
+            <div class="planetBox">
+                <div class="planetTxt">
+                    <h3 class="date">2023.11</h3>
+                    <p class="tit">11월 관측 행성 제목</p>
+                    <p class="tit2">11월 관측 행성 소개글, 설명글 입니다.<br>
+                        설명 두번째줄 입니다.
+                    </p>
+                </div>
+                <div class="planetImg">
+                    <a href="img/planet1.jpg"><img src="img/planet1.jpg" alt="행성1"></a>
+                </div>
+            </div>
+            <div class="planetBox">
+                <div class="planetTxt">
+                    <h3 class="date">2023.12</h3>
+                    <p class="tit">12월 관측 행성 제목</p>
+                    <p class="tit2">12월 관측 행성 소개글, 설명글 입니다.<br>
+                        설명 두번째줄 입니다.
+                    </p>
+                </div>
+                <div class="planetImg">
+                    <a href="img/planet2.jpg"><img src="img/planet2.jpg" alt="행성2"></a>
+                </div>
+            </div>
+            <div class="planetBox">
+                <div class="planetTxt">
+                    <h3 class="date">2024.01</h3>
+                    <p class="tit">1월 관측 행성 제목</p>
+                    <p class="tit2">1월 관측 행성 소개글, 설명글 입니다.<br>
+                        설명 두번째줄 입니다.
+                    </p>
+                </div>
+                <div class="planetImg">
+                    <a href="img/planet3.jpg"><img src="img/planet3.jpg" alt="행성3"></a>
+                </div>
+            </div>
+        </div>
+        <div class="indi2">
+            <i class="fa fa-angle-left arrow" style="font-size: 24px;"></i>
+            <span class="dot2"></span>
+            <span class="dot2"></span>
+            <span class="dot2"></span>
+            <span class="dot2"></span>
+            <span class="dot2"></span>
+            <i class="fa fa-angle-right arrow" style="font-size: 24px;"></i>
+        </div>
+    </div>
+    <!-----------------------------------------cont4----------------------------------------->
+    <div class="cont cont4">
+        <h2 class="cont4tit">천문대 소개 및 SNS</h2>
+        <div class="screen">
+            <iframe src="https://www.youtube.com/embed/qpNUKa6mE8o"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+            <div class="snspart">
+                <h4 class="snstit">SNS영역</h4>
+                <div class="snsbox">
+                    <ul class="snslogo">
+                        <li><a href="#"><img src="img/iconI.png" alt="INSTAGRAM"></a></li>
+                        <li><a href="#"><img src="img/iconF.png" alt="FACEBOOK"></a></li>
+                        <li><a href="#"><img src="img/iconY.png" alt="BLOG"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-----------------------------------------footer----------------------------------------->
+<footer>
+    <div class="fwrap">
+        <h1 class="flogo"><a href="#"><img src="img/L3.png" alt="로고"></a></h1>
+            <span class="adr">경기도 양평군 옥천면 중미산로 1268</span>
+            <span class="adr">문의전화  0507-1319-0306</span>
+            <span class="adr">이메일 jungmiastro@naver.com</span>
+            <a href="#">개인정보처리방침</a>
+            <p class="copy">copyright ⓒ 중미산천문대. all rights reserved.</p>
+        </div>
+
+</footer>
+<script>
+    function oNav() {
+        document.getElementById('navi').style.width = '17%';
+    }
+    function cNav() {
+        document.getElementById('navi').style.width = '0';
+    }
+</script>
+
+</html>
