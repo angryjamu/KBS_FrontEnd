@@ -7,6 +7,9 @@ html,body,header,h1,h2,h3,h4,h5,h6,nav,ul,ol,li,a,p{
     list-style: none;
     font-size: 16px;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: url(img/bbbg2.jpg) no-repeat center center /cover;
     background-attachment: fixed;
@@ -41,7 +44,9 @@ img{
 .header{
     min-height: 110px;
     background-color: #55555538;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
 }
 .weatherbox{
     display: flex;
@@ -197,7 +202,7 @@ img{
 }
 /* ---------------------------------------main--------------------------------------- */
 .cont1{
-    height: 950px;
+    height: 1000px;
     background: url(img/mim.jpg ) no-repeat center center/cover;
     position: relative;
 }
