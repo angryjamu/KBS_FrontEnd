@@ -53,11 +53,10 @@ strong {
 
 audio{
     position: absolute;
-    z-index: 999;
-    top: 5%;
-    left: 76%;
-    max-width: 100%;
-    height: 30px;
+    top: 45px;
+    right: 0;
+    width: 100px;
+    height: 15px;
 }
 
 /******************************************* 상단 *******************************************/
@@ -393,7 +392,7 @@ audio{
 .play-triangle {
     width: 600px;
     height: 400px;
-    background-color: #fff;
+    background-color: #fff5;
     cursor: pointer;
 }
 
