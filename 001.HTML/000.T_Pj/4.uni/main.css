@@ -43,7 +43,7 @@ img{
 /* ---------------------------------------header--------------------------------------- */
 .header{
     min-height: 110px;
-    background-color: #55555538;
+    background-color: #6565653b;
     position: fixed;
     width: 100%;
     z-index: 99999;
@@ -210,7 +210,7 @@ img{
     color: #fafafa;
     position: absolute;
     left: 15%;
-    top: 22%;
+    top: 30%;
     font-weight: normal;
 }
 
