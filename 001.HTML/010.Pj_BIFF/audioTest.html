@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ocean Sounds Page</title>
+    <style>
+        /* Add your styles here */
+        .audio-wave {
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #0077cc;
+            animation: wave 1.5s infinite ease;
+            opacity: 0;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-wave" onclick="toggleAudio()">
+        <div id="wave-animation" class="wave-animation"></div>
+    </div>
+
+    <audio id="bgm" src="./img/ocean_waves.mp3"></audio>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('bgm');
+            var waveAnimation = document.getElementById('wave-animation');
+
+            if (audio.paused) {
+                audio.play();
+                waveAnimation.style.opacity = 0.8;
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+                waveAnimation.style.opacity = 0;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -40,6 +40,28 @@ img{
 *{
     box-sizing: border-box;
 }
+
+.cont a {
+    text-decoration: none; /* 밑줄 제거 */
+    position: relative; /* 부모 기준으로 하위 요소의 위치 설정 */
+}
+
+.cont a::after {
+    content: ''; /* 가상 요소 생성 */
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #03a6ff; /* 밑줄 색상 설정 */
+    transform: scaleX(0); /* 초기에는 안 보이게 설정 */
+    transition: transform 0.4s ease; /* 밑줄 나타내기 효과 */
+}
+
+.cont a:hover::after {
+    transform: scaleX(1); /* 호버 시 밑줄 나타내기 */
+}
+
 /* ---------------------------------------header--------------------------------------- */
 .header{
     min-height: 110px;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ocean Sounds Page</title>
+    <style>
+        /* Add your styles here */
+        .audio-wave {
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #0077cc;
+            animation: wave 1.5s infinite ease;
+            opacity: 0;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-wave" onclick="toggleAudio()">
+        <div id="wave-animation" class="wave-animation"></div>
+    </div>
+
+    <audio id="bgm" src="./img/ocean_waves.mp3"></audio>
+
+    <script>
+        var audio = document.getElementById('bgm');
+        var waveAnimation = document.getElementById('wave-animation');
+        var isPlaying = false;
+
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                waveAnimation.style.animationPlayState = 'paused';
+                waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
+                waveAnimation.style.opacity = 0.8;
+            } else {
+                audio.play();
+                waveAnimation.style.animationPlayState = 'running';
+                waveAnimation.style.opacity = 0.8;
+            }
+            isPlaying = !isPlaying;
+        }
+
+        audio.addEventListener('ended', function() {
+            // Reset animation when audio playback ends
+            waveAnimation.style.animationPlayState = 'paused';
+            waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
+            waveAnimation.style.opacity = 0.8;
+            isPlaying = false;
+        });
+    </script>
+
+</body>
+</html>

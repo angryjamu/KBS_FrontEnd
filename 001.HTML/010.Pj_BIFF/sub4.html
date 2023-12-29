@@ -89,6 +89,18 @@
                     </ul>
                 </div>
             </div>
+            <div class="audioBox">
+                <div class="audio-wave" onclick="toggleAudio()">
+                    <div id="wave-animation" class="wave-animation"></div>
+                </div>
+                <!-- <audio id="bgm" autoplay controls loop onloadstart="this.volume=0.3">
+                    <source src="./img/ocean_waves.mp3" autoplay type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    이 브라우저에서는 오디오가 지원되지 않습니다.
+                </audio> -->
+                <audio id="bgm" autoplay loop onloadstart="this.volume=0.3" src="./img/ocean_waves.mp3"></audio>
+
+            </div>
 
         </header>
     </div>
@@ -97,11 +109,10 @@
     <div id="cont">
         <section id="pg" class="cont1">
             <video class="Mvideo" src="./img/ocean_waves.mp4" autoplay muted loop></video>
-            <audio autoplay controls loop onloadstart="this.volume=0.3">
-                <source src="./img/ocean_waves.mp3" autoplay type="audio/mpeg">
-                Your browser does not support the audio element.
-                이 브라우저에서는 오디오가 지원되지 않습니다.
-            </audio>
+
+            
+        
+
             <div class="play-backdrop"></div>
             <div class="backmain">
                 <div onclick="location.href ='./index.html'">
@@ -128,9 +139,38 @@
             </div>
         </section>
         <!-- partial -->
+        
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
         <script src="./JS/submain.js"></script>
-
+        <!-- audio script -->
+        <script>
+            var audio = document.getElementById('bgm');
+            var waveAnimation = document.getElementById('wave-animation');
+            var isPlaying = false;
+    
+            function toggleAudio() {
+                if (isPlaying) {
+                    audio.pause();
+                    waveAnimation.style.animationPlayState = 'paused';
+                    waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
+                    waveAnimation.style.opacity = 0.8;
+                } else {
+                    audio.play();
+                    waveAnimation.style.animationPlayState = 'running';
+                    waveAnimation.style.opacity = 0.8;
+                }
+                isPlaying = !isPlaying;
+            }
+    
+            audio.addEventListener('ended', function() {
+                // Reset animation when audio playback ends
+                waveAnimation.style.animationPlayState = 'paused';
+                waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
+                waveAnimation.style.opacity = 0.8;
+                isPlaying = false;
+            });
+        </script>
+    
         <!-- /******************************************* cont2 *******************************************/ -->
         <!-- <main class="cont ibx"> -->
         <section id="pg1" class="cont2">
@@ -152,7 +192,7 @@
                                 <p>
                                     스튜디오 지브리가 제작한 TV판 애니메이션이다. 도쿄에서 전학 온 리카코를 좋아하게 된 타쿠와 마츠노의 우정과 사랑을 그린 이야기. <br><br>
 
-                                    &lt;바다가 들린다&gt;의 의미는 상당히 제유적으로 나타난다. 때문에 단순히 바다를 자주 보여준다거나 하와이가 등장하는 것에서 의미를 찾아야 하는
+                                    &lt;바다가 들린다&gt;의 의미는 상당히 비유적으로 나타난다. 때문에 단순히 바다를 자주 보여준다거나 하와이가 등장하는 것에서 의미를 찾아야 하는
                                     것이 아니라 그들이 어른이 되어서 생각하는 성장의 과정을 생각해 봐야 한다.<br><br>
 
                                     특히 동창회에서 타쿠는 시미즈와 대화를 나누던 중<br> “학교 이외의 세계가 생기면 싫은 애 한둘 쯤은 어떻게 되어도 상관없다고 생각하게 된다”는
