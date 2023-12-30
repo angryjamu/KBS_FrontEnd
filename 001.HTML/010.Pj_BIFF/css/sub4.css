@@ -225,6 +225,7 @@ strong {
     /* 보이는 화면에 꽉참 */
     background-color: #8fb5c4;
     transition: right .4s ease-in-out;
+    z-index: 99999;
 }
 
 .gnb1.on {
