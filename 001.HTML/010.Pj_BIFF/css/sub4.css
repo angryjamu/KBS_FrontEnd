@@ -29,6 +29,7 @@ body {
 a {
     color: #000;
     text-decoration: none;
+    font-size: 16px;
 }
 
 body {
@@ -225,7 +226,7 @@ strong {
     /* 보이는 화면에 꽉참 */
     background-color: #8fb5c4;
     transition: right .4s ease-in-out;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .gnb1.on {
@@ -359,7 +360,7 @@ strong {
     height: 100px;
     position: absolute;
     cursor: pointer;
-    z-index: 99999;
+    z-index: 99;
 }
 
 .play-backdrop {
