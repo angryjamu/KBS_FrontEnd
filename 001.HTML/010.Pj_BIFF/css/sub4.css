@@ -87,8 +87,16 @@ strong {
         opacity: 0;
     }
 }
-  
 
+.audiotxt{
+    position: absolute;
+    white-space: nowrap;
+    top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+
+}
 /******************************************* 상단 *******************************************/
 #top {
     position: fixed;
