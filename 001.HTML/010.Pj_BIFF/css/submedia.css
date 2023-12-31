@@ -3,20 +3,6 @@
 /************************* 모바일기준 800px 이하 *************************/
 @media only screen and (max-width: 800px) {
 
-    .tbl_schedule .sch_li .sch_it {
-        text-align: center;
-        width: auto;
-        left: 10%;
-    }
-
-    .tbl_schedule .sch_li .sch_it.blank_wrap,
-    .sch_it_blank {
-        display: none;
-    }
-
-    .tbl_schedule .sch_li .sch_li_tit {
-        padding: 15px 10px;
-    }
 
 }
 
@@ -87,39 +73,4 @@
     .menu {
         font-size: 23px;
     }
-
-    .tbl_schedule .sch_li .sch_li_tit {
-        font-size: 15px;
-        border: 1px solid #e0e0e0;
-        margin-bottom: 10px;
-        padding: 8px 6px;
-    }
-
-    .tbl_schedule .sch_li .sch_it {
-        height: 190px;
-        padding: 30px 8px 10px 8px;
-        margin: 1px;
-        width: 32%;
-    }
-
-    .tbl_schedule .sch_li .sch_it .code {
-        font-size: 12px;
-        padding: 3px 6px;
-        line-height: 1.2;
-        right: auto;
-        top: 10px;
-        left: 10px;
-    }
-
-    .tbl_schedule .sch_li .sch_it .time {
-        font-size: 14px;
-        margin-top: 4px;
-    }
-
-    .tbl_schedule .sch_li .sch_it .grade {
-        margin-top: 4px;
-        left: 8px;
-    }
-
-
 }
