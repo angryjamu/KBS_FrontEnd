@@ -112,9 +112,6 @@
         <section id="pg" class="cont1">
             <video class="Mvideo" src="./img/ocean_waves.mp4" autoplay muted playsinline loop></video>
 
-            
-        
-
             <div class="play-backdrop"></div>
             <div class="backmain">
                 <div onclick="location.href ='./index.html'">
@@ -140,43 +137,11 @@
                 </div>
             </div>
         </section>
-        <!-- partial -->
-        
+
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
         <script src="./JS/submain.js"></script>
-        <!-- audio script -->
-        <script>
-            var audio = document.getElementById('bgm');
-            var waveAnimation = document.getElementById('wave-animation');
-            var isPlaying = false;
-    
-            function toggleAudio() {
-                if (isPlaying) {
-                    audio.pause();
-                    waveAnimation.style.animationPlayState = 'paused';
-                    waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
-                    waveAnimation.style.opacity = 0.8;
-                } else {
-                    audio.play();
-                    waveAnimation.style.animationPlayState = 'running';
-                    waveAnimation.style.opacity = 0.8;
-                }
-                isPlaying = !isPlaying;
-            }
-    
-            audio.addEventListener('ended', function() {
-                // Reset animation when audio playback ends
-                waveAnimation.style.animationPlayState = 'paused';
-                waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
-                waveAnimation.style.opacity = 0.8;
-                isPlaying = false;
-            });
-
-            
-        </script>
     
         <!-- /******************************************* cont2 *******************************************/ -->
-        <!-- <main class="cont ibx"> -->
         <section id="pg1" class="cont2">
             <div class="characters">
                 <h2>바다가 들린다 | Ocean Waves</h2>
