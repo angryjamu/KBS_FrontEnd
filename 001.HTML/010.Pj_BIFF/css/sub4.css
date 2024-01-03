@@ -95,8 +95,18 @@ strong {
     font-size: 20px;
     font-weight: bold;
     color: #fff;
-
 }
+
+.audiotxt:hover {
+    color: #0061f5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.audiotxt:active {
+    transform: scale(0.95);
+}
+
 /******************************************* 상단 *******************************************/
 #top {
     position: fixed;
