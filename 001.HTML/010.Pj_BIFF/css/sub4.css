@@ -71,7 +71,7 @@ strong {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #0077cc;
+    background-color: #0061f5;
     animation: wave 2s infinite ease;
     opacity: 0;
     cursor: pointer;
@@ -80,11 +80,11 @@ strong {
 @keyframes wave {
     0% {
         transform: translate(-50%, -50%) scale(0);
-        opacity: .9;
+        opacity: 1;
     }
     100% {
         transform: translate(-50%, -50%) scale(1);
-        opacity: 0;
+        opacity: .1;
     }
 }
 
@@ -130,19 +130,6 @@ strong {
 .logo img {
     width: 100%;
     border-radius: 50%;
-}
-
-.logo:hover img{
-    animation: logoFilter 2s alternate infinite;
-}
-
-@keyframes logoFilter {
-    0% {
-        filter: 0;
-    }
-    100% {
-        filter: invert(64%) sepia(60%) saturate(7438%) hue-rotate(197deg) brightness(107%) contrast(101%);
-    }
 }
 
 .gnb2 ul {
@@ -304,9 +291,6 @@ strong {
     display: block;
     transition: .5s;
 }
-/* .gnb1>ul>li>a{
-    font-size: 30px;
-} */
 
 .gnb1>ul>li:hover>a {
     color: #31da12;
@@ -323,10 +307,6 @@ strong {
     overflow: hidden;
     transition: height .4s ease-in-out;
 }
-
-/* .smenu a{
-    font-size: 24px;
-} */
 
 .smenu a:hover {
     color: #0037b4;
@@ -346,22 +326,9 @@ strong {
 }
 
 /******************************************* Cont1 *******************************************/
+
 .cont1 {
     position: relative;
-}
-
-.back {
-    position: absolute;
-    top: 9%;
-    left: 3%;
-    z-index: 99;
-    padding-left: 25px;
-    background-position-y: 6px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.cont1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,6 +345,17 @@ strong {
     overflow: hidden;
     text-align: center;
 }
+.back {
+    position: absolute;
+    top: 9%;
+    left: 3%;
+    z-index: 99;
+    padding-left: 25px;
+    background-position-y: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 .play-button {
     width: 100px;
