@@ -52,61 +52,6 @@ strong {
     box-sizing: border-box;
 }
 
-.audioBox{
-    position: absolute;
-    top: 10%;
-    left: 20px;
-}
-.audio-wave {
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-.wave-animation {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(0);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #0061f5;
-    animation: wave 2s infinite ease;
-    opacity: 0;
-    cursor: pointer;
-}
-
-@keyframes wave {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: .1;
-    }
-}
-
-.audiotxt{
-    position: absolute;
-    white-space: nowrap;
-    top: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-}
-
-.audiotxt:hover {
-    color: #0061f5;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.audiotxt:active {
-    transform: scale(0.95);
-}
-
 /******************************************* 상단 *******************************************/
 #top {
     position: fixed;
@@ -325,6 +270,61 @@ strong {
     height: 80px;
 }
 
+.audioBox{
+    position: absolute;
+    top: 10%;
+    left: 20px;
+}
+.audio-wave {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.wave-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0061f5;
+    animation: wave 2s infinite ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .1;
+    }
+}
+
+.audiotxt{
+    position: absolute;
+    white-space: nowrap;
+    top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.audioBox:hover .audiotxt {
+    color: #0061f5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.audiotxt:active {
+    transform: scale(0.95);
+}
+
 /******************************************* Cont1 *******************************************/
 
 .cont1 {
@@ -406,12 +406,6 @@ strong {
 .play-close::after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-}
-
-.play-circles {
-    display: block;
-    width: 100%;
-    height: 100%;
 }
 
 .play-perspective {
@@ -601,6 +595,10 @@ section .inner{
     width: 43.3%;
     margin: 0 auto;
     margin-top: 3em;
+}
+
+.cont3 .end img{
+    width: 100%;
 }
 
 .cont3 .txtbx{
