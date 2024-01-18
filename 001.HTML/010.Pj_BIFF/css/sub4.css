@@ -26,6 +26,7 @@ body {
 }
 
 body {
+    cursor: url(../img/sealogo.jpeg), auto;
     color: #333333;
 }
 
@@ -34,7 +35,7 @@ a {
     text-decoration: none;
 }
 
-p{
+p {
     font-size: 100%;
     line-height: 1.5em;
 }
@@ -45,7 +46,7 @@ strong {
 }
 
 .cont1 {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -142,7 +143,7 @@ strong {
     color: #ddd;
 }
 
-.gnb2 a:hover{
+.gnb2 a:hover {
     color: #0061f5;
 }
 
@@ -242,7 +243,7 @@ strong {
     background-color: #213490d6;
 }
 
-.ghilogo{
+.ghilogo {
     vertical-align: middle;
     height: 35px;
 }
@@ -270,11 +271,12 @@ strong {
     height: 80px;
 }
 
-.audioBox{
+.audioBox {
     position: absolute;
     top: 10%;
     left: 20px;
 }
+
 .audio-wave {
     position: relative;
     width: 50px;
@@ -300,13 +302,14 @@ strong {
         transform: translate(-50%, -50%) scale(0);
         opacity: 1;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: .1;
     }
 }
 
-.audiotxt{
+.audiotxt {
     position: absolute;
     white-space: nowrap;
     top: 15px;
@@ -329,22 +332,21 @@ strong {
 
 .cont1 {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-position: center;
-    background-size: cover;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .Mvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    overflow: hidden;
-    text-align: center;
 }
+
 .back {
     position: absolute;
     top: 9%;
@@ -357,171 +359,99 @@ strong {
 }
 
 
-.play-button {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    cursor: pointer;
-    z-index: 99;
-}
-
-.play-backdrop {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #000;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.play-close {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 0;
-    bottom: calc(100% + 15px);
-    border: none;
-    outline: none;
-    background: none;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.play-close::before,
-.play-close::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background-color: #fff;
-}
-
-.play-close::after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.play-perspective {
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    left: -230px;
-    top: -125px;
-}
-
-.play-triangle {
-    width: 600px;
-    height: 400px;
-    background-color: #fff5;
-    cursor: pointer;
-}
-
 /******************************************* Cont2 ******************************************/
-.characters{
+.characters {
     margin: 0 auto;
     max-width: 1300px;
     padding: 60px 60px 80px;
     background-color: #17171721;
 }
 
-.characters h2{
+.characters h2 {
     font-size: 260%;
     line-height: 1.2em;
     text-decoration: overline;
-    padding: 0;
     background-color: transparent;
-    border-radius: 0;
     font-weight: normal;
-    margin-bottom: 0;
 }
 
-.cbwrap>.box1:first-child{
+.cbwrap>.box1:first-child {
     padding-top: 30px;
 }
-.cbwrap>.box1{
+
+.cbwrap>.box1 {
     position: relative;
     padding: 0;
     margin-bottom: -1px;
 }
 
-.cbwrap > div > div{
+.cbwrap>div>div {
     padding: 15px 0;
 }
-.cbwrap > div > div{
-    border-bottom: 1px solid #ccc;
-}
-.imgtxtbx{
+
+.imgtxtbx {
     border-top: 1px solid #ccc;
 }
 
-.imgtxtbx > div.txtbx{
+.imgtxtbx>div.txtbx {
     padding: 30px 30px;
     box-sizing: border-box;
     position: relative;
     vertical-align: middle;
 }
-.imgtxtbx > div{
-    display: table-cell !important;
+
+.imgtxtbx>div {
+    display: table-cell;
     vertical-align: top;
     width: 50%;
     text-align: center;
 }
 
-.imgtxtbx .iimg{
+.imgtxtbx .iimg {
     margin-bottom: 30px;
     max-width: 200px;
 }
 
-.iimg{
+.iimg {
     min-width: 160px;
 }
 
-.txtbx h3{
+.txtbx h3 {
     text-align: center;
-    line-height: 1.3em !important;
+    line-height: 1.3em;
 }
-h3{
-    border: none;
+
+h3 {
     padding: 0;
     font-size: 155%;
     font-weight: normal;
     margin-bottom: 20px;
     margin-top: 0;
-    display: table;
     width: 100%;
 }
-.txtbx h3 span{
+
+.txtbx h3 span {
     font-size: 80%;
     display: block;
 }
 
-.txtbx p{
+.txtbx p {
     text-align: center;
     margin: 15px 0 0;
 }
 
-.cbwrap .imgtxtbx > .imgbx{
+.cbwrap .imgtxtbx>.imgbx {
     text-align: center;
     position: relative;
     left: 0;
-    background-image: url(../img/sub4img/poster1.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 550px auto;
+    background: url(../img/sub4img/poster1.jpeg) no-repeat center center/550px auto;
 }
 
-.mainposter{
+.mainposter {
     display: block;
 }
 
-.cont2 .imgbx div{
+.cont2 .imgbx div {
     padding-top: 101%;
     background-position: center;
     background-size: cover;
@@ -530,31 +460,31 @@ h3{
     position: relative;
 }
 
-.cont2{
-    background-image: url(../img/sub4img/bottomback.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.cont2 {
+    background: url(../img/sub4img/bottomback.jpeg) no-repeat 50% 50%/cover;
     margin-bottom: 0;
 }
 
-.cbwrap .imgtxtbx > .scdimg{
+.cbwrap .imgtxtbx>.scdimg {
     background-image: url(../img/sub4img/taku2.gif);
     background-size: 540px auto;
     top: 0;
 }
-.cbwrap .imgtxtbx > .trdimg{
+
+.cbwrap .imgtxtbx>.trdimg {
     background-image: url(../img/sub4img/rikako.gif);
     background-size: 540px auto;
     top: 0;
 }
-.cbwrap .imgtxtbx > .fimg{
+
+.cbwrap .imgtxtbx>.fimg {
     background-image: url(../img/sub4img/utaka.gif);
     background-size: 540px auto;
     top: 0;
     left: 12%;
 }
-.cbwrap .imgtxtbx > .fifimg{
+
+.cbwrap .imgtxtbx>.fifimg {
     background-image: url(../img/sub4img/umi0.jpeg);
     background-size: 540px auto;
     top: 0;
@@ -568,21 +498,17 @@ h3{
     background-size: cover;
 }
 
-section .inner{
+section .inner {
     width: 94%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.tit{
+.tit {
     font-size: 36px;
     display: block;
-    width: auto;
     margin-bottom: 1.5em;
     text-align: center;
-    visibility: visible;
-    animation-duration: 1.25s;
-    animation-name: fadeIn;
 }
 
 .cont3 .end {
@@ -591,11 +517,11 @@ section .inner{
     margin-top: 3em;
 }
 
-.cont3 .end img{
+.cont3 .end img {
     width: 100%;
 }
 
-.cont3 .txtbx{
+.cont3 .txtbx {
     margin: 2em 0;
     text-align: center;
     font-family: 'Poor Story', cursive;
@@ -603,33 +529,32 @@ section .inner{
     font-size: 17px;
 }
 
-.cont3 .txtbx p{
+.cont3 .txtbx p {
     text-decoration: underline;
 }
 
 /******************************************* 하단 *******************************************/
-#footer{
-    clear: both;
+#footer {
     padding: 10px 0 10px 0;
-    background:#a3a3a3;
+    background: #a3a3a3;
     font-size: 14px;
     color: #404040;
     text-align: center;
     font-weight: bolder;
 }
 
-.ghibli{
+.ghibli {
     height: 20px;
     margin-right: 5px;
     vertical-align: middle;
 }
 
-#footer a{
+#footer a {
     display: inline-block;
     margin-right: 5px;
     color: #404040;
 }
 
-#footer a:hover{
+#footer a:hover {
     text-decoration: underline;
 }
