@@ -1,9 +1,62 @@
 @charset "utf-8";
 
-/************************* 모바일기준 800px 이하 *************************/
-@media only screen and (max-width: 800px) {
+/************************* 모바일기준 1360px 이하 *************************/
+@media only screen and (max-width: 1360px) {
+    .cont1 {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+}
 
+/************************* 모바일기준 1230px 이하 *************************/
+@media only screen and (max-width: 1230px) {
 
+    .audiotxt{
+        font-size: 16px;
+    }
+
+    .cont2 .characters h2 {
+        font-size: 200%;
+    }
+
+    .cont2 h3{
+        margin-bottom: 5px;
+    }
+
+    #pg1 .box1:first-child{
+        height: 900px;
+    }
+
+    #pg1 .cbwrap .box1:first-child .imgtxtbx>.imgbx {
+        background-size: 460px auto;
+    }
+
+    #pg1 .box1:first-child .re{
+        top: 8%;
+    }
+
+    .cbwrap .imgtxtbx>.scdimg{
+        background-size: 450px auto;
+    }
+
+    .cbwrap .imgtxtbx>.trdimg {
+        background-size: 450px auto;
+    }
+    
+    .cbwrap .imgtxtbx>.fimg {
+        background-size: 450px auto;
+    }
+    
+    .cbwrap .imgtxtbx>.fifimg {
+        background-size: 450px auto;
+    }
+    
+    .txtbx p{
+        font-size: 15px;
+    }
 }
 
 /************************* 모바일기준 640px 이하 *************************/

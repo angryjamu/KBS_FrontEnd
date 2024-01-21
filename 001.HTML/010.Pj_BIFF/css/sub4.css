@@ -81,15 +81,6 @@ strong {
     border-radius: 50%;
 }
 
-.gnb2 ul {
-    width: 70%;
-    margin: 0 auto;
-    padding-top: 5px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
 .gnb2 {
     position: absolute;
     top: 50%;
@@ -101,6 +92,15 @@ strong {
     overflow: hidden;
     display: flex;
     animation: menuAni 1s ease-out 1s forwards;
+}
+
+.gnb2 ul {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 @keyframes menuAni {
@@ -133,10 +133,7 @@ strong {
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-
-.gnb2 li {
-    font-size: 16px;
+    visibility: visible;
 }
 
 .gnb2 a {
@@ -273,7 +270,7 @@ strong {
 
 .audioBox {
     position: absolute;
-    top: 10%;
+    top: 100%;
     left: 20px;
 }
 
@@ -332,10 +329,7 @@ strong {
 
 .cont1 {
     position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
+    height: 100vh;
 }
 
 .Mvideo {
@@ -347,7 +341,7 @@ strong {
     object-fit: cover;
 }
 
-.back {
+/* .back {
     position: absolute;
     top: 9%;
     left: 3%;
@@ -356,10 +350,14 @@ strong {
     background-position-y: 6px;
     color: #fff;
     cursor: pointer;
-}
-
+} */
 
 /******************************************* Cont2 ******************************************/
+.cont2 {
+    background: url(../img/sub4img/bottomback.jpeg) no-repeat 50% 50%/cover;
+    margin-bottom: 0;
+}
+
 .characters {
     margin: 0 auto;
     max-width: 1300px;
@@ -371,7 +369,6 @@ strong {
     font-size: 260%;
     line-height: 1.2em;
     text-decoration: overline;
-    background-color: transparent;
     font-weight: normal;
 }
 
@@ -391,6 +388,28 @@ strong {
 
 .imgtxtbx {
     border-top: 1px solid #ccc;
+    position: relative;
+    height: 100%;
+}
+
+#pg1 .box1:first-child{
+    display: inline-block;
+    width: 100%;
+    height: 1000px;
+}
+
+#pg1 .box1:first-child .imgtxtbx .imgbx{
+    position: absolute;
+    height: 100%;
+}
+
+#pg1 .box1:first-child .re{
+    position: absolute;
+    top: 13%;
+    right: 0;
+    /* transform: translateY(-50%); */
+    /* height: 100%; */
+    padding-left: 30px;
 }
 
 .imgtxtbx>div.txtbx {
@@ -408,7 +427,7 @@ strong {
 }
 
 .imgtxtbx .iimg {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     max-width: 200px;
 }
 
@@ -421,7 +440,7 @@ strong {
     line-height: 1.3em;
 }
 
-h3 {
+.cont2 h3 {
     padding: 0;
     font-size: 155%;
     font-weight: normal;
@@ -442,27 +461,10 @@ h3 {
 
 .cbwrap .imgtxtbx>.imgbx {
     text-align: center;
+    text-indent: -9999px;
     position: relative;
     left: 0;
     background: url(../img/sub4img/poster1.jpeg) no-repeat center center/550px auto;
-}
-
-.mainposter {
-    display: block;
-}
-
-.cont2 .imgbx div {
-    padding-top: 101%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 30px 0 0;
-    position: relative;
-}
-
-.cont2 {
-    background: url(../img/sub4img/bottomback.jpeg) no-repeat 50% 50%/cover;
-    margin-bottom: 0;
 }
 
 .cbwrap .imgtxtbx>.scdimg {
@@ -481,7 +483,6 @@ h3 {
     background-image: url(../img/sub4img/utaka.gif);
     background-size: 540px auto;
     top: 0;
-    left: 12%;
 }
 
 .cbwrap .imgtxtbx>.fifimg {
