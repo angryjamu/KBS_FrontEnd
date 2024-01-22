@@ -14,6 +14,10 @@
 /************************* 모바일기준 1230px 이하 *************************/
 @media only screen and (max-width: 1230px) {
 
+    .cbtn {
+        top: 4px;
+    }
+
     .audiotxt {
         font-size: 16px;
     }
@@ -62,6 +66,23 @@
 /************************* 모바일기준 1040px 이하 *************************/
 @media only screen and (max-width: 1040px) {
 
+    .gnb1 {
+        width: 100%;
+    }
+
+    .gnb1 ul>li {
+        width: auto;
+    }
+
+    .gnb1>ul>li a {
+        width: auto;
+    }
+
+    .ham {
+        right: 0;
+    }
+
+
     .cont2 .characters h2 {
         font-size: 180%;
     }
@@ -87,19 +108,6 @@
 /************************* 모바일기준 640px 이하 *************************/
 @media only screen and (max-width: 640px) {
 
-    .gnb1 {
-        width: 100%;
-    }
-
-    .gnb1 ul>li {
-        width: auto;
-    }
-
-    .gnb1>ul>li a {
-        width: auto;
-    }
-
-
 }
 
 /************************* 모바일기준 600px 이하 *************************/
@@ -118,13 +126,7 @@
         }
     } */
 
-    .ham {
-        right: 0;
-    }
-
-    .cbtn {
-        right: 0%;
-    }
+    
 
 }
 
