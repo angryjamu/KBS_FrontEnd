@@ -129,6 +129,10 @@
         font-size: 23px;
     }
 
+    .gnb1 ul>li {
+        font-size: 28px;
+    }
+
     .cont2 .characters h2{
         font-size: 25px;
 
@@ -142,6 +146,10 @@
 /************************* 모바일기준 385px 이하 *************************/
 @media only screen and (max-width: 385px) {
 
+    .gnb1 ul>li {
+        font-size: 26px;
+    }
+
     .cont2 .characters h2{
         font-size: 23px;
     }
@@ -149,4 +157,5 @@
     .imgtxtbx .iimg {
         max-width: 190px
     }
+    
 }
