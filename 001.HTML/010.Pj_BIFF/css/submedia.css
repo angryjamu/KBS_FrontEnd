@@ -82,9 +82,14 @@
         right: 0;
     }
 
+    .cbtn{
+        right: 0;
+    }
+
 
     .cont2 .characters h2 {
-        font-size: 180%;
+        font-size: 190%;
+        text-align: center;
     }
     
     #pg1 .box1:first-child {
@@ -125,7 +130,10 @@
             width: 410px;
         }
     } */
-
+    .audiotxt {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+    }
     
 
 }
@@ -133,7 +141,7 @@
 /************************* 모바일기준 500px 이하 *************************/
 @media only screen and (max-width: 500px) {
 
-    /* .gnb2 li {
+    .gnb2 li {
         font-size: 1.3vh;
     }
 
@@ -148,9 +156,9 @@
         to {
             width: 330px;
         }
-    } */
+    }
 
     .menu {
-        font-size: 23px;
+        font-size: 11px;
     }
 }
