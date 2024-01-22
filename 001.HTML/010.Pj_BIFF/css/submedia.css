@@ -86,7 +86,6 @@
         right: 0;
     }
 
-
     .cont2 .characters h2 {
         font-size: 190%;
         text-align: center;
@@ -108,63 +107,42 @@
     .imgtxtbx .iimg {
         max-width: 250px;
     }
-}
 
-/************************* 모바일기준 640px 이하 *************************/
-@media only screen and (max-width: 640px) {
-
+    .imgtxtbx>div.txtbx {
+        padding: 20px 0px;
+    }
 }
 
 /************************* 모바일기준 600px 이하 *************************/
 @media only screen and (max-width: 600px) {
 
-    /* .gnb2 .lb {
-        width: 160px;
-    }
-    
-    .gnb2 .rb {
-        width: 160px;
-    }
-    @keyframes menuAni {
-        to {
-            width: 410px;
-        }
-    } */
     .audiotxt {
         font-size: 13px;
         color: rgba(255, 255, 255, 0.7);
     }
-    
-
 }
 
 /************************* 모바일기준 500px 이하 *************************/
 @media only screen and (max-width: 500px) {
-
-    /* .gnb2 li {
-        font-size: 1.3vh;
-    }
-
-    .gnb2 .lb {
-        width: 130px;
-    }
-    
-    .gnb2 .rb {
-        width: 130px;
-    }
-    @keyframes menuAni {
-        to {
-            width: 330px;
-        }
-    } */
 
     .menu {
         font-size: 23px;
     }
 
     .cont2 .characters h2{
-        /* font-size: 130%; */
-        
+        font-size: 25px;
+
+    }
+}
+
+/************************* 모바일기준 385px 이하 *************************/
+@media only screen and (max-width: 385px) {
+
+    .cont2 .characters h2{
+        font-size: 23px;
     }
 
+    .imgtxtbx .iimg {
+        max-width: 190px
+    }
 }
