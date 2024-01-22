@@ -14,7 +14,7 @@
 /************************* 모바일기준 1230px 이하 *************************/
 @media only screen and (max-width: 1230px) {
 
-    .audiotxt{
+    .audiotxt {
         font-size: 16px;
     }
 
@@ -22,11 +22,11 @@
         font-size: 200%;
     }
 
-    .cont2 h3{
+    .cont2 h3 {
         margin-bottom: 5px;
     }
 
-    #pg1 .box1:first-child{
+    #pg1 .box1:first-child {
         height: 900px;
     }
 
@@ -34,28 +34,53 @@
         background-size: 460px auto;
     }
 
-    #pg1 .box1:first-child .re{
+    #pg1 .box1:first-child .re {
         top: 8%;
     }
 
-    .cbwrap .imgtxtbx>.scdimg{
+    .cbwrap .imgtxtbx>.scdimg {
         background-size: 450px auto;
     }
 
     .cbwrap .imgtxtbx>.trdimg {
         background-size: 450px auto;
     }
-    
+
     .cbwrap .imgtxtbx>.fimg {
         background-size: 450px auto;
     }
-    
+
     .cbwrap .imgtxtbx>.fifimg {
         background-size: 450px auto;
     }
+
+    .txtbx p {
+        font-size: 16px;
+    }
+}
+
+/************************* 모바일기준 1040px 이하 *************************/
+@media only screen and (max-width: 1040px) {
+
+    .cont2 .characters h2 {
+        font-size: 180%;
+    }
     
-    .txtbx p{
-        font-size: 15px;
+    #pg1 .box1:first-child {
+        height: 100%;
+    }
+
+    #pg1 .box1 .imgtxtbx>.imgbx {
+        display: none;
+    }
+
+    #pg1 .box1:first-child .re {
+        position: relative;
+        padding-left: 0;
+    }
+
+    .imgtxtbx .iimg {
+        max-width: 250px;
     }
 }
 
