@@ -45,6 +45,10 @@ strong {
     font-weight: bolder;
 }
 
+abbr {
+    text-decoration: underline solid;
+}
+
 .cont1 {
     width: 100vw;
     height: 100vh;
