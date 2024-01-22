@@ -365,7 +365,7 @@ abbr {
 .characters {
     margin: 0 auto;
     max-width: 1300px;
-    padding: 60px 60px 80px;
+    padding: 60px;
     background-color: #17171721;
 }
 
@@ -411,13 +411,11 @@ abbr {
     position: absolute;
     top: 13%;
     right: 0;
-    /* transform: translateY(-50%); */
-    /* height: 100%; */
     padding-left: 30px;
 }
 
 .imgtxtbx>div.txtbx {
-    padding: 30px 30px;
+    padding: 30px;
     box-sizing: border-box;
     position: relative;
     vertical-align: middle;

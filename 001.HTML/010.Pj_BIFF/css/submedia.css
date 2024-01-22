@@ -101,7 +101,7 @@
 
     #pg1 .box1:first-child .re {
         position: relative;
-        padding-left: 0;
+        padding: 20px 0 0;
     }
 
     .imgtxtbx .iimg {
@@ -119,6 +119,10 @@
     .audiotxt {
         font-size: 13px;
         color: rgba(255, 255, 255, 0.7);
+    }
+
+    p.audiotxt {
+        margin-top: 20px;
     }
 }
 
