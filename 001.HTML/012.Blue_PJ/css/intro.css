@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+html,body,h1 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    cursor: url(../images/hand.png)100 100, auto;
+}
+.bg {
+    height: 100vh;
+    background: url(../images/hifive1.webp) no-repeat 0 0/cover;
+    filter: grayscale(1);
+}
+.bg:hover{
+    filter: grayscale(0);
+}
