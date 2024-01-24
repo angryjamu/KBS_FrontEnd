@@ -1,17 +1,60 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html,body,h1 {
     margin: 0;
     padding: 0;
 }
-body {
-    cursor: url(../images/hand.png)100 100, auto;
+a {
+    text-decoration: none;
+    color: #fff;
 }
-.bg {
-    height: 100vh;
+body {
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    /* cursor: url(../images/hand.png)100 100, auto; */
+
+}
+
+.wrap{
+    position: relative;
+    text-align: center;
+}
+.wrap .bg{
     background: url(../images/hifive1.webp) no-repeat 0 0/cover;
+    height: 100vh;
     filter: grayscale(1);
 }
-.bg:hover{
+.wrap .tit{
+    background-color: #9d4646;
+    position: absolute;
+    width: 20vw;
+    height: 40vh;
+    top: 35%;
+    left: 15%;
+    z-index: 1;
+    border-radius: 500px;
+    padding-top: 30px;
+    cursor: pointer;
+}
+.wrap .tit a{
+    line-height: 350px;
+    font-size: 2vw;
+}
+.wrap .tit:hover a{
+    color: dodgerblue;
+}
+.wrap .tit:hover+.bg{
     filter: grayscale(0);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .wrap .tit {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        padding-top: 15px;
+    }
 }
