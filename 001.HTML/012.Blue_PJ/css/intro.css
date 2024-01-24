@@ -65,10 +65,13 @@ a {
 @media (max-width: 768px) {
     .wrap .tit {
         top: 7%;
+        left: 11%;
         width: 100px;
         height: 130px;
         padding-top: 5px;
         line-height: 135px;
-        font-size: 1.3vw;
+    }
+    .wrap .tit a{
+        font-size: 1.5vw;
     }
 }
