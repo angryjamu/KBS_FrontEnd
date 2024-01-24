@@ -28,7 +28,7 @@ a {
     z-index: 1;
 }
 .wrap .tit{
-    background-color: #9d4646;
+    /* background-color: #9d4646; */
     position: absolute;
     width: 18vw;
     height: 40vh;
@@ -38,9 +38,9 @@ a {
     padding-top: 30px;
     cursor: pointer;
     z-index: 2;
+    line-height: 350px;
 }
 .wrap .tit a{
-    line-height: 350px;
     font-size: 1.9vw;
 }
 .wrap .tit:hover a{
@@ -64,10 +64,10 @@ a {
 /* 반응형 */
 @media (max-width: 768px) {
     .wrap .tit {
-        top: 5%;
+        top: 7%;
         width: 100px;
-        height: 150px;
-        line-height: 150px;
-        padding-top: 15px;
+        height: 130px;
+        padding-top: 5px;
+        line-height: 135px;
     }
 }
