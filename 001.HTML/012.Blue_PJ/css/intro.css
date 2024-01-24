@@ -5,54 +5,67 @@ html,body,h1 {
     margin: 0;
     padding: 0;
 }
-a {
-    text-decoration: none;
-    color: #fff;
-}
+
 body {
     font-family: 'Permanent Marker', cursive;
     letter-spacing: 2px;
     white-space: nowrap;
     /* cursor: url(../images/hand.png)100 100, auto; */
-
 }
-
+a {
+    text-decoration: none;
+    color: snow;
+}
 .wrap{
     position: relative;
     text-align: center;
 }
 .wrap .bg{
-    background: url(../images/hifive1.webp) no-repeat 0 0/cover;
+    position: relative;
+    background: url(../images/hifive1.webp) no-repeat 0 0/contain;
     height: 100vh;
     filter: grayscale(1);
+    z-index: 1;
 }
 .wrap .tit{
     background-color: #9d4646;
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 40vh;
-    top: 35%;
-    left: 15%;
-    z-index: 1;
+    top: 30%;
+    left: 12%;
     border-radius: 500px;
     padding-top: 30px;
     cursor: pointer;
+    z-index: 2;
 }
 .wrap .tit a{
     line-height: 350px;
-    font-size: 2vw;
+    font-size: 1.9vw;
 }
 .wrap .tit:hover a{
     color: dodgerblue;
 }
-.wrap .tit:hover+.bg{
+.wrap .tit:hover+.bg+.wall{
     filter: grayscale(0);
 }
+.wrap .wall{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    filter: grayscale(1);
+}
+.wrap .wall img{
+    width: 100vw;
+    height: 100vh;
+    vertical-align: middle;
+}
 
-/* 반응형 스타일 */
+/* 반응형 */
 @media (max-width: 768px) {
     .wrap .tit {
-        width: 150px;
+        top: 5%;
+        width: 100px;
         height: 150px;
         line-height: 150px;
         padding-top: 15px;
