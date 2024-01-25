@@ -1,7 +1,11 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-html,body,h1 {
+*{box-sizing: border-box;}
+
+html,
+body,
+h1 {
     margin: 0;
     padding: 0;
 }
@@ -10,25 +14,35 @@ body {
     font-family: 'Permanent Marker', cursive;
     letter-spacing: 2px;
     white-space: nowrap;
+    background-color: #999;
     /* cursor: url(../images/hand.png)100 100, auto; */
 }
+
 a {
     text-decoration: none;
     color: snow;
 }
-.wrap{
+
+.wrap {
     position: relative;
     text-align: center;
-}
-.wrap .bg{
-    position: relative;
-    background: url(../images/hifive1.webp) no-repeat 0 0/contain;
+    overflow: hidden;
+    width: 100vw;
     height: 100vh;
+    border: 1px solid red;
+}
+
+.wrap .bg {
+    position: relative;
+    background: url(../images/hifive1.webp) no-repeat 0 0/cover;
+    height: 80vh;
     filter: grayscale(1);
     z-index: 1;
+    border: 1px solid blue;
 }
-.wrap .tit{
-    /* background-color: #9d4646; */
+
+.wrap .tit {
+    border: 1px solid green;
     position: absolute;
     width: 18vw;
     height: 40vh;
@@ -40,25 +54,34 @@ a {
     z-index: 2;
     line-height: 350px;
 }
-.wrap .tit a{
-    font-size: 1.9vw;
-}
-.wrap .tit:hover a{
-    color: dodgerblue;
-}
-.wrap .tit:hover+.bg+.wall{
+
+.wrap .tit:hover+.bg {
     filter: grayscale(0);
 }
-.wrap .wall{
-    position: absolute;
+
+.wrap .tit a {
+    font-size: 1.9vw;
+}
+
+.wrap .wall {
+    /* filter: grayscale(1);
+    background: url(../images/hifive1.webp) no-repeat 0 0/cover; */
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    height: 100%;
+    width: 300%;
+    font-size: 100px;
+    /* border: 1px solid yellow;
+    background-color: lightyellow; */
     left: 0;
     bottom: 0;
-    filter: grayscale(1);
+    position: relative;
+    animation: left 15s linear infinite;
 }
-.wrap .wall img{
-    width: 100vw;
-    height: 100vh;
-    vertical-align: middle;
+
+.wrap .tit:hover+.bg+.wall {
+    filter: grayscale(0);
 }
 
 /* 반응형 */
@@ -71,7 +94,8 @@ a {
         padding-top: 5px;
         line-height: 135px;
     }
-    .wrap .tit a{
+
+    .wrap .tit a {
         font-size: 1.5vw;
     }
 }

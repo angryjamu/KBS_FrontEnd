@@ -7,6 +7,11 @@ function sMenu() {
 
 }; /// 햄버거메뉴 JS //////////////////////////
 
+// 로딩
+window.addEventListener('DOMContentLoaded', function () {
+
+});
+
 
             //audio script
             var audio = document.getElementById('bgm');
