@@ -396,18 +396,18 @@ abbr {
     height: 100%;
 }
 
-#pg1 .box1:first-child{
+#pg1 .box1:first-child {
     display: inline-block;
     width: 100%;
     height: 1000px;
 }
 
-#pg1 .box1:first-child .imgtxtbx .imgbx{
+#pg1 .box1:first-child .imgtxtbx .imgbx {
     position: absolute;
     height: 100%;
 }
 
-#pg1 .box1:first-child .re{
+#pg1 .box1:first-child .re {
     position: absolute;
     top: 13%;
     right: 0;
@@ -534,6 +534,28 @@ section .inner {
 
 .cont3 .txtbx p {
     text-decoration: underline;
+}
+
+/******************************************* Cont4 ******************************************/
+.cont4 .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.cont4 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont4 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /******************************************* 하단 *******************************************/
