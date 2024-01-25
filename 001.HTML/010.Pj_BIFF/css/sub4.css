@@ -547,6 +547,22 @@ section .inner {
     object-fit: cover;
 }
 
+.swiper-button-next, .swiper-button-prev{
+    margin: 0 1%;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    font-size: 30px;
+    color: snow;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff;
+}
+.swiper-pagination-bullet .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
 /******************************************* 하단 *******************************************/
 #footer {
     padding: 10px 0 10px 0;
