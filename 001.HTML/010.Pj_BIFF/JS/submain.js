@@ -5,13 +5,25 @@ function sMenu() {
     document.getElementsByClassName("gnb1").item(0);
   gnb1.classList.toggle("on");
 
-}; /// 햄버거메뉴 JS //////////////////////////
+};
+
+document.querySelectorAll('.gnb1 a').forEach(function (link) {
+  link.addEventListener('click', function () {
+      // .gnb1에게 "on" 클래스 제거
+      document.querySelector('.gnb1').classList.remove('on');
+  });
+});
+/// 햄버거메뉴 JS //////////////////////////
 
 // 로딩
-window.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+  var video = document.getElementsByClassName('Mvideo');
 
+  video.addEventListener('loadeddata', function () {
+      // 비디오가 로드된 후 실행되는 코드
+      console.log('비디오 로딩 완료');
+  });
 });
-
 
             //audio script
             let audio = document.getElementById('bgm');
