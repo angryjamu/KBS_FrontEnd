@@ -132,7 +132,12 @@
 
 /************************* 모바일기준 500px 이하 *************************/
 @media only screen and (max-width: 500px) {
-
+    .gnb2{
+        display: none;
+    }
+    .sideM{
+        display: block;
+    }
     .menu {
         font-size: 23px;
     }

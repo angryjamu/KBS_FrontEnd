@@ -102,13 +102,13 @@ abbr {
     margin: 0 auto;
     padding-top: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 10px;
 }
 
 @keyframes menuAni {
     to {
-        width: 260px;
+        width: 500px;
     }
 }
 
@@ -130,13 +130,13 @@ abbr {
 
 .gnb2 .rb {
     position: absolute;
-    width: 200px;
+    width: 245px;
     right: 0;
     top: 0;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    visibility: visible;
+    /* visibility: visible; */
 }
 
 .gnb2 a {
@@ -145,6 +145,10 @@ abbr {
 
 .gnb2 a:hover {
     color: #0061f5;
+}
+
+.sideM{
+    display: none;
 }
 
 .menu {
