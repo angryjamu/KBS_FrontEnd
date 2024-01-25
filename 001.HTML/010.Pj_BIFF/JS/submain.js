@@ -14,9 +14,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
             //audio script
-            var audio = document.getElementById('bgm');
-            var waveAnimation = document.getElementById('wave-animation');
-            var isPlaying = false;
+            let audio = document.getElementById('bgm');
+            let waveAnimation = document.getElementById('wave-animation');
+            let audiotxt = document.getElementsByClassName('audiotxt');
+            let isPlaying = false;
     
             function toggleAudio() {
                 if (isPlaying) {
@@ -24,10 +25,12 @@ window.addEventListener('DOMContentLoaded', function () {
                     waveAnimation.style.animationPlayState = 'paused';
                     waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
                     waveAnimation.style.opacity = 0.8;
+                    audiotxt[0].innerText = 'BGM Play!';
                 } else {
                     audio.play();
                     waveAnimation.style.animationPlayState = 'running';
                     waveAnimation.style.opacity = 0.8;
+                    audiotxt[0].innerText = 'BGM Stop!';
                 }
                 isPlaying = !isPlaying;
             }
