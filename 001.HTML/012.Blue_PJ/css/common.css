@@ -82,7 +82,6 @@ img{vertical-align: middle}
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* font-family: 'Permanent Marker', cursive; */
     letter-spacing: 3px;
 }
 .header .subH2{
@@ -111,7 +110,7 @@ img{vertical-align: middle}
 .menuBtn img:hover{
     filter: grayscale(0)
 }
-/* --------------cont1-------------- */
+/* ------------------------cont1------------------------ */
 .cont1{
     display: flex;
     justify-content: space-between;
@@ -146,7 +145,7 @@ img{vertical-align: middle}
 }
 /* --------------------메인 왼쪽-------------------- */
 .cont1 .mainL{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .cont1 .mainL .mainImgL{
     width: 100%;
@@ -159,7 +158,7 @@ img{vertical-align: middle}
 }
 /* --------------------메인 가운데-------------------- */
 .cont1 .mainC{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .cont1 .mainC .mainImgC1{
     margin: auto;
@@ -195,7 +194,7 @@ img{vertical-align: middle}
 }
 /* --------------------메인 오른쪽-------------------- */
 .cont1 .mainR{
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .cont1 .mainR .mainImgR{
     width: 100%;
@@ -209,3 +208,13 @@ img{vertical-align: middle}
 .cont1 .mainImg2.R{
     transform: scaleX(-1);
 }
+/* ------------------------cont2------------------------ */
+.cont2{
+    position: relative;
+}
+.cont2 .Mvideo{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    }
