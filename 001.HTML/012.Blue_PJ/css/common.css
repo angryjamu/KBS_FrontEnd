@@ -30,19 +30,29 @@ img{vertical-align: middle}
     transform: translateX(-50%);
     animation: down 2s linear infinite;
     text-align: center;
+    cursor: pointer;
+    z-index: 9;
+}
+.cont .down:hover img{
+    animation: scroll .8s ease-in-out forwards;
 }
 .cont .down img{
     height: 5vh;
-    cursor: pointer;
 }
 @keyframes down {
-    0%{transform: translateY(-10px);
-        }
+    0%{transform: translateY(-10px);}
     25%{transform: translateY(0px);}
     50%{transform: translateY(10px);}
     75%{transform: translateY(0px);}
-    100%{transform: translateY(-10px);
-        }
+    100%{transform: translateY(-10px);}
+}
+@keyframes scroll {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
 }
 .wrapBox .cont.cont1{
     height: calc(100vh - 100px);
@@ -101,7 +111,7 @@ img{vertical-align: middle}
 .menuBtn img:hover{
     filter: grayscale(0)
 }
-/* --------------Main cont1-------------- */
+/* --------------cont1-------------- */
 .cont1{
     display: flex;
     justify-content: space-between;
@@ -112,46 +122,44 @@ img{vertical-align: middle}
 }
 .cont1 h3{
     font-family: 'Cardo', serif;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
 }
 .cont1 .mainT{
     width: 100%;
     height: 10%;
+    margin-top: 5%;
 }
 .cont1 p{
     text-align: center;
     font-weight: 300;
 }
+.cont1 .mainImg2 {
+    background: url(../images/IMG_6063.JPG) no-repeat 50% 50%/70%;
+    width: 100%;
+    height: 65%;
+    filter: grayscale(1);
+}
+.cont1 .mainImg2:hover{
+    filter: grayscale(0)
+}
 /* --------------------메인 왼쪽-------------------- */
 .cont1 .mainL{
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 .cont1 .mainL .mainImgL{
     width: 100%;
     height: 20%;
-    background: url(../images/hifive1.webp) no-repeat 0 50%/100%;
+    background: url(../images/hifive1.webp) no-repeat 0 60%/100%;
     filter: grayscale(1);
 }
 .cont1 .mainL .mainImgL:hover{
     filter: grayscale(0)
 }
-.cont1 .mainImg2 {
-    background: url(../images/IMG_6063.JPG) no-repeat 50% 50%/70%;
-    width: 100%;
-    height: 70%;
-    filter: grayscale(1);
-}
-.cont1 .mainImg2.R{
-    transform: scaleX(-1);
-}
-.cont1 .mainImg2:hover{
-    filter: grayscale(0)
-}
 /* --------------------메인 가운데-------------------- */
 .cont1 .mainC{
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 }
 .cont1 .mainC .mainImgC1{
     margin: auto;
@@ -187,7 +195,7 @@ img{vertical-align: middle}
 }
 /* --------------------메인 오른쪽-------------------- */
 .cont1 .mainR{
-    /* border: 1px solid green; */
+    border: 1px solid green;
 }
 .cont1 .mainR .mainImgR{
     width: 100%;
@@ -197,4 +205,7 @@ img{vertical-align: middle}
 }
 .cont1 .mainR .mainImgR:hover{
     filter: grayscale(0)
+}
+.cont1 .mainImg2.R{
+    transform: scaleX(-1);
 }
