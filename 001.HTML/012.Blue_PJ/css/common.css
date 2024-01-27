@@ -2,7 +2,7 @@
 /* 공통 */
 @import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Oswald:wght@200;300;400;500;700&family=Permanent+Marker&display=swap');
 html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li{padding: 0;margin: 0;}
-body{font-family: 'Oswald', sans-serif; background-color: silver;}
+body{font-family: 'Oswald', sans-serif;}
 ul,ol,li{list-style: none;}
 *{box-sizing: border-box;}
 a{color: #000; text-decoration: none;}
@@ -23,11 +23,12 @@ img{vertical-align: middle}
     width: 90vw;
 }
 .cont .down{
-    position: absolute;
+    color: #1b3486;
+    position: fixed;
     left: 50%;
     bottom: 3%;
     transform: translateX(-50%);
-    animation: down 2.5s linear infinite;
+    animation: down 2s linear infinite;
     text-align: center;
 }
 .cont .down img{
@@ -71,7 +72,7 @@ img{vertical-align: middle}
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Permanent Marker', cursive; */
     letter-spacing: 3px;
 }
 .header .subH2{
@@ -102,7 +103,6 @@ img{vertical-align: middle}
 }
 /* --------------Main cont1-------------- */
 .cont1{
-    background-color: lightyellow;
     display: flex;
     justify-content: space-between;
 }
@@ -116,30 +116,42 @@ img{vertical-align: middle}
     font-weight: bold;
     text-align: center;
 }
+.cont1 .mainT{
+    width: 100%;
+    height: 10%;
+}
 .cont1 p{
     text-align: center;
     font-weight: 300;
 }
 /* --------------------메인 왼쪽-------------------- */
 .cont1 .mainL{
-    border: 1px solid red;
-    width: 33%;
+    /* border: 1px solid red; */
 }
 .cont1 .mainL .mainImgL{
     width: 100%;
-    height: 20vh;
+    height: 20%;
     background: url(../images/hifive1.webp) no-repeat 0 50%/100%;
     filter: grayscale(1);
 }
 .cont1 .mainL .mainImgL:hover{
     filter: grayscale(0)
 }
-.cont1 .mainL .mainTitL{
-
+.cont1 .mainImg2 {
+    background: url(../images/IMG_6063.JPG) no-repeat 50% 50%/70%;
+    width: 100%;
+    height: 70%;
+    filter: grayscale(1);
+}
+.cont1 .mainImg2.R{
+    transform: scaleX(-1);
+}
+.cont1 .mainImg2:hover{
+    filter: grayscale(0)
 }
 /* --------------------메인 가운데-------------------- */
 .cont1 .mainC{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .cont1 .mainC .mainImgC1{
     margin: auto;
@@ -148,22 +160,22 @@ img{vertical-align: middle}
     background: url(../images/mainC1-1.jpeg) no-repeat 50% 50%/100%;
     position: relative;
 }
-.cont1 .mainImgC1:hover{
+/* .cont1 .mainImgC1:hover{
     background: url(../images/article_thumbnail_19.png) no-repeat 50% 50%/100%;
-}
+} */
 .cont1 .mainC .mainTitC{
     display: none;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%);
     font-size: 2.5vh;
     white-space: nowrap;
     color: #fff;
 }
-/* .cont1 .mainC .mainImgC1:hover .mainTitC{
+.cont1 .mainC .mainImgC1:hover .mainTitC{
     display: block;
-} */
+}
 .cont1 .mainC .mainImgC2{
     width: 100%;
     height: 80%;
@@ -175,13 +187,14 @@ img{vertical-align: middle}
 }
 /* --------------------메인 오른쪽-------------------- */
 .cont1 .mainR{
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .cont1 .mainR .mainImgR{
     width: 100%;
-    height: 20vh;
+    height: 20%;
     background: url(../images/mainR1.jpeg) no-repeat 0 100%/100%;
+    filter: grayscale(1);
 }
 .cont1 .mainR .mainImgR:hover{
-    filter: invert(1)
+    filter: grayscale(0)
 }
