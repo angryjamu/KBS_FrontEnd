@@ -1,6 +1,6 @@
 $(function(){
     $('.menuBtn').click(function(){
-        $('.menuBox').toggleClass('on')
+        $('.wrapBox.on').toggleClass('on')
         console.log(this)
     })
 })
