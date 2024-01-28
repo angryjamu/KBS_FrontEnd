@@ -203,7 +203,7 @@ img{
 }
 /* ---------------------------------------main--------------------------------------- */
 .cont1{
-    height: 1000px;
+    height: 100vh;
     background: url(img/mim.jpg ) no-repeat center center/cover;
     position: relative;
 }
