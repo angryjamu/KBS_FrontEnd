@@ -25,7 +25,7 @@ img{vertical-align: middle}
 .cont .down{
     color: #1b3486;
     position: fixed;
-    left: 50%;
+    right: 2%;
     bottom: 3%;
     transform: translateX(-50%);
     animation: down 2s linear infinite;
@@ -135,8 +135,9 @@ img{vertical-align: middle}
 }
 .cont1 .mainImg2 {
     background: url(../images/IMG_6063.JPG) no-repeat 50% 50%/70%;
-    width: 100%;
-    height: 65%;
+    margin: auto;
+    width: 70%;
+    height: 60%;
     filter: grayscale(1);
 }
 .cont1 .mainImg2:hover{
@@ -209,13 +210,30 @@ img{vertical-align: middle}
 }
 /* ------------------------cont2------------------------ */
 .cont2{
-    position: relative;
+    border: 1px solid green;
 }
-.cont2 .Mvideo{
-    position: absolute;
+.swiper {
     width: 100%;
     height: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-}
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 /* ------------------------cont3------------------------ */
+.cont3{
+
+}

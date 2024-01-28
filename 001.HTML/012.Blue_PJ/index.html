@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/common.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/common.css">
+
 </head>
 
 <body>
@@ -48,7 +51,18 @@
         </main>
         <!------------------------------------------------- cont2 ------------------------------------------------->
         <section class="cont cont2">
-            <video class="Mvideo" src="video/yves540.mp4" autoplay muted playsinline loop controls></video>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/cont2bg1.png" alt="이미지1번"></div>
+                  <div class="swiper-slide"><img src="images/cont2bg2.png" alt="이미지2번"></div>
+                  <div class="swiper-slide"><img src="images/cont2bg3.png" alt="이미지3번"></div>
+                  <div class="swiper-slide"><img src="images/cont2bg4.png" alt="이미지4번"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            
         </section>
         <!------------------------------------------------- cont3 ------------------------------------------------->
         <section class="cont cont3">
