@@ -246,8 +246,44 @@ color: #fff;
     background: url(../images/pager_active.svg);
 }
 
-
 /* ------------------------cont3------------------------ */
 .cont3{
+    display: flex;
+}
+.cont3 h4{
+    text-align: center;
+}
+.cont3 .c3boxL{
+    outline: 1px solid red;
+    width: 40%;
+    height: 100%;
+}
+.cont3 .c3boxL .c3titL{
+    outline: 1px dotted cyan;
+    height: 20%;
+    
+}
+.cont3 .c3boxL .c3imgbxL{
+    outline: 1px dotted firebrick;
+    height: 80%;
+}
 
+.cont3 .c3boxR{
+    outline: 1px solid blue;
+    width: 60%;
+    height: 100%;
+}
+.cont3 .c3boxR .c3imgbxR{
+    outline: 1px dotted firebrick;
+    height: 70%;
+}
+.cont3 .c3boxR .c3titR{
+    outline: 1px dotted cyan;
+    height: 30%;
+}
+
+/* ------------------------footer------------------------ */
+.footer{
+    outline: 1px dotted hotpink;
+    height: 310px;
 }
