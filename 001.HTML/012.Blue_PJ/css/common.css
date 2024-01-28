@@ -209,8 +209,9 @@ img{vertical-align: middle}
     transform: scaleX(-1);
 }
 /* ------------------------cont2------------------------ */
-.cont2{
+.wrapBox .cont.cont2{
     border: 1px solid green;
+    width: 100vw;
 }
 .swiper {
     width: 100%;
