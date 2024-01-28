@@ -218,21 +218,35 @@ img{vertical-align: middle}
     height: 100%;
   }
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.wrapBox .cont2 .mySwiper .swiper-button-next, .swiper-button-prev{
+color: #fff;
+}
+.wrapBox .cont2 .mySwiper .swiper-button-next::after,
+.wrapBox .cont2 .mySwiper .swiper-button-prev::after{
+      font-size: 1.7vw;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background: url(../images/pager.svg);
+}
+.swiper-pagination-clickable .swiper-pagination-bullet-active{
+    background: url(../images/pager_active.svg);
+}
+
 
 /* ------------------------cont3------------------------ */
 .cont3{
