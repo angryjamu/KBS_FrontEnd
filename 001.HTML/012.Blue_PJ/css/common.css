@@ -330,7 +330,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 .footer{
     /* outline: 1px dotted hotpink; */
     margin: auto;
-    padding-top: 30px;
+    margin-top: 50px;
     height: 200px;
     width: 90vw;
     font-size: 1em;
