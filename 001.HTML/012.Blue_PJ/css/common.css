@@ -318,8 +318,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
 }
 .cont3 .tWrap h4{
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 500;
+    padding-bottom: 20px;
 }
 .cont3 .tWrap p{
     font-size: 1em;
