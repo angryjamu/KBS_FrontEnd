@@ -27,20 +27,50 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 .cont .down{
     color: #1b3486;
     position: fixed;
-    right: 50%;
+    width: 40px;
+    height: 55px;
+    left: 50%;
     bottom: 3%;
-    transform: translateX(-50%);
     animation: down 2s linear infinite;
     text-align: center;
     cursor: pointer;
-    z-index: 9;
+    z-index: 999;
+}
+.cont .down:hover{
+    animation: none;
 }
 .cont .down:hover img{
-    animation: scroll .8s ease-in-out forwards;
+    animation: rotate .8s ease-in-out forwards;
 }
 .cont .down img{
-    height: 5vh;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    z-index: 10;
 }
+.cont .down .imgWrap{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 9999;
+}
+.cont .down .imgWrap::before{
+    position: absolute;
+    content: 'scroll';
+    animation: backC 2s linear infinite;
+    width: 90%;
+    height: 100%;
+    transform: translate(-100%,-100%);
+    left: 40px;
+    background-color: #1b3590;
+    border-radius: 3px;
+}
+.cont .down .imgWrap:hover::before{
+    display: none;
+}
+
 @keyframes down {
     0%{transform: translateY(-10px);}
     25%{transform: translateY(0px);}
@@ -48,12 +78,25 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     75%{transform: translateY(0px);}
     100%{transform: translateY(-10px);}
 }
-@keyframes scroll {
+@keyframes rotate {
     0%{
         transform: rotate(0);
     }
     100%{
         transform: rotate(-180deg);
+    }
+}
+@keyframes backC {
+    0%{
+        top: 95%;
+        height: 0;
+    }
+    50%{
+        height: 50%;
+    }
+    100%{
+        top: 95%;
+        height: 0;
     }
 }
 .wrapBox .cont.cont1{
@@ -336,6 +379,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 90vw;
     font-size: 1em;
     font-weight: 200;
+    position: relative;
 }
 .footer .footInfo{
     display: flex;
@@ -353,6 +397,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 }
 .footer .footCbx{
     display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .footer .footCbx .menu{
     padding: 0 50px;
