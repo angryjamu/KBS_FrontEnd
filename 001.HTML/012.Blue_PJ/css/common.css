@@ -212,7 +212,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
     opacity: 1;
 }
-
+.ham ul li .rd:hover::after{
+    background-color: red;
+}
 .ham .imgCont{
     position: absolute;
     right: 15%;

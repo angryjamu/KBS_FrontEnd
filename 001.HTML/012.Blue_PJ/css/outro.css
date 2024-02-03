@@ -13,7 +13,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: #787878;
+    color: #fdfcf6;
 }
 .bg{
     background: url(../images/exitbg.jpeg) no-repeat 0 60% / cover;
@@ -30,7 +30,7 @@ a{
     position: absolute;
 }
 .wrapT span:hover a{
-    color: #fdfcf6;
+    color: #787878;
 }
 .wrapT .back{
     top: 40%;
