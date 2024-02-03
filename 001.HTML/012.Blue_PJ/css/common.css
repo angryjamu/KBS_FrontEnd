@@ -193,6 +193,10 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     text-align: center;
     color: #fff;
     padding: 15px 0;
+    transition: color .6s ease-in-out;
+}
+.ham ul li:last-child:hover a{
+    color: red;
 }
 .ham ul li a::after{
     content: '';

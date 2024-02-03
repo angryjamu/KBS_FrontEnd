@@ -1,0 +1,42 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 2px;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: #787878;
+}
+.bg{
+    background: url(../images/exitbg.jpeg) no-repeat 0 60% / cover;
+    height: 100%;
+}
+.wrapT{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 5.5em;
+    font-weight: bold;
+}
+.wrapT span{
+    position: absolute;
+}
+.wrapT span:hover a{
+    color: #fdfcf6;
+}
+.wrapT .back{
+    top: 40%;
+    left: 15%;
+}
+.wrapT .exit{
+    top: 40%;
+    right: 25%;
+}
