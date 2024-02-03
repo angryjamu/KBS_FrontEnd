@@ -26,7 +26,7 @@ $(function() {
         $('.ham').addClass('on')
     });
     
-    $('#exit').click(function() {
+    $('#close').click(function() {
         $('.ham').removeClass('on');
     });
 })
