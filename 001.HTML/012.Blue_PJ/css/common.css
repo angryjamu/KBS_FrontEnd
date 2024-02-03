@@ -160,33 +160,49 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     position: fixed;
     left: 0;
     top: -100%;
-    z-index: 999;
     width: 100%;
     height: 100%;
-    transition: top .2s ease-in-out;
+    transition: all .6s ease-in-out;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-direction: row-reverse;
+    opacity: 0;
+    z-index: 999;
+}
+.ham.on::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000035;
+    z-index: 99;
 }
 .ham.on{
     top: 0;
+    opacity: 1;
+}
+.ham ul{
+    position: absolute;
+    left: 25%;
+    z-index: 9999;
 }
 .ham ul li a{
     font-size: 40px;
     font-weight: 500;
     display: block;
     text-align: center;
-    color: #6e6e6e;
+    color: #fff;
     padding: 15px 0;
 }
 .ham ul li a::after{
     content: '';
     display: block;
     width: 0%;
-    height: 3px;
+    height: 4px;
+    border-radius: 2px;
     background: #004dff;
     opacity: 0;
-    transition: all .5s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 .ham ul li a:hover::after{
     width: 100%;
@@ -194,13 +210,13 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 }
 
 .ham .imgCont{
-    position: relative;
-    height: 29vh;
+    position: absolute;
+    right: 15%;
+    height: 29vw;
 }
 .ham .imgCont img{
     width: 100%;
     height: 100%;
-    border: 1px solid blue;
 }
 /* ------------------------cont1------------------------ */
 .cont1{
@@ -237,9 +253,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     filter: grayscale(0)
 }
 /* --------------------메인 왼쪽-------------------- */
-.cont1 .mainL{
-    /* border: 1px solid red; */
-}
+/* .cont1 .mainL{
+    border: 1px solid red;
+} */
 .cont1 .mainL .mainImgL{
     width: 100%;
     height: 20%;
@@ -250,9 +266,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     filter: grayscale(0)
 }
 /* --------------------메인 가운데-------------------- */
-.cont1 .mainC{
-    /* border: 1px solid blue; */
-}
+/* .cont1 .mainC{
+    border: 1px solid blue;
+} */
 .cont1 .mainC .mainImgC1{
     margin: auto;
     width: 100%;
@@ -286,9 +302,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     filter: grayscale(0)
 }
 /* --------------------메인 오른쪽-------------------- */
-.cont1 .mainR{
-    /* border: 1px solid green; */
-}
+/* .cont1 .mainR{
+    border: 1px solid green;
+} */
 .cont1 .mainR .mainImgR{
     width: 100%;
     height: 20%;
