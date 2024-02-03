@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change on Hover</title>
+    <style>
+        .menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            /* opacity: 0; */
+            transition: opacity 0.5s ease;
+        }
+
+        #main-image {
+            max-width: 100%;
+            height: auto;
+            transition: filter 0.3s ease;
+        }
+
+        #main-image:hover {
+            filter: brightness(70%);
+        }
+
+        #main-image.loaded {
+            filter: brightness(100%);
+        }
+
+        .image-container.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#" data-image="images/cont2bg2.png">Menu 1</a></li>
+        <li><a href="#" data-image="images/cont2bg3.png">Menu 2</a></li>
+        <li><a href="#" data-image="images/cont2bg4.png">Menu 3</a></li>
+    </ul>
+    <div class="image-container">
+        <img src="images/cont2bg1.png" alt="Default Image" id="main-image">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('.menu a');
+  const mainImage = document.getElementById('main-image');
+  const imageContainer = document.querySelector('.image-container');
+  let originalImage;
+
+  // 초기 이미지 저장
+  originalImage = mainImage.src;
+
+  menuLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      const imageUrl = this.dataset.image;
+
+      // 이미지 로드 후 효과를 적용하기 위한 로직
+      const tempImage = new Image();
+      tempImage.src = imageUrl;
+      tempImage.onload = function() {
+        mainImage.src = imageUrl;
+        mainImage.classList.add('loaded');
+        imageContainer.classList.add('loaded');
+      };
+    });
+
+    link.addEventListener('mouseleave', function() {
+      // 마우스가 떠나면 초기 이미지로 돌아가기
+      mainImage.src = originalImage;
+      mainImage.classList.remove('loaded');
+      imageContainer.classList.remove('loaded');
+    });
+  });
+});
+
+    </script>
+</body>
+
+</html>

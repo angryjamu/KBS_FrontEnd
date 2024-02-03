@@ -1,9 +1,13 @@
 // 메뉴버튼
 $(function(){
     $('.menuBtn').click(function(){
-        $('.wrapBox.on').toggleClass('on')
-        console.log(this)
-    })
+        $('.ham').addClass('on')
+    });
+    
+    
+    $('#exit').click(function() {
+        $('.ham').removeClass('on');
+    });
 })
 
 // 스와이퍼
