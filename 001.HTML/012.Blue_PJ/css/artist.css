@@ -21,6 +21,7 @@
 .art1 .aWrap .info{
     margin-left: 150px;
     font-size: 2em;
+    width: 450px;
 }
 .art1 .aWrap .info .inT li+li{
     padding-top: 50px;
