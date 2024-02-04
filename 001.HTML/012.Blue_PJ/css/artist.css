@@ -12,7 +12,7 @@
 }
 .art1 .aWrap .yves{
     width: 350px;
-    height: 470px;
+    height: 450px;
 }
 .art1 .yves img{
     width: 100%;
@@ -23,10 +23,15 @@
     font-size: 2em;
 }
 .art1 .aWrap .info .inT li+li{
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .art1 .aWrap .info .inT i{
     font-family: 'Alkatra', system-ui;
     font-weight: 400;
+}
+.art1 .bWrap{
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
 }
