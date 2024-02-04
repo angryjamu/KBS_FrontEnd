@@ -1,18 +1,18 @@
 @charset 'utf-8';
-.art1 h1 {
-    text-align: center;
-    padding: 50px 0;
-    font-weight: 700;
-    font-size: 50px;
-}
 .art1 .aWrap{
     padding-top: 30px;
     display: flex;
     justify-content: center;
 }
 .art1 .aWrap .yves{
-    width: 350px;
-    height: 450px;
+    padding-top: 57.5px;
+    width: 500px;
+    height: 350px;
+}
+.art1 .aWrap .yves.col{
+    width: 320px;
+    height: 445px;
+    padding-top: 0;
 }
 .art1 .yves img{
     width: 100%;
