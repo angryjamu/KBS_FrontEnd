@@ -1,14 +1,19 @@
 @charset 'utf-8';
 /* 공통 */
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Oswald:wght@200;300;400;500;700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Francois+One&family=Cardo:wght@400;700&family=Oswald:wght@200;300;400;500;700&family=Permanent+Marker&display=swap');
+/* font-family: 'Oswald', sans-serif; */
+/* font-family: 'Cardo', serif; */
+/* font-family: 'Francois One', sans-serif */
+/* font-family: 'Alkatra', system-ui; */
+/* font-family: 'Permanent Marker', cursive; */
 html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,button{padding: 0;margin: 0;}
-html,body{font-family: 'Oswald', sans-serif; scroll-behavior: smooth; overflow-x: hidden;}
+html,body{font-family: 'Cardo', serif; scroll-behavior: smooth; overflow-x: hidden;}
 ul,ol,li{list-style: none;}
 *{box-sizing: border-box;}
 a{color: #000; text-decoration: none;}
-i{font-style: normal;}
+i,em{font-style: normal;}
 img{vertical-align: middle}
-button{background: none; border: none; font-size: 1em; font-weight: 200; font-family: 'Oswald', sans-serif;}
+button{background: none; border: none; font-size: 1em; font-weight: 200; font-family: 'Cardo', serif;}
 
 /* 레이아웃 */
 .wrapBox{
@@ -211,7 +216,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 .ham ul li a{
     font-size: 40px;
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     display: block;
     text-align: center;
     color: #fff;
@@ -279,18 +284,20 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 .cont1 .mainT{
     width: 100%;
     height: 10%;
-    margin-top: 5%;
+    padding-top: 5%;
 }
 .cont1 p{
     text-align: center;
     font-weight: 300;
+    padding-top: 5px;
 }
 .cont1 .mainImg2 {
-    background: url(../images/IMG_6063.JPG) no-repeat 50% 50%/70%;
+    background: url(../images/IMG_6063.JPG) no-repeat 50% 50%/100%;
     margin: auto;
-    width: 70%;
-    height: 60%;
     filter: grayscale(1);
+    width: 250px;
+    height: 400px;
+    margin-top: 130px;
 }
 .cont1 .mainImg2:hover{
     filter: grayscale(0)
@@ -351,11 +358,10 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 .cont1 .mainR .mainImgR{
     width: 100%;
     height: 20%;
-    background: url(../images/mainR1.jpeg) no-repeat 0 100%/100%;
-    filter: grayscale(1);
+    background: url(../images/mr01.jpeg) no-repeat 0 100%/100%;
 }
 .cont1 .mainR .mainImgR:hover{
-    filter: grayscale(0)
+    background: url(../images/mainR1.jpeg) no-repeat 0 100%/100%;
 }
 .cont1 .mainImg2.R{
     transform: scaleX(-1);
@@ -483,8 +489,8 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     margin-top: 50px;
     height: 200px;
     width: 100%;
-    font-size: 1em;
-    font-weight: 200;
+    font-size: .7em;
+    font-weight: 400;
     position: relative;
 }
 .footer .footInfo{
@@ -493,9 +499,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     height: 70%;
     margin: 0 100px;
 }
-.footer .footLbx{
+/* .footer .footLbx{
     font-size: 14px;
-}
+} */
 .footer .footLbx ul li{
     padding: 2px 0;
 }
@@ -517,7 +523,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 }
 .footer .snsWrap{
     width: 270px;
-    /* border: 1px solid #000; */
     text-align: right;
 }
 .footer .snsWrap .snsTit{
@@ -533,6 +538,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
     font-size: .6em;
     margin-left: 100px;
+    overflow: hidden;
 }
 .footer .copy ul li{
     float: left;
