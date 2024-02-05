@@ -230,7 +230,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     content: '';
     display: block;
     width: 0%;
-    height: 4px;
+    height: 3px;
     border-radius: 2px;
     background: #004dff;
     opacity: 0;
@@ -376,7 +376,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     height: 90%;
     top: 5%;
 }
-.swiper-slide {
+.cont2 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -384,7 +384,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     justify-content: center;
     align-items: center;
 }
-.swiper-slide img {
+.cont2 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
