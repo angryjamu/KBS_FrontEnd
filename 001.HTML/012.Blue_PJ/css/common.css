@@ -213,6 +213,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     left: 25%;
     z-index: 9999;
 }
+
 .ham ul li a{
     font-size: 40px;
     font-weight: 500;
@@ -258,14 +259,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
     height: 100%;
 }
-/* #close{
-    position: absolute;
-    color: #fff;
-    font-size: 40px;
-    top: 2%;
-    right: 2%;
-    z-index: 999;
-} */
 /* ------------------------cont1------------------------ */
 .cont1{
     display: flex;
@@ -303,9 +296,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     filter: grayscale(0)
 }
 /* --------------------메인 왼쪽-------------------- */
-/* .cont1 .mainL{
-    border: 1px solid red;
-} */
 .cont1 .mainL .mainImgL{
     width: 100%;
     height: 20%;
@@ -316,9 +306,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     filter: grayscale(0)
 }
 /* --------------------메인 가운데-------------------- */
-/* .cont1 .mainC{
-    border: 1px solid blue;
-} */
 .cont1 .mainC .mainImgC1{
     margin: auto;
     width: 100%;
@@ -326,9 +313,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     background: url(../images/mainC1-1.jpeg) no-repeat 50% 50%/100%;
     position: relative;
 }
-/* .cont1 .mainImgC1:hover{
-    background: url(../images/article_thumbnail_19.png) no-repeat 50% 50%/100%;
-} */
 .cont1 .mainC .mainTitC{
     display: none;
     position: absolute;
@@ -352,9 +336,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     filter: grayscale(0)
 }
 /* --------------------메인 오른쪽-------------------- */
-/* .cont1 .mainR{
-    border: 1px solid green;
-} */
 .cont1 .mainR .mainImgR{
     width: 100%;
     height: 20%;
@@ -368,7 +349,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 }
 /* ------------------------cont2------------------------ */
 .wrapBox .cont.cont2{
-    /* border: 1px solid blue; */
     margin-bottom: 60px;
 }
 .cont2 .swiper {
@@ -388,7 +368,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     display: block;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
 }
 .wrapBox .cont2 .swiper-button-next, .swiper-button-prev{
     position: absolute;
@@ -424,22 +403,22 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 }
 
 /* ------------------------cont3------------------------ */
+.cont3_M{
+    display: none;
+}
 .cont3{
     display: flex;
     text-align: center;
 }
 .cont3 .c3boxL{
-    /* outline: 1px solid red; */
     width: 40%;
     height: 100%;
 }
 .cont3 .c3boxL .c3titL{
-    /* outline: 1px dotted cyan; */
     height: 20%;
     position: relative;
 }
 .cont3 .c3boxL .c3imgbxL{
-    /* outline: 1px dotted firebrick; */
     height: 80%;
 }
 .cont3 .c3boxL .c3imgbxL .c3imgL{
@@ -449,12 +428,10 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 }
 
 .cont3 .c3boxR{
-    /* outline: 1px solid blue; */
     width: 60%;
     height: 100%;
 }
 .cont3 .c3boxR .c3imgbxR{
-    /* outline: 1px dotted firebrick; */
     height: 70%;
 }
 .cont3 .c3boxR .c3imgbxR .c3imgR{
@@ -463,7 +440,6 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     background: url(../images/newspaper.jpeg) no-repeat 50%/90%;
 }
 .cont3 .c3boxR .c3titR{
-    /* outline: 1px dotted cyan; */
     height: 30%;
     position: relative;
 }
@@ -522,7 +498,7 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     color: #777;
 }
 .footer .snsWrap{
-    width: 270px;
+    width: 200px;
     text-align: right;
 }
 .footer .snsWrap .snsTit{
@@ -533,6 +509,18 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     display: flex;
     justify-content: space-between;
     padding-top: 13px;
+}
+.sns > div a {
+    display: inline-block;
+}
+
+.sns > div a i {
+    display: block;
+}
+
+.sns > div a i img {
+    width: 25px;
+    height: auto;
 }
 .footer .copy ul{
     width: 100%;
