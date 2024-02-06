@@ -9,9 +9,10 @@
 }
 
 .info .title {
-    width: calc(100vw - 45%);
+    width: 680px;
     position: relative;
     text-align: center;
+    margin: auto;
 }
 .info .title .titleBox{
     position: absolute;
