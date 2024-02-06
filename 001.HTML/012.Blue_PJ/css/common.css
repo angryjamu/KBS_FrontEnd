@@ -26,8 +26,8 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
 .wrapBox .cont{
     position: relative;
     margin: 0 auto;
-    height: 100vh;
-    width: 90vw;
+    height: 90vh;
+    max-width: 1300px;
 }
 .cont .down{
     color: #1b3486;
@@ -450,8 +450,8 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
 }
 .cont3 .tWrap h4{
-    font-size: 1.5em;
-    font-weight: 500;
+    font-size: 1.1em;
+    font-weight: 700;
     padding-bottom: 20px;
 }
 .cont3 .tWrap p{
