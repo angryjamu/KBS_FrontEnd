@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+@media only screen and (max-width: 1024px) {
+.art1 .aWrap .yves {
+    width: 500px;
+    height: 210px;
+    padding-top: 10px;
+}
+.art1 .aWrap .info {
+    margin-left: 60px;
+    font-size: 1.2em;
+}
+
+.art1 .aWrap .info .inT li+li {
+    padding-top: 25px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+    .art1 .aWrap .yves {
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .art1 .aWrap .info {
+        margin-left: 30px;
+        font-size: .7em;
+    }
+    .art1 .bWrap {
+        padding: 15px;
+        font-size: 11px;
+    }
+    .art1 .aWrap .yves {
+        padding-top: 20px;
+        width: 500px;
+        height: 130px;
+    }
+    .art1 .aWrap .info .inT li+li {
+        padding-top: 15px;
+    }
+}
