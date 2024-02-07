@@ -260,6 +260,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     height: 100%;
 }
 /* ------------------------cont1------------------------ */
+.cont.cont1.media{
+    display: none;
+}
 .cont1{
     display: flex;
     justify-content: space-between;

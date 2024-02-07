@@ -217,5 +217,69 @@
 }
 
 @media only screen and (max-width: 425px) {
-    
+    .header {
+        height: 70px;
+        font-size: 9px;
+    }
+    .header .title {
+        line-height: 70px;
+    }
+    .header .menuBtn {
+        width: 10vw;
+    }
+    .cont1{
+        display: none;
+    }
+    .cont.cont1.media{
+        display: block;
+        width: 370px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .cont1.media .mainC{
+        width: 100%;
+        height: 200px;
+        padding: 0;
+    }
+    .cont1 .mainC .mainTitC{
+        display: block;
+        font-size: 20px;
+    }
+    .cont1.media .mainC .mainImgC1:hover .mainTitC{
+        display: block;
+        font-size: 20px;
+    }
+    .cont1 .mainC .mainTitC {
+        top: 45%;
+    }
+    .cont1.media .mainC .mainImgC1{
+        height: 100%;
+    }
+
+    .cont1 .mainC .mainImgC2{
+        position: relative;
+        bottom: 0;
+        filter: grayscale(0);
+    }
+    .cont1.media .mainC2{
+        width: 80%;
+        height: 385px;
+        margin: auto;
+    }
+    .cont1.media .mainC2 .mainImgC2{
+        height: 100%;
+    }
+    .cont1.media .mainL{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        bottom: 100px;
+        padding: 0;
+    }
+    .cont1.media .mainL .mainImg2{
+        width: 100%;
+        height: 100px;
+        filter: grayscale(.2);
+    }
+
 }
