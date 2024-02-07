@@ -1,0 +1,79 @@
+@charset 'utf-8';
+
+@media only screen and (max-width: 1024px) {
+    main.art1 {
+        width: 800px;
+    }
+
+    .art1 .aWrap .yves.col {
+        height: 380px;
+    }
+
+    .art1 .aWrap .info {
+        font-size: 1.7em;
+    }
+
+    .art1 .bWrap {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main.art1 {
+        width: 630PX;
+    }
+    .art1 .aWrap .yves.col {
+        height: 340px;
+    }
+    .art1 .aWrap .info {
+        margin-left: 60px
+    }
+    .art1 .aWrap .info {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    main.art1 {
+        width: 350PX;
+    }
+    .art1 .aWrap .yves.col {
+        height: 200px;
+    }
+    .art1 .aWrap .info {
+        margin-left: 30px;
+        font-size: .9em;
+    }
+    .art1 .aWrap .info .inT li+li {
+        padding-top: 30px;
+    }
+    .art1 .bWrap {
+        padding: 25px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    main.art1 {
+        width: 315PX;
+    }
+    .art1 .aWrap .yves.col {
+        height: 170px;
+    }
+    .art1 .aWrap .info {
+        font-size: .7em;
+    }
+    .art1 .aWrap .info .inT li+li {
+        padding-top: 20px;
+    }
+    .art1 .bWrap {
+        padding: 20px;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    main.art1 {
+        width: 280px;
+    }
+}
