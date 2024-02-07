@@ -351,3 +351,41 @@
         width: 13px;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .header {
+        font-size: 8px;
+    }
+    .header .menuBtn {
+        height: 2.5vh;
+    }
+    .cont.cont1.media,
+    .cont.cont2,
+    .wrapBox .cont.cont3_M {
+        width: 340px;
+    }
+    .cont .down {
+        font-size: 10px;
+        width: 30px;
+        height: 40px;
+    }
+    .cont .down .imgWrap::before {
+        left: 30px;
+    }
+    .c3imgL_M {
+        height: 250px;
+    }
+    .c3imgR_M {
+        height: 200px;
+    }
+    .footer {
+        height: 100px;
+    }
+    .footer .footInfo {
+        font-size: 6px;
+    }
+    .footer .footLbx .lang ul {
+        right: 25px;
+        transform: translateY(-10px);
+    }
+}
