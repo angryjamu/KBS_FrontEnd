@@ -342,13 +342,13 @@
     }
 
     .footer {
-        height: 60px;
+        height: 80px;
     }
 
     .footer .footInfo {
         margin: 0 10px;
         font-size: 7px;
-        height: 50px;
+        height: 70px;
     }
 
     .footer .copy ul {
@@ -360,6 +360,10 @@
         transform: translateX(0);
         display: flex;
         justify-content: center;
+    }
+
+    .footer .footCbx .menu {
+        padding: 0px 2px;
     }
 
     .footer .footCbx .menu {
@@ -435,11 +439,12 @@
     }
 
     .footer {
-        height: 60px;
+        height: 70px;
     }
 
     .footer .footInfo {
         font-size: 6px;
+        height: 60px;
     }
 
     .footer .footLbx .lang ul {
