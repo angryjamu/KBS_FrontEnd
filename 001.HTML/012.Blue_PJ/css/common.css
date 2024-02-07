@@ -111,8 +111,8 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     font-size: 15px;
     position: absolute;
     width: auto;
-    bottom: 1.5%;
-    right: 5%;
+    bottom: 0;
+    right: 0;
     z-index: 99;
 }
 .cont .more::after{
