@@ -1,21 +1,16 @@
 // 메뉴버튼
 $(function() {
-    // 기존 이미지 저장
     var originalImgSrc = $('.ham .imgCont img').attr('src');
 
     $('.ham ul li').hover(
-        // 마우스를 올렸을 때
         function() {
             var imagePath = $(this).data('image');
 
-            // 이미지 변경
             $('.ham .imgCont img').fadeOut(400, function() {
                 $(this).attr('src', imagePath).fadeIn(400);
             });
         },
-        // 마우스를 뗄 때
         function() {
-            // 기존 이미지로 되돌리기
             $('.ham .imgCont img').fadeOut(400, function() {
                 $(this).attr('src', originalImgSrc).fadeIn(400);
             });
@@ -29,6 +24,17 @@ $(function() {
     $('#close').click(function() {
         $('.ham').removeClass('on');
     });
+})
+
+// 언어버튼
+$(function(){
+    $('.lang button').click(function(){
+        if($(this).next().is(':hidden')){
+            $(this).next().slideDown(300)
+        }else{
+            $(this).next().fadeOut(200)
+        }
+    })
 })
 
 // 스와이퍼

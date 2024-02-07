@@ -164,8 +164,8 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     right: 2%;
     top: 50%;
     transform: translateY(-50%);
-    width: 4vw;
-    height: 3vh;
+    width: 4.5vw;
+    height: 3.5vh;
     z-index: 9;
 }
 
@@ -475,9 +475,26 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     height: 70%;
     margin: 0 100px;
 }
-/* .footer .footLbx{
-    font-size: 14px;
-} */
+.footer .footLbx .lang{
+    position: relative;
+}
+.footer .footLbx .lang button{
+    height: 20px;
+    cursor: pointer;
+}
+.footer .footLbx .lang button:hover{
+    text-decoration: underline;
+    color: #777;
+}
+.footer .footLbx .lang ul{
+    position: absolute; right: 45px; top: 0;
+    transform: translateY(-20px);
+    display: none;
+}
+.footer .footLbx .lang ul:hover li a{
+    text-decoration: underline;
+    color: #777;
+}
 .footer .footLbx ul li{
     padding: 2px 0;
 }
