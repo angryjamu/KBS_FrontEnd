@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 @media only screen and (max-width: 1024px) {
-    .header{
+    .header {
         font-size: 15px;
     }
 
@@ -10,54 +10,68 @@
         height: 4vh;
     }
 
-    .cont .down {
-        left: 94%;
-    }
-
-    .footer .footInfo {
-        margin: 0 50px;
-    }
-    .footer .footCbx .menu {
-        padding: 0 10px;
-    }
-
-
-    .cont1 .mainC .mainImgC1:hover .mainTitC {
-        font-size: medium;
-    }
-    .cont1 .mainImg2 {
-        width: 200px;
-        height: 300px;
-    }
-
-    .cont3 .c3boxL{
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-35%);
-    }
-    .cont3 .c3boxL .c3titL {
-        height: 15%;
-    }
-    .cont3 .c3boxL .c3imgbxL{
-        height: 50%;
-    }
-    
-    .cont3 .c3boxR{
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-55%);
-    }
-    .cont3 .c3boxR .c3imgbxR {
-        height: 65%;
-    }
     .ham ul {
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
+    .cont .more {
+        right: 5%;
+    }
+
+    .cont .down {
+        left: 94%;
+    }
+
+    .wrapBox .cont {
+        max-width: 870px;
+    }
+
+    .footer .footInfo {
+        margin: 0 50px;
+    }
+
+    .footer .footCbx .menu {
+        padding: 0 10px;
+    }
+
+    .cont1 .mainC .mainImgC1:hover .mainTitC {
+        font-size: medium;
+    }
+
+    .cont1 .mainImg2 {
+        width: 200px;
+        height: 300px;
+    }
+
+    .cont3 .c3boxL {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-35%);
+    }
+
+    .cont3 .c3boxL .c3titL {
+        height: 15%;
+    }
+
+    .cont3 .c3boxL .c3imgbxL {
+        height: 50%;
+    }
+
+    .cont3 .c3boxR {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-55%);
+    }
+
+    .cont3 .c3boxR .c3imgbxR {
+        height: 65%;
+    }
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -69,9 +83,13 @@
         height: 90px;
         font-size: 13px;
     }
-    
+
     .header .title {
         line-height: 90px;
+    }
+
+    .wrapBox .cont {
+        max-width: 700px;
     }
 
     .cont .more {
@@ -96,7 +114,7 @@
     .cont1 h3 {
         font-size: 1em;
     }
-    
+
     .cont1 p {
         font-size: 12px;
     }
@@ -116,62 +134,73 @@
         left: 0;
         bottom: 250px;
     }
+
     .wrapBox .cont2 .swiper-button-next,
-    .wrapBox .cont2 .swiper-button-prev{
+    .wrapBox .cont2 .swiper-button-prev {
         background-size: 15px;
     }
 
     .wrapBox .cont2 .swiper-button-next {
         right: -20px;
     }
+
     .wrapBox .cont2 .swiper-button-prev {
         left: -20px;
     }
 
-    .cont3{
+    .cont3 {
         display: none;
     }
 
-    .wrapBox .cont.cont3_M{
+    .wrapBox .cont.cont3_M {
         height: 1250px;
     }
 
-    .cont3_M{
+    .cont3_M {
         display: block;
         text-align: center;
     }
+
     .cont3_M .tWrap_M h4 {
         font-size: 18px;
         padding-bottom: 15px;
     }
-    .c3imgL_M{
+
+    .c3imgL_M {
         width: 50%;
         height: 400px;
         margin: 20px auto;
         background: url(../images/main-imageL.jpeg) no-repeat 50%/100%;
     }
-    .c3imgR_M{
+
+    .c3imgR_M {
         width: 50%;
         height: 400px;
         margin: 20px auto;
         background: url(../images/newspaper.jpeg) no-repeat 50%/100%;
     }
+
     .footer {
         height: 140px;
     }
+
     .footer .footInfo {
         margin: 0 15px;
         font-size: 9px;
     }
+
     .footer .snsWrap {
         width: 130px;
     }
-    .sns > div a i img {
+
+    .sns>div a i img {
         width: 18px;
     }
+
     .copy {
         position: relative;
     }
+
     .footer .copy ul {
         width: auto;
         margin-left: 0;
@@ -180,8 +209,13 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    .ham ul li a{
+
+    .ham ul li a {
         font-size: 35px;
         letter-spacing: 3px;
     }
+}
+
+@media only screen and (max-width: 425px) {
+    
 }
