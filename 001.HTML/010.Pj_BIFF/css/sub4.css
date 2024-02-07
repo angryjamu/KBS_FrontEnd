@@ -106,6 +106,10 @@ abbr {
     margin-top: 10px;
 }
 
+.gnb2 .lb li:first-child {
+    padding-right: 30px;
+}
+
 @keyframes menuAni {
     to {
         width: 500px;
