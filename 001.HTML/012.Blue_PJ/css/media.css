@@ -236,6 +236,7 @@
     .cont.cont1.media{
         display: block;
         width: 370px;
+        height: 870px;
         margin: 0 auto;
     }
     .cont1.media .mainC{
@@ -283,7 +284,7 @@
     }
     .wrapBox .cont.cont2{
         width: 370px;
-        height: 30vh;
+        height: 40vh;
     }
     .cont2 .swiper {
         position: relative;
@@ -292,7 +293,7 @@
         overflow: hidden;
         max-width: 100%;
     }
-    .cont42 .swiper-slide img{
+    .cont2 .swiper-slide img{
         height: 100%;
         object-fit: cover;
     }
