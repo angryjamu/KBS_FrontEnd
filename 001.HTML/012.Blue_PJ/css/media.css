@@ -221,71 +221,85 @@
         height: 70px;
         font-size: 9px;
     }
+
     .header .title {
         line-height: 70px;
     }
+
     .header .menuBtn {
         width: 10vw;
     }
-    .cont1{
+
+    .cont1 {
         display: none;
     }
-    .cont1>div{
+
+    .cont1>div {
         position: static;
     }
-    .cont.cont1.media{
+
+    .cont.cont1.media {
         display: block;
         width: 370px;
         height: 870px;
         margin: 0 auto;
     }
-    .cont1.media .mainC{
+
+    .cont1.media .mainC {
         width: 100%;
         height: 200px;
         padding: 0;
     }
-    .cont1 .mainC .mainTitC{
+
+    .cont1 .mainC .mainTitC {
         display: block;
         font-size: 20px;
     }
-    .cont1.media .mainC .mainImgC1:hover .mainTitC{
+
+    .cont1.media .mainC .mainImgC1:hover .mainTitC {
         display: block;
         font-size: 20px;
     }
+
     .cont1 .mainC .mainTitC {
         top: 45%;
     }
-    .cont1.media .mainC .mainImgC1{
+
+    .cont1.media .mainC .mainImgC1 {
         height: 100%;
     }
 
-    .cont1 .mainC .mainImgC2{
+    .cont1 .mainC .mainImgC2 {
         position: static;
         filter: grayscale(0);
     }
-    .cont1.media .mainC2{
+
+    .cont1.media .mainC2 {
         width: 80%;
         height: 385px;
         margin: auto;
     }
-    .cont1.media .mainC2 .mainImgC2{
+
+    .cont1.media .mainC2 .mainImgC2 {
         height: 100%;
     }
-    .cont1.media .mainL{
+
+    .cont1.media .mainL {
         display: flex;
         width: 100%;
         padding: 0;
     }
-    .cont1.media .mainL .mainImg2{
-        /* width: 100%; */
-        /* height: 100px; */
+
+    .cont1.media .mainL .mainImg2 {
         filter: grayscale(.2);
         margin-top: 10px;
     }
-    .wrapBox .cont.cont2{
+
+    .wrapBox .cont.cont2 {
         width: 370px;
         height: 40vh;
     }
+
     .cont2 .swiper {
         position: relative;
         padding-bottom: 56.25%;
@@ -293,101 +307,157 @@
         overflow: hidden;
         max-width: 100%;
     }
-    .cont2 .swiper-slide img{
+
+    .cont2 .swiper-slide img {
         height: 100%;
         object-fit: cover;
     }
+
     .wrapBox .cont2 .swiper-button-next,
-    .wrapBox .cont2 .swiper-button-prev{
+    .wrapBox .cont2 .swiper-button-prev {
         display: none;
     }
+
     .cont2 .swiper-pagination {
         bottom: 0;
     }
-    .wrapBox .cont.cont3_M{
+
+    .wrapBox .cont.cont3_M {
         width: 370px;
         height: 1050px;
     }
+
     .c3imgL_M {
         height: 300px;
         margin: auto;
     }
+
     .c3imgR_M {
         height: 250px;
         margin: auto;
     }
+
     .footer {
-        height: 120px;
+        height: 60px;
     }
+
     .footer .footInfo {
         margin: 0 10px;
         font-size: 7px;
+        height: 50px;
     }
+
+    .footer .copy ul {
+        width: 100%;
+        margin: auto;
+        font-size: 3px;
+        position: static;
+        left: 0;
+        transform: translateX(0);
+        display: flex;
+        justify-content: center;
+    }
+
     .footer .footCbx .menu {
         padding: 0 5px;
     }
+
     .footer .footLbx ul li {
         padding: 5px 0;
     }
-    .footer .copy ul li:first-child{
+
+    .footer .copy ul li:first-child {
         padding-left: 5px;
     }
+
     .footer .footLbx .lang button {
         height: auto;
     }
+
     .footer .footLbx .lang ul {
         right: 29px;
         transform: translateY(-15px);
     }
+
     .footer .snsWrap {
         width: 70px;
     }
-    .footer .snsWrap .snsTit{
+
+    .footer .snsWrap .snsTit {
         padding-bottom: 10px;
     }
+
     .footer .snsWrap .sns {
         padding-top: 10px;
     }
+
     .sns>div a i img {
         width: 13px;
     }
+
 }
 
 @media only screen and (max-width: 375px) {
     .header {
         font-size: 8px;
     }
+
     .header .menuBtn {
         height: 2.5vh;
     }
+
     .cont.cont1.media,
-    .cont.cont2,
+    .wrapBox.cont.cont2,
     .wrapBox .cont.cont3_M {
         width: 340px;
     }
+
     .cont .down {
         font-size: 10px;
         width: 30px;
         height: 40px;
     }
+
     .cont .down .imgWrap::before {
         left: 30px;
     }
+
     .c3imgL_M {
         height: 250px;
     }
+
     .c3imgR_M {
         height: 200px;
     }
+
     .footer {
-        height: 90px;
+        height: 60px;
     }
+
     .footer .footInfo {
         font-size: 6px;
-        height: 60%;
     }
+
     .footer .footLbx .lang ul {
         right: 25px;
         transform: translateY(-10px);
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .cont.cont1.media, .wrapBox .cont.cont2, .wrapBox .cont.cont3_M {
+        width: 300px;
+    }
+    .cont1.media .mainC {
+        height: 160px;
+    }
+    .cont1.media .mainC2 {
+        height: 320px;
+    }
+    .cont2 .swiper {
+        width: 100%;
+    }
+    .footer .footInfo {
+        font-size: 5px;
     }
 }
