@@ -226,6 +226,10 @@
         font-size: 9px;
     }
 
+    .header h2.title.subH2 {
+        font-size: 12px;
+    }
+
     .header .title {
         line-height: 70px;
     }
