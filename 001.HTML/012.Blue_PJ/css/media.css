@@ -92,6 +92,10 @@
         max-width: 700px;
     }
 
+    .ham {
+        background: url(../images/menubar_col.png) no-repeat 50% 50%/cover;
+    }
+
     .cont .more {
         font-size: 11px;
     }
