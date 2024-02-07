@@ -546,7 +546,11 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
     font-size: .6em;
     margin-left: 100px;
-    overflow: hidden;
+}
+.footer .copy ul::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .footer .copy ul li{
     float: left;

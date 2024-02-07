@@ -380,10 +380,11 @@
         height: 200px;
     }
     .footer {
-        height: 100px;
+        height: 90px;
     }
     .footer .footInfo {
         font-size: 6px;
+        height: 60%;
     }
     .footer .footLbx .lang ul {
         right: 25px;
