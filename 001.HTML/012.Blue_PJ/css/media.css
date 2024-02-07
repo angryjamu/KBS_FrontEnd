@@ -36,6 +36,10 @@
         padding: 0 10px;
     }
 
+    .footer .copy ul {
+        margin-left: 50px;
+    }
+
     .cont1 .mainC .mainImgC1:hover .mainTitC {
         font-size: medium;
     }
