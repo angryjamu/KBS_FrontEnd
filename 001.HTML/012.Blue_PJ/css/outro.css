@@ -16,7 +16,7 @@ a{
     color: #fdfcf6;
 }
 .bg{
-    background: url(../images/exitbg.jpeg) no-repeat 0 60% / cover;
+    background: url(../images/exitbg.jpeg) no-repeat 0 50% / cover;
     height: 100%;
 }
 .wrapT{
@@ -39,4 +39,17 @@ a{
 .wrapT .exit{
     top: 40%;
     right: 25%;
+}
+
+@media only screen and (max-width: 425px) {
+    .bg{
+        background-size: contain;
+    }
+    .wrapT {
+        font-size: 1.7em;
+    }
+    .wrapT .back,
+    .wrapT .exit{
+        top: 46%;
+    }
 }
