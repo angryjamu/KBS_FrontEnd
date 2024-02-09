@@ -1,7 +1,9 @@
 @charset 'utf-8';
 
 .article{
-    padding: 50px 80px;
+    padding: 50px 0;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .article .info {
     display: flex;
@@ -30,7 +32,7 @@
 }
 
 .info .news {
-    width: calc(100vw - 80%);
+    width: calc(85vw - 80%);
 }
 
 .swiper {
