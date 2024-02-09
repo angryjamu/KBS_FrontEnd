@@ -1,0 +1,397 @@
+@charset "utf-8";
+/******************************************* 공통 *******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+/* font-family: 'Gowun Batang', serif; */
+/* font-family: 'IM Fell English SC', serif; */
+/* font-family: 'Poor Story', cursive; */
+html,
+body,
+h1,
+h2,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Poor Story', cursive;
+}
+
+body {
+    color: #333333;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+p {
+    font-size: 100%;
+    line-height: 1.5em;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+abbr {
+    text-decoration: underline solid;
+}
+
+.cont1 {
+    width: 100vw;
+    height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/******************************************* 상단 *******************************************/
+#top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #2422213a;
+    z-index: 999;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 22.5px);
+    width: 45px;
+    height: 45px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.gnb2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    animation: menuAni 1s ease-out 1s forwards;
+}
+
+.gnb2 ul {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.gnb2 .lb li:first-child {
+    padding-right: 30px;
+}
+
+@keyframes menuAni {
+    to {
+        width: 500px;
+    }
+}
+
+.gnb2>div {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.gnb2 .lb {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gnb2 .rb {
+    position: absolute;
+    width: 245px;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gnb2 a {
+    color: #ddd;
+}
+
+.gnb2 a:hover {
+    color: #0061f5;
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 3px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.ham {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+}
+
+.gnb1 {
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #8fb5c4;
+    transition: right .4s ease-in-out;
+    z-index: 9999;
+}
+
+.gnb1.on {
+    right: 0;
+}
+
+.cbtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #ffffff00;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gnb1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.gnb1>ul {
+    margin: 0 auto;
+}
+
+.gnb1 ul {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gnb1 ul>li {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+}
+
+.gnb1 ol>li {
+    font-size: 18px;
+    line-height: 2.2;
+}
+
+.gnb1>ul>li a {
+    width: 320px;
+    font-weight: bolder;
+    display: block;
+    transition: .5s;
+}
+
+.gnb1>ul>li:hover>a {
+    color: #12adda;
+    background-color: #213490d6;
+}
+
+.ghilogo {
+    vertical-align: middle;
+    height: 35px;
+}
+
+.smenu {
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+
+.smenu a:hover {
+    color: #0037b4;
+    background-color: #95b0e2e0;
+}
+
+.gnb1>ul>li:nth-child(1):hover .smenu {
+    height: 120px;
+}
+
+.gnb1>ul>li:nth-child(2):hover .smenu {
+    height: 160px;
+}
+
+.gnb1>ul>li:nth-child(3):hover .smenu {
+    height: 80px;
+}
+
+.audioBox {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+}
+
+.audio-wave {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.wave-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f7ff62;
+    animation: wave 2s infinite ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .1;
+    }
+}
+
+.audiotxt {
+    position: absolute;
+    white-space: nowrap;
+    top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.audioBox:hover .audiotxt {
+    color: #f7ff62;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.audiotxt:active {
+    transform: scale(0.95);
+}
+
+/******************************************* Cont1 *******************************************/
+
+.cont1 {
+    position: relative;
+    height: 100vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax-bg.m1{
+      background: url(../img/main/mbg1.jpeg) no-repeat 50% / cover;
+  }
+
+  .parallax-bg.m2{
+    background: url(../img/main/mbg2.jpeg) no-repeat 50% / cover;
+  }
+  .parallax-bg.m3{
+    background: url(../img/main/mbg3.jpeg) no-repeat 50% / cover;
+  }
+
+  .txtWrap {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+ .swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+  }
+
+  .swiper-slide .subtitle {
+    font-size: 21px;
+  }
+
+  .swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+  }

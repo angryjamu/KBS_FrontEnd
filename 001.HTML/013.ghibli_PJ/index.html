@@ -1,12 +1,175 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHIBLI STUDIO</title>
     <link rel="shortcut icon" href="./img/main/gibrri.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+
 </head>
+
 <body>
-    
+    <div id="top">
+
+        <div class="sideM">
+            <div class="ham">
+                <button class="menu" onclick="sMenu()">=</button>
+            </div>
+            <nav class="gnb1">
+                <button class="cbtn" onclick="sMenu()">×</button>
+                <ul>
+                    <li>
+                        <a href="#pg">Main</a>
+                        <!-- <ol class="smenu">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#pg1">Ocean Waves</a>
+                            </li>
+                            <li>
+                                <a href="#pg2">Characters</a>
+                            </li>
+                        </ol> -->
+                    </li>
+                    <li>
+                        <a href="#pg1">Ocean Waves</a>
+                        <!-- <ol class="smenu">
+                            <li>
+                                <a href="#">상영관</a>
+                            </li>
+                            <li>
+                                <a href="#">장소</a>
+                            </li>
+                            <li>
+                                <a href="#">티켓구매</a>
+                            </li>
+                            <li>
+                                <a href="#">이벤트</a>
+                            </li>
+                        </ol> -->
+                    </li>
+                    <li>
+                        <a href="#pg2">Characters</a>
+                        <!-- <ol class="smenu">
+                            <li>
+                                <a href="#">지브리 미술관</a>
+                            </li>
+                            <li>
+                                <a href="#">지브리 전시회</a>
+                            </li>
+                        </ol> -->
+                    </li>
+                    <li>
+                        <a href="#pg3">Ending</a>
+                    </li>
+                    <li><a href="#footer"><img class="ghilogo" src="./img/ocean/gibrri.png" alt="지브리"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class="top ibx">
+            <div class="logo">
+                <a href="#">
+                    <img class="log" src="./img/ocean/gibrri.png" alt="바다가들린다 로고">
+                </a>
+            </div>
+            <div class="gnb2">
+                <div>
+                    <ul class="lb">
+                        <li class="on"><a href="#pg1">Ghibli Studio</a></li>
+                        <li><a href="#pg2">Movie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="rb">
+                        <li><a href="#pg3">OST</a></li>
+                        <li><a href="#pg4">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="audioBox">
+                <div class="audio-wave" onclick="toggleAudio()">
+                    <div id="wave-animation" class="wave-animation"></div>
+                </div>
+                <p class="audiotxt" onclick="toggleAudio()">BGM Play!</p>
+                <audio id="bgm" autoplay loop onloadstart="this.volume=0.3" src="./mp3/kiki.mp3">
+                    Your browser does not support the audio element.
+                    이 브라우저에서는 오디오가 지원되지 않습니다.</audio>
+            </div>
+        </header>
+    </div>
+
+    <!-- /******************************************* cont1 *******************************************/ -->
+    <div id="cont">
+        <section id="pg" class="cont1">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="parallax-bg m1"></div>
+                        <div class="txtWrap">
+                            <div class="title" data-swiper-parallax="-300">Slide 1</div>
+                            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                            <div class="text" data-swiper-parallax="-100">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="parallax-bg m2"></div>
+                        <div class="txtWrap">
+                            <div class="title" data-swiper-parallax="-300">Slide 2</div>
+                            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                            <div class="text" data-swiper-parallax="-100">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="parallax-bg m3"></div>
+                        <div class="txtWrap">
+                            <div class="title" data-swiper-parallax="-300">Slide 3</div>
+                            <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                            <div class="text" data-swiper-parallax="-100">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+        <script src="./JS/main.js"></script>
 </body>
+
 </html>
