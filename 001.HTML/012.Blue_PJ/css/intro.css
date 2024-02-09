@@ -83,7 +83,7 @@ a {
         line-height: 15vh;
     }
     .wrap .tit a {
-        letter-spacing: 1px;
+        letter-spacing: 0;
         font-size: .8vh;
     }
 }
