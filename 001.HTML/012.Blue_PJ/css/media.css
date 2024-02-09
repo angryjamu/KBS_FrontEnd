@@ -49,6 +49,13 @@
         height: 300px;
     }
 
+    .wrapBox .cont2 .swiper-button-next {
+        right: -15px;
+    }
+    .wrapBox .cont2 .swiper-button-prev {
+        left: -15px;
+    }
+
     .cont3 .c3boxL {
         position: absolute;
         left: 0;
@@ -309,29 +316,34 @@
 
     .wrapBox .cont.cont2 {
         width: 370px;
-        height: 40vh;
+        height: 33vh;
     }
 
     .cont2 .swiper {
         position: relative;
-        padding-bottom: 56.25%;
-        height: auto;
+        height: 100%;
         overflow: hidden;
         max-width: 100%;
     }
 
+    .cont2 .swiper {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .cont2 .swiper-pagination {
+        bottom: -40px;
+    }
+
     .cont2 .swiper-slide img {
         height: 100%;
-        object-fit: cover;
     }
 
     .wrapBox .cont2 .swiper-button-next,
     .wrapBox .cont2 .swiper-button-prev {
         display: none;
-    }
-
-    .cont2 .swiper-pagination {
-        bottom: 0;
     }
 
     .wrapBox .cont.cont3_M {
