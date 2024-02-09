@@ -12,15 +12,11 @@
 
 .info .title {
     width: 950px;
-    height: 450px;
-    position: relative;
+    height: 100%;
     margin: auto;
 }
 .info .title .titleBox{
-    position: absolute;
     width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
 }
 .info .title .tit{
     font-size: 30px;
