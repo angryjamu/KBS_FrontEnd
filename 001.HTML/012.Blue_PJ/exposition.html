@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,18 @@
     <link rel="shortcut icon" href="images/jump.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/media.css">
-    
+    <style>
+        @media only screen and (max-width: 425px) {
+            .wrapBox .cont.cont2 {
+                height: 30vh;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="wrapBox">
         <header class="header">
@@ -50,7 +58,8 @@
                     <div class="swiper-slide"><img src="images/cont2bg5.jpeg" alt="이미지5번"></div>
                     <div class="swiper-slide"><img src="images/cont2bg7.jpeg" alt="이미지7번"></div>
                     <div class="swiper-slide"><img src="images/cont2bg8.jpeg" alt="이미지8번"></div>
-                    <div class="swiper-slide"><video class="Mvideo" src="./video/yves540.mp4" controls muted></video></div>
+                    <div class="swiper-slide"><video class="Mvideo" src="./video/yves540.mp4" controls muted></video>
+                    </div>
                 </div>
             </div>
             <!-- <div class="swiper-button-next"></div>
@@ -102,4 +111,5 @@
     </div>
     <script src="JS/main.js"></script>
 </body>
+
 </html>

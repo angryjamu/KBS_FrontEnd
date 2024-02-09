@@ -271,6 +271,9 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 33.33%;
     padding: 15px;
 }
+.cont1 .more{
+    padding: 0;
+}
 .cont1 h3{
     font-family: 'Cardo', serif;
     font-size: 1.5em;

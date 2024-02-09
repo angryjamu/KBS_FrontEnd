@@ -52,6 +52,7 @@
     .wrapBox .cont2 .swiper-button-next {
         right: -15px;
     }
+
     .wrapBox .cont2 .swiper-button-prev {
         left: -15px;
     }
@@ -144,10 +145,10 @@
     }
 
     .cont1 .mainC .mainImgC2 {
-        height: 37%;
+        height: 45%;
         position: absolute;
         left: 0;
-        bottom: 250px;
+        bottom: 100px;
     }
 
     .wrapBox .cont2 .swiper-button-next,
@@ -316,18 +317,12 @@
 
     .wrapBox .cont.cont2 {
         width: 370px;
-        height: 33vh;
-    }
-
-    .cont2 .swiper {
-        position: relative;
         height: 100%;
-        overflow: hidden;
-        max-width: 100%;
     }
 
     .cont2 .swiper {
         position: relative;
+        margin-top: 30px;
         height: 100%;
         overflow: hidden;
         max-width: 100%;
@@ -473,19 +468,26 @@
     }
 }
 
-@media only screen and (max-width: 320px){
-    .cont.cont1.media, .wrapBox .cont.cont2, .wrapBox .cont.cont3_M {
+@media only screen and (max-width: 320px) {
+
+    .cont.cont1.media,
+    .wrapBox .cont.cont2,
+    .wrapBox .cont.cont3_M {
         width: 300px;
     }
+
     .cont1.media .mainC {
         height: 160px;
     }
+
     .cont1.media .mainC2 {
         height: 320px;
     }
+
     .cont2 .swiper {
         width: 100%;
     }
+
     .footer .footInfo {
         font-size: 5px;
     }
