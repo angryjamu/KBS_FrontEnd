@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/************************* 모바일기준 1360px 이하 *************************/
+@media only screen and (max-width: 1360px) {
+
+    .cont1,
+    .cont4 {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .cont4 .swiper-slide img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/************************* 모바일기준 1230px 이하 *************************/
+@media only screen and (max-width: 1230px) {
+
+    .cbtn {
+        top: 4px;
+    }
+
+    .audiotxt {
+        font-size: 16px;
+    }
+
+    .cont2 .characters h2 {
+        font-size: 200%;
+    }
+
+    .cont2 h3 {
+        margin-bottom: 5px;
+    }
+
+    #pg1 .box1:first-child {
+        height: 900px;
+    }
+
+    #pg1 .cbwrap .box1:first-child .imgtxtbx>.imgbx {
+        background-size: 460px auto;
+    }
+
+    #pg1 .box1:first-child .re {
+        top: 8%;
+    }
+
+    .cbwrap .imgtxtbx>.scdimg {
+        background-size: 450px auto;
+    }
+
+    .cbwrap .imgtxtbx>.trdimg {
+        background-size: 450px auto;
+    }
+
+    .cbwrap .imgtxtbx>.fimg {
+        background-size: 450px auto;
+    }
+
+    .cbwrap .imgtxtbx>.fifimg {
+        background-size: 450px auto;
+    }
+
+    .txtbx p {
+        font-size: 16px;
+    }
+}
+
+/************************* 모바일기준 1040px 이하 *************************/
+@media only screen and (max-width: 1040px) {
+
+    .gnb1 {
+        width: 100%;
+    }
+
+    .gnb1 ul>li {
+        width: auto;
+    }
+
+    .gnb1>ul>li a {
+        width: auto;
+    }
+
+    .ham {
+        right: 0;
+    }
+
+    .cbtn {
+        right: 0;
+    }
+
+    .cont2 .characters h2 {
+        font-size: 190%;
+        text-align: center;
+    }
+
+    #pg1 .box1:first-child {
+        height: 100%;
+    }
+
+    #pg1 .box1 .imgtxtbx>.imgbx {
+        display: none;
+    }
+
+    #pg1 .box1:first-child .re {
+        position: relative;
+        padding: 20px 0 0;
+    }
+
+    .imgtxtbx .iimg {
+        max-width: 250px;
+    }
+
+    .imgtxtbx>div.txtbx {
+        padding: 20px 0px;
+    }
+}
+
+/************************* 모바일기준 600px 이하 *************************/
+@media only screen and (max-width: 600px) {
+
+    .audiotxt {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    p.audiotxt {
+        margin-top: 20px;
+    }
+}
+
+/************************* 모바일기준 500px 이하 *************************/
+@media only screen and (max-width: 500px) {
+    .gnb2 {
+        display: none;
+    }
+
+    .sideM {
+        display: block;
+    }
+
+    .menu {
+        font-size: 23px;
+    }
+
+    .gnb1 ul>li {
+        font-size: 28px;
+    }
+
+    .cont2 .characters h2 {
+        font-size: 25px;
+
+    }
+
+    .cont3 .txtbx {
+        font-size: 15px;
+    }
+}
+
+/************************* 모바일기준 385px 이하 *************************/
+@media only screen and (max-width: 385px) {
+
+    .gnb1 ul>li {
+        font-size: 26px;
+    }
+
+    .cont2 .characters h2 {
+        font-size: 23px;
+    }
+
+    .imgtxtbx .iimg {
+        max-width: 190px
+    }
+
+}
