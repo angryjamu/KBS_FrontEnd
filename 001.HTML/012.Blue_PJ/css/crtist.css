@@ -89,3 +89,17 @@
         width: 340px;
     }
 }
+@media only screen and (max-width: 1024px) {
+    .article {
+        max-width: 700px;
+    }
+    .info .title .tit {
+        font-size: 22px;
+    }
+    .info .title .txt {
+        padding-top: 10px;
+    }
+    .info .news {
+        width: 255px;
+    }
+}
