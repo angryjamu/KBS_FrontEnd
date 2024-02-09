@@ -78,7 +78,8 @@ a {
         line-height: 15vh;
     }
     .wrap .tit a {
-        font-size: .7vh;
+        letter-spacing: 1px;
+        font-size: .8vh;
     }
 }
 @media (max-width: 375px) {
@@ -88,6 +89,6 @@ a {
         line-height: 10vh;
     }
     .wrap .tit a {
-        font-size: .6vh;
+        font-size: .7vh;
     }
 }
