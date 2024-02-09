@@ -375,7 +375,8 @@ button{background: none; border: none; font-size: 1em; font-weight: 200; font-fa
     width: 100%;
     height: 100%;
 }
-.wrapBox .cont2 .swiper-button-next, .swiper-button-prev{
+.wrapBox .cont2 .swiper-button-next,
+.wrapBox .cont2 .swiper-button-prev{
     position: absolute;
     top: 0;
     height: 100%;
