@@ -41,13 +41,12 @@ a {
     position: absolute;
     width: 23vw;
     height: 40vh;
-    top: 40%;
-    left: 13%;
-    border-radius: 500px;
+    top: 39%;
+    left: 10%;
     padding-top: 30px;
     cursor: pointer;
     z-index: 2;
-    line-height: 350px;
+    line-height: 40vh;
 }
 
 .wrap .tit:hover+.bg {
@@ -58,6 +57,14 @@ a {
     font-size: 1.9vw;
 }
 
+.wrap .tit:hover a{
+    animation: filter 2s infinite ease-in;
+}
+@keyframes filter {
+    0%{filter: 0;}
+    50%{filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);}
+    100%{filter: 0;}
+}
 /* 반응형 */
 @media (max-width: 768px) {
     .wrap .tit{
