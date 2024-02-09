@@ -103,3 +103,25 @@
         width: 255px;
     }
 }
+@media only screen and (max-width: 425px) {
+    .article .info {
+        display: block;
+    }
+    .info .title {
+        width: 350px;
+        text-align: justify;
+    }
+    .title .tit {
+        font-size: 17px;
+    }
+    .scrip h2 {
+        font-size: 17px;
+    }
+    .info .news {
+        margin: 10px auto 0;
+    }
+    .scrip {
+        width: 350px;
+        margin: 10px auto 0;
+    }
+}
