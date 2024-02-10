@@ -18,7 +18,7 @@ var swiper = new Swiper(".mySwiper", {
     parallax: true,
     loop: true,
     autoplay: {
-        delay: 2200,
+        delay: 3000,
         disableOnInteraction: false,
       },
     pagination: {

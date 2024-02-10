@@ -72,11 +72,12 @@ abbr {
 
 .logo {
     position: absolute;
-    top: 5%;
+    top: 50%;
     left: calc(50% - 22.5px);
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     z-index: 10;
+    transform: translateY(-50%);
 }
 
 .logo img {
