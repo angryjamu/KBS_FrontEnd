@@ -12,6 +12,35 @@ function sMenu() {
     });
   };
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const gnb1 = document.querySelector('.gnb1');
+    const menuItems = document.querySelectorAll('.gnb1 > ul > li');
+    let prevBackgroundImage = gnb1.style.backgroundImage;
+
+    menuItems.forEach(function(menuItem) {
+        menuItem.addEventListener('mouseover', function() {
+            if (menuItem.classList.contains('menu1')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg5.jpg)';
+            } else if (menuItem.classList.contains('menu2')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg6.jpg)';
+            } else if (menuItem.classList.contains('menu3')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg3.jpeg)';
+            } else if (menuItem.classList.contains('menu4')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg1.jpeg)';
+            } else if (menuItem.classList.contains('menu5')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg2.jpeg)';
+            }
+            // 나머지 메뉴에 대한 처리도 추가할 수 있습니다.
+        });
+
+        menuItem.addEventListener('mouseout', function() {
+            // 마우스를 떼었을 때 이전의 백그라운드 이미지로 돌아가기
+            gnb1.style.backgroundImage = prevBackgroundImage;
+        });
+    });
+});
+
+
 // 스와이퍼
 var swiper = new Swiper(".mySwiper", {
     speed: 600,
