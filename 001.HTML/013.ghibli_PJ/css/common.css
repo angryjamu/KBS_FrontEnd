@@ -74,8 +74,8 @@ abbr {
     position: absolute;
     top: 50%;
     left: calc(50% - 22.5px);
-    width: 29px;
-    height: 29px;
+    width: 28px;
+    height: 28px;
     z-index: 10;
     transform: translateY(-50%);
 }

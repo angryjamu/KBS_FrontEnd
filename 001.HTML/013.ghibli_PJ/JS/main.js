@@ -12,6 +12,7 @@ function sMenu() {
     });
   };
 
+//  햄버거메뉴 li 오버시 이미지번경
   document.addEventListener("DOMContentLoaded", function() {
     const gnb1 = document.querySelector('.gnb1');
     const menuItems = document.querySelectorAll('.gnb1 > ul > li');
@@ -30,11 +31,9 @@ function sMenu() {
             } else if (menuItem.classList.contains('menu5')) {
                 gnb1.style.backgroundImage = 'url(./img/main/mbg5.jpg)';
             }
-            // 나머지 메뉴에 대한 처리도 추가할 수 있습니다.
         });
 
         menuItem.addEventListener('mouseout', function() {
-            // 마우스를 떼었을 때 이전의 백그라운드 이미지로 돌아가기
             gnb1.style.backgroundImage = prevBackgroundImage;
         });
     });
@@ -46,7 +45,7 @@ var swiper = new Swiper(".mySwiper", {
     speed: 600,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
       },
     pagination: {
@@ -58,6 +57,7 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
 
 // 오디오
 let audio = document.getElementById('bgm');
@@ -82,7 +82,6 @@ function toggleAudio() {
 }
 
 audio.addEventListener('ended', function() {
-    // Reset animation when audio playback ends
     waveAnimation.style.animationPlayState = 'paused';
     waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
     waveAnimation.style.opacity = 0.8;
