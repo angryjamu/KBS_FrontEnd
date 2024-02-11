@@ -20,15 +20,15 @@ function sMenu() {
     menuItems.forEach(function(menuItem) {
         menuItem.addEventListener('mouseover', function() {
             if (menuItem.classList.contains('menu1')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg5.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mbg7.jpg)';
             } else if (menuItem.classList.contains('menu2')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg6.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mbg9.png)';
             } else if (menuItem.classList.contains('menu3')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg3.jpeg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mbg8.png)';
             } else if (menuItem.classList.contains('menu4')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg1.jpeg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mbg6.jpg)';
             } else if (menuItem.classList.contains('menu5')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg2.jpeg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mbg5.jpg)';
             }
             // 나머지 메뉴에 대한 처리도 추가할 수 있습니다.
         });
@@ -44,7 +44,6 @@ function sMenu() {
 // 스와이퍼
 var swiper = new Swiper(".mySwiper", {
     speed: 600,
-    parallax: true,
     loop: true,
     autoplay: {
         delay: 3000,

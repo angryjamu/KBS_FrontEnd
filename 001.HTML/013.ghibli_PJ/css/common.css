@@ -74,8 +74,8 @@ abbr {
     position: absolute;
     top: 50%;
     left: calc(50% - 22.5px);
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     z-index: 10;
     transform: translateY(-50%);
 }
@@ -148,7 +148,7 @@ abbr {
 }
 
 .gnb2 a:hover {
-    color: #0061f5;
+    color: #109CEB;
 }
 
 .menu {
