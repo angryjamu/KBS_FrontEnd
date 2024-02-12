@@ -15,7 +15,7 @@ function sMenu() {
 //  햄버거메뉴 li 오버시 이미지번경
   document.addEventListener("DOMContentLoaded", function() {
     const gnb1 = document.querySelector('.gnb1');
-    const menuItems = document.querySelectorAll('.gnb1 > ul > li');
+    const menuItems = document.querySelectorAll('.gnb1 > ul > li, .gnb1 > ul > li > ol > li');
     let prevBackgroundImage = gnb1.style.backgroundImage;
 
     menuItems.forEach(function(menuItem) {
@@ -30,6 +30,14 @@ function sMenu() {
                 gnb1.style.backgroundImage = 'url(./img/main/mbg6.jpg)';
             } else if (menuItem.classList.contains('menu5')) {
                 gnb1.style.backgroundImage = 'url(./img/main/mbg5.jpg)';
+            }else if (menuItem.parentElement.classList.contains('smenu1')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg7.jpg)';
+            } else if (menuItem.parentElement.classList.contains('smenu2')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg9.png)';
+            } else if (menuItem.parentElement.classList.contains('smenu3')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg8.png)';
+            } else if (menuItem.parentElement.classList.contains('smenu4')) {
+                gnb1.style.backgroundImage = 'url(./img/main/mbg6.jpg)';
             }
         });
 

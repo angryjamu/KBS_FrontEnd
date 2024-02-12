@@ -63,6 +63,16 @@ img{
     box-sizing: border-box;
 }
 
+.afbf::after,
+.afbf::before{
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+    background: url(../img/main/kurosuke.png) no-repeat 50% / 100%;
+    vertical-align: middle;
+}
+
 /******************************************* 상단 *******************************************/
 #top {
     position: fixed;
@@ -469,16 +479,6 @@ img{
     font-size: 30px;
 }
 
-.cont2 .info .tit1::after,
-.cont2 .info .tit1::before{
-    content: '';
-    display: inline-block;
-    width: 17px;
-    height: 15px;
-    background: url(../img/main/kurosuke.png) no-repeat 50% / 100%;
-    vertical-align: middle;
-}
-
 .cont2 .info .tit2{
     font-size: 24px;
 }
@@ -531,16 +531,6 @@ img{
     font-size: 30px;
 }
 
-.cont3 .movie .moviet::after,
-.cont3 .movie .moviet::before{
-    content: '';
-    display: inline-block;
-    width: 17px;
-    height: 15px;
-    background: url(../img/main/kurosuke.png) no-repeat 50% / 100%;
-    vertical-align: middle;
-}
-
 .cont3 .movie .list {
     padding: 30px;
     display: flex;
@@ -559,18 +549,37 @@ img{
 
 .cont3 .movie .moremovie {
     text-align: center;
-    background: #ceff8ecf;
+    background: #ffffffcf;
     color: #252525;
+}
+
+.cont3 .movie .moremovie:hover {
+    background: #ceff8ecf;
+    color: #fff;
 }
 
 /******************************************* Cont4 *******************************************/
 .cont4 {
-    background: url(../img/main/opabg.webp) no-repeat 100% 100% / cover;
+    background: url(../img/main/mpbg1.jpg) no-repeat 100% 100% / cover;
+    position: relative;
+}
+.cont4::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #bcbcbc58;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .7;
 }
 
 .cont4 .ost {
     max-width: 1200px;
     margin: auto;
+    position: relative;
+    z-index: 9;
 }
 
 .cont4 .ost .ostT{
@@ -620,4 +629,70 @@ img{
 
 .ostSwiper .swiper-slide:hover::after{
     opacity: .8;
+}
+
+/******************************************* footer sch *******************************************/
+
+.footer .schcont{
+    background: #716844;
+    color: #ede6cb;
+    padding: 50px;
+    width: 100%;
+}
+
+.footer .schcont .cont {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .schcont .cont p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.footer .search .formItem {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.footer .search .formItem .form_input {
+    width: 100%;
+    padding: 20px;
+}
+
+.footer .search .formItem button {
+    padding: 14px 20px;
+    cursor: pointer;
+    background-color: #2b2510;
+    color: #ada277;
+    border: 0;
+    outline: 0;
+    transition: all .4s;
+}
+
+.footer .search .formItem button:hover {
+    background-color: #13120c;
+    color: #7b6f41;
+}
+
+#footer {
+    padding: 80px 0;
+    background: #000;
+    font-size: 14px;
+    color: #404040;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#footer .ghibli {
+    height: 100px;
+    margin-right: 5px;
+    vertical-align: middle;
 }

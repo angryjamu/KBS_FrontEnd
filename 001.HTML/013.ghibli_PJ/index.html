@@ -24,7 +24,7 @@
                 <button class="cbtn" onclick="sMenu()">×</button>
                 <ul>
                     <li class="menu1">
-                        <a href="#pg">Main</a>
+                        <a href="#pg">Ghibli Studio</a>
                         <!-- <ol class="smenu">
                             <li>
                                 <a href="#">Home</a>
@@ -38,24 +38,27 @@
                         </ol> -->
                     </li>
                     <li class="menu2">
-                        <a href="#pg1">Ocean Waves</a>
-                        <!-- <ol class="smenu">
-                            <li>
-                                <a href="#">상영관</a>
+                        <a href="#pg1">Movie</a>
+                        <ol class="smenu">
+                            <li class="smenu1">
+                                <a href="ocean.html">Ocean Waves</a>
                             </li>
-                            <li>
-                                <a href="#">장소</a>
+                            <li class="smenu2">
+                                <a href="#">Spirited Away</a>
                             </li>
-                            <li>
-                                <a href="#">티켓구매</a>
+                            <li class="smenu3">
+                                <a href="#">Princess Mononoke</a>
                             </li>
-                            <li>
-                                <a href="#">이벤트</a>
+                            <li class="smenu4">
+                                <a href="#">Howl's Moving Castle</a>
                             </li>
-                        </ol> -->
+                            <li class="smenu4">
+                                <a href="#">MY NEIGHBOR TOTORO</a>
+                            </li>
+                        </ol>
                     </li>
                     <li class="menu3">
-                        <a href="#pg2">Characters</a>
+                        <a href="#pg2">Ghibli Shop</a>
                         <!-- <ol class="smenu">
                             <li>
                                 <a href="#">지브리 미술관</a>
@@ -66,7 +69,7 @@
                         </ol> -->
                     </li>
                     <li class="menu4">
-                        <a href="#pg3">Ending</a>
+                        <a href="#pg3">OST</a>
                     </li>
                     <li class="menu5"><a href="#footer"><img class="ghilogo" src="./img/ocean/gibrri.png" alt="지브리"></a>
                     </li>
@@ -90,7 +93,7 @@
                 <div>
                     <ul class="rb">
                         <li><a href="#pg3">OST</a></li>
-                        <li><a href="#pg4">Gallery</a></li>
+                        <li><a href="#pg4">Search</a></li>
                     </ul>
                 </div>
             </div>
@@ -318,7 +321,7 @@
         <!-- /******************************************* cont2 *******************************************/ -->
         <section id="pg1" class="cont cont2">
             <div class="info">
-                <h1 class="tit1">&nbsp;Studio Ghibli&nbsp;</h1>
+                <h1 class="tit1 afbf">&nbsp;Studio Ghibli&nbsp;</h1>
                 <p class="tit3">Studio Ghibli is a Japanese animation studio based in Koganei, Tokyo. It has a strong
                     presence in the
                     animation industry and has expanded its portfolio to include various media formats, such as short
@@ -333,7 +336,7 @@
                 <a href="#" class="logoGold"><img src="img/main/ghibli_logo_gold.png" alt="지브리스튜디오골드색"></a>
             </div>
             <div class="info">
-                <h1 class="tit1">&nbsp;Celebrating 25 years of Princess Mononoke&nbsp;</h1>
+                <h1 class="tit1 afbf">&nbsp;Celebrating 25 years of Princess Mononoke&nbsp;</h1>
                 <h2 class="tit2">Hayao Miyazaki’s masterpiece returns to cinemas for a limited time in celebration of
                     its 25th Anniversary.</h2>
                 <p class="tit3">In the 14th century, the harmony that humans, animals and gods have enjoyed begins to
@@ -349,7 +352,7 @@
         <!-- /******************************************* cont3 *******************************************/ -->
         <section id="pg2" class="cont cont3">
             <div class="movie">
-                <h1 class="moviet">&nbsp;MOVIE&nbsp;</h1>
+                <h1 class="moviet afbf">&nbsp;MOVIE&nbsp;</h1>
                 <div class="list">
                     <div class="poster"><a href="#"><img src="img/main/poster_away.jpeg" alt="센과 치히로의 행방불명"></a></div>
                     <div class="poster"><a href="#"><img src="img/main/poster_howls.jpeg" alt="하울의 움직이는 성"></a></div>
@@ -375,9 +378,11 @@
             </div>
         </section>
 
+        <!-- /******************************************* cont4 *******************************************/ -->
+
         <section id="pg3" class="cont cont4">
             <div class="ost">
-                <h1 class="ostT">&nbsp;OST&nbsp;</h1>
+                <h1 class="ostT afbf">&nbsp;OST&nbsp;</h1>
                 <div class="swiper ostSwiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -412,8 +417,24 @@
                   </div>
             </div>
         </section>
-
     </div>
+    <footer id="pg4" class="footer">
+        <div class="schcont">
+            <div class="cont">
+                <form class="search">
+                    <p>Love STUDIO GHIBLI as much as we do? Sign up for updates and stay in the loop!</p>
+                    <div class="formItem">
+                        <input type="search" name="sch" id="sch" class="form_input" placeholder="Search">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="#"><abbr title="지브리 공식홈페이지"><img class="ghibli" src="img/main/ghibli_logo_white-1.png"
+                alt="지브리로고"></abbr></a>
+        </div>
+    </footer>
     <script src="./JS/main.js"></script>
 </body>
 
