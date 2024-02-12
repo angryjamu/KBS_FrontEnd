@@ -48,6 +48,10 @@ abbr {
     text-decoration: underline solid;
 }
 
+img{
+    vertical-align:middle
+}
+
 .cont1 {
     width: 100vw;
     height: 100vh;
@@ -348,7 +352,6 @@ abbr {
 
 .cont1 {
     position: relative;
-    height: 100vh;
 }
 
 .swiper {
@@ -446,10 +449,10 @@ abbr {
 }
 
 /******************************************* Cont2 *******************************************/
+
 .cont2 {
     background-color: #716844;
     color: #ede6cb;
-    position: relative;
 }
 
 .cont2 .info{
@@ -484,7 +487,7 @@ abbr {
     font-size: 17px;
 }
 
-.cont2 .info>a{
+.cont2 .info .ticket{
     display: block;
     width: 250px;
     margin: auto;
@@ -495,21 +498,60 @@ abbr {
     font-size: 17px;
 }
 
-.cont2 .info a:hover{
+.cont2 .info .ticket:hover{
     background-color: #fff;
     color: #000;
 }
 
-.cont2 .ghiimg{
-    position: absolute;
-    right: 0;
-    top: 30%;
+.cont2 .logoGold {
     display: inline-block;
     background-color: #fafafa;
     padding: 30px 50px;
+    margin: auto;
 }
 
-.cont2 .ghiimg img{
+.cont2 .logoGold img{
     width: 210px;
-    height: 110px;
+}
+
+/******************************************* Cont3 *******************************************/
+.cont3 {
+    background: url(../img/main/opabg.webp) no-repeat 0 50% / cover;
+}
+
+.cont3 .movie {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cont3 .movie .moviet {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.cont3 .movie .moviet::after,
+.cont3 .movie .moviet::before{
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+    background: url(../img/main/kurosuke.png) no-repeat 50% / 100%;
+    vertical-align: middle;
+}
+
+.cont3 .movie .list {
+    padding: 50px 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cont3 .movie .list .poster{
+    width: 20%;
+    padding: 0 10px;
+}
+
+.cont3 .movie .list .poster img{
+    width: 100%;
+    height: 100%;
 }
