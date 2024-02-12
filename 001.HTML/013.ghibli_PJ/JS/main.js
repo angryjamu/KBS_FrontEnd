@@ -40,7 +40,7 @@ function sMenu() {
 });
 
 
-// 스와이퍼
+// 메인 스와이퍼
 var swiper = new Swiper(".mySwiper", {
     speed: 600,
     loop: true,
@@ -58,6 +58,24 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+// ost 스와이퍼
+var swiper = new Swiper(".ostSwiper", {
+    effect: "coverflow",
+    // grabCursor: true,
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
 
 // 오디오
 let audio = document.getElementById('bgm');

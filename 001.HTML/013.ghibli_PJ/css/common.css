@@ -193,14 +193,14 @@ img{
     right: 0;
 }
 
-.gnb1.on::before {
+/* .gnb1.on::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background: #00000023;
     z-index: 9;
-}
+} */
 
 .cbtn {
     position: absolute;
@@ -487,7 +487,7 @@ img{
     font-size: 17px;
 }
 
-.cont2 .info .ticket{
+.cont .btn{
     display: block;
     width: 250px;
     margin: auto;
@@ -498,7 +498,7 @@ img{
     font-size: 17px;
 }
 
-.cont2 .info .ticket:hover{
+.cont .btn:hover{
     background-color: #fff;
     color: #000;
 }
@@ -515,18 +515,19 @@ img{
 }
 
 /******************************************* Cont3 *******************************************/
+
 .cont3 {
     background: url(../img/main/opabg.webp) no-repeat 0 50% / cover;
 }
 
 .cont3 .movie {
     max-width: 1200px;
+    padding: 70px;
     margin: auto;
 }
 
 .cont3 .movie .moviet {
     text-align: center;
-    padding-top: 50px;
     font-size: 30px;
 }
 
@@ -541,7 +542,7 @@ img{
 }
 
 .cont3 .movie .list {
-    padding: 50px 50px 0;
+    padding: 30px;
     display: flex;
     justify-content: center;
 }
@@ -554,4 +555,69 @@ img{
 .cont3 .movie .list .poster img{
     width: 100%;
     height: 100%;
+}
+
+.cont3 .movie .moremovie {
+    text-align: center;
+    background: #ceff8ecf;
+    color: #252525;
+}
+
+/******************************************* Cont4 *******************************************/
+.cont4 {
+    background: url(../img/main/opabg.webp) no-repeat 100% 100% / cover;
+}
+
+.cont4 .ost {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cont4 .ost .ostT{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.ost .ostSwiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: transparent;
+  }
+
+.ost .ostSwiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    position: relative;
+  }
+
+.ost .ostSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.ostSwiper .swiper-slide::after {
+    content: '';
+    background: url(../img/main/play.png)no-repeat 50% / cover;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    opacity: .3;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.ostSwiper .swiper-slide:hover::after{
+    opacity: .8;
 }
