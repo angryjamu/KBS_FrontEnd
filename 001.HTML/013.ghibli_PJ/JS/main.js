@@ -71,6 +71,10 @@ var swiper = new Swiper(".ostSwiper", {
     effect: "coverflow",
     // grabCursor: true,
     loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
