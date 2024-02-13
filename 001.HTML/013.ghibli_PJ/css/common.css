@@ -22,7 +22,7 @@ html,
 body {
     scroll-behavior: smooth;
     font-family: 'IM Fell English SC', serif;
-    font-family: 'Poor Story', cursive;
+    /* font-family: 'Poor Story', cursive; */
 }
 
 body {
@@ -271,7 +271,7 @@ img{
     background: transparent;
     height: 70px;
     font-size: 35px;
-    font-family: 'Poor Story', cursive;
+    font-family: 'IM Fell English SC', serif;
     padding: 0;
     color: #fff;
 }
