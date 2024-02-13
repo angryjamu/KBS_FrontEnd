@@ -231,6 +231,8 @@ img{
 .gnb1 a {
     color: #fff;
     text-decoration: none;
+    display: block;
+    transition: all .4s ease;
 }
 
 .gnb1>ul {
@@ -261,16 +263,23 @@ img{
     line-height: 2.2;
 }
 
-.gnb1>ul>li a {
+.gnb1>ul>li button {
     width: 320px;
-    font-weight: bolder;
     display: block;
-    transition: all .5s ease;
+    transition: all .4s ease;
+    border: 0;
+    background: transparent;
+    height: 70px;
+    font-size: 35px;
+    font-family: 'Poor Story', cursive;
+    padding: 0;
+    color: #fff;
 }
 
-.gnb1>ul>li:hover>a {
-    background-color: #bfbfbf42;
+.gnb1>ul>li:hover button {
+    background: #bfbfbf42;
     border: 2px solid snow;
+    cursor: pointer;
 }
 
 .ghilogo {
