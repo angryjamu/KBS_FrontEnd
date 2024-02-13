@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/************************* 모바일기준 1230px 이하 *************************/
+@media only screen and (max-width: 1230px) {
+
+    .cbtn {
+        top: 4px;
+    }
+
+    .audiotxt {
+        font-size: 16px;
+    }
+}
+
+/************************* 모바일기준 1040px 이하 *************************/
+@media only screen and (max-width: 1040px) {
+
+
+    .gnb1 {
+        width: 100%;
+    }
+
+    .gnb1 ul>li {
+        width: auto;
+    }
+
+    .gnb1>ul>li a {
+        width: auto;
+    }
+
+    .ham {
+        right: 0;
+    }
+
+    .cbtn {
+        right: 0;
+    }
+
+    .cont3 .kuro1 {
+        width: 55px;
+        top: 15%;
+        left: 2%;
+    }
+    
+    .cont3 .kuro2 {
+        width: 75px;
+        top: 20%;
+        right: 1%;
+    }
+    
+    .cont3 .kuro3 {
+        width: 50px;
+        top: 35%;
+        left: 5%;
+    }
+    
+    .cont3 .kuro4 {
+        width: 52px;
+        top: 45%;
+        right: 4%;
+    }
+    
+    .cont3 .kuro5 {
+        width: 40px;
+        top: 45%;
+        left: 2%;
+    }
+}
+/************************* 모바일기준 600px 이하 *************************/
+@media only screen and (max-width: 600px) {
+
+    .audiotxt {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    p.audiotxt {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .gnb2 {
+        display: none;
+    }
+
+    .sideM {
+        display: block;
+    }
+
+    .menu {
+        font-size: 23px;
+    }
+
+    .gnb1 ul>li {
+        font-size: 28px;
+    }
+
+    .cont2 .logoGold {
+        padding: 0;
+    }
+
+    .cont3 .movie .moviet {
+        padding-bottom: 50px;
+    }
+
+    .cont3 .movie .list {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .cont3 .movie .list .poster{
+        width: 50%;
+        padding: 10px 10px;
+    }
+
+    .cont3 .movie .list.p .poster:last-child {
+        display: none;
+    }
+
+    .cont3 .movie .list.m {
+        display: flex;
+    }
+}
+
+/************************* 모바일기준 385px 이하 *************************/
+@media only screen and (max-width: 385px) {
+
+    .gnb1 ul>li {
+        font-size: 26px;
+    }
+
+    .cont .btn {
+        width: auto;
+    }
+}
