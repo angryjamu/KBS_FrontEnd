@@ -18,7 +18,7 @@ function sMenu() {
 //  햄버거메뉴 li 오버시 이미지번경
   document.addEventListener("DOMContentLoaded", function() {
     const gnb1 = document.querySelector('.gnb1');
-    const menuItems = document.querySelectorAll('.gnb1 > ul > li, .gnb1 > ul > li > ol > li');
+    const menuItems = document.querySelectorAll('.gnb1 > ul > li');
     let prevBackgroundImage = gnb1.style.backgroundImage;
 
     menuItems.forEach(function(menuItem) {
@@ -26,13 +26,13 @@ function sMenu() {
             if (menuItem.classList.contains('menu1')) {
                 gnb1.style.backgroundImage = 'url(./img/main/mbg7.jpg)';
             } else if (menuItem.classList.contains('menu2')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg9.png)';
+                gnb1.style.backgroundImage = 'url(./img/main/chihiro043.jpg)';
             } else if (menuItem.classList.contains('menu3')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg8.png)';
+                gnb1.style.backgroundImage = 'url(./img/main/shop.jpeg)';
             } else if (menuItem.classList.contains('menu4')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg6.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/howlbg.png)';
             } else if (menuItem.classList.contains('menu5')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg5.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/kurobg.png)';
             }
         });
 
