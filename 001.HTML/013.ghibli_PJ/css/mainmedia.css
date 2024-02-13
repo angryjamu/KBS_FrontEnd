@@ -139,4 +139,8 @@
     .cont .btn {
         width: auto;
     }
+
+    .cont2 .info .tit1 {
+        font-size: 27px;
+    }
 }
