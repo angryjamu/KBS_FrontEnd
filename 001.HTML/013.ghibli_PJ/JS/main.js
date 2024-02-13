@@ -26,13 +26,13 @@ function sMenu() {
             if (menuItem.classList.contains('menu1')) {
                 gnb1.style.backgroundImage = 'url(./img/main/mbg7.jpg)';
             } else if (menuItem.classList.contains('menu2')) {
-                gnb1.style.backgroundImage = 'url(./img/main/chihiro043.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mononoke023.jpg)';
             } else if (menuItem.classList.contains('menu3')) {
-                gnb1.style.backgroundImage = 'url(./img/main/shop.jpeg)';
+                gnb1.style.backgroundImage = 'url(./img/main/kazetachinu050.jpg)';
             } else if (menuItem.classList.contains('menu4')) {
-                gnb1.style.backgroundImage = 'url(./img/main/howlbg.png)';
+                gnb1.style.backgroundImage = 'url(./img/main/howl049.jpg)';
             } else if (menuItem.classList.contains('menu5')) {
-                gnb1.style.backgroundImage = 'url(./img/main/kurobg.png)';
+                gnb1.style.backgroundImage = 'url(./img/main/chihiro014.jpg)';
             }
         });
 

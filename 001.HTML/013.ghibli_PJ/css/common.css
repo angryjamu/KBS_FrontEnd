@@ -196,7 +196,7 @@ img{
     height: 100%;
     transition: right .4s ease-in-out, background-image .5s ease-in-out;
     z-index: 9999;
-    background: url(../img/main/mbg4.png) no-repeat 50% / cover;
+    background: url(../img/main/chihiro043.jpg) no-repeat 50% / cover;
 }
 
 .gnb1.on {
