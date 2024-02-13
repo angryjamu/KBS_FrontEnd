@@ -388,14 +388,6 @@ img{
     background-position: center;
 }
 
-/* .cont1 .parallax-bg img {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-} */
-
-
 .parallax-bg.m1 {
     background: url(../img/main/chihiro001.jpg) no-repeat 50% / cover;
 }
@@ -536,7 +528,6 @@ img{
 
 .cont3 .kuro {
     position: absolute;
-    /* animation: kuro 5s ease-in-out infinite; */
 }
 
 .cont3 .kuro1 {
@@ -568,12 +559,6 @@ img{
     top: 50%;
     left: 12%;
 }
-
-/* @keyframes kuro {
-    0% {transform: translateY(0%)}
-    50% {transform: translateY(15%);}
-    100% {transform: translateY(0%);}
-} */
 
 .cont3 .movie .moviet {
     text-align: center;
