@@ -234,11 +234,6 @@ abbr {
     line-height: 2;
 }
 
-.gnb1 ol>li {
-    font-size: 18px;
-    line-height: 2.2;
-}
-
 .gnb1>ul>li a {
     width: 320px;
     font-weight: bolder;
@@ -254,29 +249,6 @@ abbr {
 .ghilogo {
     vertical-align: middle;
     height: 35px;
-}
-
-.smenu {
-    height: 0;
-    overflow: hidden;
-    transition: height .4s ease-in-out;
-}
-
-.smenu a:hover {
-    color: #0037b4;
-    background-color: #95b0e2e0;
-}
-
-.gnb1>ul>li:nth-child(1):hover .smenu {
-    height: 120px;
-}
-
-.gnb1>ul>li:nth-child(2):hover .smenu {
-    height: 160px;
-}
-
-.gnb1>ul>li:nth-child(3):hover .smenu {
-    height: 80px;
 }
 
 .audioBox {
