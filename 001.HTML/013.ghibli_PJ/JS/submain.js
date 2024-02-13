@@ -35,7 +35,6 @@ function toggleAudio() {
 }
 
 audio.addEventListener('ended', function() {
-    // Reset animation when audio playback ends
     waveAnimation.style.animationPlayState = 'paused';
     waveAnimation.style.transform = 'translate(-50%, -50%) scale(1)';
     waveAnimation.style.opacity = 0.8;
