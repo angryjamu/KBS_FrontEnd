@@ -7,7 +7,8 @@
 /* font-family: 'Alkatra', system-ui; */
 /* font-family: 'Permanent Marker', cursive; */
 html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,button{padding: 0;margin: 0;}
-html,body{font-family: 'Cardo', serif; scroll-behavior: smooth; overflow-x: hidden;}
+html,body{font-family: 'Cardo', serif; scroll-behavior: smooth;}
+body{overflow-x: hidden;}
 ul,ol,li{list-style: none;}
 *{box-sizing: border-box;}
 a{color: #000; text-decoration: none;}
