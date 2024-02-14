@@ -196,7 +196,7 @@ img{
     height: 100%;
     transition: right .4s ease-in-out, background-image .5s ease-in-out;
     z-index: 9999;
-    background: url(../img/main/chihiro043.jpg) no-repeat 50% / cover;
+    background: url(../img/main/chihiro043.webp) no-repeat 50% / cover;
 }
 
 .gnb1.on {
@@ -389,47 +389,47 @@ img{
 }
 
 .parallax-bg.m1 {
-    background: url(../img/main/chihiro001.jpg) no-repeat 50% / cover;
+    background: url(../img/main/chihiro001.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m2 {
-    background: url(../img/main/howl011.jpg) no-repeat 50% / cover;
+    background: url(../img/main/howl011.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m3 {
-    background: url(../img/main/mononoke019.jpg) no-repeat 50% / cover;
+    background: url(../img/main/mononoke019.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m4 {
-    background: url(../img/main/umi023.jpg) no-repeat 50% / cover;
+    background: url(../img/main/umi023.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m5 {
-    background: url(../img/main/laputa036.jpg) no-repeat 50% / cover;
+    background: url(../img/main/laputa036.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m6 {
-    background: url(../img/main/mbg6.jpg) no-repeat 50% / cover;
+    background: url(../img/main/mbg6.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m7 {
-    background: url(../img/main/porco041.jpg) no-repeat 50% / cover;
+    background: url(../img/main/porco041.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m8 {
-    background: url(../img/main/totoro029.jpg) no-repeat 50% / cover;
+    background: url(../img/main/totoro029.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m9 {
-    background: url(../img/main/kokurikozaka017.jpg) no-repeat 50% / cover;
+    background: url(../img/main/kokurikozaka017.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m10 {
-    background: url(../img/main/kazetachinu024.jpg) no-repeat 50% / cover;
+    background: url(../img/main/kazetachinu024.webp) no-repeat 50% / cover;
 }
 
 .parallax-bg.m11 {
-    background: url(../img/main/marnie021.jpg) no-repeat 50% / cover;
+    background: url(../img/main/marnie021.webp) no-repeat 50% / cover;
 }
 
 .txtWrap {
@@ -598,7 +598,7 @@ img{
 
 /******************************************* Cont4 *******************************************/
 .cont4 {
-    background: url(../img/main/mpbg1.jpg) no-repeat 100% 100% / cover;
+    background: url(../img/main/mpbg1.webp) no-repeat 100% 100% / cover;
     position: relative;
 }
 .cont4::after{

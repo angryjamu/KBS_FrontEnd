@@ -24,15 +24,15 @@ function sMenu() {
     menuItems.forEach(function(menuItem) {
         menuItem.addEventListener('mouseover', function() {
             if (menuItem.classList.contains('menu1')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mbg7.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mbg7.webp)';
             } else if (menuItem.classList.contains('menu2')) {
-                gnb1.style.backgroundImage = 'url(./img/main/mononoke023.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/mononoke023.webp)';
             } else if (menuItem.classList.contains('menu3')) {
-                gnb1.style.backgroundImage = 'url(./img/main/kazetachinu050.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/kazetachinu050.webp)';
             } else if (menuItem.classList.contains('menu4')) {
-                gnb1.style.backgroundImage = 'url(./img/main/howl049.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/howl049.webp)';
             } else if (menuItem.classList.contains('menu5')) {
-                gnb1.style.backgroundImage = 'url(./img/main/chihiro014.jpg)';
+                gnb1.style.backgroundImage = 'url(./img/main/chihiro014.webp)';
             }
         });
 
