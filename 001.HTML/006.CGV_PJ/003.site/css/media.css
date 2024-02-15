@@ -1,10 +1,8 @@
 @charset "utf-8";
-/* CGV PJ 메인페이지 미디어쿼리 - media.css */
 
 /********************************** 1300px 이하 **********************************/
 @media screen and (max-width:1300px) {
 
-    /* gnb메뉴 위치이동 - 영사기가 보이게 */
     .gnb {
         right: 63px;
     }
@@ -13,20 +11,15 @@
 /********************************** 1050px 이하 **********************************/
 @media screen and (max-width:1050px) {
 
-    /* glist메뉴 숨기기 - 영사기는 살아있음 */
-    /* 전체메뉴 하위 메뉴박스(.glist) */
     .glist {
         position: absolute;
         left: -73px;
         width: 121px;
         padding-top: 17px;
-        /* 오버시 끊어지지 않게 패딩탑으로 밀기 */
         text-align: right;
         display: none;
-        /* 처음에 안보임 */
     }
 
-    /* 상위메뉴 li는 float해제 */
     ul.glist>li {
         float: none;
     }
@@ -35,12 +28,10 @@
         bottom: 22px;
     }
 
-    /* gnb에 마우스 오버시 .glist메뉴 보이기 */
     .gnb:hover .glist {
         display: block;
     }
 
-    /* 상위메뉴 오버시 하위메뉴 숨기기 */
     .glist>li:hover .smenu {
         display: none;
     }
@@ -49,7 +40,6 @@
 /********************************** 780px 이하 **********************************/
 @media screen and (max-width:780px) {
 
-    /* 하단영역 배치 변경하기 */
     #info {
         height: auto;
         text-align: center;
@@ -69,60 +59,48 @@
 
 }
 
-/********************************** 모바일파트 **********************************/
 /********************************** 600px 이하 **********************************/
 @media screen and (max-width:600px) {
 
-    /* 1.타이틀 글자크기 */
     h1.tit {
         font-size: 30px;
     }
 
-    /* 1. 메인영역 - 상단과 하단을 뺀 나머지 높이설정 */
     .rbx::before {
         padding-top: calc(100vh - 230px);
-        /* 보이는 화면높이 100% 에서 상단(80px)+(하단150px)을 뺀 나머지 높이설정 */
     }
 
-    /* 2. 영화정보박스 */
     .mlist {
         transform: translateX(-50%);
         width: 100%;
     }
 
-    /* 3. 영화텍스트박스 */
     .movtxt {
         font-size: 2.6vw;
         line-height: 3vw;
     }
 
-    /* 4. 첫번째 li는 영화제목 */
     .movtxt li:first-child {
         font-size: 3.3vw;
     }
 
-    /* 5. 메인박스 배경 */
     #cont {
         background-size: 500px;
         background-position: center top;
     }
 
-    /* 6. 스크린 크기, 위치 맞추기 */
     #screen {
         top: 56px;
         left: 50.4%;
         transform: translateX(-50%);
-        /* 가로중앙이동 */
         width: 299px;
         height: 167px;
     }
 
-    /* 7. 하단영역 - 150px */
     #info {
         height: 150px;
     }
 
-    /* 8. 하단주소만 없애기 */
     #info address span {
         display: none;
     }

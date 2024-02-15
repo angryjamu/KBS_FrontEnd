@@ -1,22 +1,6 @@
 @charset 'utf-8';
-/* 공통 */
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Francois+One&family=Cardo:wght@400;700&family=Oswald:wght@200;300;400;500;700&family=Permanent+Marker&display=swap');
-/* font-family: 'Oswald', sans-serif; */
-/* font-family: 'Cardo', serif; */
-/* font-family: 'Francois One', sans-serif */
-/* font-family: 'Alkatra', system-ui; */
-/* font-family: 'Permanent Marker', cursive; */
-html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,button{padding: 0;margin: 0;}
-html,body{font-family: 'Cardo', serif; scroll-behavior: smooth;}
-body{overflow-x: hidden;}
-ul,ol,li{list-style: none;}
-*{box-sizing: border-box;}
-a{color: #000; text-decoration: none;}
-i,em{font-style: normal;}
-img{vertical-align: middle}
-button{background: none; border: none; font-size: 1em; font-weight: 200; font-family: 'Cardo', serif;}
+@import url(reset.css);
 
-/* 레이아웃 */
 .wrapBox{
     margin: 0 auto;
 }
