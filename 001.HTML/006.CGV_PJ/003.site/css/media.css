@@ -31,6 +31,10 @@
         float: none;
     }
 
+    .gnb {
+        bottom: 22px;
+    }
+
     /* gnb에 마우스 오버시 .glist메뉴 보이기 */
     .gnb:hover .glist {
         display: block;
