@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+html,
+body,
+h1,
+h2,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: 'IM Fell English SC', serif;
+}
+
+body {
+    color: #333333;
+    overflow-x: hidden;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+p {
+    font-size: 100%;
+    line-height: 1.5em;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+abbr {
+    text-decoration: underline solid;
+}
+
+img{
+    vertical-align:middle
+}

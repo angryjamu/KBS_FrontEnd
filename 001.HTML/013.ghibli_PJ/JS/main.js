@@ -64,7 +64,6 @@ var swiper = new Swiper(".mySwiper", {
 // ost 스와이퍼
 var swiper = new Swiper(".ostSwiper", {
     effect: "coverflow",
-    // grabCursor: true,
     loop: true,
     autoplay: {
         delay: 3000,
