@@ -6,48 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGV PJ</title>
     <link rel="stylesheet" href="css/main.css">
-    <!-- 기존 css하단에 외부파일 미디어쿼리 넣기 -->
     <link rel="stylesheet" href="css/media.css">
 
-    <!-- script 요소 스크립트 코딩영역 -->
     <script>
-        // 자바스크립트 문법구영 //
-
-        // 주석1
-        /* 주석2 */
-
-        // 함수 - function
-        // : 바로실행하지 않고 호출시에 실행할 코드 저장소
-        // function 함수명(){코드}
-        // 변수는 따옴표없이 사용한 문자이며
-        // 변수는 값을 저장하는 저장소
-        // 변수명은 저장주소
-        function goMv(code) { //코드는 전달변수
-            //호출확인
-            //alert("불러써?"+code);
-
-            // 전체문서.가져와아이디(아이디명).속성명=
+        function goMv(code) {
             document.getElementById("ifr").src =
-                // 이퀄(=) 오른쪽의 값이 왼쪽으로 들아감
-                // 결과적으로 src속성에 변경된 값이 할당
-                "https://www.youtube.com/embed/" +
-                code +
-                "?autoplay=1&playsinline=1";
-        } // goMv 함수//
+            "https://www.youtube.com/embed/" +
+            code +
+            "?autoplay=1&playsinline=1";
+            }
     </script>
 </head>
 
 <body>
-    <!-- 1. 상단영역 -->
     <header id="top" class="part">
-        <!-- 1-1.페이지 타이틀 -->
         <h1 class="tit">CGV 예고편 상영관</h1>
-        <!-- 1-2.전체메뉴(GNB) -->
         <nav class="gnb">
             <ul class="glist">
                 <li>
                     <a href="#">영화</a>
-                    <!-- 서브메뉴 -->
                     <div class="smenu">
                         <ol>
                             <li>
@@ -67,7 +44,6 @@
                 </li>
                 <li>
                     <a href="#">예매</a>
-                    <!-- 서브메뉴 -->
                     <div class="smenu">
                         <ol>
                             <li>
@@ -81,7 +57,6 @@
                 </li>
                 <li>
                     <a href="#">극장</a>
-                        <!-- 서브메뉴 -->
                         <div class="smenu">
                             <ol>
                                 <li>
@@ -94,12 +69,11 @@
                             <a href="#">CLUB 서비스</a>
                                 </li>
                             </li>
-                </ol>
-                </div>
+                        </ol>
+                    </div>
                 </li>
                 <li>
                     <a href="#">이벤트&amp;컬처</a>
-                    <!-- 서브메뉴 -->
                     <div class="smenu">
                         <ol>
                             <li>
@@ -111,41 +85,30 @@
                             </li>
                             <li>
                                 <a href="#">매거진</a>
-
                             </li>
+                            </li>
+                        </ol>
+                    </div>
                 </li>
-                </ol>
-                </div>
-                </li>
-            </ul> <!-- ul.glist -->
-            <!-- 영사기박스 -->
+            </ul>
             <aside id="cam">
-                <!-- 영사기 이미지 -->
                 <img src="./images/gnb.png" alt="영사기">
-                <!-- 빔표시박스 -->
                 <div class="bim"></div>
             </aside>
         </nav>
     </header>
-    <!-- 2. 메인영역 -->
     <main id="cont" class="part rbx">
-        <!-- 2-1.스크린박스 -->
         <div id="screen">
             <iframe id="ifr"
                 src="https://www.youtube.com/embed/?autoplay=1&mute=1&loop=1&playlist=rHTTv3m-zb0&playsinline=1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <!-- 2-2.예고편선택메뉴 -->
         <nav class="mlist">
             <ul>
                 <li>
-                    <!-- onclick 속성
-                    클릭이벤트속성 : 클릭이벤트 발생시
-                JS코드를 실행함 -> 여기서는 함수호출 -->
                     <a href="#" onclick="goMv('4EVtLIbdMGo')">
                         <img src="images/deadman.jpeg" alt="데드맨">
-                        <!-- 영화정보 -->
                         <ol class="movtxt">
                             <li>데드맨</li>
                             <li>조진웅, 김희애</li>
@@ -155,7 +118,6 @@
                 <li>
                     <a href="#" onclick="goMv('LpVR8ZPXDQo')">
                         <img src="images/almostlove.jpeg" alt="우견니">
-                        <!-- 영화정보 -->
                         <ol class="movtxt">
                             <li>우견니</li>
                             <li>서약함</li>
@@ -165,7 +127,6 @@
                 <li>
                     <a href="#" onclick="goMv('CASvEXDk7HI')">
                         <img src="images/argylle.jpeg" alt="아가일">
-                        <!-- 영화정보 -->
                         <ol class="movtxt">
                             <li>아가일</li>
                             <li>헨리 카빌</li>
@@ -175,7 +136,6 @@
                 <li>
                     <a href="#" onclick="goMv('BR5YCAxjbwc')">
                         <img src="images/dune2.jpeg" alt="듄 파트2">
-                        <!-- 영화정보 -->
                         <ol class="movtxt">
                             <li>듄: 파트2</li>
                             <li>티모시 샬라메</li>
@@ -185,7 +145,6 @@
                 <li>
                     <a href="#" onclick="goMv('OAMDkBrItoc')">
                         <img src="images/snow.jpeg" alt="스노우 퍼핀즈">
-                        <!-- 영화정보 -->
                         <ol class="movtxt">
                             <li>스노우 퍼핀즈</li>
                             <li>조니 뎁</li>
@@ -195,7 +154,6 @@
                 <li>
                     <a href="#" onclick="goMv('Bldf9SWRPFM')">
                         <img src="images/wonka.jpeg" alt="웡카">
-                        <!-- 영화정보 -->
                         <ol class="movtxt">
                             <li>웡카</li>
                             <li>티모시 샬라메</li>
@@ -206,9 +164,7 @@
         </nav>
 
     </main>
-    <!-- 3. 하단영역 -->
     <footer id="info" class="part">
-        <!-- 3-1. 회사정보 -->
         <address>
             <img src="./images/blogo.png" alt="하단로고">
             <span>
@@ -217,7 +173,6 @@
                 개인정보보호 책임자 : 정종민대표이메일 : cjcgvmaster@cj.netCGV고객센터 : 1544-1122
             </span>
         </address>
-        <!-- 3-2. SNS버튼 -->
         <ul class="sns">
             <li>
                 <a href="https://www.facebook.com/CJCGV" target="_blank" title="페이스북 바로가기">

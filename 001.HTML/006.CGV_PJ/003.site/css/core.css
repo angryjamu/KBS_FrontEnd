@@ -1,19 +1,6 @@
 @charset "utf-8";
-/* CGV PJ 공통핵심 CSS - core.css */
-/* -> 웹폰트, 공용 클래스 */
-
-/* 웹폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Jua&family=Audiowide&display=swap');
 
-/* 
-    font-family: 'Cute Font', cursive;
-    font-family: 'Jua', sans-serif;
-    font-family: 'Audiowide', cursive;
-*/
-
-/* 공통 class */
-
-/* 비율유지 클래스 */
 .rbx {
     position: relative;
 }
@@ -22,15 +9,7 @@
     display: block;
     padding-top: 65.66%;
 }
-/* 
-    비율계산:
-    이미지가로 : 이미지세로 = 100% : 몇%
-    1200 : 788= 100: x
-    x = 788*100/1200
-    x = 65.66
- */
 
-/* IR(Image Replacement)클래스 */
 .ir{
     display: block;
     width: 0;
