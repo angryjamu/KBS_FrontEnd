@@ -17,6 +17,7 @@ html,
 body {
     scroll-behavior: smooth;
     font-family: 'Poor Story', cursive;
+    overflow-x: hidden;
 }
 
 body {
