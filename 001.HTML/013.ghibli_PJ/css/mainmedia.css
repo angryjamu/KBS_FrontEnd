@@ -136,6 +136,10 @@
         font-size: 26px;
     }
 
+    .logo {
+        left: 46%;
+    }
+
     .cont .btn {
         width: auto;
     }
