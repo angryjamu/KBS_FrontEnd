@@ -137,7 +137,9 @@
     }
 
     .logo {
-        left: 46%;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%);
     }
 
     .cont .btn {
