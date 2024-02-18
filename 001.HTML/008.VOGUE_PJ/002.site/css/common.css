@@ -42,6 +42,8 @@ html{
 #top.on .logo{
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 100%;
     text-align: center;
 }
