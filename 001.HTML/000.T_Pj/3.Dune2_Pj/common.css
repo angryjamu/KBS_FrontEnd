@@ -14,6 +14,9 @@ body{
     background-color: #000;
     background: url(img/bg.jpg) no-repeat fixed center/cover;
 }
+.cont { 
+    height: 100vh;
+}
 .scbar::-webkit-scrollbar{
     width: 7px;
 }
@@ -106,20 +109,25 @@ li{
 .cont{
     min-height: 800px;
 }
-#cbx{
+#cbx {
     position: relative;
     top: 400px;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
-.cat{
-    width: 25%;
+
+.cat {
+    width: 20%;
     padding: 5px;
     box-sizing: border-box;
     float: left;
     background-color: #332922;
-    /* #686764 #4b4a49 #241e19 */
     transition: margin-top .6s ease-out;
+    margin-right: 6.6%;
+}
+
+.cat:last-child {
+    margin-right: 0;
 }
 .cat:hover{
     margin-top: -30%;
