@@ -39,7 +39,7 @@ li{
 /* -------------------------------head----------------------------------- */
 .top{
     min-height: 111px;
-    background-color: #fff;
+    background-color: #232112;
     border-bottom: 1px solid #c9aa1f;
 }
 .logo{
@@ -101,13 +101,13 @@ li{
     width: 100%;
     left: 0;
     height: 0;
-    background-color: #fff;
+    background-color: #bf9a76;
     transition: height .4s ease-out;
     margin-top: 1px;
 }
 /* -------------------------------main----------------------------------- */
-.cont{
-    min-height: 800px;
+.cont1{
+    height: calc(100vh - 111px);
 }
 #cbx {
     position: relative;
