@@ -281,7 +281,6 @@ transition-delay: 0s;
 .sns li{
     width: 30px;
     height: 30px;
-    /* background: #737373; */
     margin: 5px;
     border-radius: 7px;
     transition: all .5s;
@@ -299,10 +298,6 @@ transition-delay: 0s;
     margin: 0;
     transition: all 1s;
 }
-
-/* .sns li:hover {
-    background: snow;
-} */
 
 .sns li:hover img{
     transform: rotateY(360deg);
