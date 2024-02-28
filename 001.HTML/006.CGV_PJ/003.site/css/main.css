@@ -279,10 +279,10 @@ transition-delay: 0s;
 }
 
 .sns li{
-    width: 34px;
-    height: 34px;
-    background: #737373;
-    margin: 2px;
+    width: 30px;
+    height: 30px;
+    /* background: #737373; */
+    margin: 5px;
     border-radius: 7px;
     transition: all .5s;
 }
@@ -300,9 +300,9 @@ transition-delay: 0s;
     transition: all 1s;
 }
 
-.sns li:hover {
+/* .sns li:hover {
     background: snow;
-}
+} */
 
 .sns li:hover img{
     transform: rotateY(360deg);
