@@ -124,8 +124,8 @@
     width: 100%;
     height: 100%;
     transition: right .4s ease-in-out, background-image .5s ease-in-out;
-    z-index: 9999;
     background: url(../img/main/chihiro043.webp) no-repeat 50% / cover;
+    z-index: 9999;
 }
 
 .gnb1.on {
