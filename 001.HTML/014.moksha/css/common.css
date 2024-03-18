@@ -24,3 +24,38 @@
 #header .logo.pc {
     width: 76px;
 }
+
+#header .menu-box {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+#header .btn-menu {
+    display: block;
+    width: 61px;
+    height: 20px;
+    position: relative;
+}
+
+#header .btn-menu::before {
+    content: '';
+    display: block;
+    height: 1px;
+    border-top: 1px solid #000;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 100%;
+}
+
+#header .btn-menu::after {
+    content: '';
+    display: block;
+    height: 1px;
+    border-top: 1px solid #000;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+}
