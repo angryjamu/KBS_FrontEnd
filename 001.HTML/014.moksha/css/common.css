@@ -21,8 +21,22 @@
     padding: 34px 35px;
 }
 
+#header .logo {
+    transition: opacity .4s;
+    text-align: center;
+}
+
+#header .logo:hover {
+    opacity: .7;
+}
+
 #header .logo.pc {
     width: 76px;
+}
+
+#header .logo a i {
+    font-size: 15px;
+    font-weight: 300;
 }
 
 #header .menu-box {
@@ -36,6 +50,12 @@
     width: 61px;
     height: 20px;
     position: relative;
+    transition: opacity .4s;
+    cursor: pointer;
+}
+
+#header .btn-menu:hover {
+    opacity: .4;
 }
 
 #header .btn-menu::before {
@@ -47,6 +67,7 @@
     left: 0;
     top: 5px;
     width: 100%;
+    transition: opacity .4s;
 }
 
 #header .btn-menu::after {
@@ -58,4 +79,5 @@
     left: 0;
     bottom: 5px;
     width: 100%;
+    transition: opacity .4s;
 }
