@@ -31,12 +31,13 @@
 }
 
 #header .logo.pc {
-    width: 76px;
+    width: 66px;
 }
 
 #header .logo a i {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
+    font-family: "Piazzolla", serif;
 }
 
 #header .menu-box {
