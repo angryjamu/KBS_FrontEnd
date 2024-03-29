@@ -159,6 +159,7 @@
 
 .top-wrapper .second-section .description-box .title {
     font-size: 28px;
+    font-weight: 800;
     margin-right: 50px;
     writing-mode: vertical-lr;
 }
@@ -171,7 +172,18 @@
 
 .top-wrapper .second-section .description-box .text-box .text {
     font-size: 14px;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 2px;
     margin-right: 5px;
     writing-mode: vertical-lr;
+}
+
+.top-wrapper .second-section .video-box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.top-wrapper .second-section .video-box .video {
+    width: 100%;
 }
