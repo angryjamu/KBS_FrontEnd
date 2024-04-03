@@ -187,3 +187,10 @@
 .top-wrapper .second-section .video-box .video {
     width: 100%;
 }
+
+.top-wrapper .second-section .button-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
