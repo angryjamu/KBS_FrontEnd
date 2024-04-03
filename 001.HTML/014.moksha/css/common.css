@@ -347,3 +347,11 @@
     margin-right: 41px;
     writing-mode: vertical-rl;
 }
+
+/* --------------------footer-------------------- */
+#footer {
+    max-width: 1056px;
+    height: 100vh;
+    margin: 0 auto;
+    transition: .8s;
+}
