@@ -194,3 +194,83 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+/* --------------------sec3-------------------- */
+.top-wrapper .third-section .cuisine, .top-wrapper .third-section .room {
+    padding-bottom: 240px;
+}
+
+.top-wrapper .third-section .description-img-box1 {
+    height: 635px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-wrapper .third-section .description-img-box1 .left-box {
+    width: 526px;
+    margin-right: 136px;
+    aspect-ratio: 526 / 635;
+    overflow: hidden;
+}
+
+.top-wrapper .third-section .description-img-box1 .right-box {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box {
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Nanum Myeongjo", serif;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .en-box {
+    flex-direction: column;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .en {
+    font-size: 13px;
+    font-family: "Nanum Myeongjo", serif;
+    writing-mode: vertical-rl;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .en.second {
+    margin-top: 3px;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .border::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 30px;
+    border-left: 1px solid #000;
+    margin: 0 40px;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .sub {
+    font-size: 14px;
+    writing-mode: vertical-rl;
+    font-weight: normal;
+}
+
+.top-wrapper .third-section .description-img-box1 .vertical-title-box .hanja {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 10px;
+    writing-mode: vertical-rl;
+    margin-right: 40px;
+}
