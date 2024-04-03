@@ -196,7 +196,7 @@
 }
 
 /* --------------------sec3-------------------- */
-.top-wrapper .third-section .cuisine, .top-wrapper .third-section .room {
+.top-wrapper .third-section .cuisine, .top-wrapper .third-section .room, .top-wrapper .third-section .tea {
     padding-bottom: 240px;
 }
 
@@ -273,4 +273,77 @@
     letter-spacing: 10px;
     writing-mode: vertical-rl;
     margin-right: 40px;
+}
+
+.top-wrapper .third-section .description-img-box2 {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-wrapper .third-section .description-img-box2 .left-box {
+    width: 840px;
+    margin-bottom: 47px;
+    overflow: hidden;
+    aspect-ratio: 1004 / 668;
+}
+
+.top-wrapper .third-section .description-img-box2 .left-box .picture {
+    width: 100%;
+}
+
+.top-wrapper .third-section .description-img-box2 .right-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 128px 240px;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Nanum Myeongjo", serif;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .en-box {
+    flex-direction: column;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .en {
+    font-size: 13px;
+    writing-mode: vertical-rl;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .border::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 30px;
+    border-left: 1px solid #000;
+    margin: 0 40px;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .sub {
+    font-size: 14px;
+    writing-mode: vertical-rl;
+}
+
+.top-wrapper .third-section .description-img-box2 .vertical-title-box .hanja {
+    font-size: 28px;
+    letter-spacing: 15px;
+    line-height: 1;
+    margin-right: 41px;
+    writing-mode: vertical-rl;
 }
