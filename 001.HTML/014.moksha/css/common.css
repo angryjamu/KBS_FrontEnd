@@ -354,4 +354,119 @@
     height: 100vh;
     margin: 0 auto;
     transition: .8s;
+    font-family: "Nanum Myeongjo", serif;
+}
+
+#footer .footer-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    padding: 147px 200px 129px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .footer-wrapper .left-box {
+    min-height: 525px;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    line-height: 2.2;
+    margin-right: 50px;
+}
+
+#footer .footer-wrapper .left-box .upper-box {
+    margin-bottom: 2vw;
+    transition: .8s;
+}
+
+#footer .footer-wrapper .left-box .upper-box .address {
+    transition: .4s;
+}
+
+#footer .footer-wrapper .left-box .upper-box .tel {
+    transition: .4s;
+}
+
+#footer .footer-wrapper .left-box .middle-wrapper1, #footer .footer-wrapper .left-box .middle-wrapper2 {
+    margin-bottom: 2vw;
+}
+
+#footer .footer-wrapper .left-box .bottom-wrapper1, #footer .footer-wrapper .left-box .bottom-wrapper2 {
+    margin-bottom: 2vw;
+}
+
+#footer .footer-wrapper .right-box {
+    min-height: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .footer-wrapper .right-box .logo {
+    width: 112px;
+    height: 190px;
+    position: relative;
+    margin-bottom: 16vw;
+    transition: .4s;
+}
+
+#footer .footer-wrapper .right-box .logo > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .4s;
+}
+
+#footer .footer-wrapper .right-box .logo > a img {
+    width: 100%;
+}
+
+#footer .footer-wrapper .right-box .bottom-wrapper .menu-lang {
+    margin: auto 0 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .footer-wrapper .right-box .bottom-wrapper .menu-lang .lang {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .footer-wrapper .right-box .bottom-wrapper .menu-lang .lang > li > a {
+    letter-spacing: 3px;
+    transition: .4s;
+}
+
+#footer .footer-wrapper .right-box .bottom-wrapper .menu-lang .lang > li > a:last-child {
+    margin-left: 3px;
+}
+
+#footer .footer-wrapper .right-box .bottom-wrapper .menu-lang .lang > span {
+    transition: .4s;
+}
+
+#footer .footer-wrapper .right-box .bottom-wrapper #copyright {
+    text-align: center;
+    transition: .8s;
+}
+
+small {
+    font-size: 80%;
+}
+
+@media screen and (min-width: 1441px) {
+    #footer .footer-wrapper .left-box.kr {
+        height: 600px;
+    }
+    #footer .footer-wrapper .right-box.kr {
+        height: 600px;
+    }
 }
