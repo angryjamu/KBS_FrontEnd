@@ -1,5 +1,4 @@
 // 스와이퍼
-
 var swiper = new Swiper(".swiper-fade", {
     effect: "fade",
     loop: true,

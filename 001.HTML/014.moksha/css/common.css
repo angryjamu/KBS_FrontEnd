@@ -16,6 +16,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     position: absolute;
     left: 0;
     top: 0;
@@ -23,16 +24,13 @@
 }
 
 #header .logo {
-    transition: opacity .4s;
+    width: 66px;
     text-align: center;
+    transition: opacity .4s;
 }
 
 #header .logo:hover {
     opacity: .7;
-}
-
-#header .logo.pc {
-    width: 66px;
 }
 
 #header .logo a i {
@@ -284,6 +282,10 @@
     margin-bottom: 289px;
 }
 
+.top-wrapper .first-section .address {
+    display: none;
+}
+
 .top-wrapper .inner-wrapper {
     width: 100%;
     height: 100%;
@@ -301,6 +303,8 @@
 
 .top-wrapper .first-section .first-view-box .swiper-wrapper {
     overflow: hidden;
+    width: 610px;
+    aspect-ratio: 610 / 970;
 }
 
 .top-wrapper .first-section .swiper-fade .swiper-slide {
@@ -665,5 +669,117 @@ small {
     }
     #footer .footer-wrapper .right-box.kr {
         height: 600px;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .top-wrapper .first-section .address {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        margin: 80px 0 0 40px;
+    }
+
+    .top-wrapper .top-layer-wrapper .address {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .top-wrapper .first-section {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+
+    #header .nav-box {
+        padding: 30px;
+        align-items: center;
+    }
+    
+    #header .logo {
+        width: 94px;
+    }
+
+    #header .logo a i {
+        font-size: 17px;
+    }
+
+    #header .nav-box .counsel {
+        font-size: 28px;
+        margin-top: -1px;
+    }
+
+    #header .menu-box {
+        align-items: center;
+    }
+
+    .top-wrapper .first-section .address {
+        font-size: 24px;
+    }
+
+    .top-wrapper .first-section .first-view-box {
+        aspect-ratio: initial;
+        padding: 0 99px;
+        width: 100%;
+    }
+
+    .top-wrapper .first-section .first-view-box .swiper-wrapper {
+        width: 100%;
+    }
+
+    .top-wrapper .first-section .first-view-box .swiper-wrapper .l-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #header {
+        height: 60px;
+        padding: 15px;
+        background: #fff;
+    }
+    
+    #header .nav-box {
+        padding: 15px;
+    }
+
+    #header .logo {
+        width: 35px;
+    }
+
+    #header .logo a i {
+        display: none;
+    }
+
+    #header .nav-box .counsel {
+        font-size: 14px;
+        margin-right: 15px;
+    }
+
+    #header .btn-menu {
+        width: 32px;
+        height: 6px;
+    }
+
+    .top-wrapper .first-section {
+        padding: 70px 0 0;
+        margin-bottom: 162px;
+    }
+
+    .top-wrapper .first-section .first-view-box{
+        padding: 0 50px;
+    }
+    
+    .top-wrapper .first-section .address {
+        font-size: 12px;
+        margin: 30px 0 0 15px;
     }
 }
