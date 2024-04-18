@@ -381,6 +381,15 @@
     overflow: hidden;
     transition: .8s;
 }
+
+.top-wrapper .third-section .description-img-box1 .left-box .picture {
+    width: 100%;
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate3d(0px, auto, 0px);
+}
+
 .top-wrapper .third-section .description-img-box1 .left-box:hover {
     opacity: .8;
 }
@@ -438,6 +447,7 @@
 }
 
 .top-wrapper .third-section .description-img-box1 .vertical-title-box .hanja {
+    font-family: "Nanum Myeongjo", serif;
     font-size: 28px;
     font-weight: normal;
     line-height: 1;
@@ -689,6 +699,42 @@ small {
     .top-wrapper .first-section {
         margin-top: 80px;
     }
+
+    .top-wrapper .second-section .button-box {
+        padding: 0 95px;
+    }
+
+    .top-wrapper .third-section .cuisine, .top-wrapper .third-section .room, .top-wrapper .third-section .tea {
+        padding-bottom: 223px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 {
+        max-width: 638px;
+        height: auto;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .left-box {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .right-box {
+        width: 100%;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        padding: 0 40px;
+        margin: 79px 0 38px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .en.second {
+        /* margin-top: 0; */
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -777,7 +823,7 @@ small {
     .top-wrapper .first-section .first-view-box{
         padding: 0 50px;
     }
-    
+
     .top-wrapper .first-section .address {
         font-size: 12px;
         margin: 30px 0 0 15px;
