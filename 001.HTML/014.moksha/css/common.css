@@ -1017,4 +1017,144 @@ small {
         font-size: 12px;
         margin: 30px 0 0 15px;
     }
+
+    .top-wrapper .second-section {
+        margin: 0 auto 111px;
+    }
+
+    .top-wrapper .second-section .description-box {
+        padding: 60px 79px;
+    }
+
+    .top-wrapper .second-section .description-box .text-box .text {
+        font-size: 13px;
+    }
+
+    .top-wrapper .second-section .description-box .title {
+        font-size: 19px;
+        margin-left: 30px;
+    }
+
+    .top-wrapper .second-section .button-box {
+        padding: 0 48px;
+    }
+
+    .link-button {
+        width: 103px;
+        height: 103px;
+    }
+
+    .link-button .text {
+        font-size: 13px;
+    }
+
+    .top-wrapper .third-section .cuisine, .top-wrapper .third-section .room, .top-wrapper .third-section .tea {
+        padding-bottom: 111px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 {
+        padding: 0 48px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box {
+        padding: 0 26px;
+        margin: 40px 0 19px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .en {
+        font-size: 12px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .border::before {
+        margin: 0 18px 0;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .sub {
+        font-size: 14px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box .hanja {
+        font-size: 21px;
+        letter-spacing: 8px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .left-box {
+        margin-bottom: 40px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .right-box {
+        padding: 0 48px 111px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box {
+        padding: 0 26px;
+        margin-bottom: 19px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .en {
+        font-size: 12px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .border::before {
+        margin: 0 18px 0;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .sub {
+        font-size: 14px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .hanja {
+        font-size: 21px;
+        letter-spacing: 8px;
+    }
+
+    #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 42px;
+        max-width: initial;
+    }
+
+    #footer .footer-wrapper {
+        width: 100%;
+        max-width: initial;
+        padding: 110px 0 109px;
+        margin: 0 5px;
+    }
+
+    #footer .footer-wrapper .logo-box {
+        margin-bottom: 89px;
+    }
+
+    #footer .footer-wrapper .logo-box .logo-sp a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer .footer-wrapper .logo-box .logo-sp a img {
+        width: 50%;
+    }
+
+    #footer .footer-wrapper .left-box .upper-box {
+        font-size: 13px;
+    }
+
+    #footer .footer-wrapper .left-box .middle-wrapper1 .menu > li a, #footer .footer-wrapper .left-box .middle-wrapper2 .menu > li a {
+        font-size: 13px;
+    }
+
+    #footer .footer-wrapper .left-box .bottom-wrapper1 .menu > li a, #footer .footer-wrapper .left-box .bottom-wrapper1 .sns > li a, #footer .footer-wrapper .left-box .bottom-wrapper2 .menu > li a, #footer .footer-wrapper .left-box .bottom-wrapper2 .sns > li a {
+        font-size: 13px;
+    }
+
+    #footer .footer-wrapper .left-box .bottom-wrapper1 .recruit a, #footer .footer-wrapper .left-box .bottom-wrapper2 .recruit a {
+        font-size: 13px;
+    }
+
+    #footer .footer-wrapper .copyright-sp {
+        font-size: 11px;
+        margin-top: 39px;
+    }
 }
