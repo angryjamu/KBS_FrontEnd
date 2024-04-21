@@ -553,6 +553,10 @@
     align-items: center;
 }
 
+#footer .footer-wrapper .logo-box {
+    display: none;
+}
+
 #footer .footer-wrapper .left-box {
     min-height: 525px;
     font-size: 12px;
@@ -666,6 +670,11 @@
 
 #footer .footer-wrapper .right-box .bottom-wrapper #copyright {
     text-align: center;
+    transition: .8s;
+}
+
+#footer .footer-wrapper .copyright-sp {
+    display: none;
     transition: .8s;
 }
 
@@ -871,6 +880,98 @@ small {
 
     .top-wrapper .third-section .description-img-box1 .vertical-title-box {
         margin-top: 102px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .left-box {
+        aspect-ratio: 840 / 660;
+        margin-bottom: 79px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .en {
+        font-size: 24px;
+    }
+
+    .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .border::before {
+        margin: 0 30px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .border::before {
+        margin: 0 30px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .subtitle-box .sub {
+        font-size: 28px;
+    }
+
+    .top-wrapper .third-section .description-img-box2 .vertical-title-box .hanja {
+        font-size: 43px;
+    }
+
+    #footer {
+        height: 100%;
+        max-width: 521px;
+    }
+
+    #footer .footer-wrapper {
+        max-width: 521px;
+        height: auto;
+        padding: 220px 0 219px;
+        flex-direction: column;
+    }
+
+    #footer .footer-wrapper .logo-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 178px;
+    }
+
+    #footer .footer-wrapper .logo-box .logo-sp {
+        width: 150px;
+        display: block;
+        transition: .4s;
+    }
+
+    #footer .footer-wrapper .left-box {
+        height: auto;
+        margin-right: 0;
+    }
+
+    #footer .footer-wrapper .left-box .upper-box {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    #footer .footer-wrapper .left-box .middle-wrapper1, #footer .footer-wrapper .left-box .middle-wrapper2 {
+        margin-bottom: 25px;
+    }
+
+    #footer .footer-wrapper .left-box .middle-wrapper1 .menu > li a, #footer .footer-wrapper .left-box .middle-wrapper2 .menu > li a {
+        font-size: 26px;
+    }
+
+    #footer .footer-wrapper .left-box .bottom-wrapper1, #footer .footer-wrapper .left-box .bottom-wrapper2 {
+        margin-bottom: 25px;
+    }
+
+    #footer .footer-wrapper .left-box .bottom-wrapper1 .menu > li a, #footer .footer-wrapper .left-box .bottom-wrapper1 .sns > li a, #footer .footer-wrapper .left-box .bottom-wrapper2 .menu > li a, #footer .footer-wrapper .left-box .bottom-wrapper2 .sns > li a {
+        font-size: 26px;
+    }
+
+    #footer .footer-wrapper .left-box .bottom-wrapper2 .recruit a {
+        font-size: 26px;
+    }
+
+    #footer .footer-wrapper .copyright-sp {
+        display: block;
+        font-size: 22px;
+        margin-top: 78px;
+    }
+
+    #footer .footer-wrapper .right-box.kr {
+        display: none;
+        height: auto;
     }
 }
 
