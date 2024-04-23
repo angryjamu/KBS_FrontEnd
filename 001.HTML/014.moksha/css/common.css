@@ -39,10 +39,6 @@
     font-family: "Piazzolla", serif;
 }
 
-#header .logo.sp {
-    display: none;
-}
-
 #header .menu-box {
     display: flex;
     align-items: start;
@@ -250,31 +246,6 @@
 
 #header .global .outer .inner .menu-lang .lang > span {
     font-size: 14px;
-}
-
-#header .global .outer .menu-bottom {
-    display: none;
-}
-
-#header .global .outer .menu-bottom .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#header .global .outer .menu-bottom .menu li {
-    letter-spacing: 1px;
-    line-height: 1.6;
-    transition: .4s;
-}
-
-#header .global .outer .menu-bottom .menu li:last-child {
-    margin-bottom: 0;
-}
-
-#header .global .outer .menu-bottom .menu-lang {
-    height: auto;
-    display: none;
 }
 
 #header .nav-box .lang > li > a:last-child {
@@ -829,18 +800,6 @@ small {
         font-size: 17px;
     }
 
-    #header .logo.pc {
-        display: none;
-    }
-
-    #header .logo.sp {
-        display: block;
-    }
-
-    #header .logo.sp > a img {
-        width: 94px;
-    }
-
     #header .nav-box .counsel {
         font-size: 28px;
         margin-top: -1px;
@@ -850,14 +809,6 @@ small {
         align-items: center;
     }
 
-    #header .global .outer .menu-bottom .menu-lang .lang > li > a {
-        font-size: 17px;
-    }
-
-    #header .global .outer .menu-bottom .menu-lang .lang > span {
-        font-size: 17px;
-    }
-    
     .top-wrapper .first-section .address {
         font-size: 24px;
     }
@@ -1021,92 +972,6 @@ small {
     #footer .footer-wrapper .right-box.kr {
         display: none;
         height: auto;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    #header .global {
-        height: 100vh;
-    }
-
-    #header .global .outer-wrapper {
-        max-width: 454px;
-        padding: 100px 0;
-    }
-
-    #header .global .outer {
-        height: auto;
-        max-height: 1000px;
-    }
-
-    #header .global .outer .inner {
-        height: auto;
-        margin-bottom: 48px;
-    }
-
-    #header .global .outer .inner .menu {
-        height: auto;
-    }
-
-    #header .global .outer .inner .menu li {
-        margin-bottom: 60px;
-    }
-
-    #header .global .outer .inner .menu li .kr {
-        font-size: 27px;
-    }
-
-    #header .global .outer .inner .menu li .en {
-        display: none;
-    }
-
-    #header .global .outer .inner .menu-right {
-        justify-content: flex-start;
-    }
-
-    #header .global .outer .inner .menu-right .menu li {
-        margin-bottom: 45px;
-    }
-
-    #header .global .outer .inner .menu-right .menu li .kr {
-        font-size: 20px;
-    }
-
-    #header .global .outer .inner .menu li .en {
-        display: none;
-    }
-
-    #header .global .outer .inner .menu li:last-child {
-        margin-bottom: 50px;
-    }
-
-    #header .global .outer .inner .sns {
-        height: auto;
-        font-size: 20px;
-    }
-
-    #header .global .outer .inner .sns li {
-        margin-bottom: 45px;
-    }
-
-    #header .global .outer .menu-bottom {
-        width: 100%;
-        border-top: 1px solid #000;
-        display: block;
-        padding-top: 73px;
-    }
-
-    #header .global .outer .menu-bottom .menu li .kr {
-        font-size: 27px;
-    }
-
-    #header .global .outer .menu-bottom .menu-lang {
-        display: block;
-        margin-top: 100px;
-    }
-
-    #header .global .outer .menu-bottom .menu-lang .lang {
-        justify-content: flex-start;
     }
 }
 
