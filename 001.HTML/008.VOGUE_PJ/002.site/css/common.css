@@ -1,9 +1,5 @@
 @charset "utf-8";
 /* 보그PJ 공통 기능 디자인 - common.css */
-/* 
-    공통기능: 상단영역(로고,메뉴,GNB)
-            하단영역(하단로고,회사정보)
-*/
 
 /* 부드러운 스크롤 */
 html{
@@ -59,7 +55,6 @@ html{
 #top.on .gnb{
     font-size: 14px;
     line-height: 50px;
-    margin-top: 0;
     margin-left: 125px;
 }
 
@@ -219,9 +214,8 @@ html{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     line-height: 40px;
-    
     padding: 0 30px;
-    margin-top: 11px;
+    margin-top: 30px;
 }
 
 .gnb>ul {
