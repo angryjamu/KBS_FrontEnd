@@ -20,7 +20,7 @@
         right: 5%;
     }
 
-    .cont .down {
+    .down {
         left: 94%;
     }
 
@@ -116,14 +116,14 @@
         font-size: 11px;
     }
 
-    .cont .down {
-        left: 48%;
+    .down {
+        left: 85%;
         font-size: 12px;
         width: 35px;
         height: 45px;
     }
 
-    .cont .down .imgWrap::before {
+    .down .imgWrap::before {
         left: 36px;
     }
 
@@ -435,13 +435,13 @@
         width: 340px;
     }
 
-    .cont .down {
+    .down {
         font-size: 10px;
         width: 30px;
         height: 40px;
     }
 
-    .cont .down .imgWrap::before {
+    .down .imgWrap::before {
         left: 30px;
     }
 
